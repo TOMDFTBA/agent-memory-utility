@@ -27,6 +27,6 @@
 - [ ] 将最终 commit SHA 写入发布说明或结果 manifest
 - [ ] 可选：在第二台干净机器运行 CPU 安装流程
 - [x] 创建并推送 GitHub 仓库
-- [ ] 标记 `v0.1.0`
+- [x] 标记 `v0.1.0`
 
 本清单不要求在 v0.1 中解决 utility-aware retention；该研究问题属于 v0.2。
