@@ -1,0 +1,9 @@
+path: integrations/ultrarag-memory/src/ultrarag-memory.py
+query: What editor does Alice prefer?
+top_k: 3
+content: Alice prefers Neovim.
+memory_id: alice-editor
+importance: 0.8
+source: user
+supersedes: null
+metadata: {}

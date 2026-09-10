@@ -1,0 +1,34 @@
+{
+  "counts": {
+    "same_subject_obsolete": 90
+  },
+  "examples": [
+    {
+      "query": "Which editor does Person005 currently prefer?",
+      "expected": "Person005 now prefers Neovim as their editor.",
+      "rank1": "Person005 previously preferred Vim as their editor."
+    },
+    {
+      "query": "Which editor does Person006 currently prefer?",
+      "expected": "Person006 now prefers Sublime Text as their editor.",
+      "rank1": "Person006 previously preferred Vim as their editor."
+    },
+    {
+      "query": "Which editor does Person007 currently prefer?",
+      "expected": "Person007 now prefers Emacs as their editor.",
+      "rank1": "Person007 previously preferred Vim as their editor."
+    },
+    {
+      "query": "Which editor does Person008 currently prefer?",
+      "expected": "Person008 now prefers Neovim as their editor.",
+      "rank1": "Person008 previously preferred Vim as their editor."
+    },
+    {
+      "query": "Which editor does Person009 currently prefer?",
+      "expected": "Person009 now prefers Emacs as their editor.",
+      "rank1": "Person009 previously preferred Vim as their editor."
+    }
+  ],
+  "interpretation": "All audited top-1 failures retrieve the same subject obsolete fact; this identifies the failure type, not the causal reason within the embedding model.",
+  "implementation_check": "Local official model README uses Query: prefix and mean pooling over internally position-weighted hidden states, matching src/longmem/embedder.py."
+}

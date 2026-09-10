@@ -1,0 +1,587 @@
+{
+  "status": "completed",
+  "config": {
+    "chunk_tokens": 512,
+    "overlap_tokens": 64,
+    "model_max_tokens": 2048,
+    "page_aggregation": "max_chunk_cosine",
+    "ocr_language": "eng",
+    "ocr_psm": 3,
+    "ocr_oem": 1,
+    "image_max_side": 1400
+  },
+  "device": "AMD Radeon 8060S Graphics",
+  "torch": "2.10.0",
+  "rocm": "7.14.60850",
+  "ocr_version": "tesseract 5.5.0\n leptonica-1.84.1\n  libgif 5.2.2 : libjpeg 6b (libjpeg-turbo 2.1.5) : libpng 1.6.48 : libtiff 4.7.0 : zlib 1.3.1 : libwebp 1.5.0 : libopenjp2 2.5.3\n Found AVX512BW\n Found AVX512F\n Found AVX512VNNI\n Found AVX2\n Found AVX\n Found FMA\n Found SSE4.1\n Found OpenMP 201511\n Found libarchive 3.7.4 zlib/1.3.1 liblzma/5.8.1 bz2lib/1.0.8 liblz4/1.10.0 libzstd/1.5.7\n Found libcurl/8.14.1 OpenSSL/3.5.7 zlib/1.3.1 brotli/1.1.0 zstd/1.5.7 libidn2/2.3.8 libpsl/0.21.2 libssh2/1.11.1 nghttp2/1.64.0 nghttp3/1.8.0 librtmp/2.3 OpenLDAP/2.6.10\n",
+  "text_model_version": "minicpm:db76a20cde39a5364c43d4fb434013773c21a95fc54f2b3c6d24008e22adbf9b",
+  "script_sha256": "97d893ec619c005e40d8c2a9955a4da46dedbdc1803eb9d8e773692ea9146f47",
+  "shared_encoder_sha256": "0f16c86aa6babdf0b497280b438abe0e71591bb8b72894c9498dacc5538e9d19",
+  "visual_model_files": {
+    "config.json": "93a56ca6d8fe12b3ebf1604e62a877550c7bf2cd264e2d8b0a2540b569cd468d",
+    "modeling_minicpm.py": "db23d74eefcbab591d12a43eb7b3bd2ed1756b8bdcddb21221e487a46f980c0b",
+    "model.safetensors.index.json": "340e8939dccc4994b15adbb7a50df6dcbc7889be3c36472169116a03e8e82230",
+    "configuration_minicpm.py": "b0bd7eff3b8768c78dd6f7187311c83a569022d08d033c3cdc80fadbbbe4ec7a",
+    "modeling_minicpmv.py": "a9da21e2e046b303bc5db429af42b46a9928b0a63cfca365f890c02c2a608dad",
+    "modeling_visrag_ret.py": "3b15efe4ff0dfe80f7f281b92fe50ee3d6bf2e441a7626a15dbb52cd7e2bc3e3",
+    "special_tokens_map.json": "bd2f925a3c481721eb93692d3e46a41d356cc2abfd14bd679e26cbab392f5137",
+    "resampler.py": "ca6f243d446a8d8cbe778771e5f7279a0f2fb1adfef49aa0922bdba5d59e0905",
+    "tokenizer.py": "898912209e5d5c462d82217bc9da9fc194b311bb9d79ab2f05d45c4feb629be2",
+    "tokenizer_config.json": "4a21e3afed69016075548358c34f030254e1b1cd4ab36a1356cb9393210efcfc",
+    "tokenizer.json": "a513da24a7a05dfadce52d046aae90749ba60135c85629527fe7c75ef09f785b"
+  },
+  "visual_seconds_including_load": 18.957127607000075,
+  "text_seconds_including_load": 10.767663773000095,
+  "results": [
+    {
+      "query_id": "q1",
+      "query": "Find the diagram comparing the TextRAG pipeline on the left with the VisRAG pipeline on the right.",
+      "target_page_id": "v1-p4",
+      "visual": [
+        {
+          "page_id": "v1-p4",
+          "score": 0.3737579584121704
+        },
+        {
+          "page_id": "v1-p2",
+          "score": 0.3710917532444
+        },
+        {
+          "page_id": "v1-p1",
+          "score": 0.3392444849014282
+        },
+        {
+          "page_id": "v2-p3",
+          "score": 0.2570192813873291
+        },
+        {
+          "page_id": "v1-p5",
+          "score": 0.23071032762527466
+        },
+        {
+          "page_id": "v2-p2",
+          "score": 0.22714170813560486
+        },
+        {
+          "page_id": "v1-p6",
+          "score": 0.22500841319561005
+        },
+        {
+          "page_id": "v2-p1",
+          "score": 0.21913538873195648
+        }
+      ],
+      "visual_rank": 1,
+      "native_text": [
+        {
+          "page_id": "v1-p2",
+          "score": 0.4903546869754791
+        },
+        {
+          "page_id": "v1-p4",
+          "score": 0.4527345895767212
+        },
+        {
+          "page_id": "v1-p1",
+          "score": 0.4218708276748657
+        },
+        {
+          "page_id": "v1-p5",
+          "score": 0.3876356780529022
+        },
+        {
+          "page_id": "v1-p6",
+          "score": 0.38620418310165405
+        },
+        {
+          "page_id": "v2-p3",
+          "score": 0.3639734983444214
+        },
+        {
+          "page_id": "v2-p1",
+          "score": 0.34875211119651794
+        },
+        {
+          "page_id": "v2-p2",
+          "score": 0.3415893316268921
+        }
+      ],
+      "native_text_rank": 2,
+      "ocr_text": [
+        {
+          "page_id": "v1-p1",
+          "score": 0.47274935245513916
+        },
+        {
+          "page_id": "v1-p2",
+          "score": 0.4592970907688141
+        },
+        {
+          "page_id": "v1-p4",
+          "score": 0.4569198489189148
+        },
+        {
+          "page_id": "v1-p6",
+          "score": 0.40970951318740845
+        },
+        {
+          "page_id": "v1-p5",
+          "score": 0.3570728600025177
+        },
+        {
+          "page_id": "v2-p1",
+          "score": 0.34550440311431885
+        },
+        {
+          "page_id": "v2-p2",
+          "score": 0.3335278630256653
+        },
+        {
+          "page_id": "v2-p3",
+          "score": 0.325612872838974
+        }
+      ],
+      "ocr_text_rank": 3
+    },
+    {
+      "query_id": "q2",
+      "query": "Find the bar chart comparing TextRAG and VisRAG accuracy using MiniCPM-V and GPT-4o generators.",
+      "target_page_id": "v1-p2",
+      "visual": [
+        {
+          "page_id": "v1-p2",
+          "score": 0.3583733141422272
+        },
+        {
+          "page_id": "v1-p6",
+          "score": 0.31485715508461
+        },
+        {
+          "page_id": "v1-p1",
+          "score": 0.3035142719745636
+        },
+        {
+          "page_id": "v1-p4",
+          "score": 0.2844732999801636
+        },
+        {
+          "page_id": "v1-p5",
+          "score": 0.26025402545928955
+        },
+        {
+          "page_id": "v2-p1",
+          "score": 0.2257687747478485
+        },
+        {
+          "page_id": "v2-p3",
+          "score": 0.21694055199623108
+        },
+        {
+          "page_id": "v2-p2",
+          "score": 0.21388664841651917
+        }
+      ],
+      "visual_rank": 1,
+      "native_text": [
+        {
+          "page_id": "v1-p2",
+          "score": 0.5572797060012817
+        },
+        {
+          "page_id": "v1-p6",
+          "score": 0.5157816410064697
+        },
+        {
+          "page_id": "v1-p1",
+          "score": 0.46236488223075867
+        },
+        {
+          "page_id": "v1-p5",
+          "score": 0.44524165987968445
+        },
+        {
+          "page_id": "v1-p4",
+          "score": 0.437747597694397
+        },
+        {
+          "page_id": "v2-p1",
+          "score": 0.3977358341217041
+        },
+        {
+          "page_id": "v2-p3",
+          "score": 0.3728106915950775
+        },
+        {
+          "page_id": "v2-p2",
+          "score": 0.37085601687431335
+        }
+      ],
+      "native_text_rank": 1,
+      "ocr_text": [
+        {
+          "page_id": "v1-p6",
+          "score": 0.5198100209236145
+        },
+        {
+          "page_id": "v1-p2",
+          "score": 0.4847055673599243
+        },
+        {
+          "page_id": "v1-p5",
+          "score": 0.46757835149765015
+        },
+        {
+          "page_id": "v1-p1",
+          "score": 0.46509474515914917
+        },
+        {
+          "page_id": "v1-p4",
+          "score": 0.4443245828151703
+        },
+        {
+          "page_id": "v2-p2",
+          "score": 0.38738131523132324
+        },
+        {
+          "page_id": "v2-p1",
+          "score": 0.37903276085853577
+        },
+        {
+          "page_id": "v2-p3",
+          "score": 0.3319656550884247
+        }
+      ],
+      "ocr_text_rank": 2
+    },
+    {
+      "query_id": "q3",
+      "query": "Find the example comparing Japan and Spain population, with sports news interest at 35 percent.",
+      "target_page_id": "v2-p2",
+      "visual": [
+        {
+          "page_id": "v2-p2",
+          "score": 0.3610418736934662
+        },
+        {
+          "page_id": "v1-p1",
+          "score": 0.0766109898686409
+        },
+        {
+          "page_id": "v1-p6",
+          "score": 0.07012458890676498
+        },
+        {
+          "page_id": "v1-p2",
+          "score": 0.06143370643258095
+        },
+        {
+          "page_id": "v2-p1",
+          "score": 0.05427157133817673
+        },
+        {
+          "page_id": "v1-p5",
+          "score": 0.0440702848136425
+        },
+        {
+          "page_id": "v1-p4",
+          "score": 0.04143540933728218
+        },
+        {
+          "page_id": "v2-p3",
+          "score": 0.024548301473259926
+        }
+      ],
+      "visual_rank": 1,
+      "native_text": [
+        {
+          "page_id": "v2-p2",
+          "score": 0.7005964517593384
+        },
+        {
+          "page_id": "v1-p6",
+          "score": 0.06401216238737106
+        },
+        {
+          "page_id": "v1-p5",
+          "score": 0.062397655099630356
+        },
+        {
+          "page_id": "v2-p3",
+          "score": 0.05848050117492676
+        },
+        {
+          "page_id": "v2-p1",
+          "score": 0.046853240579366684
+        },
+        {
+          "page_id": "v1-p1",
+          "score": 0.037691812962293625
+        },
+        {
+          "page_id": "v1-p4",
+          "score": 0.02681533433496952
+        },
+        {
+          "page_id": "v1-p2",
+          "score": 0.02256392128765583
+        }
+      ],
+      "native_text_rank": 1,
+      "ocr_text": [
+        {
+          "page_id": "v2-p2",
+          "score": 0.6673898696899414
+        },
+        {
+          "page_id": "v1-p4",
+          "score": 0.07814865559339523
+        },
+        {
+          "page_id": "v2-p3",
+          "score": 0.0756630077958107
+        },
+        {
+          "page_id": "v1-p6",
+          "score": 0.05898938700556755
+        },
+        {
+          "page_id": "v1-p5",
+          "score": 0.05087445676326752
+        },
+        {
+          "page_id": "v2-p1",
+          "score": 0.04407963529229164
+        },
+        {
+          "page_id": "v1-p2",
+          "score": 0.03919672593474388
+        },
+        {
+          "page_id": "v1-p1",
+          "score": 0.02689623273909092
+        }
+      ],
+      "ocr_text_rank": 1
+    },
+    {
+      "query_id": "q4",
+      "query": "Which page defines position-weighted mean pooling for the retrieval embedding?",
+      "target_page_id": "v1-p4",
+      "visual": [
+        {
+          "page_id": "v1-p4",
+          "score": 0.23901209235191345
+        },
+        {
+          "page_id": "v2-p3",
+          "score": 0.21577870845794678
+        },
+        {
+          "page_id": "v2-p2",
+          "score": 0.2051287442445755
+        },
+        {
+          "page_id": "v1-p5",
+          "score": 0.2006649225950241
+        },
+        {
+          "page_id": "v2-p1",
+          "score": 0.19662632048130035
+        },
+        {
+          "page_id": "v1-p2",
+          "score": 0.1931815892457962
+        },
+        {
+          "page_id": "v1-p6",
+          "score": 0.19030585885047913
+        },
+        {
+          "page_id": "v1-p1",
+          "score": 0.18542931973934174
+        }
+      ],
+      "visual_rank": 1,
+      "native_text": [
+        {
+          "page_id": "v1-p4",
+          "score": 0.402875691652298
+        },
+        {
+          "page_id": "v1-p5",
+          "score": 0.3648018538951874
+        },
+        {
+          "page_id": "v1-p2",
+          "score": 0.35154810547828674
+        },
+        {
+          "page_id": "v2-p3",
+          "score": 0.33695778250694275
+        },
+        {
+          "page_id": "v1-p1",
+          "score": 0.2988503873348236
+        },
+        {
+          "page_id": "v2-p2",
+          "score": 0.2862597405910492
+        },
+        {
+          "page_id": "v1-p6",
+          "score": 0.27376821637153625
+        },
+        {
+          "page_id": "v2-p1",
+          "score": 0.2706967294216156
+        }
+      ],
+      "native_text_rank": 1,
+      "ocr_text": [
+        {
+          "page_id": "v1-p4",
+          "score": 0.3893677294254303
+        },
+        {
+          "page_id": "v1-p5",
+          "score": 0.35295915603637695
+        },
+        {
+          "page_id": "v2-p3",
+          "score": 0.32022830843925476
+        },
+        {
+          "page_id": "v2-p2",
+          "score": 0.2938688397407532
+        },
+        {
+          "page_id": "v1-p1",
+          "score": 0.2902716100215912
+        },
+        {
+          "page_id": "v1-p2",
+          "score": 0.2860012650489807
+        },
+        {
+          "page_id": "v1-p6",
+          "score": 0.28347817063331604
+        },
+        {
+          "page_id": "v2-p1",
+          "score": 0.2710549831390381
+        }
+      ],
+      "ocr_text_rank": 1
+    },
+    {
+      "query_id": "q5",
+      "query": "Find the equations for per-image evidence recording and answer reasoning in EVisRAG.",
+      "target_page_id": "v2-p3",
+      "visual": [
+        {
+          "page_id": "v2-p3",
+          "score": 0.43482717871665955
+        },
+        {
+          "page_id": "v2-p2",
+          "score": 0.3460722267627716
+        },
+        {
+          "page_id": "v2-p1",
+          "score": 0.3327704071998596
+        },
+        {
+          "page_id": "v1-p5",
+          "score": 0.21882061660289764
+        },
+        {
+          "page_id": "v1-p4",
+          "score": 0.16720396280288696
+        },
+        {
+          "page_id": "v1-p6",
+          "score": 0.14960457384586334
+        },
+        {
+          "page_id": "v1-p2",
+          "score": 0.1429787278175354
+        },
+        {
+          "page_id": "v1-p1",
+          "score": 0.1422451287508011
+        }
+      ],
+      "visual_rank": 1,
+      "native_text": [
+        {
+          "page_id": "v2-p3",
+          "score": 0.4780369997024536
+        },
+        {
+          "page_id": "v2-p1",
+          "score": 0.41985440254211426
+        },
+        {
+          "page_id": "v2-p2",
+          "score": 0.4155445694923401
+        },
+        {
+          "page_id": "v1-p5",
+          "score": 0.341833233833313
+        },
+        {
+          "page_id": "v1-p4",
+          "score": 0.3127545714378357
+        },
+        {
+          "page_id": "v1-p2",
+          "score": 0.2933904230594635
+        },
+        {
+          "page_id": "v1-p1",
+          "score": 0.2583889067173004
+        },
+        {
+          "page_id": "v1-p6",
+          "score": 0.24452561140060425
+        }
+      ],
+      "native_text_rank": 1,
+      "ocr_text": [
+        {
+          "page_id": "v2-p3",
+          "score": 0.5153271555900574
+        },
+        {
+          "page_id": "v2-p2",
+          "score": 0.44251617789268494
+        },
+        {
+          "page_id": "v2-p1",
+          "score": 0.40388771891593933
+        },
+        {
+          "page_id": "v1-p4",
+          "score": 0.3262719213962555
+        },
+        {
+          "page_id": "v1-p2",
+          "score": 0.29446884989738464
+        },
+        {
+          "page_id": "v1-p5",
+          "score": 0.28361836075782776
+        },
+        {
+          "page_id": "v1-p1",
+          "score": 0.26392367482185364
+        },
+        {
+          "page_id": "v1-p6",
+          "score": 0.2557941675186157
+        }
+      ],
+      "ocr_text_rank": 1
+    }
+  ]
+}

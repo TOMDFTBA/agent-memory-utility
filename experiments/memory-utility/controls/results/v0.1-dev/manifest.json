@@ -1,0 +1,38 @@
+{
+  "identity": {
+    "stage": "dev",
+    "backend": "transformers",
+    "dataset_sha256": "d2f3635649dacf9f37735ee6a51826aa8785998a3b69f711c22c38cf75de67e3",
+    "design_sha256": "e74a25838743eede60ef39e0415924dad37fea64f646fce67e26269fff26f8e7",
+    "source_hashes": {
+      "experiments/memory-utility/controls/control_common.py": "16dd323c3bf0b3c777bec85988015c2ff8a28e1ea168e0d567d64f99f9317626",
+      "experiments/memory-utility/controls/run_controls.py": "bb9547daf7ee3cc7bd293782fcb1c741140c082adb442eda2019d4021149e24a",
+      "experiments/memory-utility/generate_dataset.py": "8c56cabf2abeaa743a12617afd583b59cf2fec26f00b7ed3fb142b9ef61bbd32",
+      "experiments/memory-budget/generate_dataset.py": "2f4b70038827457e00eec2b3f8cf13ab03197ffdd5fbdd565bf85e96a1a0f4dd",
+      "experiments/memory-utility/score.py": "9a3f9ecb5ed1fe3e3f6382ef55850b517035621aa49e38c0ce2cff8455124eec"
+    },
+    "generation": {
+      "backend": "transformers",
+      "model_path": "base-MiniCPM-2B-sft-bf16",
+      "device": "cuda",
+      "max_new_tokens": 24,
+      "max_input_tokens": 2048
+    },
+    "model_metadata_sha256": {
+      "generation_config.json": "a022aa21060c3e0106edf2c9580e5d1878fa3ab01ad1fbe69a277cc847169e20",
+      "configuration_minicpm.py": "eca7460ace9a195a69ed9955e065bc3d6a6bf801bb15c1ed0a4c1356ad0fd590",
+      "config.json": "41cf26cfdca93f49209a6c0c26c00b281d6408e010ddc8cca9531c825cc17fc4",
+      "modeling_minicpm.py": "d38af5893eab28893041fbddfdf69f380c9fc67077fcb9c6eecbb30282c9e671",
+      "tokenizer_config.json": "9c87efade54e9b26d3374a42f294d266722cbf9e97c748a12183d8317da074c9",
+      "tokenizer.model": "c9aafcd7da1f5611dab6be545db74d5552a2ccc9c2a12c72ea7be63aac4a25d7"
+    },
+    "protocols": [
+      "chat_line",
+      "chat_eos",
+      "plain_line",
+      "plain_eos"
+    ],
+    "selection": null
+  },
+  "python": "3.13.5"
+}

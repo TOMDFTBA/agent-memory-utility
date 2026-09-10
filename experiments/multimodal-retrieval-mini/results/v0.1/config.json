@@ -1,0 +1,10 @@
+{
+  "chunk_tokens": 512,
+  "overlap_tokens": 64,
+  "model_max_tokens": 2048,
+  "page_aggregation": "max_chunk_cosine",
+  "ocr_language": "eng",
+  "ocr_psm": 3,
+  "ocr_oem": 1,
+  "image_max_side": 1400
+}

@@ -1,0 +1,7 @@
+servers:
+  longmem: integrations/ultrarag-memory
+pipeline:
+  - longmem.memory_search
+  - longmem.prompt_construction
+  - longmem.generator
+  - longmem.remember_response

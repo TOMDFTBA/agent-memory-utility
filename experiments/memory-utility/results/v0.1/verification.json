@@ -1,0 +1,15 @@
+{
+  "status": "PASS",
+  "cases": 54,
+  "responses": 594,
+  "checks": [
+    "complete paired coverage",
+    "unique responses",
+    "dataset hash",
+    "gold and evidence",
+    "prompt",
+    "scores",
+    "retrieval metrics",
+    "backend"
+  ]
+}

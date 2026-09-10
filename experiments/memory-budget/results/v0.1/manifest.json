@@ -1,0 +1,33 @@
+{
+  "backend": "minicpm",
+  "model_config": "configs/local.yaml",
+  "sizes": [
+    100,
+    500,
+    1000,
+    5000,
+    10000
+  ],
+  "seeds": [
+    11,
+    22,
+    33
+  ],
+  "repeats": 5,
+  "cache": "cache/memory-budget-v2",
+  "calibration_file": null,
+  "output": "experiments/memory-budget/results/v0.1",
+  "embedding_version": "minicpm:06b484ecdf4dc07b3bbca4dcff99895b51beea5efd57a612a36107b1ca6b5e96",
+  "platform": "Linux-6.18.44+rex+5-amd64-x86_64-with-glibc2.41",
+  "processor": "",
+  "numpy": "2.2.4",
+  "faiss": "1.15.0",
+  "faiss_threads": 1,
+  "query_batch_size": 1,
+  "document_batch_size": 8,
+  "status": "COMPLETE",
+  "torch": "2.10.0",
+  "rocm": "7.14.60850",
+  "gpu": "AMD Radeon 8060S Graphics",
+  "rows": 300
+}

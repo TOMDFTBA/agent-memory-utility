@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "page_count": 8,
+  "query_count": 5,
+  "page_scores_recomputed": 120,
+  "text_token_coverage": "100% for both native PDF and OCR text",
+  "native_text_chunks": 26,
+  "ocr_text_chunks": 24,
+  "checks": [
+    "input hashes",
+    "full tokenizer coverage",
+    "chunk size and ownership",
+    "normalized finite vectors",
+    "all scores and rankings",
+    "target ranks"
+  ]
+}

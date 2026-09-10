@@ -1,0 +1,68 @@
+[
+  {
+    "condition": "no_memory",
+    "strict_em": 0,
+    "first_line_em": 0,
+    "multiline_answers": 0
+  },
+  {
+    "condition": "relevant",
+    "strict_em": 1,
+    "first_line_em": 1,
+    "multiline_answers": 0
+  },
+  {
+    "condition": "irrelevant",
+    "strict_em": 0.24074074074074073,
+    "first_line_em": 0.24074074074074073,
+    "multiline_answers": 0
+  },
+  {
+    "condition": "conflicting",
+    "strict_em": 1,
+    "first_line_em": 1,
+    "multiline_answers": 0
+  },
+  {
+    "condition": "consolidation_strip_temporal_cue",
+    "strict_em": 0.35185185185185186,
+    "first_line_em": 0.7037037037037037,
+    "multiline_answers": 19
+  },
+  {
+    "condition": "retrieved:full-1:k1",
+    "strict_em": 0.6296296296296297,
+    "first_line_em": 0.6296296296296297,
+    "multiline_answers": 8
+  },
+  {
+    "condition": "retrieved:full-1:k3",
+    "strict_em": 0.8888888888888888,
+    "first_line_em": 1,
+    "multiline_answers": 6
+  },
+  {
+    "condition": "retrieved:full-1:k5",
+    "strict_em": 0.9444444444444444,
+    "first_line_em": 0.9444444444444444,
+    "multiline_answers": 0
+  },
+  {
+    "condition": "retrieved:semantic_dedup-0.5:k1",
+    "strict_em": 0.2962962962962963,
+    "first_line_em": 0.2962962962962963,
+    "multiline_answers": 14
+  },
+  {
+    "condition": "retrieved:semantic_dedup-0.5:k3",
+    "strict_em": 0.5925925925925926,
+    "first_line_em": 0.6481481481481481,
+    "multiline_answers": 3
+  },
+  {
+    "condition": "retrieved:semantic_dedup-0.5:k5",
+    "strict_em": 0.5740740740740741,
+    "first_line_em": 0.5740740740740741,
+    "multiline_answers": 0
+  }
+]

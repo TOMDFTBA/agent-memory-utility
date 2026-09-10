@@ -1,0 +1,23 @@
+{
+  "dev_seed": 77,
+  "dev_cases": 6,
+  "test_cases": 54,
+  "protocols": [
+    "chat_line",
+    "chat_eos",
+    "plain_line",
+    "plain_eos"
+  ],
+  "selection": "Highest mean dev EM over all six conditions, then fixed order chat_line, chat_eos, plain_line, plain_eos",
+  "stopping": "*_line stops on first newline after non-whitespace output; strip boundary suffix before scoring. *_eos stops at EOS or 24 tokens.",
+  "max_new_tokens": 24,
+  "max_input_tokens": 2048,
+  "do_sample": false,
+  "use_cache": false,
+  "torch_seed": 20260905,
+  "development_only": true,
+  "original_test_sha256": "977a2aceaea10956a7a52506fd13a56fdc1482ec72d480ecb6abc2ca50edc195",
+  "dev_sha256": "d2f3635649dacf9f37735ee6a51826aa8785998a3b69f711c22c38cf75de67e3",
+  "test_sha256": "f1189cc28f34b962b5ab82c66cfa55348f5d7c9cf7131cff5f0035847ad496b7",
+  "limitation": "Follow-up on previously observed test set; protocol selection uses distinct dev subjects only. No new held-out test claim."
+}

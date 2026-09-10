@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "dev_cases": 6,
+  "dev_responses": 144,
+  "test_cases": 54,
+  "test_responses": 648,
+  "checks": [
+    "dev-only protocol selection",
+    "source/model/design/data hashes",
+    "paired coverage",
+    "no duplicate responses",
+    "rendered and content prompts",
+    "answer extraction",
+    "scores",
+    "retrieval labels",
+    "Relevant/keep identical outputs",
+    "old/new content equality"
+  ]
+}

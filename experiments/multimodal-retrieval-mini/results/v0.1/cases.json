@@ -1,0 +1,312 @@
+[
+  {
+    "query_id": "q1",
+    "target_page_id": "v1-p4",
+    "top3": {
+      "visual": [
+        {
+          "page_id": "v1-p4",
+          "score": 0.3737579584121704
+        },
+        {
+          "page_id": "v1-p2",
+          "score": 0.3710917532444
+        },
+        {
+          "page_id": "v1-p1",
+          "score": 0.3392444849014282
+        }
+      ],
+      "native_text": [
+        {
+          "page_id": "v1-p2",
+          "score": 0.4903546869754791
+        },
+        {
+          "page_id": "v1-p4",
+          "score": 0.4527345895767212
+        },
+        {
+          "page_id": "v1-p1",
+          "score": 0.4218708276748657
+        }
+      ],
+      "ocr_text": [
+        {
+          "page_id": "v1-p1",
+          "score": 0.47274935245513916
+        },
+        {
+          "page_id": "v1-p2",
+          "score": 0.4592970907688141
+        },
+        {
+          "page_id": "v1-p4",
+          "score": 0.4569198489189148
+        }
+      ]
+    },
+    "target_chunks": {
+      "native_text": {
+        "chunk_index": 6,
+        "start": 0,
+        "end": 512,
+        "score": 0.4527345895767212
+      },
+      "ocr_text": {
+        "chunk_index": 6,
+        "start": 0,
+        "end": 512,
+        "score": 0.4569198489189148
+      }
+    }
+  },
+  {
+    "query_id": "q2",
+    "target_page_id": "v1-p2",
+    "top3": {
+      "visual": [
+        {
+          "page_id": "v1-p2",
+          "score": 0.3583733141422272
+        },
+        {
+          "page_id": "v1-p6",
+          "score": 0.31485715508461
+        },
+        {
+          "page_id": "v1-p1",
+          "score": 0.3035142719745636
+        }
+      ],
+      "native_text": [
+        {
+          "page_id": "v1-p2",
+          "score": 0.5572797060012817
+        },
+        {
+          "page_id": "v1-p6",
+          "score": 0.5157816410064697
+        },
+        {
+          "page_id": "v1-p1",
+          "score": 0.46236488223075867
+        }
+      ],
+      "ocr_text": [
+        {
+          "page_id": "v1-p6",
+          "score": 0.5198100209236145
+        },
+        {
+          "page_id": "v1-p2",
+          "score": 0.4847055673599243
+        },
+        {
+          "page_id": "v1-p5",
+          "score": 0.46757835149765015
+        }
+      ]
+    },
+    "target_chunks": {
+      "native_text": {
+        "chunk_index": 5,
+        "start": 896,
+        "end": 1215,
+        "score": 0.5572797060012817
+      },
+      "ocr_text": {
+        "chunk_index": 4,
+        "start": 448,
+        "end": 960,
+        "score": 0.4847055673599243
+      }
+    }
+  },
+  {
+    "query_id": "q3",
+    "target_page_id": "v2-p2",
+    "top3": {
+      "visual": [
+        {
+          "page_id": "v2-p2",
+          "score": 0.3610418736934662
+        },
+        {
+          "page_id": "v1-p1",
+          "score": 0.0766109898686409
+        },
+        {
+          "page_id": "v1-p6",
+          "score": 0.07012458890676498
+        }
+      ],
+      "native_text": [
+        {
+          "page_id": "v2-p2",
+          "score": 0.7005964517593384
+        },
+        {
+          "page_id": "v1-p6",
+          "score": 0.06401216238737106
+        },
+        {
+          "page_id": "v1-p5",
+          "score": 0.062397655099630356
+        }
+      ],
+      "ocr_text": [
+        {
+          "page_id": "v2-p2",
+          "score": 0.6673898696899414
+        },
+        {
+          "page_id": "v1-p4",
+          "score": 0.07814865559339523
+        },
+        {
+          "page_id": "v2-p3",
+          "score": 0.0756630077958107
+        }
+      ]
+    },
+    "target_chunks": {
+      "native_text": {
+        "chunk_index": 17,
+        "start": 0,
+        "end": 512,
+        "score": 0.7005964517593384
+      },
+      "ocr_text": {
+        "chunk_index": 17,
+        "start": 0,
+        "end": 512,
+        "score": 0.6673898696899414
+      }
+    }
+  },
+  {
+    "query_id": "q4",
+    "target_page_id": "v1-p4",
+    "top3": {
+      "visual": [
+        {
+          "page_id": "v1-p4",
+          "score": 0.23901209235191345
+        },
+        {
+          "page_id": "v2-p3",
+          "score": 0.21577870845794678
+        },
+        {
+          "page_id": "v2-p2",
+          "score": 0.2051287442445755
+        }
+      ],
+      "native_text": [
+        {
+          "page_id": "v1-p4",
+          "score": 0.402875691652298
+        },
+        {
+          "page_id": "v1-p5",
+          "score": 0.3648018538951874
+        },
+        {
+          "page_id": "v1-p2",
+          "score": 0.35154810547828674
+        }
+      ],
+      "ocr_text": [
+        {
+          "page_id": "v1-p4",
+          "score": 0.3893677294254303
+        },
+        {
+          "page_id": "v1-p5",
+          "score": 0.35295915603637695
+        },
+        {
+          "page_id": "v2-p3",
+          "score": 0.32022830843925476
+        }
+      ]
+    },
+    "target_chunks": {
+      "native_text": {
+        "chunk_index": 7,
+        "start": 448,
+        "end": 834,
+        "score": 0.402875691652298
+      },
+      "ocr_text": {
+        "chunk_index": 7,
+        "start": 448,
+        "end": 828,
+        "score": 0.3893677294254303
+      }
+    }
+  },
+  {
+    "query_id": "q5",
+    "target_page_id": "v2-p3",
+    "top3": {
+      "visual": [
+        {
+          "page_id": "v2-p3",
+          "score": 0.43482717871665955
+        },
+        {
+          "page_id": "v2-p2",
+          "score": 0.3460722267627716
+        },
+        {
+          "page_id": "v2-p1",
+          "score": 0.3327704071998596
+        }
+      ],
+      "native_text": [
+        {
+          "page_id": "v2-p3",
+          "score": 0.4780369997024536
+        },
+        {
+          "page_id": "v2-p1",
+          "score": 0.41985440254211426
+        },
+        {
+          "page_id": "v2-p2",
+          "score": 0.4155445694923401
+        }
+      ],
+      "ocr_text": [
+        {
+          "page_id": "v2-p3",
+          "score": 0.5153271555900574
+        },
+        {
+          "page_id": "v2-p2",
+          "score": 0.44251617789268494
+        },
+        {
+          "page_id": "v2-p1",
+          "score": 0.40388771891593933
+        }
+      ]
+    },
+    "target_chunks": {
+      "native_text": {
+        "chunk_index": 23,
+        "start": 1344,
+        "end": 1856,
+        "score": 0.4780369997024536
+      },
+      "ocr_text": {
+        "chunk_index": 22,
+        "start": 896,
+        "end": 1408,
+        "score": 0.5153271555900574
+      }
+    }
+  }
+]

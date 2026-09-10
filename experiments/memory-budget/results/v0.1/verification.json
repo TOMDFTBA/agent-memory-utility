@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "runs": 300,
+  "checks": [
+    "coverage",
+    "unique runs",
+    "fixed budgets",
+    "subject split isolation",
+    "saved prediction recall",
+    "target retention denominator",
+    "metric bounds"
+  ]
+}

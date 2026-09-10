@@ -1,0 +1,792 @@
+[
+  {
+    "kind": "correct_rank1",
+    "case": "balanced-10000-11/full-1",
+    "query": "Where does Person001 live now?",
+    "target": {
+      "subject": "Person001",
+      "relation": "city",
+      "importance": 0.5078412730622711,
+      "source": "synthetic",
+      "split": "test",
+      "memory_id": "current-1",
+      "canonical_id": "current-1",
+      "content": "Currently, Person001 lives in Perth.",
+      "event_order": 0.07692307692307693,
+      "supersedes_id": "old-1"
+    },
+    "retrieved": [
+      {
+        "subject": "Person001",
+        "relation": "city",
+        "importance": 0.5078412730622711,
+        "source": "synthetic",
+        "split": "test",
+        "memory_id": "current-1",
+        "canonical_id": "current-1",
+        "content": "Currently, Person001 lives in Perth.",
+        "event_order": 0.07692307692307693,
+        "supersedes_id": "old-1"
+      },
+      {
+        "subject": "Person001",
+        "relation": "city",
+        "importance": 0.5078412730622711,
+        "source": "synthetic",
+        "split": "test",
+        "memory_id": "old-1",
+        "canonical_id": "old-1",
+        "content": "Previously, Person001 lives in Kyoto.",
+        "event_order": 0.06192307692307693,
+        "supersedes_id": null
+      },
+      {
+        "memory_id": "distractor-277",
+        "canonical_id": "distractor-277",
+        "content": "Currently, Person00301 lives in Perth.",
+        "subject": "Person00301",
+        "relation": "city",
+        "event_order": 0.7237920436287394,
+        "importance": 0.3316584635291733,
+        "supersedes_id": null,
+        "source": "synthetic",
+        "split": "distractor"
+      },
+      {
+        "memory_id": "distractor-7",
+        "canonical_id": "distractor-7",
+        "content": "Currently, Person00031 lives in Perth.",
+        "subject": "Person00031",
+        "relation": "city",
+        "event_order": 0.42075561724642097,
+        "importance": 0.21286567300908943,
+        "supersedes_id": null,
+        "source": "synthetic",
+        "split": "distractor"
+      },
+      {
+        "memory_id": "distractor-1177",
+        "canonical_id": "distractor-1177",
+        "content": "Currently, Person01201 lives in Kyoto.",
+        "subject": "Person01201",
+        "relation": "city",
+        "event_order": 0.8527205290978003,
+        "importance": 0.7722920596605699,
+        "supersedes_id": null,
+        "source": "synthetic",
+        "split": "distractor"
+      }
+    ]
+  },
+  {
+    "kind": "correct_rank1",
+    "case": "balanced-10000-11/full-1",
+    "query": "What is Person001's current city?",
+    "target": {
+      "subject": "Person001",
+      "relation": "city",
+      "importance": 0.5078412730622711,
+      "source": "synthetic",
+      "split": "test",
+      "memory_id": "current-1",
+      "canonical_id": "current-1",
+      "content": "Currently, Person001 lives in Perth.",
+      "event_order": 0.07692307692307693,
+      "supersedes_id": "old-1"
+    },
+    "retrieved": [
+      {
+        "subject": "Person001",
+        "relation": "city",
+        "importance": 0.5078412730622711,
+        "source": "synthetic",
+        "split": "test",
+        "memory_id": "current-1",
+        "canonical_id": "current-1",
+        "content": "Currently, Person001 lives in Perth.",
+        "event_order": 0.07692307692307693,
+        "supersedes_id": "old-1"
+      },
+      {
+        "memory_id": "distractor-277",
+        "canonical_id": "distractor-277",
+        "content": "Currently, Person00301 lives in Perth.",
+        "subject": "Person00301",
+        "relation": "city",
+        "event_order": 0.7237920436287394,
+        "importance": 0.3316584635291733,
+        "supersedes_id": null,
+        "source": "synthetic",
+        "split": "distractor"
+      },
+      {
+        "memory_id": "distractor-7",
+        "canonical_id": "distractor-7",
+        "content": "Currently, Person00031 lives in Perth.",
+        "subject": "Person00031",
+        "relation": "city",
+        "event_order": 0.42075561724642097,
+        "importance": 0.21286567300908943,
+        "supersedes_id": null,
+        "source": "synthetic",
+        "split": "distractor"
+      },
+      {
+        "memory_id": "distractor-2977",
+        "canonical_id": "distractor-2977",
+        "content": "Currently, Person03001 lives in Oslo.",
+        "subject": "Person03001",
+        "relation": "city",
+        "event_order": 0.10931588603922648,
+        "importance": 0.5445327900857534,
+        "supersedes_id": null,
+        "source": "synthetic",
+        "split": "distractor"
+      },
+      {
+        "memory_id": "distractor-967",
+        "canonical_id": "distractor-967",
+        "content": "Currently, Person00991 lives in Lisbon.",
+        "subject": "Person00991",
+        "relation": "city",
+        "event_order": 0.5906215653230047,
+        "importance": 0.6766708117629688,
+        "supersedes_id": null,
+        "source": "synthetic",
+        "split": "distractor"
+      }
+    ]
+  },
+  {
+    "kind": "obsolete_rank1",
+    "case": "balanced-10000-11/full-1",
+    "query": "Find the latest programming language for Person002.",
+    "target": {
+      "subject": "Person002",
+      "relation": "language",
+      "importance": 0.8039003127210486,
+      "source": "synthetic",
+      "split": "test",
+      "memory_id": "current-2",
+      "canonical_id": "current-2",
+      "content": "Currently, Person002 uses Rust for programming.",
+      "event_order": 0.11538461538461539,
+      "supersedes_id": "old-2"
+    },
+    "retrieved": [
+      {
+        "subject": "Person002",
+        "relation": "language",
+        "importance": 0.8039003127210486,
+        "source": "synthetic",
+        "split": "test",
+        "memory_id": "old-2",
+        "canonical_id": "old-2",
+        "content": "Previously, Person002 uses Python for programming.",
+        "event_order": 0.10038461538461539,
+        "supersedes_id": null
+      },
+      {
+        "memory_id": "distractor-2018",
+        "canonical_id": "distractor-2018",
+        "content": "Currently, Person02042 uses Python for programming.",
+        "subject": "Person02042",
+        "relation": "language",
+        "event_order": 0.6451478744631661,
+        "importance": 0.7190322939901241,
+        "supersedes_id": null,
+        "source": "synthetic",
+        "split": "distractor"
+      },
+      {
+        "memory_id": "distractor-2006",
+        "canonical_id": "distractor-2006",
+        "content": "Currently, Person02030 uses Python for programming.",
+        "subject": "Person02030",
+        "relation": "language",
+        "event_order": 0.38440167032321393,
+        "importance": 0.5259619269286409,
+        "supersedes_id": null,
+        "source": "synthetic",
+        "split": "distractor"
+      },
+      {
+        "memory_id": "distractor-2258",
+        "canonical_id": "distractor-2258",
+        "content": "Currently, Person02282 uses Python for programming.",
+        "subject": "Person02282",
+        "relation": "language",
+        "event_order": 0.8857994713151846,
+        "importance": 0.7338021062089596,
+        "supersedes_id": null,
+        "source": "synthetic",
+        "split": "distractor"
+      },
+      {
+        "memory_id": "distractor-2198",
+        "canonical_id": "distractor-2198",
+        "content": "Currently, Person02222 uses Python for programming.",
+        "subject": "Person02222",
+        "relation": "language",
+        "event_order": 0.23755703046626608,
+        "importance": 0.5677784431350215,
+        "supersedes_id": null,
+        "source": "synthetic",
+        "split": "distractor"
+      }
+    ]
+  },
+  {
+    "kind": "obsolete_rank1",
+    "case": "balanced-10000-11/full-1",
+    "query": "How does Person003 commute now?",
+    "target": {
+      "subject": "Person003",
+      "relation": "transport",
+      "importance": 0.6139588340593641,
+      "source": "synthetic",
+      "split": "test",
+      "memory_id": "current-3",
+      "canonical_id": "current-3",
+      "content": "Currently, Person003 commutes using a scooter.",
+      "event_order": 0.15384615384615385,
+      "supersedes_id": "old-3"
+    },
+    "retrieved": [
+      {
+        "subject": "Person003",
+        "relation": "transport",
+        "importance": 0.6139588340593641,
+        "source": "synthetic",
+        "split": "test",
+        "memory_id": "old-3",
+        "canonical_id": "old-3",
+        "content": "Previously, Person003 commutes using a bus.",
+        "event_order": 0.13884615384615384,
+        "supersedes_id": null
+      },
+      {
+        "subject": "Person003",
+        "relation": "transport",
+        "importance": 0.6139588340593641,
+        "source": "synthetic",
+        "split": "test",
+        "memory_id": "current-3",
+        "canonical_id": "current-3",
+        "content": "Currently, Person003 commutes using a scooter.",
+        "event_order": 0.15384615384615385,
+        "supersedes_id": "old-3"
+      },
+      {
+        "memory_id": "distractor-9",
+        "canonical_id": "distractor-9",
+        "content": "Currently, Person00033 commutes using a bus.",
+        "subject": "Person00033",
+        "relation": "transport",
+        "event_order": 0.9979037186865889,
+        "importance": 0.019630709370301758,
+        "supersedes_id": null,
+        "source": "synthetic",
+        "split": "distractor"
+      },
+      {
+        "memory_id": "distractor-3309",
+        "canonical_id": "distractor-3309",
+        "content": "Currently, Person03333 commutes using a bus.",
+        "subject": "Person03333",
+        "relation": "transport",
+        "event_order": 0.26337911723438046,
+        "importance": 0.8211329763308675,
+        "supersedes_id": null,
+        "source": "synthetic",
+        "split": "distractor"
+      },
+      {
+        "memory_id": "distractor-3009",
+        "canonical_id": "distractor-3009",
+        "content": "Currently, Person03033 commutes using a bicycle.",
+        "subject": "Person03033",
+        "relation": "transport",
+        "event_order": 0.2389492626198968,
+        "importance": 0.325056909305121,
+        "supersedes_id": null,
+        "source": "synthetic",
+        "split": "distractor"
+      }
+    ]
+  },
+  {
+    "kind": "correct_below_rank1",
+    "case": "balanced-10000-11/full-1",
+    "query": "Find the latest commuting method for Person009.",
+    "target": {
+      "subject": "Person009",
+      "relation": "transport",
+      "importance": 0.03565278045988274,
+      "source": "synthetic",
+      "split": "test",
+      "memory_id": "current-9",
+      "canonical_id": "current-9",
+      "content": "Currently, Person009 commutes using a bicycle.",
+      "event_order": 0.38461538461538464,
+      "supersedes_id": "old-9"
+    },
+    "retrieved": [
+      {
+        "memory_id": "distractor-8985",
+        "canonical_id": "distractor-8985",
+        "content": "Currently, Person09009 commutes using a train.",
+        "subject": "Person09009",
+        "relation": "transport",
+        "event_order": 0.9203881712391943,
+        "importance": 0.7731108873001031,
+        "supersedes_id": null,
+        "source": "synthetic",
+        "split": "distractor"
+      },
+      {
+        "memory_id": "distractor-975",
+        "canonical_id": "distractor-975",
+        "content": "Currently, Person00999 commutes using a train.",
+        "subject": "Person00999",
+        "relation": "transport",
+        "event_order": 0.5422704953634754,
+        "importance": 0.26280702798584377,
+        "supersedes_id": null,
+        "source": "synthetic",
+        "split": "distractor"
+      },
+      {
+        "subject": "Person009",
+        "relation": "transport",
+        "importance": 0.03565278045988274,
+        "source": "synthetic",
+        "split": "test",
+        "memory_id": "current-9",
+        "canonical_id": "current-9",
+        "content": "Currently, Person009 commutes using a bicycle.",
+        "event_order": 0.38461538461538464,
+        "supersedes_id": "old-9"
+      },
+      {
+        "subject": "Person009",
+        "relation": "transport",
+        "importance": 0.03565278045988274,
+        "source": "synthetic",
+        "split": "test",
+        "memory_id": "old-9",
+        "canonical_id": "old-9",
+        "content": "Previously, Person009 commutes using a scooter.",
+        "event_order": 0.3696153846153846,
+        "supersedes_id": null
+      },
+      {
+        "memory_id": "distractor-75",
+        "canonical_id": "distractor-75",
+        "content": "Currently, Person00099 commutes using a bus.",
+        "subject": "Person00099",
+        "relation": "transport",
+        "event_order": 0.5396891288258997,
+        "importance": 0.9468187952073137,
+        "supersedes_id": null,
+        "source": "synthetic",
+        "split": "distractor"
+      }
+    ]
+  },
+  {
+    "kind": "correct_below_rank1",
+    "case": "balanced-10000-11/full-1",
+    "query": "What is Person016's current favorite beverage?",
+    "target": {
+      "subject": "Person016",
+      "relation": "drink",
+      "importance": 0.2539947428947479,
+      "source": "synthetic",
+      "split": "test",
+      "memory_id": "current-16",
+      "canonical_id": "current-16",
+      "content": "Currently, Person016 prefers green tea as a drink.",
+      "event_order": 0.6538461538461539,
+      "supersedes_id": "old-16"
+    },
+    "retrieved": [
+      {
+        "memory_id": "distractor-1642",
+        "canonical_id": "distractor-1642",
+        "content": "Currently, Person01666 prefers coffee as a drink.",
+        "subject": "Person01666",
+        "relation": "drink",
+        "event_order": 0.7505411896572102,
+        "importance": 0.09576956923730728,
+        "supersedes_id": null,
+        "source": "synthetic",
+        "split": "distractor"
+      },
+      {
+        "subject": "Person016",
+        "relation": "drink",
+        "importance": 0.2539947428947479,
+        "source": "synthetic",
+        "split": "test",
+        "memory_id": "duplicate-16",
+        "canonical_id": "current-16",
+        "content": "Currently, Person016 prefers green tea as a drink.",
+        "event_order": 0.6548461538461539,
+        "supersedes_id": null
+      },
+      {
+        "subject": "Person016",
+        "relation": "drink",
+        "importance": 0.2539947428947479,
+        "source": "synthetic",
+        "split": "test",
+        "memory_id": "current-16",
+        "canonical_id": "current-16",
+        "content": "Currently, Person016 prefers green tea as a drink.",
+        "event_order": 0.6538461538461539,
+        "supersedes_id": "old-16"
+      },
+      {
+        "memory_id": "distractor-1582",
+        "canonical_id": "distractor-1582",
+        "content": "Currently, Person01606 prefers coffee as a drink.",
+        "subject": "Person01606",
+        "relation": "drink",
+        "event_order": 0.5054045440835471,
+        "importance": 0.5066773463916353,
+        "supersedes_id": null,
+        "source": "synthetic",
+        "split": "distractor"
+      },
+      {
+        "memory_id": "distractor-1342",
+        "canonical_id": "distractor-1342",
+        "content": "Currently, Person01366 prefers coffee as a drink.",
+        "subject": "Person01366",
+        "relation": "drink",
+        "event_order": 0.3268804402106419,
+        "importance": 0.6844611544423103,
+        "supersedes_id": null,
+        "source": "synthetic",
+        "split": "distractor"
+      }
+    ]
+  },
+  {
+    "kind": "retained_but_not_top5",
+    "case": "balanced-10000-11/full-1",
+    "query": "What is Person020's current coding language?",
+    "target": {
+      "subject": "Person020",
+      "relation": "language",
+      "importance": 0.9580423833198135,
+      "source": "synthetic",
+      "split": "test",
+      "memory_id": "current-20",
+      "canonical_id": "current-20",
+      "content": "Currently, Person020 uses Julia for programming.",
+      "event_order": 0.8076923076923077,
+      "supersedes_id": "old-20"
+    },
+    "retrieved": [
+      {
+        "memory_id": "distractor-2006",
+        "canonical_id": "distractor-2006",
+        "content": "Currently, Person02030 uses Python for programming.",
+        "subject": "Person02030",
+        "relation": "language",
+        "event_order": 0.38440167032321393,
+        "importance": 0.5259619269286409,
+        "supersedes_id": null,
+        "source": "synthetic",
+        "split": "distractor"
+      },
+      {
+        "subject": "Person020",
+        "relation": "language",
+        "importance": 0.9580423833198135,
+        "source": "synthetic",
+        "split": "test",
+        "memory_id": "old-20",
+        "canonical_id": "old-20",
+        "content": "Previously, Person020 uses Python for programming.",
+        "event_order": 0.7926923076923077,
+        "supersedes_id": null
+      },
+      {
+        "memory_id": "distractor-2018",
+        "canonical_id": "distractor-2018",
+        "content": "Currently, Person02042 uses Python for programming.",
+        "subject": "Person02042",
+        "relation": "language",
+        "event_order": 0.6451478744631661,
+        "importance": 0.7190322939901241,
+        "supersedes_id": null,
+        "source": "synthetic",
+        "split": "distractor"
+      },
+      {
+        "memory_id": "distractor-1982",
+        "canonical_id": "distractor-1982",
+        "content": "Currently, Person02006 uses Python for programming.",
+        "subject": "Person02006",
+        "relation": "language",
+        "event_order": 0.4356152530016777,
+        "importance": 0.020611151129585004,
+        "supersedes_id": null,
+        "source": "synthetic",
+        "split": "distractor"
+      },
+      {
+        "memory_id": "distractor-2678",
+        "canonical_id": "distractor-2678",
+        "content": "Currently, Person02702 uses Python for programming.",
+        "subject": "Person02702",
+        "relation": "language",
+        "event_order": 0.06800972615872469,
+        "importance": 0.7665785209076182,
+        "supersedes_id": null,
+        "source": "synthetic",
+        "split": "distractor"
+      }
+    ]
+  },
+  {
+    "kind": "target_pruned",
+    "case": "balanced-10000-11/recency-0.5",
+    "query": "Where does Person001 live now?",
+    "target": {
+      "subject": "Person001",
+      "relation": "city",
+      "importance": 0.5078412730622711,
+      "source": "synthetic",
+      "split": "test",
+      "memory_id": "current-1",
+      "canonical_id": "current-1",
+      "content": "Currently, Person001 lives in Perth.",
+      "event_order": 0.07692307692307693,
+      "supersedes_id": "old-1"
+    },
+    "retrieved": [
+      {
+        "memory_id": "distractor-277",
+        "canonical_id": "distractor-277",
+        "content": "Currently, Person00301 lives in Perth.",
+        "subject": "Person00301",
+        "relation": "city",
+        "event_order": 0.7237920436287394,
+        "importance": 0.3316584635291733,
+        "supersedes_id": null,
+        "source": "synthetic",
+        "split": "distractor"
+      },
+      {
+        "memory_id": "distractor-1177",
+        "canonical_id": "distractor-1177",
+        "content": "Currently, Person01201 lives in Kyoto.",
+        "subject": "Person01201",
+        "relation": "city",
+        "event_order": 0.8527205290978003,
+        "importance": 0.7722920596605699,
+        "supersedes_id": null,
+        "source": "synthetic",
+        "split": "distractor"
+      },
+      {
+        "memory_id": "distractor-187",
+        "canonical_id": "distractor-187",
+        "content": "Currently, Person00211 lives in Kyoto.",
+        "subject": "Person00211",
+        "relation": "city",
+        "event_order": 0.9518957007598954,
+        "importance": 0.5021490751186076,
+        "supersedes_id": null,
+        "source": "synthetic",
+        "split": "distractor"
+      },
+      {
+        "memory_id": "distractor-1777",
+        "canonical_id": "distractor-1777",
+        "content": "Currently, Person01801 lives in Kyoto.",
+        "subject": "Person01801",
+        "relation": "city",
+        "event_order": 0.6481029012874987,
+        "importance": 0.5908964236311469,
+        "supersedes_id": null,
+        "source": "synthetic",
+        "split": "distractor"
+      },
+      {
+        "memory_id": "distractor-91",
+        "canonical_id": "distractor-91",
+        "content": "Currently, Person00115 lives in Perth.",
+        "subject": "Person00115",
+        "relation": "city",
+        "event_order": 0.9457473969454969,
+        "importance": 0.4925812973003919,
+        "supersedes_id": null,
+        "source": "synthetic",
+        "split": "distractor"
+      }
+    ]
+  },
+  {
+    "kind": "target_pruned",
+    "case": "balanced-10000-11/recency-0.5",
+    "query": "What is Person001's current city?",
+    "target": {
+      "subject": "Person001",
+      "relation": "city",
+      "importance": 0.5078412730622711,
+      "source": "synthetic",
+      "split": "test",
+      "memory_id": "current-1",
+      "canonical_id": "current-1",
+      "content": "Currently, Person001 lives in Perth.",
+      "event_order": 0.07692307692307693,
+      "supersedes_id": "old-1"
+    },
+    "retrieved": [
+      {
+        "memory_id": "distractor-277",
+        "canonical_id": "distractor-277",
+        "content": "Currently, Person00301 lives in Perth.",
+        "subject": "Person00301",
+        "relation": "city",
+        "event_order": 0.7237920436287394,
+        "importance": 0.3316584635291733,
+        "supersedes_id": null,
+        "source": "synthetic",
+        "split": "distractor"
+      },
+      {
+        "memory_id": "distractor-967",
+        "canonical_id": "distractor-967",
+        "content": "Currently, Person00991 lives in Lisbon.",
+        "subject": "Person00991",
+        "relation": "city",
+        "event_order": 0.5906215653230047,
+        "importance": 0.6766708117629688,
+        "supersedes_id": null,
+        "source": "synthetic",
+        "split": "distractor"
+      },
+      {
+        "memory_id": "distractor-1177",
+        "canonical_id": "distractor-1177",
+        "content": "Currently, Person01201 lives in Kyoto.",
+        "subject": "Person01201",
+        "relation": "city",
+        "event_order": 0.8527205290978003,
+        "importance": 0.7722920596605699,
+        "supersedes_id": null,
+        "source": "synthetic",
+        "split": "distractor"
+      },
+      {
+        "memory_id": "distractor-127",
+        "canonical_id": "distractor-127",
+        "content": "Currently, Person00151 lives in Lisbon.",
+        "subject": "Person00151",
+        "relation": "city",
+        "event_order": 0.5027854442491133,
+        "importance": 0.6856826307844301,
+        "supersedes_id": null,
+        "source": "synthetic",
+        "split": "distractor"
+      },
+      {
+        "memory_id": "distractor-877",
+        "canonical_id": "distractor-877",
+        "content": "Currently, Person00901 lives in Lisbon.",
+        "subject": "Person00901",
+        "relation": "city",
+        "event_order": 0.7879645484689469,
+        "importance": 0.8867207201657271,
+        "supersedes_id": null,
+        "source": "synthetic",
+        "split": "distractor"
+      }
+    ]
+  },
+  {
+    "kind": "retained_but_not_top5",
+    "case": "balanced-10000-22/full-1",
+    "query": "Find the latest project assignment for Person005.",
+    "target": {
+      "subject": "Person005",
+      "relation": "project",
+      "importance": 0.8835852000746155,
+      "source": "synthetic",
+      "split": "test",
+      "memory_id": "current-5",
+      "canonical_id": "current-5",
+      "content": "Currently, Person005 works on project Delta.",
+      "event_order": 0.23076923076923078,
+      "supersedes_id": "old-5"
+    },
+    "retrieved": [
+      {
+        "memory_id": "distractor-131",
+        "canonical_id": "distractor-131",
+        "content": "Currently, Person00155 works on project Atlas.",
+        "subject": "Person00155",
+        "relation": "project",
+        "event_order": 0.5833982339984833,
+        "importance": 0.8344247235703461,
+        "supersedes_id": null,
+        "source": "synthetic",
+        "split": "distractor"
+      },
+      {
+        "memory_id": "distractor-5831",
+        "canonical_id": "distractor-5831",
+        "content": "Currently, Person05855 works on project Cedar.",
+        "subject": "Person05855",
+        "relation": "project",
+        "event_order": 0.6621793298826613,
+        "importance": 0.8965796745081377,
+        "supersedes_id": null,
+        "source": "synthetic",
+        "split": "distractor"
+      },
+      {
+        "memory_id": "distractor-5231",
+        "canonical_id": "distractor-5231",
+        "content": "Currently, Person05255 works on project Atlas.",
+        "subject": "Person05255",
+        "relation": "project",
+        "event_order": 0.6259033378357092,
+        "importance": 0.644462966718343,
+        "supersedes_id": null,
+        "source": "synthetic",
+        "split": "distractor"
+      },
+      {
+        "memory_id": "distractor-5027",
+        "canonical_id": "distractor-5027",
+        "content": "Currently, Person05051 works on project Atlas.",
+        "subject": "Person05051",
+        "relation": "project",
+        "event_order": 0.7149189326501585,
+        "importance": 0.005769633356653592,
+        "supersedes_id": null,
+        "source": "synthetic",
+        "split": "distractor"
+      },
+      {
+        "memory_id": "distractor-5021",
+        "canonical_id": "distractor-5021",
+        "content": "Currently, Person05045 works on project Atlas.",
+        "subject": "Person05045",
+        "relation": "project",
+        "event_order": 0.06939005877956783,
+        "importance": 0.887157685403894,
+        "supersedes_id": null,
+        "source": "synthetic",
+        "split": "distractor"
+      }
+    ]
+  }
+]

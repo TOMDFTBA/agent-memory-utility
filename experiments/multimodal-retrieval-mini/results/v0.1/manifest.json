@@ -1,0 +1,159 @@
+{
+  "pages": [
+    {
+      "page_id": "v1-p1",
+      "source_pdf": "VisRAG-v1-arXiv-2410.10594.pdf",
+      "page_number": 1,
+      "source_pdf_sha256": "1b952e416611b4e0d076ace1d94d74730585409cc53c405db0e6fe9da9d16269",
+      "image_path": "examples/v1-p1.png",
+      "native_text_path": "examples/v1-p1.txt",
+      "ocr_text_path": "examples/v1-p1.ocr.txt",
+      "ocr_tsv_path": "examples/v1-p1.ocr.tsv",
+      "artifact_sha256": {
+        "image_path": "b26c3505b963011b719fc55f9d0640c1338bc78949922a23f7d2260f5286cf29",
+        "native_text_path": "e7d3e9edb4285de841fe7387ddcd27f2f3a6abac2a93eda19b5e7f7f44f087b2",
+        "ocr_text_path": "fee0cf48f8ffff9bb4f98acd0c7947fbfcacb724e945de33aac2e4986b793ea9",
+        "ocr_tsv_path": "046e86de8339b2ad80def4c9644672e6d65e7edc868eb800ab3018a36e08c283"
+      }
+    },
+    {
+      "page_id": "v1-p2",
+      "source_pdf": "VisRAG-v1-arXiv-2410.10594.pdf",
+      "page_number": 2,
+      "source_pdf_sha256": "1b952e416611b4e0d076ace1d94d74730585409cc53c405db0e6fe9da9d16269",
+      "image_path": "examples/v1-p2.png",
+      "native_text_path": "examples/v1-p2.txt",
+      "ocr_text_path": "examples/v1-p2.ocr.txt",
+      "ocr_tsv_path": "examples/v1-p2.ocr.tsv",
+      "artifact_sha256": {
+        "image_path": "440aa769908fb91592dcfa7ac56bd7f2ead4f556cec8936b8e01afef4f67386a",
+        "native_text_path": "b2996a98ffa201b4d555e6300a4baf854f2706d5a3e2663da8e4a26958f1a45e",
+        "ocr_text_path": "279a105f37b77f2e72379eb81189dd9d38874862b6d34f084f6cae6d2b9c5ba9",
+        "ocr_tsv_path": "13c043fbb901515c60ca8667018dea99ce6cde72e4cc25b713cef5e6768b7038"
+      }
+    },
+    {
+      "page_id": "v1-p4",
+      "source_pdf": "VisRAG-v1-arXiv-2410.10594.pdf",
+      "page_number": 4,
+      "source_pdf_sha256": "1b952e416611b4e0d076ace1d94d74730585409cc53c405db0e6fe9da9d16269",
+      "image_path": "examples/v1-p4.png",
+      "native_text_path": "examples/v1-p4.txt",
+      "ocr_text_path": "examples/v1-p4.ocr.txt",
+      "ocr_tsv_path": "examples/v1-p4.ocr.tsv",
+      "artifact_sha256": {
+        "image_path": "f868c3c5271a9bf6b45f1d469b8cefd52da74de71c33963fe1e5ed39719def27",
+        "native_text_path": "92dc09b614c6afdfc979ba51b2f20ec3863319f92d7369264c76622334b21e68",
+        "ocr_text_path": "9951087e824eefaea87e5f61c4372a4cb281e15f3b0025e4a3586deea6905f62",
+        "ocr_tsv_path": "e462cfd38d0513e72d79cde4bcb9838aff4dfc5e977766db93ff6bddfd32e413"
+      }
+    },
+    {
+      "page_id": "v1-p5",
+      "source_pdf": "VisRAG-v1-arXiv-2410.10594.pdf",
+      "page_number": 5,
+      "source_pdf_sha256": "1b952e416611b4e0d076ace1d94d74730585409cc53c405db0e6fe9da9d16269",
+      "image_path": "examples/v1-p5.png",
+      "native_text_path": "examples/v1-p5.txt",
+      "ocr_text_path": "examples/v1-p5.ocr.txt",
+      "ocr_tsv_path": "examples/v1-p5.ocr.tsv",
+      "artifact_sha256": {
+        "image_path": "02f1ef79b9385d4cd4a2270ddd54f50134f678c43b92ee62d4a131089bbca80d",
+        "native_text_path": "6ab9ff2c6665287b336ef6a44fcdcb7dab754439eff11b12dac4a88b54a02c93",
+        "ocr_text_path": "3406270e92ebd1977391d52b02b54c3babb5aef4a4af3b2e38513cb5fa3eefb8",
+        "ocr_tsv_path": "1773d68cc2978df11137c8d6c58fa1d29d70ed988341a148149ffbb62f82584e"
+      }
+    },
+    {
+      "page_id": "v1-p6",
+      "source_pdf": "VisRAG-v1-arXiv-2410.10594.pdf",
+      "page_number": 6,
+      "source_pdf_sha256": "1b952e416611b4e0d076ace1d94d74730585409cc53c405db0e6fe9da9d16269",
+      "image_path": "examples/v1-p6.png",
+      "native_text_path": "examples/v1-p6.txt",
+      "ocr_text_path": "examples/v1-p6.ocr.txt",
+      "ocr_tsv_path": "examples/v1-p6.ocr.tsv",
+      "artifact_sha256": {
+        "image_path": "04101aebf36d3a3ea38ef340f4913845f0f468b6931f09201e653e794a5c6ef4",
+        "native_text_path": "9233c5d9c56692ce8eb23cc63fecf37a62360b853aa263147683b7a78c1b4fa1",
+        "ocr_text_path": "a8ba173474388a84e94ae1c3033af984c5e09426b8705b69606276b13c773d8b",
+        "ocr_tsv_path": "a786345871c63580c6f3b908e34f8ee54c84d2d489c2ddbb41d6a65e39507684"
+      }
+    },
+    {
+      "page_id": "v2-p1",
+      "source_pdf": "VisRAG-v2-arXiv-2510.09733.pdf",
+      "page_number": 1,
+      "source_pdf_sha256": "a586b567074536529b389a2d654b31305eae3e4c183f062575f34d3c009eef3a",
+      "image_path": "examples/v2-p1.png",
+      "native_text_path": "examples/v2-p1.txt",
+      "ocr_text_path": "examples/v2-p1.ocr.txt",
+      "ocr_tsv_path": "examples/v2-p1.ocr.tsv",
+      "artifact_sha256": {
+        "image_path": "73a9bd06a5cc1e8120f2f2180d866f421e007dfc74177ede8a24bc9032343f4f",
+        "native_text_path": "9c46da0a552db070b11ddadf6f34f8779fc6cebd336d44f6cca4941b401b033a",
+        "ocr_text_path": "c26060d797a280f6635b201694fa286c0bff20e8a0e4b5722d91aa5688ef7282",
+        "ocr_tsv_path": "c018c807c22b13036629d1518b473b45743251c2d8e3dfb3aa8cf200891bff76"
+      }
+    },
+    {
+      "page_id": "v2-p2",
+      "source_pdf": "VisRAG-v2-arXiv-2510.09733.pdf",
+      "page_number": 2,
+      "source_pdf_sha256": "a586b567074536529b389a2d654b31305eae3e4c183f062575f34d3c009eef3a",
+      "image_path": "examples/v2-p2.png",
+      "native_text_path": "examples/v2-p2.txt",
+      "ocr_text_path": "examples/v2-p2.ocr.txt",
+      "ocr_tsv_path": "examples/v2-p2.ocr.tsv",
+      "artifact_sha256": {
+        "image_path": "7eb0f6a6302045713dbd9771bde0e8817ca7876020543b6e0d0ad428d507a86e",
+        "native_text_path": "9b1c44c882f9bb0433bae9629746eef2bf6f82d96359d08c1a4bae89deae90d1",
+        "ocr_text_path": "0e2e07fabe568a49313e8c987294d588e4e90b7305c2436f95b317674a635ca0",
+        "ocr_tsv_path": "8bad789503a54e247d42f543179b1efc52a9c03a53ab559035c59ef5912f5d37"
+      }
+    },
+    {
+      "page_id": "v2-p3",
+      "source_pdf": "VisRAG-v2-arXiv-2510.09733.pdf",
+      "page_number": 3,
+      "source_pdf_sha256": "a586b567074536529b389a2d654b31305eae3e4c183f062575f34d3c009eef3a",
+      "image_path": "examples/v2-p3.png",
+      "native_text_path": "examples/v2-p3.txt",
+      "ocr_text_path": "examples/v2-p3.ocr.txt",
+      "ocr_tsv_path": "examples/v2-p3.ocr.tsv",
+      "artifact_sha256": {
+        "image_path": "aca86283240af79171e3d88aea1bb197d1d1fca3dfb2b7a42ad1fd8070dcd410",
+        "native_text_path": "a1939ba3f8e47bc93cf29d93787137491579b7fcad52208d74532f428bfba72f",
+        "ocr_text_path": "ed28573a8b4ad91c146dab2216e4afe1ab80ca3f1db7ceda2e913836e1d46052",
+        "ocr_tsv_path": "1e12bb2e8200218e30942d43bf9883197a65a95cb13f7541feaa3a04d7b3a765"
+      }
+    }
+  ],
+  "queries": [
+    {
+      "query_id": "q1",
+      "query": "Find the diagram comparing the TextRAG pipeline on the left with the VisRAG pipeline on the right.",
+      "target_page_id": "v1-p4"
+    },
+    {
+      "query_id": "q2",
+      "query": "Find the bar chart comparing TextRAG and VisRAG accuracy using MiniCPM-V and GPT-4o generators.",
+      "target_page_id": "v1-p2"
+    },
+    {
+      "query_id": "q3",
+      "query": "Find the example comparing Japan and Spain population, with sports news interest at 35 percent.",
+      "target_page_id": "v2-p2"
+    },
+    {
+      "query_id": "q4",
+      "query": "Which page defines position-weighted mean pooling for the retrieval embedding?",
+      "target_page_id": "v1-p4"
+    },
+    {
+      "query_id": "q5",
+      "query": "Find the equations for per-image evidence recording and answer reasoning in EVisRAG.",
+      "target_page_id": "v2-p3"
+    }
+  ]
+}

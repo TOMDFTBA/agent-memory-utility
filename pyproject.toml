@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-memory-utility"
+version = "0.1.0"
+description = "Reproducible experiments from persistent agent-memory retrieval to downstream utility and retention"
+authors = [{name = "Qixuan Zhong"}]
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.11"
+classifiers = [
+  "License :: OSI Approved :: Apache Software License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+]
+dependencies = ["numpy>=1.26,<3", "faiss-cpu==1.15.0", "PyYAML>=6,<7"]
+
+[project.urls]
+Repository = "https://github.com/TOMDFTBA/agent-memory-utility"
+Documentation = "https://github.com/TOMDFTBA/agent-memory-utility#readme"
+
+[project.optional-dependencies]
+models = ["transformers==4.51.3", "sentencepiece>=0.2,<0.3", "safetensors>=0.4"]
+mcp = ["fastmcp==3.4.4"]
+experiments = ["matplotlib>=3.8,<4", "Pillow>=10,<13"]
+test = ["pytest>=8,<10"]
+
+[project.scripts]
+longmem = "longmem.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

@@ -1,0 +1,29 @@
+[
+  {
+    "kind": "wording_improves",
+    "case_id": "11:Person002:language:0",
+    "query": "Which programming language does Person002 use now?",
+    "gold": "Rust",
+    "keep": "Rust",
+    "strip": "UNKNOWN.",
+    "top5": "Rust."
+  },
+  {
+    "kind": "wording_equal",
+    "case_id": "11:Person001:city:0",
+    "query": "Where does Person001 live now?",
+    "gold": "Perth",
+    "keep": "Perth.",
+    "strip": "Perth.",
+    "top5": "Perth."
+  },
+  {
+    "kind": "remaining_retrieval_error",
+    "case_id": "22:Person005:project:0",
+    "query": "Which project does Person005 work on now?",
+    "gold": "Delta",
+    "keep": "Delta.",
+    "strip": "UNKNOWN",
+    "top5": "Atlas."
+  }
+]

@@ -1,0 +1,5 @@
+store_dir: data/test-memory
+embedding:
+  backend: hash-test
+generation:
+  backend: evidence-test

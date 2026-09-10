@@ -1,0 +1,17 @@
+store_dir: data/memory
+
+embedding:
+  backend: minicpm
+  model_path: /path/to/MiniCPM-Embedding
+  device: cuda  # ROCm-enabled PyTorch also exposes AMD GPUs through "cuda".
+  max_length: 512
+  batch_size: 8
+  query_prefix: 'Query: '
+  revision: dc0f82b4466b254dddc25787bf7b1cbc28f755b0
+
+generation:
+  backend: transformers
+  model_path: /path/to/MiniCPM-2B-SFT
+  device: cuda
+  max_new_tokens: 128
+  max_input_tokens: 2048

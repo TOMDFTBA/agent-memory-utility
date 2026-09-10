@@ -1,0 +1,24 @@
+{
+  "threshold": 0.9,
+  "seed": 77,
+  "size": 500,
+  "split": "dev",
+  "objective": "mean equivalent-fact Recall@5 across budgets",
+  "trials": [
+    {
+      "threshold": 0.9,
+      "dev_recall5": 0.611111111111111,
+      "representatives": 98
+    },
+    {
+      "threshold": 0.95,
+      "dev_recall5": 0.5,
+      "representatives": 298
+    },
+    {
+      "threshold": 0.98,
+      "dev_recall5": 0.4444444444444444,
+      "representatives": 473
+    }
+  ]
+}

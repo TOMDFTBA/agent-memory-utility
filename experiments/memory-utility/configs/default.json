@@ -1,0 +1,11 @@
+{
+  "seeds": [11, 22, 33],
+  "scenario": "balanced",
+  "size": 10000,
+  "query_variant": "0",
+  "policies": ["full-1", "semantic_dedup-0.5"],
+  "top_k": [1, 3, 5],
+  "max_new_tokens": 24,
+  "max_input_tokens": 2048,
+  "sampling": "All test subjects, first query variant; no outcome-based selection"
+}

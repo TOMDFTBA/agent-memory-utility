@@ -1,0 +1,145 @@
+{
+  "wording_keep_minus_strip": {
+    "n": 54,
+    "mean_difference": 0.2962962962962963,
+    "improved": 16,
+    "worsened": 0,
+    "unchanged": 38
+  },
+  "protocol_comparisons": [
+    {
+      "condition": "no_memory",
+      "old_condition": "no_memory",
+      "old_em": 0,
+      "new_em": 0,
+      "n": 54,
+      "mean_difference": 0,
+      "improved": 0,
+      "worsened": 0,
+      "unchanged": 54
+    },
+    {
+      "condition": "relevant",
+      "old_condition": "relevant",
+      "old_em": 1,
+      "new_em": 1,
+      "n": 54,
+      "mean_difference": 0,
+      "improved": 0,
+      "worsened": 0,
+      "unchanged": 54
+    },
+    {
+      "condition": "irrelevant",
+      "old_condition": "irrelevant",
+      "old_em": 0.24074074074074073,
+      "new_em": 0.24074074074074073,
+      "n": 54,
+      "mean_difference": 0,
+      "improved": 0,
+      "worsened": 0,
+      "unchanged": 54
+    },
+    {
+      "condition": "conflicting",
+      "old_condition": "conflicting",
+      "old_em": 1,
+      "new_em": 1,
+      "n": 54,
+      "mean_difference": 0,
+      "improved": 0,
+      "worsened": 0,
+      "unchanged": 54
+    },
+    {
+      "condition": "consolidation_keep_temporal_cue",
+      "old_condition": "relevant",
+      "old_em": 1,
+      "new_em": 1,
+      "n": 54,
+      "mean_difference": 0,
+      "improved": 0,
+      "worsened": 0,
+      "unchanged": 54
+    },
+    {
+      "condition": "consolidation_strip_temporal_cue",
+      "old_condition": "consolidation_strip_temporal_cue",
+      "old_em": 0.35185185185185186,
+      "new_em": 0.7037037037037037,
+      "n": 54,
+      "mean_difference": 0.35185185185185186,
+      "improved": 19,
+      "worsened": 0,
+      "unchanged": 35
+    },
+    {
+      "condition": "retrieved:full-1:k1",
+      "old_condition": "retrieved:full-1:k1",
+      "old_em": 0.6296296296296297,
+      "new_em": 0.6296296296296297,
+      "n": 54,
+      "mean_difference": 0,
+      "improved": 0,
+      "worsened": 0,
+      "unchanged": 54
+    },
+    {
+      "condition": "retrieved:full-1:k3",
+      "old_condition": "retrieved:full-1:k3",
+      "old_em": 0.8888888888888888,
+      "new_em": 1,
+      "n": 54,
+      "mean_difference": 0.1111111111111111,
+      "improved": 6,
+      "worsened": 0,
+      "unchanged": 48
+    },
+    {
+      "condition": "retrieved:full-1:k5",
+      "old_condition": "retrieved:full-1:k5",
+      "old_em": 0.9444444444444444,
+      "new_em": 0.9444444444444444,
+      "n": 54,
+      "mean_difference": 0,
+      "improved": 0,
+      "worsened": 0,
+      "unchanged": 54
+    },
+    {
+      "condition": "retrieved:semantic_dedup-0.5:k1",
+      "old_condition": "retrieved:semantic_dedup-0.5:k1",
+      "old_em": 0.2962962962962963,
+      "new_em": 0.2962962962962963,
+      "n": 54,
+      "mean_difference": 0,
+      "improved": 0,
+      "worsened": 0,
+      "unchanged": 54
+    },
+    {
+      "condition": "retrieved:semantic_dedup-0.5:k3",
+      "old_condition": "retrieved:semantic_dedup-0.5:k3",
+      "old_em": 0.5925925925925926,
+      "new_em": 0.6481481481481481,
+      "n": 54,
+      "mean_difference": 0.05555555555555555,
+      "improved": 3,
+      "worsened": 0,
+      "unchanged": 51
+    },
+    {
+      "condition": "retrieved:semantic_dedup-0.5:k5",
+      "old_condition": "retrieved:semantic_dedup-0.5:k5",
+      "old_em": 0.5740740740740741,
+      "new_em": 0.5740740740740741,
+      "n": 54,
+      "mean_difference": 0,
+      "improved": 0,
+      "worsened": 0,
+      "unchanged": 54
+    }
+  ],
+  "original_responses_sha256": "be76981402c50fcfe6814b606fe39471c1bea0010880543cb748fd359b8fbc8f",
+  "note": "Original test outcomes were already seen. Follow-up diagnosis, not a new untouched test set; no significance claim."
+}
