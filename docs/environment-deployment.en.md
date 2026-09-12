@@ -226,4 +226,4 @@ The only recorded source compatibility patch lives outside this repository in th
 - Performance numbers apply only to this host and software combination.
 - Upstream repositories and models retain their own licenses; this repository redistributes neither their source nor their weights.
 
-See [technical lineage](technical-lineage.md) for upstream versions and roles, and [project validation](validation.md) for project-level acceptance evidence. Both documents are currently in Chinese.
+See [technical lineage](technical-lineage.en.md) for upstream versions and roles, and [project validation](validation.en.md) for project-level acceptance evidence. Chinese versions remain available alongside both documents.

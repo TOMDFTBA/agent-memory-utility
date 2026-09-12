@@ -2,11 +2,31 @@
 
 [English](README.md) | 简体中文
 
-从检索走向保留：一个研究长期智能体记忆的存储、检索、利用和模态问题的可复现实验框架。
+从检索走向保留：一个可复现的实验框架，用于测量长期 Agent Memory 存了什么、检索到什么，以及模型真正利用了什么。
 
 长期运行的 Agent 会持续积累事实、回答和外部知识。本项目研究一个核心问题：在记忆不断增长时，系统如何可靠保存和检索历史证据，检索到的内容是否真正改善下游回答，以及哪些信息值得长期保留。
 
-> 当前版本：v0.1 research prototype。它完成了四阶段探索，但结果主要来自英文合成数据和单机实验，不是生产级 memory service，也不声称完整复现四个上游项目或其论文指标。
+## 研究路径
+
+```mermaid
+flowchart LR
+    A[Persistent memory<br/>写入、重放、恢复]
+    B[Retrieval under growth<br/>预算与保留基线]
+    C[Downstream utility<br/>检索证据是否真的有用]
+    D[Utility-aware retention<br/>v0.2 假设]
+    M[Multimodal case study<br/>视觉 vs 原生文本 vs OCR]
+
+    A --> B --> C --> D
+    B --> M
+```
+
+前三阶段将问题从可靠存储收窄到增长中的检索，再到可测量的回答效用。多模态分支检查“所有知识都先转成文本”是否总是合适的检索接口。它们共同导向 v0.2：在固定 memory/token budget 下，utility-aware retention 能否比 recency、importance 和 semantic deduplication 保留更多下游任务性能？
+
+## 关键发现
+
+- **记忆增长并未让全量检索失效，但保留策略影响明显。** 在 balanced 场景中，全量保留在 10,000 条记忆时仍有 0.949 Recall@5；50% 保留预算下，本次基线为 0.486–0.537。[结果与边界](experiments/memory-budget/results/v0.1/report.md)
+- **检索成功不等于回答成功。** 全量记忆 `k=3` 时 Recall 为 1.000，但 exact match 为 0.889，54 个样例中有 6 个 hit-but-wrong。[Memory-utility 报告](experiments/memory-utility/results/v0.1/report.md)
+- **表示形式改变了这组小样本的检索行为。** 指定页排第一的次数分别为视觉 5/5、原生文本 4/5、OCR 3/5。这只是 8 页文档的案例，不是通用模态排名。[多模态报告](experiments/multimodal-retrieval-mini/results/v0.1/report.md)
 
 ## v0.1 完成内容
 
@@ -16,25 +36,6 @@
 | Memory budget | 记忆增长和压缩如何影响检索？ | 100–10,000 条、三种子、三档预算的 300 组运行；报告 recall、延迟、索引大小及 retention baselines |
 | Memory utility | 检索命中是否等于有效利用？ | relevant/irrelevant/conflicting/consolidated 对照，以及 top-k hit-but-wrong 分析；暴露了时间措辞和输出协议的敏感性 |
 | Multimodal case study | 知识是否总应先转成文本？ | 8 页、5 问的视觉/原生文本/OCR 轻量对照；仅作为描述性案例，不证明视觉检索普遍更优 |
-
-这四阶段形成的研究链是：
-
-```text
-persistent storage → retrieval under growth → downstream utility → modality
-```
-
-v0.2 将收敛到一个可证伪假设：在固定 memory/token budget 下，utility-aware retention 能否比 recency、importance 和 semantic dedup 保留更多下游任务性能。
-
-## 结果入口
-
-- [系统架构与恢复机制](docs/architecture.md)
-- [第一阶段验收](docs/validation.md)
-- [Memory-budget 完整报告](experiments/memory-budget/results/v0.1/report.md)
-- [Memory-utility 完整报告](experiments/memory-utility/results/v0.1/report.md)
-- [Memory-utility 补充控制](experiments/memory-utility/controls/results/v0.1-test/report.md)
-- [Multimodal 三路对照](experiments/multimodal-retrieval-mini/results/v0.1/report.md)
-- [多模态方向判断](docs/multimodal-memory-relevance.md)
-- [实验命名与模块开发指南](docs/experiment-development-guide.md)
 
 ## 快速验证
 
@@ -48,6 +49,18 @@ python3 -m venv .venv
 ```
 
 `test` 模式不加载模型，只验证存储、MCP 和编排链路。确定性测试向量与 `[TEST ONLY]` 输出不能用于声明真实语义质量。
+
+## 结果与文档
+
+- [系统架构与恢复机制](docs/architecture.md) ([English](docs/architecture.en.md))
+- [第一阶段验收](docs/validation.md) ([English](docs/validation.en.md))
+- [Memory-budget 完整报告](experiments/memory-budget/results/v0.1/report.md) ([English](experiments/memory-budget/results/v0.1/report.en.md))
+- [Memory-utility 完整报告](experiments/memory-utility/results/v0.1/report.md) ([English](experiments/memory-utility/results/v0.1/report.en.md))
+- [Multimodal 三路对照](experiments/multimodal-retrieval-mini/results/v0.1/report.md) ([English](experiments/multimodal-retrieval-mini/results/v0.1/report.en.md))
+- [技术谱系与上游边界](docs/technical-lineage.md) ([English](docs/technical-lineage.en.md))
+- [Memory-utility 补充控制](experiments/memory-utility/controls/results/v0.1-test/report.md)
+- [多模态方向判断](docs/multimodal-memory-relevance.md)
+- [实验命名与模块开发指南](docs/experiment-development-guide.md)
 
 ## 真实模型与 AMD/ROCm
 

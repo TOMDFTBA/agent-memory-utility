@@ -2,11 +2,31 @@
 
 English | [简体中文](README.zh-CN.md)
 
-From retrieval to retention: a reproducible framework for studying storage, retrieval, utilization, and modality in long-horizon agent memory.
+**From retrieval to retention: a reproducible framework for measuring what long-horizon agent memory stores, retrieves, and actually uses.**
 
 Long-running agents continuously accumulate facts, answers, and external knowledge. This project asks how an agent can preserve and retrieve historical evidence as memory grows, whether retrieved evidence actually improves downstream answers, and which memories deserve long-term retention.
 
-> Current release: v0.1 research prototype. It completes a four-stage investigation using mostly English synthetic data and single-machine experiments. It is not a production memory service and does not claim full reproduction of the upstream projects or their paper results.
+## Research path
+
+```mermaid
+flowchart LR
+    A[Persistent memory<br/>write, replay, recover]
+    B[Retrieval under growth<br/>budget and retention baselines]
+    C[Downstream utility<br/>does retrieved evidence help?]
+    D[Utility-aware retention<br/>v0.2 hypothesis]
+    M[Multimodal case study<br/>visual vs native text vs OCR]
+
+    A --> B --> C --> D
+    B --> M
+```
+
+The first three stages narrow the problem from reliable storage to retrieval and then to measured answer utility. The multimodal branch tests whether converting every source to text is always an adequate retrieval interface. Together they motivate the next question: under a fixed memory/token budget, can utility-aware retention preserve more downstream task performance than recency, importance, and semantic deduplication?
+
+## Key findings
+
+- **Growth is manageable, but retention policy matters.** With all memories retained, Recall@5 remained 0.949 at 10,000 memories in the balanced scenario. At a 50% retention budget, the evaluated baselines reached 0.486–0.537 Recall@5. [Results and scope](experiments/memory-budget/results/v0.1/report.en.md)
+- **Retrieval success is not the same as answer success.** Full-memory retrieval at `k=3` reached 1.000 recall, yet exact match was 0.889, including 6 of 54 hit-but-wrong cases. [Utility report](experiments/memory-utility/results/v0.1/report.en.md)
+- **Representation changed retrieval behavior in the small multimodal study.** The designated page ranked first for 5/5 visual queries, 4/5 native-text queries, and 3/5 OCR queries. This is an eight-page case study, not a general modality ranking. [Multimodal report](experiments/multimodal-retrieval-mini/results/v0.1/report.en.md)
 
 ## What v0.1 delivers
 
@@ -16,24 +36,6 @@ Long-running agents continuously accumulate facts, answers, and external knowled
 | Memory budget | How do memory growth and compression affect retrieval? | 300 runs over 100–10,000 memories, three seeds, and three budget levels, reporting recall, latency, index size, and retention baselines |
 | Memory utility | Does retrieval success imply effective use? | Relevant, irrelevant, conflicting, and consolidated evidence controls plus top-k hit-but-wrong analysis, exposing sensitivity to temporal wording and output protocol |
 | Multimodal case study | Should knowledge always be converted to text first? | A visual/native-text/OCR comparison over eight pages and five queries; descriptive evidence only, not a claim of general visual superiority |
-
-The four stages form one research chain:
-
-```text
-persistent storage → retrieval under growth → downstream utility → modality
-```
-
-The intended v0.2 question is narrower and falsifiable: under a fixed memory/token budget, can utility-aware retention preserve more downstream task performance than recency, importance, and semantic deduplication?
-
-## Results
-
-- [System architecture and recovery mechanism](docs/architecture.md) — Chinese
-- [Stage 1 validation](docs/validation.md) — Chinese
-- [Memory-budget report](experiments/memory-budget/results/v0.1/report.md) — Chinese
-- [Memory-utility report](experiments/memory-utility/results/v0.1/report.md) — Chinese
-- [Memory-utility control study](experiments/memory-utility/controls/results/v0.1-test/report.md) — Chinese
-- [Multimodal comparison](experiments/multimodal-retrieval-mini/results/v0.1/report.md) — Chinese
-- [Experiment naming and module guide](docs/experiment-development-guide.md) — Chinese
 
 ## Quick verification
 
@@ -48,6 +50,16 @@ python3 -m venv .venv
 
 Test mode validates storage, MCP, and orchestration with deterministic test doubles. It does not load model weights, and its vectors and `[TEST ONLY]` outputs are not semantic-quality evidence.
 
+## Results and documentation
+
+- [System architecture and recovery model](docs/architecture.en.md) ([中文](docs/architecture.md))
+- [Stage 1 validation](docs/validation.en.md) ([中文](docs/validation.md))
+- [Memory-budget report](experiments/memory-budget/results/v0.1/report.en.md) ([中文](experiments/memory-budget/results/v0.1/report.md))
+- [Memory-utility report](experiments/memory-utility/results/v0.1/report.en.md) ([中文](experiments/memory-utility/results/v0.1/report.md))
+- [Multimodal comparison](experiments/multimodal-retrieval-mini/results/v0.1/report.en.md) ([中文](experiments/multimodal-retrieval-mini/results/v0.1/report.md))
+- [Technical lineage and upstream boundaries](docs/technical-lineage.en.md) ([中文](docs/technical-lineage.md))
+- [Experiment naming and module guide](docs/experiment-development-guide.md) — Chinese
+
 ## Real models and AMD/ROCm
 
 Copy the example configuration and point it to model directories outside this repository:
@@ -60,7 +72,7 @@ cp configs/local.example.yaml configs/local.yaml
 
 Real-model execution requires hardware-compatible PyTorch, MiniCPM-Embedding, and MiniCPM-2B-SFT installations. Models are loaded from local files; the runtime does not download weights automatically.
 
-The scoped UltraRAG, MiniCPM-Embedding, VisRAG, and RAG-DDR paths were validated on Radeon 8060S, ROCm 7.14, and PyTorch 2.10. The [AMD/ROCm deployment report](docs/environment-deployment.en.md) records exact coverage, compatibility changes, and exclusions; upstream revisions are listed in the [technical lineage](docs/technical-lineage.md), currently in Chinese.
+The scoped UltraRAG, MiniCPM-Embedding, VisRAG, and RAG-DDR paths were validated on Radeon 8060S, ROCm 7.14, and PyTorch 2.10. The [AMD/ROCm deployment report](docs/environment-deployment.en.md) records exact coverage, compatibility changes, and exclusions; upstream revisions are listed in the [technical lineage](docs/technical-lineage.en.md).
 
 ## Memory-store CLI
 
