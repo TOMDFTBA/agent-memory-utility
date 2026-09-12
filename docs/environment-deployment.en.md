@@ -79,7 +79,7 @@ The validated host used Python 3.13.5 with an explicit `--allow-unsupported-pyth
 | Stage | Main components | Environment source | Status | Entry point |
 |---|---|---|---|---|
 | 1. Persistent memory | JSONL, SQLite, FAISS CPU, FastMCP, UltraRAG CLI, MiniCPM embedding/SFT | Project `.venv`, system ROCm PyTorch, external models and UltraRAG checkout | PASS; full UltraRAG extras are PARTIAL | `pytest`, `demo.py --mode test/model` |
-| 2. Memory budget | MiniCPM-Embedding, FAISS CPU, NumPy, matplotlib, vector cache | Project `.venv`, system ROCm PyTorch, external embedding weights | PASS, 300 formal runs | `benchmark_v2.py` → verify/report/analyze |
+| 2. Memory budget | MiniCPM-Embedding, FAISS CPU, NumPy, matplotlib, vector cache | Project `.venv`, system ROCm PyTorch, external embedding weights | PASS, 300 formal runs | `benchmark.py` → verify/report/analyze |
 | 3. Memory utility | MiniCPM-2B-SFT, Transformers, SentencePiece, matplotlib | Project `.venv`, system ROCm PyTorch, external SFT base | PASS, 594 main responses and 648 control responses; RAG-DDR training NOT TESTED | `run_ablation.py`, `run_controls.py` |
 | 4. Multimodal case study | VisRAG-Ret, MiniCPM-Embedding, TorchVision, timm, Pillow, Poppler, Tesseract | Existing VisRAG `.venv`, system ROCm, OCR from project cache or PATH | PASS, three-way retrieval over 8 pages × 5 queries; generation and training NOT TESTED | `run_demo.py` → verify/analyze |
 
@@ -113,14 +113,14 @@ This stage trains no model. It runs embedding, retention policies, and FAISS CPU
 - The non-interactive matplotlib `Agg` backend.
 
 ```bash
-.venv/bin/python experiments/memory-budget/benchmark_v2.py \
-  --calibration-file experiments/memory-budget/configs/frozen-v2.json \
+.venv/bin/python experiments/memory-budget/benchmark.py \
+  --calibration-file experiments/memory-budget/configs/frozen-v0.1.json \
   --output experiments/memory-budget/results/new-full
 .venv/bin/python experiments/memory-budget/verify_results.py \
   experiments/memory-budget/results/new-full
-.venv/bin/python experiments/memory-budget/report_v2.py \
+.venv/bin/python experiments/memory-budget/report.py \
   experiments/memory-budget/results/new-full
-.venv/bin/python experiments/memory-budget/analyze_v2.py \
+.venv/bin/python experiments/memory-budget/analyze.py \
   experiments/memory-budget/results/new-full
 ```
 

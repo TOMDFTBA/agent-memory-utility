@@ -61,7 +61,7 @@ for ax in axes: ax.set_xlabel('Input memories');ax.grid(alpha=.2)
 axes[0].set_ylabel('FAISS-only P50 (ms)');axes[1].set_ylabel('FAISS index (MiB)');axes[0].legend(fontsize=8)
 fig.suptitle(label+' — balanced; full baseline vs 50% retained')
 fig.savefig(root/'cost-vs-size.png',dpi=170);plt.close(fig)
-lines=['# 第二阶段记忆预算实验 v2','',f'运行状态：{manifest["status"]}；后端：{manifest["backend"]}；{len(rows)} 组结果。',
+lines=['# 第二阶段：记忆预算实验 v0.1','',f'运行状态：{manifest["status"]}；后端：{manifest["backend"]}；{len(rows)} 组结果。',
        '', '主表：全量基线保留 100%，其他策略保留 50%。Recall 按等价事实计算；完整预算和精确 ID 指标见 summary.csv。', '',
        '| 场景 | 规模 | 策略 | R@1 | R@5 ± SD | MRR | P50 ms | P95 ms | 索引 MiB | tokens |',
        '|---|---:|---|---:|---:|---:|---:|---:|---:|---:|']

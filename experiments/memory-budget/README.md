@@ -16,15 +16,15 @@
 从项目根目录运行，每次指定新的输出目录。真实模型需要本机 GPU；不自动降级为 Hash。
 
 ```bash
-.venv/bin/python experiments/memory-budget/benchmark_v2.py \
-  --calibration-file experiments/memory-budget/configs/frozen-v2.json \
+.venv/bin/python experiments/memory-budget/benchmark.py \
+  --calibration-file experiments/memory-budget/configs/frozen-v0.1.json \
   --output experiments/memory-budget/results/new-full
 .venv/bin/python experiments/memory-budget/verify_results.py experiments/memory-budget/results/new-full
-.venv/bin/python experiments/memory-budget/report_v2.py experiments/memory-budget/results/new-full
-.venv/bin/python experiments/memory-budget/analyze_v2.py experiments/memory-budget/results/new-full
+.venv/bin/python experiments/memory-budget/report.py experiments/memory-budget/results/new-full
+.venv/bin/python experiments/memory-budget/analyze.py experiments/memory-budget/results/new-full
 ```
 
-首次重新校准可省略 `--calibration-file`，仅使用 seed=77 的开发查询；不能依据测试结果挑选阈值。现有 frozen-v2.json 来自小规模复验，阈值 0.90，并校验模型版本。更换模型应重新做开发集校准。
+首次重新校准可省略 `--calibration-file`，仅使用 seed=77 的开发查询；不能依据测试结果挑选阈值。现有 `frozen-v0.1.json` 来自小规模复验，阈值 0.90，并校验模型版本。更换模型应重新做开发集校准。
 
 默认规模 100/500/1,000/5,000/10,000，种子 11/22/33，计时重复 5 次。`--sizes 100 500` 运行先导；`--backend hash-test` 仅工程验证，不得使用真实模型的冻结阈值文件或宣称语义质量。依赖沿用项目虚拟环境，绘图额外使用 matplotlib。
 

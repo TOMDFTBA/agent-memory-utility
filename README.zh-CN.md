@@ -28,14 +28,14 @@ flowchart LR
 - **检索成功不等于回答成功。** 全量记忆 `k=3` 时 Recall 为 1.000，但 exact match 为 0.889，54 个样例中有 6 个 hit-but-wrong。[Memory-utility 报告](experiments/memory-utility/results/v0.1/report.md)
 - **表示形式改变了这组小样本的检索行为。** 指定页排第一的次数分别为视觉 5/5、原生文本 4/5、OCR 3/5。这只是 8 页文档的案例，不是通用模态排名。[多模态报告](experiments/multimodal-retrieval-mini/results/v0.1/report.md)
 
-## v0.1 完成内容
+## v0.1 交付物
 
-| 阶段 | 问题 | 交付与主要观察 |
-|---|---|---|
-| Persistent memory | 如何可靠写入、恢复并接入 RAG pipeline？ | JSONL 权威日志、SQLite 投影、FAISS 索引、CLI/MCP、UltraRAG-style pipeline；跨进程恢复与并发行为通过测试 |
-| Memory budget | 记忆增长和压缩如何影响检索？ | 100–10,000 条、三种子、三档预算的 300 组运行；报告 recall、延迟、索引大小及 retention baselines |
-| Memory utility | 检索命中是否等于有效利用？ | relevant/irrelevant/conflicting/consolidated 对照，以及 top-k hit-but-wrong 分析；暴露了时间措辞和输出协议的敏感性 |
-| Multimodal case study | 知识是否总应先转成文本？ | 8 页、5 问的视觉/原生文本/OCR 轻量对照；仅作为描述性案例，不证明视觉检索普遍更优 |
+| 阶段 | 可复现交付物 |
+|---|---|
+| Persistent memory | JSONL → SQLite/FAISS 记忆库、CLI/MCP、UltraRAG-style pipeline，以及恢复与并发测试 |
+| Memory budget | 300 组 MiniCPM 检索实验，覆盖召回、延迟、索引大小和保留策略 |
+| Memory utility | 594 个成对回答，包含 relevant、irrelevant、conflicting、consolidated 和 no-memory 对照 |
+| Multimodal case study | 8 页、5 问的视觉/原生文本/OCR 对照 |
 
 ## 快速验证
 
@@ -43,12 +43,15 @@ flowchart LR
 
 ```bash
 python3 -m venv .venv
-.venv/bin/python -m pip install -e '.[mcp,test]'
+.venv/bin/python -m pip install -e '.[mcp,test,quality]'
+.venv/bin/python -m ruff check src tests scripts integrations
 .venv/bin/python -m pytest -q
 .venv/bin/python scripts/demo.py --mode test
 ```
 
 `test` 模式不加载模型，只验证存储、MCP 和编排链路。确定性测试向量与 `[TEST ONLY]` 输出不能用于声明真实语义质量。
+
+Ruff 当前检查可复用 package、测试、脚本和集成层。正式运行后的冻结实验 runner 由源码 hash 验证，不在原地重新格式化。
 
 ## 结果与文档
 
@@ -60,7 +63,7 @@ python3 -m venv .venv
 - [技术谱系与上游边界](docs/technical-lineage.md) ([English](docs/technical-lineage.en.md))
 - [Memory-utility 补充控制](experiments/memory-utility/controls/results/v0.1-test/report.md)
 - [多模态方向判断](docs/multimodal-memory-relevance.md)
-- [实验命名与模块开发指南](docs/experiment-development-guide.md)
+- [实验命名与模块开发指南](docs/experiment-development-guide.md) ([English](docs/experiment-development-guide.en.md))
 
 ## 真实模型与 AMD/ROCm
 

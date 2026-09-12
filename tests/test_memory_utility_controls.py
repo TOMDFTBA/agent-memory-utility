@@ -7,8 +7,8 @@ import pytest
 
 HERE=Path(__file__).parents[1]/'experiments/memory-utility/controls'
 sys.path.insert(0,str(HERE))
-import control_common as c
-import run_controls as run
+import control_common as c  # noqa: E402
+import run_controls as run  # noqa: E402
 
 
 def test_protocol_boundary_never_searches_for_gold():
@@ -21,7 +21,8 @@ def test_protocol_boundary_never_searches_for_gold():
 
 
 def test_development_subjects_are_disjoint_and_wording_control_is_exact():
-    dev=c.read_jsonl(HERE/'dev.jsonl');test=c.read_jsonl(HERE/'test.jsonl')
+    dev=c.read_jsonl(HERE/'dev.jsonl')
+    test=c.read_jsonl(HERE/'test.jsonl')
     assert len(dev)==6 and len(test)==54
     assert {r['family'].split(':')[0] for r in dev}.isdisjoint(r['family'].split(':')[0] for r in test)
     for row in dev+test:
@@ -43,7 +44,8 @@ def test_frozen_protocol_is_selected_only_from_dev(tmp_path):
     target=tmp_path/'frozen.json'
     run.freeze(SimpleNamespace(output=out,frozen=target))
     assert json.loads(target.read_text())['protocol']=='chat_line'
-    manifest=json.loads((out/'manifest.json').read_text());manifest['identity']['stage']='test'
+    manifest=json.loads((out/'manifest.json').read_text())
+    manifest['identity']['stage']='test'
     (tmp_path/'manifest.json').write_text(json.dumps(manifest))
     with pytest.raises(ValueError,match='Only development'):
         run.freeze(SimpleNamespace(output=tmp_path,frozen=target))

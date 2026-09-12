@@ -79,7 +79,7 @@ cp configs/local.example.yaml configs/local.yaml
 | 阶段 | 主要组件 | 本机环境来源 | 验证状态 | 复验入口 |
 |---|---|---|---|---|
 | 1. Persistent memory | JSONL、SQLite、FAISS CPU、FastMCP、UltraRAG CLI、MiniCPM embedding/SFT | 项目 `.venv` 复用系统 ROCm PyTorch；外部模型与 UltraRAG checkout | PASS；全量 UltraRAG extras 为 PARTIAL | `pytest`、`demo.py --mode test/model` |
-| 2. Memory budget | MiniCPM-Embedding、FAISS CPU、NumPy、matplotlib、向量缓存 | 项目 `.venv`；系统 ROCm PyTorch；仓库外 embedding 权重 | PASS，300 组正式运行 | `benchmark_v2.py` → verify/report/analyze |
+| 2. Memory budget | MiniCPM-Embedding、FAISS CPU、NumPy、matplotlib、向量缓存 | 项目 `.venv`；系统 ROCm PyTorch；仓库外 embedding 权重 | PASS，300 组正式运行 | `benchmark.py` → verify/report/analyze |
 | 3. Memory utility | MiniCPM-2B-SFT、Transformers、SentencePiece、matplotlib | 项目 `.venv`；系统 ROCm PyTorch；仓库外 SFT 基座 | PASS，594 次主实验及 648 次补充控制；RAG-DDR 训练为 NOT TESTED | `run_ablation.py`、`run_controls.py` |
 | 4. Multimodal case study | VisRAG-Ret、MiniCPM-Embedding、TorchVision、timm、Pillow、Poppler、Tesseract | 复用 VisRAG 独立 `.venv` 和系统 ROCm；OCR 位于项目缓存或 PATH | PASS，8 页 × 5 问三路检索；生成与训练为 NOT TESTED | `run_demo.py` → verify/analyze |
 
@@ -115,14 +115,14 @@ cp configs/local.example.yaml configs/local.yaml
 - matplotlib 使用无界面的 `Agg` backend 生成报告图。
 
 ```bash
-.venv/bin/python experiments/memory-budget/benchmark_v2.py \
-  --calibration-file experiments/memory-budget/configs/frozen-v2.json \
+.venv/bin/python experiments/memory-budget/benchmark.py \
+  --calibration-file experiments/memory-budget/configs/frozen-v0.1.json \
   --output experiments/memory-budget/results/new-full
 .venv/bin/python experiments/memory-budget/verify_results.py \
   experiments/memory-budget/results/new-full
-.venv/bin/python experiments/memory-budget/report_v2.py \
+.venv/bin/python experiments/memory-budget/report.py \
   experiments/memory-budget/results/new-full
-.venv/bin/python experiments/memory-budget/analyze_v2.py \
+.venv/bin/python experiments/memory-budget/analyze.py \
   experiments/memory-budget/results/new-full
 ```
 

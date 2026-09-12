@@ -22,5 +22,5 @@
     }
   ],
   "embedding_version": "minicpm:06b484ecdf4dc07b3bbca4dcff99895b51beea5efd57a612a36107b1ca6b5e96",
-  "source": "results/v2-pilot/calibration.json"
+  "source": "development calibration, seed=77"
 }

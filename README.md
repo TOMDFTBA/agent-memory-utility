@@ -28,14 +28,14 @@ The first three stages narrow the problem from reliable storage to retrieval and
 - **Retrieval success is not the same as answer success.** Full-memory retrieval at `k=3` reached 1.000 recall, yet exact match was 0.889, including 6 of 54 hit-but-wrong cases. [Utility report](experiments/memory-utility/results/v0.1/report.en.md)
 - **Representation changed retrieval behavior in the small multimodal study.** The designated page ranked first for 5/5 visual queries, 4/5 native-text queries, and 3/5 OCR queries. This is an eight-page case study, not a general modality ranking. [Multimodal report](experiments/multimodal-retrieval-mini/results/v0.1/report.en.md)
 
-## What v0.1 delivers
+## v0.1 artifacts
 
-| Stage | Research question | Deliverable and main observation |
-|---|---|---|
-| Persistent memory | How can memory be written, recovered, and connected to a RAG pipeline reliably? | An authoritative JSONL log, SQLite projection, FAISS index, CLI/MCP interface, and UltraRAG-style pipeline, with tested cross-process recovery and concurrency behavior |
-| Memory budget | How do memory growth and compression affect retrieval? | 300 runs over 100–10,000 memories, three seeds, and three budget levels, reporting recall, latency, index size, and retention baselines |
-| Memory utility | Does retrieval success imply effective use? | Relevant, irrelevant, conflicting, and consolidated evidence controls plus top-k hit-but-wrong analysis, exposing sensitivity to temporal wording and output protocol |
-| Multimodal case study | Should knowledge always be converted to text first? | A visual/native-text/OCR comparison over eight pages and five queries; descriptive evidence only, not a claim of general visual superiority |
+| Stage | Reproducible artifact |
+|---|---|
+| Persistent memory | JSONL → SQLite/FAISS memory store, CLI/MCP interface, UltraRAG-style pipeline, and recovery/concurrency tests |
+| Memory budget | 300-run MiniCPM retrieval benchmark with recall, latency, index-size, and retention-policy results |
+| Memory utility | 594 paired answers with relevant, irrelevant, conflicting, consolidated, and no-memory controls |
+| Multimodal case study | Visual/native-text/OCR comparison over eight pages and five queries |
 
 ## Quick verification
 
@@ -43,12 +43,15 @@ Python 3.11 or 3.12 is recommended:
 
 ```bash
 python3 -m venv .venv
-.venv/bin/python -m pip install -e '.[mcp,test]'
+.venv/bin/python -m pip install -e '.[mcp,test,quality]'
+.venv/bin/python -m ruff check src tests scripts integrations
 .venv/bin/python -m pytest -q
 .venv/bin/python scripts/demo.py --mode test
 ```
 
 Test mode validates storage, MCP, and orchestration with deterministic test doubles. It does not load model weights, and its vectors and `[TEST ONLY]` outputs are not semantic-quality evidence.
+
+Ruff currently covers the reusable package, tests, scripts, and integration layer. Frozen experiment runners are validated by their recorded source hashes and are not reformatted in place after a formal run.
 
 ## Results and documentation
 
@@ -58,7 +61,7 @@ Test mode validates storage, MCP, and orchestration with deterministic test doub
 - [Memory-utility report](experiments/memory-utility/results/v0.1/report.en.md) ([中文](experiments/memory-utility/results/v0.1/report.md))
 - [Multimodal comparison](experiments/multimodal-retrieval-mini/results/v0.1/report.en.md) ([中文](experiments/multimodal-retrieval-mini/results/v0.1/report.md))
 - [Technical lineage and upstream boundaries](docs/technical-lineage.en.md) ([中文](docs/technical-lineage.md))
-- [Experiment naming and module guide](docs/experiment-development-guide.md) — Chinese
+- [Experiment naming and module guide](docs/experiment-development-guide.en.md) ([中文](docs/experiment-development-guide.md))
 
 ## Real models and AMD/ROCm
 
@@ -113,7 +116,7 @@ ultrarag run configs/ultrarag-memory.yaml
 - [Memory utility](experiments/memory-utility/README.md)
 - [Multimodal retrieval mini](experiments/multimodal-retrieval-mini/README.md)
 
-v0.1 completed a breaking schema consolidation and regenerated the formal results with real local models. Later experiments should use the shared configuration, I/O, and field contracts in the [experiment development guide](docs/experiment-development-guide.md).
+v0.1 completed a breaking schema consolidation and regenerated the formal results with real local models. Later experiments should use the shared configuration, I/O, and field contracts in the [experiment development guide](docs/experiment-development-guide.en.md).
 
 The repository includes source code, frozen configurations, aggregate reports, validation summaries, and figures. It excludes model weights, vector indexes, caches, raw large-scale runs, and machine-local audit records. Stage 4 paper screenshots and OCR derivatives are also excluded until redistribution rights are confirmed.
 

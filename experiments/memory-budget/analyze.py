@@ -1,4 +1,4 @@
-"""Generate evidence-backed observations and candidate cases for phase 3."""
+"""Generate evidence-backed observations and candidate cases for Stage 3."""
 import json
 import sys
 from pathlib import Path

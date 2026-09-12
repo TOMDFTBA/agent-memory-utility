@@ -7,8 +7,8 @@ import pytest
 HERE = Path(__file__).parents[1] / "experiments/memory-budget"
 sys.path.insert(0, str(HERE))
 
-from benchmark_v2 import ranking_metrics, semantic_order
-from generate_dataset import generate
+from benchmark import ranking_metrics, semantic_order  # noqa: E402
+from generate_dataset import generate  # noqa: E402
 
 
 def test_dataset_nested_scenarios_and_answer_equivalence():

@@ -1,4 +1,5 @@
 import importlib.util
+import json
 import sys
 from pathlib import Path
 
@@ -8,8 +9,9 @@ HERE=Path(__file__).parents[1]/'experiments/memory-utility'
 sys.path.insert(0,str(HERE))
 # Other experiment modules have identically named files; isolate this import.
 spec=importlib.util.spec_from_file_location('utility_dataset',HERE/'generate_dataset.py')
-utility=importlib.util.module_from_spec(spec);spec.loader.exec_module(utility)
-from score import score
+utility=importlib.util.module_from_spec(spec)
+spec.loader.exec_module(utility)
+from score import score  # noqa: E402
 
 
 def test_scoring_rejects_substring_and_negation():
@@ -30,7 +32,6 @@ def test_consolidation_uses_event_order_not_input_order():
 
 
 def test_frozen_cases_are_paired_and_recall_matches_evidence():
-    import json
     cases=[json.loads(s) for s in (HERE/'dataset.jsonl').read_text().splitlines()]
     assert len(cases)==54
     assert len({r['case_id'] for r in cases})==54
@@ -42,12 +43,12 @@ def test_frozen_cases_are_paired_and_recall_matches_evidence():
         assert r['target_canonical_id'] not in [m['canonical_id'] for m in r['conditions']['irrelevant']]
         for c, metrics in r['retrieval'].items():
             assert metrics['recall_at_k']==int(r['target_canonical_id'] in [m['canonical_id'] for m in r['conditions'][c]])
-            if metrics['recall_at_k']: assert metrics['target_fact_retained']
+            if metrics['recall_at_k']:
+                assert metrics['target_fact_retained']
 
 
 @pytest.mark.parametrize('damage', ['duplicate','score','missing'])
 def test_report_rejects_corrupt_outputs(tmp_path, damage):
-    import json
     import subprocess
     smoke=tmp_path/'smoke'
     subprocess.run([
@@ -55,10 +56,14 @@ def test_report_rejects_corrupt_outputs(tmp_path, damage):
         '--backend','test','--limit','1'
     ],check=True,capture_output=True,text=True)
     rows=[json.loads(s) for s in (smoke/'responses.jsonl').read_text().splitlines()]
-    if damage=='duplicate': rows.append(rows[0])
-    elif damage=='missing': rows.pop()
-    else: rows[0]['scores']['exact_match']=1
-    damaged=tmp_path/'damaged';damaged.mkdir()
+    if damage=='duplicate':
+        rows.append(rows[0])
+    elif damage=='missing':
+        rows.pop()
+    else:
+        rows[0]['scores']['exact_match']=1
+    damaged=tmp_path/'damaged'
+    damaged.mkdir()
     (damaged/'manifest.json').write_text((smoke/'manifest.json').read_text())
     (damaged/'responses.jsonl').write_text(''.join(json.dumps(r)+'\n' for r in rows))
     result=subprocess.run([sys.executable,str(HERE/'report.py'),str(damaged)],capture_output=True,text=True)
