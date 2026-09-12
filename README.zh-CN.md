@@ -4,9 +4,16 @@
 
 从检索走向保留：一个可复现的实验框架，用于测量长期 Agent Memory 存了什么、检索到什么，以及模型真正利用了什么。
 
-长期运行的 Agent 会持续积累事实、回答和外部知识。本项目研究一个核心问题：在记忆不断增长时，系统如何可靠保存和检索历史证据，检索到的内容是否真正改善下游回答，以及哪些信息值得长期保留。
+长期运行的 Agent 会持续积累事实、回答和外部知识。本项目将这种持续增长拆解为一组可以验证的研究问题。
 
 ## 研究路径
+
+v0.1 研究四个问题：
+
+1. 长期记忆能否被可靠地存储和恢复？
+2. 随着记忆增长，检索质量和成本会如何变化？
+3. 成功检索到的记忆是否真的改善了下游回答？
+4. 文本是否总是可检索记忆的合适表示形式？
 
 ```mermaid
 flowchart LR
@@ -20,7 +27,7 @@ flowchart LR
     B --> M
 ```
 
-前三阶段将问题从可靠存储收窄到增长中的检索，再到可测量的回答效用。多模态分支检查“所有知识都先转成文本”是否总是合适的检索接口。它们共同导向 v0.2：在固定 memory/token budget 下，utility-aware retention 能否比 recency、importance 和 semantic deduplication 保留更多下游任务性能？
+这些结果共同导向 v0.2：在固定 memory/token budget 下，utility-aware retention 能否比 recency、importance 和 semantic deduplication 保留更多下游任务性能？
 
 ## 关键发现
 

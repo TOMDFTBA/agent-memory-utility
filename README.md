@@ -4,9 +4,16 @@ English | [简体中文](README.zh-CN.md)
 
 **From retrieval to retention: a reproducible framework for measuring what long-horizon agent memory stores, retrieves, and actually uses.**
 
-Long-running agents continuously accumulate facts, answers, and external knowledge. This project asks how an agent can preserve and retrieve historical evidence as memory grows, whether retrieved evidence actually improves downstream answers, and which memories deserve long-term retention.
+Long-running agents continuously accumulate facts, answers, and external knowledge. This project turns that growth into a sequence of testable research questions.
 
 ## Research path
+
+v0.1 investigates four questions:
+
+1. Can long-term memory be stored and recovered reliably?
+2. What happens to retrieval quality and cost as memory grows?
+3. Does successfully retrieved memory actually improve downstream answers?
+4. Is text always the right representation for retrievable memory?
 
 ```mermaid
 flowchart LR
@@ -20,7 +27,7 @@ flowchart LR
     B --> M
 ```
 
-The first three stages narrow the problem from reliable storage to retrieval and then to measured answer utility. The multimodal branch tests whether converting every source to text is always an adequate retrieval interface. Together they motivate the next question: under a fixed memory/token budget, can utility-aware retention preserve more downstream task performance than recency, importance, and semantic deduplication?
+Together, these results motivate v0.2: under a fixed memory/token budget, can utility-aware retention preserve more downstream task performance than recency, importance, and semantic deduplication?
 
 ## Key findings
 
