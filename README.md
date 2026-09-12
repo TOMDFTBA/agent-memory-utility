@@ -134,7 +134,7 @@ The repository includes source code, frozen configurations, aggregate reports, v
 
 Original code and documentation in this repository are licensed under the [Apache License 2.0](LICENSE).
 
-This repository does not vendor the four upstream projects and does not redistribute their model weights, datasets, or paper artifacts. Those assets and third-party components remain subject to their respective licenses and terms. Apache-2.0 licensing of this repository does not grant rights to separately obtained upstream assets. See [technical lineage](docs/technical-lineage.md) for the recorded boundaries.
+This repository does not vendor the four upstream projects and does not redistribute their model weights, datasets, or paper artifacts. Those assets and third-party components remain subject to their respective licenses and terms. Apache-2.0 licensing of this repository does not grant rights to separately obtained upstream assets. See [technical lineage](docs/technical-lineage.en.md) for the recorded boundaries.
 
 ## Author and citation
 
@@ -142,4 +142,4 @@ Qixuan Zhong (钟启轩) — [GitHub: TOMDFTBA](https://github.com/TOMDFTBA) —
 
 Citation metadata is available in [`CITATION.cff`](CITATION.cff).
 
-Remaining release actions are tracked in the [v0.1 release checklist](docs/release-checklist.md).
+Release validation details are recorded in the [v0.1 release checklist](docs/release-checklist.md).

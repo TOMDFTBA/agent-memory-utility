@@ -146,4 +146,4 @@ v0.1 已完成一次破坏性 schema 收敛并用真实模型重新生成正式�
 
 机器可读的引用信息见 [`CITATION.cff`](CITATION.cff)。
 
-发布前剩余的人工决策与步骤见 [v0.1 发布检查清单](docs/release-checklist.md)。本仓库自有代码和文档采用 Apache License 2.0；上游模型、数据集、论文材料及第三方代码仍分别受其自身许可证约束。
+发布验证详情记录于 [v0.1 发布检查清单](docs/release-checklist.md)。本仓库自有代码和文档采用 Apache License 2.0；上游模型、数据集、论文材料及第三方代码仍分别受其自身许可证约束。
