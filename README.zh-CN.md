@@ -69,6 +69,7 @@ Ruff 当前检查可复用 package、测试、脚本和集成层。正式运行�
 - [Multimodal 三路对照](experiments/multimodal-retrieval-mini/results/v0.1/report.md) ([English](experiments/multimodal-retrieval-mini/results/v0.1/report.en.md))
 - [技术谱系与上游边界](docs/technical-lineage.md) ([English](docs/technical-lineage.en.md))
 - [v0.1 四阶段实施日志](docs/v0.1-four-stage-implementation-log.md)
+- [v0.2 四阶段实施计划](docs/v0.2-four-stage-implementation-plan.md)
 - [Memory-utility 补充控制](experiments/memory-utility/controls/results/v0.1-test/report.md)
 - [多模态方向判断](docs/multimodal-memory-relevance.md)
 - [实验命名与模块开发指南](docs/experiment-development-guide.md) ([English](docs/experiment-development-guide.en.md))
