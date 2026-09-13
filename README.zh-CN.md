@@ -44,6 +44,10 @@ flowchart LR
 | Memory utility | 594 个成对回答，包含 relevant、irrelevant、conflicting、consolidated 和 no-memory 对照 |
 | Multimodal case study | 8 页、5 问的视觉/原生文本/OCR 对照 |
 
+## v0.1 收尾研究：DeepNote
+
+[DeepNote](studies/deepnote/README.md) 将检索片段连接到问题条件化的证据笔记。固定源码分析和两项确定性控制流程检查覆盖接受、拒绝和累计失败停止。本项不新增模型效果结论或编号阶段。[方法笔记](docs/paper-notes/deepnote.md)
+
 ## 快速验证
 
 推荐使用 Python 3.11 或 3.12：

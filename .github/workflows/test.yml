@@ -16,7 +16,7 @@ jobs:
       - name: Install quality tools
         run: python -m pip install -e '.[quality]'
       - name: Run Ruff
-        run: python -m ruff check src tests scripts integrations
+        run: python -m ruff check src tests scripts integrations studies
 
   test:
     runs-on: ubuntu-latest

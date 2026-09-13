@@ -24,3 +24,7 @@ UltraRAG was installed with `--no-deps` to avoid CUDA, Milvus, corpus-parsing, a
 In the tested checkout, `python -m ultrarag.client` executes the synchronous `main()` and then attempts to pass its result to `asyncio.run`. The installed `ultrarag` console script was therefore used instead.
 
 For exact AMD/ROCm coverage and the one recorded local source-compatibility patch, see the [environment deployment report](environment-deployment.en.md).
+
+## v0.1 closing study
+
+[DeepNote](../studies/deepnote/README.en.md) is a pinned thunlp source study of query-conditioned evidence organization. Two no-model control probes passed; adaptive retrieval quality, training, and persistent retention remain untested. The checkout stays outside the repository.

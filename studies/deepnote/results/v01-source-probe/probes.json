@@ -1,0 +1,30 @@
+{
+  "probes": [
+    {
+      "probe_id": "cumulative_failures",
+      "comparison_results": [
+        false,
+        true,
+        false
+      ],
+      "final_note": "note-2",
+      "refinement_rounds": 3,
+      "retrieval_calls": 4,
+      "passed": true
+    },
+    {
+      "probe_id": "keep_initial_on_failure",
+      "comparison_results": [
+        false,
+        false
+      ],
+      "final_note": "note-0",
+      "refinement_rounds": 2,
+      "retrieval_calls": 3,
+      "passed": true
+    }
+  ],
+  "execution": "upstream AST control function with deterministic stub retrieval/model calls",
+  "model_calls": 0,
+  "interpretation": "Control-flow checks only; no note quality or QA claim"
+}

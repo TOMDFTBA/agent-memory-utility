@@ -209,3 +209,7 @@ from longmem.experiment_io import (
 - [ ] 输出目录不覆盖既有运行
 - [ ] manifest 从 RUNNING 转为 COMPLETE 前完成验证
 - [ ] 报告明确数据、模型、硬件和统计边界
+
+## 方法研究
+
+补充研究实现进入 `memory_studies`，`studies/run.py` 仅为 CLI。manifest 使用 `longmem-study-v1`、`study_id` 与 `probe_id`，研究名称不作为 retention policy。复用 longmem I/O 与 hash，按各 study 实际依赖显式列出源码，避免绑定无关模块。新运行使用新输出目录，不改写历史 manifest。

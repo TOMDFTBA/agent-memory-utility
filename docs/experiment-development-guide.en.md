@@ -211,3 +211,7 @@ Any change to a formal runner must write to a new output directory and rerun the
 - [ ] Never overwrite an existing run directory.
 - [ ] Complete validation before changing the manifest from `RUNNING` to `COMPLETE`.
 - [ ] State dataset, model, hardware, and statistical boundaries in the report.
+
+## Method studies
+
+Use `memory_studies` for shared study implementation and `studies/run.py` as the CLI. Study manifests use `longmem-study-v1`, `study_id`, and `probe_id`; study names are not retention policies. Reuse longmem I/O and hashing. List each study's actual source dependencies explicitly rather than hashing unrelated modules. New runs use new output directories; never rewrite historical manifests.

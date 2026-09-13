@@ -44,6 +44,10 @@ Together, these results motivate v0.2: under a fixed memory/token budget, can ut
 | Memory utility | 594 paired answers with relevant, irrelevant, conflicting, consolidated, and no-memory controls |
 | Multimodal case study | Visual/native-text/OCR comparison over eight pages and five queries |
 
+## v0.1 closing study: DeepNote
+
+[DeepNote](studies/deepnote/README.en.md) connects retrieved fragments to query-conditioned evidence notes. Pinned source review and two deterministic control-flow probes cover acceptance, rejection, and cumulative failure stopping. This adds no model-quality result or numbered stage. [Method note](docs/paper-notes/deepnote.en.md)
+
 ## Quick verification
 
 Python 3.11 or 3.12 is recommended:

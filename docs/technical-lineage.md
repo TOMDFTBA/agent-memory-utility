@@ -23,3 +23,7 @@ UltraRAG 声明 Python >=3.11,<3.13；本机 3.13.5 使用显式 `--ignore-requi
 UltraRAG 以 `--no-deps` 安装，避免拉入 CUDA、Milvus、语料解析等本阶段未使用的组件。因此 `pip check` 会报告未安装的上游可选使用路径依赖。继承的系统包也有 FastAPI/Starlette 等冲突，本项目没有启用这些 Web UI 路径；不能把当前环境声称为通过全量依赖一致性检查。
 
 UltraRAG 的 `python -m ultrarag.client` 在本地版本中会在实际执行后再次对同步 `main()` 调用 `asyncio.run` 而报错，因此使用安装生成的 `ultrarag` console script。
+
+## v0.1 收尾研究
+
+[DeepNote](../studies/deepnote/README.md) 是固定 thunlp 源码的问题条件化证据组织研究。两项无模型控制检查通过；自适应检索质量、训练和持久保留尚未验证。上游 checkout 保留在仓库之外。
