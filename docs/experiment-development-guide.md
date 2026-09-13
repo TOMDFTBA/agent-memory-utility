@@ -248,17 +248,20 @@ E1 数据构造、报告和诊断实现进入 utility_retention package，顶层
 
 ## 方法与系统补充的命名
 
-studies 使用独立的 memory_studies package、longmem-study-v1 envelope、study_id 和 probe_id。研究名称不是 retention policy；上游 captureStrategy 也不直接映射为 E3 candidate。派生表示或内容变换在新协议中分别用 representation / transformation 描述，不向冻结 E1 condition 混入新含义。参见 [DeepNote](../studies/deepnote/README.md)。
+studies 使用独立的 memory_studies package、longmem-study-v1 envelope、study_id 和 probe_id。研究名称不是 retention policy；上游 captureStrategy 也不直接映射为 E3 candidate。派生表示或内容变换在新协议中分别用 representation / transformation 描述，不向冻结 E1 condition 混入新含义。参见 [studies](../studies/README.md)。
 
 ## 跨版本正文与术语
 
+正文按 v0.1 Stage 1–4、v0.2 E1–E4 标识阶段。DeepNote 是 v0.1 收尾，PilotDeck 是 v0.2 收尾，不增设 E5。软件元数据 `0.2.0` 不代表已发布；推送与标签发布完成前称“v0.2 发布候选”。
 
 | 概念 | 统一含义 |
 |---|---|
 | `U(m,q;M)` | 固定检索器、生成器、prompt 与 read budget 下，删除 memory 并重新检索生成的单任务得分差 |
 | Future retention value | `V_t` 是未来任务分布上的期望贡献；有限 future window 的平均 LOO 是经验估计，不是 memory 内在价值。决策特征只使用 t 时刻可见历史 |
 | Storage budget / read budget | 分别为保留容量上限与检索后读取容量上限；实际使用 tokens 单独报告，不与上限混称 |
+| 预算单位 | v0.1 条数、v0.2 序列化 tokens、PilotDeck 字符或文件数量限制分别说明；比例必须说明分母，不能直接跨单位比较 |
 | 冻结标签 | E1 `value`、E2 `target.value`、E3/E4 `loo_value` 按 artifact 映射，不原地改名 |
+| Study 标识 | 正文 DeepNote / PilotDeck；`study_id` 为 `deepnote` / `pilotdeck-memory`；Python 标识符使用下划线 |
 | 证据类型 | 源码分析、无模型控制/纯函数检查、真实模型实验分别报告；检查通过不代表模型 baseline 获益 |
 
 `candidate` 标识候选方法或模型，`intervention` 标识诊断干预；保留历史 `condition` 的版本语义。`representation` / `transformation` 仅用于未来协议设计。新 backend 值使用下划线，读取时兼容连字符，冻结配置保留原拼写。schema 版本与软件版本分别演进。

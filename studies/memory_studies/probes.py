@@ -1,5 +1,8 @@
 """No-model probes of pinned upstream functions; no training or platform launch."""
 import ast
+import json
+from pathlib import Path
+import subprocess
 from types import SimpleNamespace
 
 
@@ -32,3 +35,9 @@ def deepnote(checkout):
                            refinement_rounds=len(result['query_log']), retrieval_calls=len(calls), passed=True))
     return dict(probes=probes, execution='upstream AST control function with deterministic stub retrieval/model calls',
                 model_calls=0, interpretation='Control-flow checks only; no note quality or QA claim')
+
+
+def pilotdeck(checkout):
+    script = Path(__file__).with_name('pilotdeck_probe.mjs')
+    process = subprocess.run(['node', str(script), str(checkout)], check=True, text=True, capture_output=True)
+    return json.loads(process.stdout)

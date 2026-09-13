@@ -8,11 +8,11 @@
 
 ## 研究路径
 
-v0.1 建立持久化、检索增长、回答效用和多模态案例的实验基底。当前发布候选 v0.2 研究：在不观察未来任务的条件下，历史信号能否帮助决定哪些记忆值得保留？
+v0.1 建立持久化、检索增长、回答效用和多模态案例的实验基底。当前版本 v0.2 研究：在不观察未来任务的条件下，历史信号能否帮助决定哪些记忆值得保留？
 
 ```mermaid
 flowchart LR
-    A[v0.1 基底<br/>存储、检索与回答效用] --> B[v0.2 发布候选<br/>未来价值预测与预算保留]
+    A[v0.1 基底<br/>存储、检索与回答效用] --> B[v0.2 当前版本<br/>未来价值预测与预算保留]
     B --> C[v0.3 下一问题<br/>替代证据与集合条件化价值]
 ```
 
@@ -41,7 +41,7 @@ flowchart LR
 
 ```bash
 python3 -m venv .venv
-.venv/bin/python -m pip install -e '.[mcp,test,quality]'
+.venv/bin/python -m pip install -e '.[mcp,test,quality,experiments]'
 .venv/bin/python -m ruff check src tests scripts integrations experiments/utility-retention --exclude "**/results/**"
 .venv/bin/python scripts/release_artifacts.py restore-results
 .venv/bin/python scripts/audit_v02.py
@@ -72,8 +72,9 @@ Ruff 检查公共代码、测试、脚本、集成层及 v0.2 活跃源码；归
 ## 版本收尾研究
 
 - [DeepNote 方法联系](docs/paper-notes/deepnote.md)：作为 v0.1 收尾，补充证据组织讨论，已完成源码与控制流程检查。
+- [PilotDeck memory study](studies/pilotdeck-memory/README.md)：接在 v0.2 E1–E4 之后收尾，补充捕获、抽取和整理流程讨论，附已有 E4 案例映射。
 
-该研究没有新增原版本的模型效果结论；完整平台、表示实验及预算 baseline 尚未执行。[DeepNote 研究](studies/deepnote/README.md)
+两项研究没有新增原版本的模型效果结论；完整平台、表示实验及预算 baseline 尚未执行。[范围与复用](studies/README.md)
 
 ## 真实模型与 AMD/ROCm
 

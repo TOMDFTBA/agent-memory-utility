@@ -30,13 +30,13 @@ query → retrieve → initial note
 | 最终回答 | gen_answer 读取 best_note，而非无条件读取最后一次修订 | 两次拒绝时保留 initial note |
 | provenance | 保存 ref_log、note_log、query_log | 不等于 note 内每个事实都有稳定引用 ID |
 
-本次只抽取并执行上游 retrieve_note 控制函数，检索、note 生成和比较器全部使用确定性 stub；没有导入其带 API/模型初始化的 CLI，也没有训练或生成真实答案。两项检查通过，记录见[源码检查](../../studies/deepnote/results/v01-source-probe/probes.json)。
+本次只抽取并执行上游 retrieve_note 控制函数，检索、note 生成和比较器全部使用确定性 stub；没有导入其带 API/模型初始化的 CLI，也没有训练或生成真实答案。两项检查通过，记录见[源码检查](../../studies/deepnote/results/source-probe/probes.json)。
 
 ## 与 v0.1/v0.2 的联系
 
 v0.1 已区分“检索到”与“回答正确”。DeepNote 提供的是中间证据组织的参考，不补写成 v0.1 已实现模块。v0.2 的 future retention 决策只能用过去信息；不能把看到未来测试 query 后生成的 note 作为该决策的历史输入。
 
-下一次独立实验可研究：固定检索结果后改变证据组织方式，能否减少检索命中但回答错误？这是待验证的假设。
+可在下一次独立实验中研究：对固定检索结果改变组织方式，能否改善 E4 中证据齐全但组合回答失败的情况？这是从现有结果导出的假设，尚未验证。
 
 ## 后续受控实验边界
 
@@ -48,7 +48,7 @@ v0.1 已区分“检索到”与“回答正确”。DeepNote 提供的是中间
 
 ## 命名与复用
 
-复用 longmem.config、longmem.generation、既有实验评分接口、longmem.experiment_io；检索结果和 memory_id 保持可回查。未来 note 是派生表示，记录 source_memory_ids，不覆盖原 memory_id 或原文本。如需 prompt 变体，使用独立组织接口，保留冻结实验实现。
+复用 longmem.config、longmem.generation、longmem.scoring、longmem.experiment_io；检索结果和 memory_id 保持可回查。未来 note 是派生表示，记录 source_memory_ids，不覆盖原 memory_id 或原文本。不复制 v0.2 Engine 或其预算选择器；如需 prompt 变体，使用独立组织接口，不修改冻结 Engine.answer。
 
 本次实现仅位于 studies/memory_studies，使用 longmem-study-v1 与 study_id，和正式实验的 experiment_id 分开。[执行入口与固定来源](../../studies/deepnote/README.md)。
 

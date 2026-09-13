@@ -1,0 +1,2548 @@
+{
+  "schema_version": "longmem-study-v1",
+  "study_id": "pilotdeck-memory",
+  "evidence_level": "existing_e4_case_handoff",
+  "pilotdeck_evaluated": false,
+  "selection": "first stable snapshot ID per cohort/scenario; no selection by largest gain",
+  "source_hashes": {
+    "experiments/utility-retention/results/e4-diagnostic-model/manifest.json": "aad45159e3f84e352c0c7ef506be46023b165fbcf75de972783690815e95f7b7",
+    "experiments/utility-retention/results/e4-diagnostic-model/dataset.json": "d0d266c489ee1d3c956dd6c47c4c11efe058b93f3364b601afbf12ece0dd8d11",
+    "experiments/utility-retention/results/e4-diagnostic-model/cohorts.json": "96b848a8b48a91db68dc9616d155f235f5d0e5657391b9dc2c11ff25190144b6",
+    "experiments/utility-retention/results/e4-diagnostic-model/subset-scores.json": "d9c1a1bfab7b05244dd4bc7b02e0b583d6fb957da87062b11a4c11acfaf3e37f"
+  },
+  "extractor_sha256": "96d7b6b9512d4b491a8f7acd209815e7583a924a8271c60241ae97e0f0f084d6",
+  "cases": [
+    {
+      "cohort": "e3_posthoc",
+      "scenario": "redundancy",
+      "snapshot": {
+        "trajectory_id": "t-e7365e01a300",
+        "user_id": "u-24505f24a3cb",
+        "snapshot_id": "s-0ffd5159ac64",
+        "split": "test",
+        "scenario": "redundancy",
+        "event_order": 30,
+        "memories": [
+          {
+            "memory_id": "m-aeb2d7ee7429",
+            "canonical_id": "f-bd82e273cece",
+            "leakage_group": "f-bd82e273cece",
+            "event_order": 2,
+            "content": "Use 284267 as the access code to open Locker-X2e3cf82e. This record was transcribed from the local register."
+          },
+          {
+            "memory_id": "m-19fa297e16ef",
+            "canonical_id": "f-1c702b972391",
+            "leakage_group": "f-1c702b972391",
+            "event_order": 3,
+            "content": "The maintenance ticket for Locker-X2e3cf82e is 21822."
+          },
+          {
+            "memory_id": "m-d72084674691",
+            "canonical_id": "f-c24f3e049aea",
+            "leakage_group": "f-c24f3e049aea",
+            "event_order": 8,
+            "content": "The inventory label for Locker-X2e3cf82e is 41182. The facilities clerk recorded this entry during a routine inventory review."
+          },
+          {
+            "memory_id": "m-5a6ed297191a",
+            "canonical_id": "f-bd82e273cece",
+            "leakage_group": "f-bd82e273cece",
+            "event_order": 11,
+            "content": "To open Locker-X2e3cf82e, enter the access code 284267. The facilities clerk recorded this entry during a routine inventory review."
+          }
+        ],
+        "history_queries": [
+          {
+            "query_id": "h-48d05ac39bf0",
+            "event_order": 20,
+            "text": "What is the inventory label for Locker-X2e3cf82e?"
+          },
+          {
+            "query_id": "h-608fbc6b488e",
+            "event_order": 21,
+            "text": "What is the inventory label for Locker-X2e3cf82e?"
+          },
+          {
+            "query_id": "h-dbbc109e44c9",
+            "event_order": 22,
+            "text": "What is the inventory label for Locker-X2e3cf82e?"
+          }
+        ],
+        "future_queries": [
+          {
+            "query_id": "q-505900fa4c1c",
+            "event_order": 31,
+            "text": "What is the six-digit access code for Locker-X2e3cf82e?",
+            "gold_answer": "284267",
+            "supporting_memory_sets": [
+              [
+                "m-aeb2d7ee7429"
+              ],
+              [
+                "m-5a6ed297191a"
+              ]
+            ]
+          },
+          {
+            "query_id": "q-457908e58552",
+            "event_order": 32,
+            "text": "Give the complete access code needed to open Locker-X2e3cf82e.",
+            "gold_answer": "284267",
+            "supporting_memory_sets": [
+              [
+                "m-aeb2d7ee7429"
+              ],
+              [
+                "m-5a6ed297191a"
+              ]
+            ]
+          }
+        ],
+        "diagnostic_metadata": {
+          "entity": "Locker-X2e3cf82e",
+          "prefix_memory_id": "m-aeb2d7ee7429",
+          "suffix_memory_id": "m-5a6ed297191a",
+          "frequent_memory_id": "m-5a6ed297191a",
+          "expected_history_count": 3
+        }
+      },
+      "subset_scores": [
+        {
+          "snapshot_id": "s-0ffd5159ac64",
+          "trajectory_id": "t-e7365e01a300",
+          "scenario": "redundancy",
+          "storage_ids": [],
+          "store_tokens": 0,
+          "metrics": {
+            "answer.exact_match": 0,
+            "answer.token_f1": 0.0
+          },
+          "query_response_keys": [
+            [
+              "s-0ffd5159ac64",
+              [],
+              "q-505900fa4c1c",
+              20260912
+            ],
+            [
+              "s-0ffd5159ac64",
+              [],
+              "q-457908e58552",
+              20260912
+            ]
+          ]
+        },
+        {
+          "snapshot_id": "s-0ffd5159ac64",
+          "trajectory_id": "t-e7365e01a300",
+          "scenario": "redundancy",
+          "storage_ids": [
+            "m-19fa297e16ef"
+          ],
+          "store_tokens": 47,
+          "metrics": {
+            "answer.exact_match": 0,
+            "answer.token_f1": 0.0
+          },
+          "query_response_keys": [
+            [
+              "s-0ffd5159ac64",
+              [
+                "m-19fa297e16ef"
+              ],
+              "q-505900fa4c1c",
+              20260912
+            ],
+            [
+              "s-0ffd5159ac64",
+              [
+                "m-19fa297e16ef"
+              ],
+              "q-457908e58552",
+              20260912
+            ]
+          ]
+        },
+        {
+          "snapshot_id": "s-0ffd5159ac64",
+          "trajectory_id": "t-e7365e01a300",
+          "scenario": "redundancy",
+          "storage_ids": [
+            "m-5a6ed297191a"
+          ],
+          "store_tokens": 63,
+          "metrics": {
+            "answer.exact_match": 1,
+            "answer.token_f1": 1.0
+          },
+          "query_response_keys": [
+            [
+              "s-0ffd5159ac64",
+              [
+                "m-5a6ed297191a"
+              ],
+              "q-505900fa4c1c",
+              20260912
+            ],
+            [
+              "s-0ffd5159ac64",
+              [
+                "m-5a6ed297191a"
+              ],
+              "q-457908e58552",
+              20260912
+            ]
+          ]
+        },
+        {
+          "snapshot_id": "s-0ffd5159ac64",
+          "trajectory_id": "t-e7365e01a300",
+          "scenario": "redundancy",
+          "storage_ids": [
+            "m-aeb2d7ee7429"
+          ],
+          "store_tokens": 59,
+          "metrics": {
+            "answer.exact_match": 1,
+            "answer.token_f1": 1.0
+          },
+          "query_response_keys": [
+            [
+              "s-0ffd5159ac64",
+              [
+                "m-aeb2d7ee7429"
+              ],
+              "q-505900fa4c1c",
+              20260912
+            ],
+            [
+              "s-0ffd5159ac64",
+              [
+                "m-aeb2d7ee7429"
+              ],
+              "q-457908e58552",
+              20260912
+            ]
+          ]
+        },
+        {
+          "snapshot_id": "s-0ffd5159ac64",
+          "trajectory_id": "t-e7365e01a300",
+          "scenario": "redundancy",
+          "storage_ids": [
+            "m-d72084674691"
+          ],
+          "store_tokens": 61,
+          "metrics": {
+            "answer.exact_match": 0,
+            "answer.token_f1": 0.0
+          },
+          "query_response_keys": [
+            [
+              "s-0ffd5159ac64",
+              [
+                "m-d72084674691"
+              ],
+              "q-505900fa4c1c",
+              20260912
+            ],
+            [
+              "s-0ffd5159ac64",
+              [
+                "m-d72084674691"
+              ],
+              "q-457908e58552",
+              20260912
+            ]
+          ]
+        },
+        {
+          "snapshot_id": "s-0ffd5159ac64",
+          "trajectory_id": "t-e7365e01a300",
+          "scenario": "redundancy",
+          "storage_ids": [
+            "m-19fa297e16ef",
+            "m-5a6ed297191a"
+          ],
+          "store_tokens": 110,
+          "metrics": {
+            "answer.exact_match": 1,
+            "answer.token_f1": 1.0
+          },
+          "query_response_keys": [
+            [
+              "s-0ffd5159ac64",
+              [
+                "m-19fa297e16ef",
+                "m-5a6ed297191a"
+              ],
+              "q-505900fa4c1c",
+              20260912
+            ],
+            [
+              "s-0ffd5159ac64",
+              [
+                "m-19fa297e16ef",
+                "m-5a6ed297191a"
+              ],
+              "q-457908e58552",
+              20260912
+            ]
+          ]
+        },
+        {
+          "snapshot_id": "s-0ffd5159ac64",
+          "trajectory_id": "t-e7365e01a300",
+          "scenario": "redundancy",
+          "storage_ids": [
+            "m-19fa297e16ef",
+            "m-aeb2d7ee7429"
+          ],
+          "store_tokens": 106,
+          "metrics": {
+            "answer.exact_match": 1,
+            "answer.token_f1": 1.0
+          },
+          "query_response_keys": [
+            [
+              "s-0ffd5159ac64",
+              [
+                "m-19fa297e16ef",
+                "m-aeb2d7ee7429"
+              ],
+              "q-505900fa4c1c",
+              20260912
+            ],
+            [
+              "s-0ffd5159ac64",
+              [
+                "m-19fa297e16ef",
+                "m-aeb2d7ee7429"
+              ],
+              "q-457908e58552",
+              20260912
+            ]
+          ]
+        },
+        {
+          "snapshot_id": "s-0ffd5159ac64",
+          "trajectory_id": "t-e7365e01a300",
+          "scenario": "redundancy",
+          "storage_ids": [
+            "m-19fa297e16ef",
+            "m-d72084674691"
+          ],
+          "store_tokens": 108,
+          "metrics": {
+            "answer.exact_match": 0,
+            "answer.token_f1": 0.0
+          },
+          "query_response_keys": [
+            [
+              "s-0ffd5159ac64",
+              [
+                "m-19fa297e16ef",
+                "m-d72084674691"
+              ],
+              "q-505900fa4c1c",
+              20260912
+            ],
+            [
+              "s-0ffd5159ac64",
+              [
+                "m-19fa297e16ef",
+                "m-d72084674691"
+              ],
+              "q-457908e58552",
+              20260912
+            ]
+          ]
+        },
+        {
+          "snapshot_id": "s-0ffd5159ac64",
+          "trajectory_id": "t-e7365e01a300",
+          "scenario": "redundancy",
+          "storage_ids": [
+            "m-5a6ed297191a",
+            "m-aeb2d7ee7429"
+          ],
+          "store_tokens": 122,
+          "metrics": {
+            "answer.exact_match": 1,
+            "answer.token_f1": 1.0
+          },
+          "query_response_keys": [
+            [
+              "s-0ffd5159ac64",
+              [
+                "m-5a6ed297191a",
+                "m-aeb2d7ee7429"
+              ],
+              "q-505900fa4c1c",
+              20260912
+            ],
+            [
+              "s-0ffd5159ac64",
+              [
+                "m-5a6ed297191a",
+                "m-aeb2d7ee7429"
+              ],
+              "q-457908e58552",
+              20260912
+            ]
+          ]
+        },
+        {
+          "snapshot_id": "s-0ffd5159ac64",
+          "trajectory_id": "t-e7365e01a300",
+          "scenario": "redundancy",
+          "storage_ids": [
+            "m-5a6ed297191a",
+            "m-d72084674691"
+          ],
+          "store_tokens": 124,
+          "metrics": {
+            "answer.exact_match": 1,
+            "answer.token_f1": 1.0
+          },
+          "query_response_keys": [
+            [
+              "s-0ffd5159ac64",
+              [
+                "m-5a6ed297191a",
+                "m-d72084674691"
+              ],
+              "q-505900fa4c1c",
+              20260912
+            ],
+            [
+              "s-0ffd5159ac64",
+              [
+                "m-5a6ed297191a",
+                "m-d72084674691"
+              ],
+              "q-457908e58552",
+              20260912
+            ]
+          ]
+        },
+        {
+          "snapshot_id": "s-0ffd5159ac64",
+          "trajectory_id": "t-e7365e01a300",
+          "scenario": "redundancy",
+          "storage_ids": [
+            "m-aeb2d7ee7429",
+            "m-d72084674691"
+          ],
+          "store_tokens": 120,
+          "metrics": {
+            "answer.exact_match": 1,
+            "answer.token_f1": 1.0
+          },
+          "query_response_keys": [
+            [
+              "s-0ffd5159ac64",
+              [
+                "m-aeb2d7ee7429",
+                "m-d72084674691"
+              ],
+              "q-505900fa4c1c",
+              20260912
+            ],
+            [
+              "s-0ffd5159ac64",
+              [
+                "m-aeb2d7ee7429",
+                "m-d72084674691"
+              ],
+              "q-457908e58552",
+              20260912
+            ]
+          ]
+        },
+        {
+          "snapshot_id": "s-0ffd5159ac64",
+          "trajectory_id": "t-e7365e01a300",
+          "scenario": "redundancy",
+          "storage_ids": [
+            "m-19fa297e16ef",
+            "m-5a6ed297191a",
+            "m-aeb2d7ee7429"
+          ],
+          "store_tokens": 169,
+          "metrics": {
+            "answer.exact_match": 1,
+            "answer.token_f1": 1.0
+          },
+          "query_response_keys": [
+            [
+              "s-0ffd5159ac64",
+              [
+                "m-19fa297e16ef",
+                "m-5a6ed297191a",
+                "m-aeb2d7ee7429"
+              ],
+              "q-505900fa4c1c",
+              20260912
+            ],
+            [
+              "s-0ffd5159ac64",
+              [
+                "m-19fa297e16ef",
+                "m-5a6ed297191a",
+                "m-aeb2d7ee7429"
+              ],
+              "q-457908e58552",
+              20260912
+            ]
+          ]
+        },
+        {
+          "snapshot_id": "s-0ffd5159ac64",
+          "trajectory_id": "t-e7365e01a300",
+          "scenario": "redundancy",
+          "storage_ids": [
+            "m-19fa297e16ef",
+            "m-5a6ed297191a",
+            "m-d72084674691"
+          ],
+          "store_tokens": 171,
+          "metrics": {
+            "answer.exact_match": 1,
+            "answer.token_f1": 1.0
+          },
+          "query_response_keys": [
+            [
+              "s-0ffd5159ac64",
+              [
+                "m-19fa297e16ef",
+                "m-5a6ed297191a",
+                "m-d72084674691"
+              ],
+              "q-505900fa4c1c",
+              20260912
+            ],
+            [
+              "s-0ffd5159ac64",
+              [
+                "m-19fa297e16ef",
+                "m-5a6ed297191a",
+                "m-d72084674691"
+              ],
+              "q-457908e58552",
+              20260912
+            ]
+          ]
+        },
+        {
+          "snapshot_id": "s-0ffd5159ac64",
+          "trajectory_id": "t-e7365e01a300",
+          "scenario": "redundancy",
+          "storage_ids": [
+            "m-19fa297e16ef",
+            "m-aeb2d7ee7429",
+            "m-d72084674691"
+          ],
+          "store_tokens": 167,
+          "metrics": {
+            "answer.exact_match": 1,
+            "answer.token_f1": 1.0
+          },
+          "query_response_keys": [
+            [
+              "s-0ffd5159ac64",
+              [
+                "m-19fa297e16ef",
+                "m-aeb2d7ee7429",
+                "m-d72084674691"
+              ],
+              "q-505900fa4c1c",
+              20260912
+            ],
+            [
+              "s-0ffd5159ac64",
+              [
+                "m-19fa297e16ef",
+                "m-aeb2d7ee7429",
+                "m-d72084674691"
+              ],
+              "q-457908e58552",
+              20260912
+            ]
+          ]
+        },
+        {
+          "snapshot_id": "s-0ffd5159ac64",
+          "trajectory_id": "t-e7365e01a300",
+          "scenario": "redundancy",
+          "storage_ids": [
+            "m-5a6ed297191a",
+            "m-aeb2d7ee7429",
+            "m-d72084674691"
+          ],
+          "store_tokens": 183,
+          "metrics": {
+            "answer.exact_match": 1,
+            "answer.token_f1": 1.0
+          },
+          "query_response_keys": [
+            [
+              "s-0ffd5159ac64",
+              [
+                "m-5a6ed297191a",
+                "m-aeb2d7ee7429",
+                "m-d72084674691"
+              ],
+              "q-505900fa4c1c",
+              20260912
+            ],
+            [
+              "s-0ffd5159ac64",
+              [
+                "m-5a6ed297191a",
+                "m-aeb2d7ee7429",
+                "m-d72084674691"
+              ],
+              "q-457908e58552",
+              20260912
+            ]
+          ]
+        },
+        {
+          "snapshot_id": "s-0ffd5159ac64",
+          "trajectory_id": "t-e7365e01a300",
+          "scenario": "redundancy",
+          "storage_ids": [
+            "m-19fa297e16ef",
+            "m-5a6ed297191a",
+            "m-aeb2d7ee7429",
+            "m-d72084674691"
+          ],
+          "store_tokens": 230,
+          "metrics": {
+            "answer.exact_match": 1,
+            "answer.token_f1": 1.0
+          },
+          "query_response_keys": [
+            [
+              "s-0ffd5159ac64",
+              [
+                "m-19fa297e16ef",
+                "m-5a6ed297191a",
+                "m-aeb2d7ee7429",
+                "m-d72084674691"
+              ],
+              "q-505900fa4c1c",
+              20260912
+            ],
+            [
+              "s-0ffd5159ac64",
+              [
+                "m-19fa297e16ef",
+                "m-5a6ed297191a",
+                "m-aeb2d7ee7429",
+                "m-d72084674691"
+              ],
+              "q-457908e58552",
+              20260912
+            ]
+          ]
+        }
+      ],
+      "proposed_system_check": "preserve_at_least_one_substitute"
+    },
+    {
+      "cohort": "e3_posthoc",
+      "scenario": "complementarity",
+      "snapshot": {
+        "trajectory_id": "t-e9741b2e9b64",
+        "user_id": "u-a5674940b655",
+        "snapshot_id": "s-2b6334d33548",
+        "split": "test",
+        "scenario": "complementarity",
+        "event_order": 30,
+        "memories": [
+          {
+            "memory_id": "m-a7e1a84e2efa",
+            "canonical_id": "f-3e7f14b866b8",
+            "leakage_group": "f-3e7f14b866b8",
+            "event_order": 6,
+            "content": "The maintenance ticket for Locker-X48fc0dfe is 70793. The facilities clerk recorded this entry during a routine inventory review."
+          },
+          {
+            "memory_id": "m-27ca54631c0f",
+            "canonical_id": "f-e6930896f43e",
+            "leakage_group": "f-e6930896f43e",
+            "event_order": 11,
+            "content": "The first three digits of the six-digit access code for Locker-X48fc0dfe are 880. This record was transcribed from the local register."
+          },
+          {
+            "memory_id": "m-5891834a4270",
+            "canonical_id": "f-5f04df18b19a",
+            "leakage_group": "f-5f04df18b19a",
+            "event_order": 13,
+            "content": "The last three digits of the six-digit access code for Locker-X48fc0dfe are 106. This record was transcribed from the local register."
+          },
+          {
+            "memory_id": "m-b67bf4173d18",
+            "canonical_id": "f-6babe4a58013",
+            "leakage_group": "f-6babe4a58013",
+            "event_order": 17,
+            "content": "The inventory label for Locker-X48fc0dfe is 26455. This record was transcribed from the local register."
+          }
+        ],
+        "history_queries": [
+          {
+            "query_id": "h-94f82c9d412b",
+            "event_order": 20,
+            "text": "What is the inventory label for Locker-X48fc0dfe?"
+          },
+          {
+            "query_id": "h-6bc9916b462e",
+            "event_order": 21,
+            "text": "What is the inventory label for Locker-X48fc0dfe?"
+          },
+          {
+            "query_id": "h-3a4986f7056e",
+            "event_order": 22,
+            "text": "What is the inventory label for Locker-X48fc0dfe?"
+          }
+        ],
+        "future_queries": [
+          {
+            "query_id": "q-0a051694ace8",
+            "event_order": 31,
+            "text": "What is the six-digit access code for Locker-X48fc0dfe?",
+            "gold_answer": "880106",
+            "supporting_memory_sets": [
+              [
+                "m-27ca54631c0f",
+                "m-5891834a4270"
+              ]
+            ]
+          },
+          {
+            "query_id": "q-dc5b693adc86",
+            "event_order": 32,
+            "text": "Give the complete access code needed to open Locker-X48fc0dfe.",
+            "gold_answer": "880106",
+            "supporting_memory_sets": [
+              [
+                "m-27ca54631c0f",
+                "m-5891834a4270"
+              ]
+            ]
+          }
+        ],
+        "diagnostic_metadata": {
+          "entity": "Locker-X48fc0dfe",
+          "prefix_memory_id": "m-27ca54631c0f",
+          "suffix_memory_id": "m-5891834a4270",
+          "frequent_memory_id": "m-5891834a4270",
+          "expected_history_count": 3
+        }
+      },
+      "subset_scores": [
+        {
+          "snapshot_id": "s-2b6334d33548",
+          "trajectory_id": "t-e9741b2e9b64",
+          "scenario": "complementarity",
+          "storage_ids": [],
+          "store_tokens": 0,
+          "metrics": {
+            "answer.exact_match": 0,
+            "answer.token_f1": 0.0
+          },
+          "query_response_keys": [
+            [
+              "s-2b6334d33548",
+              [],
+              "q-0a051694ace8",
+              20260912
+            ],
+            [
+              "s-2b6334d33548",
+              [],
+              "q-dc5b693adc86",
+              20260912
+            ]
+          ]
+        },
+        {
+          "snapshot_id": "s-2b6334d33548",
+          "trajectory_id": "t-e9741b2e9b64",
+          "scenario": "complementarity",
+          "storage_ids": [
+            "m-27ca54631c0f"
+          ],
+          "store_tokens": 62,
+          "metrics": {
+            "answer.exact_match": 0,
+            "answer.token_f1": 0.0
+          },
+          "query_response_keys": [
+            [
+              "s-2b6334d33548",
+              [
+                "m-27ca54631c0f"
+              ],
+              "q-0a051694ace8",
+              20260912
+            ],
+            [
+              "s-2b6334d33548",
+              [
+                "m-27ca54631c0f"
+              ],
+              "q-dc5b693adc86",
+              20260912
+            ]
+          ]
+        },
+        {
+          "snapshot_id": "s-2b6334d33548",
+          "trajectory_id": "t-e9741b2e9b64",
+          "scenario": "complementarity",
+          "storage_ids": [
+            "m-5891834a4270"
+          ],
+          "store_tokens": 63,
+          "metrics": {
+            "answer.exact_match": 0,
+            "answer.token_f1": 0.0
+          },
+          "query_response_keys": [
+            [
+              "s-2b6334d33548",
+              [
+                "m-5891834a4270"
+              ],
+              "q-0a051694ace8",
+              20260912
+            ],
+            [
+              "s-2b6334d33548",
+              [
+                "m-5891834a4270"
+              ],
+              "q-dc5b693adc86",
+              20260912
+            ]
+          ]
+        },
+        {
+          "snapshot_id": "s-2b6334d33548",
+          "trajectory_id": "t-e9741b2e9b64",
+          "scenario": "complementarity",
+          "storage_ids": [
+            "m-a7e1a84e2efa"
+          ],
+          "store_tokens": 59,
+          "metrics": {
+            "answer.exact_match": 0,
+            "answer.token_f1": 0.0
+          },
+          "query_response_keys": [
+            [
+              "s-2b6334d33548",
+              [
+                "m-a7e1a84e2efa"
+              ],
+              "q-0a051694ace8",
+              20260912
+            ],
+            [
+              "s-2b6334d33548",
+              [
+                "m-a7e1a84e2efa"
+              ],
+              "q-dc5b693adc86",
+              20260912
+            ]
+          ]
+        },
+        {
+          "snapshot_id": "s-2b6334d33548",
+          "trajectory_id": "t-e9741b2e9b64",
+          "scenario": "complementarity",
+          "storage_ids": [
+            "m-b67bf4173d18"
+          ],
+          "store_tokens": 56,
+          "metrics": {
+            "answer.exact_match": 0,
+            "answer.token_f1": 0.0
+          },
+          "query_response_keys": [
+            [
+              "s-2b6334d33548",
+              [
+                "m-b67bf4173d18"
+              ],
+              "q-0a051694ace8",
+              20260912
+            ],
+            [
+              "s-2b6334d33548",
+              [
+                "m-b67bf4173d18"
+              ],
+              "q-dc5b693adc86",
+              20260912
+            ]
+          ]
+        },
+        {
+          "snapshot_id": "s-2b6334d33548",
+          "trajectory_id": "t-e9741b2e9b64",
+          "scenario": "complementarity",
+          "storage_ids": [
+            "m-27ca54631c0f",
+            "m-5891834a4270"
+          ],
+          "store_tokens": 125,
+          "metrics": {
+            "answer.exact_match": 0.5,
+            "answer.token_f1": 0.5
+          },
+          "query_response_keys": [
+            [
+              "s-2b6334d33548",
+              [
+                "m-27ca54631c0f",
+                "m-5891834a4270"
+              ],
+              "q-0a051694ace8",
+              20260912
+            ],
+            [
+              "s-2b6334d33548",
+              [
+                "m-27ca54631c0f",
+                "m-5891834a4270"
+              ],
+              "q-dc5b693adc86",
+              20260912
+            ]
+          ]
+        },
+        {
+          "snapshot_id": "s-2b6334d33548",
+          "trajectory_id": "t-e9741b2e9b64",
+          "scenario": "complementarity",
+          "storage_ids": [
+            "m-27ca54631c0f",
+            "m-a7e1a84e2efa"
+          ],
+          "store_tokens": 121,
+          "metrics": {
+            "answer.exact_match": 0,
+            "answer.token_f1": 0.0
+          },
+          "query_response_keys": [
+            [
+              "s-2b6334d33548",
+              [
+                "m-27ca54631c0f",
+                "m-a7e1a84e2efa"
+              ],
+              "q-0a051694ace8",
+              20260912
+            ],
+            [
+              "s-2b6334d33548",
+              [
+                "m-27ca54631c0f",
+                "m-a7e1a84e2efa"
+              ],
+              "q-dc5b693adc86",
+              20260912
+            ]
+          ]
+        },
+        {
+          "snapshot_id": "s-2b6334d33548",
+          "trajectory_id": "t-e9741b2e9b64",
+          "scenario": "complementarity",
+          "storage_ids": [
+            "m-27ca54631c0f",
+            "m-b67bf4173d18"
+          ],
+          "store_tokens": 118,
+          "metrics": {
+            "answer.exact_match": 0,
+            "answer.token_f1": 0.0
+          },
+          "query_response_keys": [
+            [
+              "s-2b6334d33548",
+              [
+                "m-27ca54631c0f",
+                "m-b67bf4173d18"
+              ],
+              "q-0a051694ace8",
+              20260912
+            ],
+            [
+              "s-2b6334d33548",
+              [
+                "m-27ca54631c0f",
+                "m-b67bf4173d18"
+              ],
+              "q-dc5b693adc86",
+              20260912
+            ]
+          ]
+        },
+        {
+          "snapshot_id": "s-2b6334d33548",
+          "trajectory_id": "t-e9741b2e9b64",
+          "scenario": "complementarity",
+          "storage_ids": [
+            "m-5891834a4270",
+            "m-a7e1a84e2efa"
+          ],
+          "store_tokens": 122,
+          "metrics": {
+            "answer.exact_match": 0,
+            "answer.token_f1": 0.0
+          },
+          "query_response_keys": [
+            [
+              "s-2b6334d33548",
+              [
+                "m-5891834a4270",
+                "m-a7e1a84e2efa"
+              ],
+              "q-0a051694ace8",
+              20260912
+            ],
+            [
+              "s-2b6334d33548",
+              [
+                "m-5891834a4270",
+                "m-a7e1a84e2efa"
+              ],
+              "q-dc5b693adc86",
+              20260912
+            ]
+          ]
+        },
+        {
+          "snapshot_id": "s-2b6334d33548",
+          "trajectory_id": "t-e9741b2e9b64",
+          "scenario": "complementarity",
+          "storage_ids": [
+            "m-5891834a4270",
+            "m-b67bf4173d18"
+          ],
+          "store_tokens": 119,
+          "metrics": {
+            "answer.exact_match": 0,
+            "answer.token_f1": 0.0
+          },
+          "query_response_keys": [
+            [
+              "s-2b6334d33548",
+              [
+                "m-5891834a4270",
+                "m-b67bf4173d18"
+              ],
+              "q-0a051694ace8",
+              20260912
+            ],
+            [
+              "s-2b6334d33548",
+              [
+                "m-5891834a4270",
+                "m-b67bf4173d18"
+              ],
+              "q-dc5b693adc86",
+              20260912
+            ]
+          ]
+        },
+        {
+          "snapshot_id": "s-2b6334d33548",
+          "trajectory_id": "t-e9741b2e9b64",
+          "scenario": "complementarity",
+          "storage_ids": [
+            "m-a7e1a84e2efa",
+            "m-b67bf4173d18"
+          ],
+          "store_tokens": 115,
+          "metrics": {
+            "answer.exact_match": 0,
+            "answer.token_f1": 0.0
+          },
+          "query_response_keys": [
+            [
+              "s-2b6334d33548",
+              [
+                "m-a7e1a84e2efa",
+                "m-b67bf4173d18"
+              ],
+              "q-0a051694ace8",
+              20260912
+            ],
+            [
+              "s-2b6334d33548",
+              [
+                "m-a7e1a84e2efa",
+                "m-b67bf4173d18"
+              ],
+              "q-dc5b693adc86",
+              20260912
+            ]
+          ]
+        },
+        {
+          "snapshot_id": "s-2b6334d33548",
+          "trajectory_id": "t-e9741b2e9b64",
+          "scenario": "complementarity",
+          "storage_ids": [
+            "m-27ca54631c0f",
+            "m-5891834a4270",
+            "m-a7e1a84e2efa"
+          ],
+          "store_tokens": 184,
+          "metrics": {
+            "answer.exact_match": 0.5,
+            "answer.token_f1": 0.5
+          },
+          "query_response_keys": [
+            [
+              "s-2b6334d33548",
+              [
+                "m-27ca54631c0f",
+                "m-5891834a4270",
+                "m-a7e1a84e2efa"
+              ],
+              "q-0a051694ace8",
+              20260912
+            ],
+            [
+              "s-2b6334d33548",
+              [
+                "m-27ca54631c0f",
+                "m-5891834a4270",
+                "m-a7e1a84e2efa"
+              ],
+              "q-dc5b693adc86",
+              20260912
+            ]
+          ]
+        },
+        {
+          "snapshot_id": "s-2b6334d33548",
+          "trajectory_id": "t-e9741b2e9b64",
+          "scenario": "complementarity",
+          "storage_ids": [
+            "m-27ca54631c0f",
+            "m-5891834a4270",
+            "m-b67bf4173d18"
+          ],
+          "store_tokens": 181,
+          "metrics": {
+            "answer.exact_match": 0.5,
+            "answer.token_f1": 0.5
+          },
+          "query_response_keys": [
+            [
+              "s-2b6334d33548",
+              [
+                "m-27ca54631c0f",
+                "m-5891834a4270",
+                "m-b67bf4173d18"
+              ],
+              "q-0a051694ace8",
+              20260912
+            ],
+            [
+              "s-2b6334d33548",
+              [
+                "m-27ca54631c0f",
+                "m-5891834a4270",
+                "m-b67bf4173d18"
+              ],
+              "q-dc5b693adc86",
+              20260912
+            ]
+          ]
+        },
+        {
+          "snapshot_id": "s-2b6334d33548",
+          "trajectory_id": "t-e9741b2e9b64",
+          "scenario": "complementarity",
+          "storage_ids": [
+            "m-27ca54631c0f",
+            "m-a7e1a84e2efa",
+            "m-b67bf4173d18"
+          ],
+          "store_tokens": 177,
+          "metrics": {
+            "answer.exact_match": 0,
+            "answer.token_f1": 0.0
+          },
+          "query_response_keys": [
+            [
+              "s-2b6334d33548",
+              [
+                "m-27ca54631c0f",
+                "m-a7e1a84e2efa",
+                "m-b67bf4173d18"
+              ],
+              "q-0a051694ace8",
+              20260912
+            ],
+            [
+              "s-2b6334d33548",
+              [
+                "m-27ca54631c0f",
+                "m-a7e1a84e2efa",
+                "m-b67bf4173d18"
+              ],
+              "q-dc5b693adc86",
+              20260912
+            ]
+          ]
+        },
+        {
+          "snapshot_id": "s-2b6334d33548",
+          "trajectory_id": "t-e9741b2e9b64",
+          "scenario": "complementarity",
+          "storage_ids": [
+            "m-5891834a4270",
+            "m-a7e1a84e2efa",
+            "m-b67bf4173d18"
+          ],
+          "store_tokens": 178,
+          "metrics": {
+            "answer.exact_match": 0,
+            "answer.token_f1": 0.0
+          },
+          "query_response_keys": [
+            [
+              "s-2b6334d33548",
+              [
+                "m-5891834a4270",
+                "m-a7e1a84e2efa",
+                "m-b67bf4173d18"
+              ],
+              "q-0a051694ace8",
+              20260912
+            ],
+            [
+              "s-2b6334d33548",
+              [
+                "m-5891834a4270",
+                "m-a7e1a84e2efa",
+                "m-b67bf4173d18"
+              ],
+              "q-dc5b693adc86",
+              20260912
+            ]
+          ]
+        },
+        {
+          "snapshot_id": "s-2b6334d33548",
+          "trajectory_id": "t-e9741b2e9b64",
+          "scenario": "complementarity",
+          "storage_ids": [
+            "m-27ca54631c0f",
+            "m-5891834a4270",
+            "m-a7e1a84e2efa",
+            "m-b67bf4173d18"
+          ],
+          "store_tokens": 240,
+          "metrics": {
+            "answer.exact_match": 0.5,
+            "answer.token_f1": 0.5
+          },
+          "query_response_keys": [
+            [
+              "s-2b6334d33548",
+              [
+                "m-27ca54631c0f",
+                "m-5891834a4270",
+                "m-a7e1a84e2efa",
+                "m-b67bf4173d18"
+              ],
+              "q-0a051694ace8",
+              20260912
+            ],
+            [
+              "s-2b6334d33548",
+              [
+                "m-27ca54631c0f",
+                "m-5891834a4270",
+                "m-a7e1a84e2efa",
+                "m-b67bf4173d18"
+              ],
+              "q-dc5b693adc86",
+              20260912
+            ]
+          ]
+        }
+      ],
+      "proposed_system_check": "preserve_both_support_parts_and_trace_their_sources"
+    },
+    {
+      "cohort": "e4_independent",
+      "scenario": "redundancy",
+      "snapshot": {
+        "trajectory_id": "t-2a18492dfe5a",
+        "user_id": "u-5d2b59faf9ff",
+        "snapshot_id": "s-1c870f772291",
+        "split": "test",
+        "scenario": "redundancy",
+        "event_order": 30,
+        "memories": [
+          {
+            "memory_id": "m-5574ab43f680",
+            "canonical_id": "f-997532abe5ab",
+            "leakage_group": "f-997532abe5ab",
+            "event_order": 1,
+            "content": "The maintenance ticket for Vault-X1295dc35 is 63138. The facilities clerk recorded this entry during a routine inventory review."
+          },
+          {
+            "memory_id": "m-d919f9ad9b76",
+            "canonical_id": "f-9843512eedf9",
+            "leakage_group": "f-9843512eedf9",
+            "event_order": 5,
+            "content": "The inventory label for Vault-X1295dc35 is 98390. This record was transcribed from the local register."
+          },
+          {
+            "memory_id": "m-a318755fda88",
+            "canonical_id": "f-b49908cbda6c",
+            "leakage_group": "f-b49908cbda6c",
+            "event_order": 11,
+            "content": "The access code for Vault-X1295dc35 is 330751. This record was transcribed from the local register."
+          },
+          {
+            "memory_id": "m-732620087fa6",
+            "canonical_id": "f-b49908cbda6c",
+            "leakage_group": "f-b49908cbda6c",
+            "event_order": 14,
+            "content": "To open Vault-X1295dc35, enter the access code 330751. The facilities clerk recorded this entry during a routine inventory review."
+          }
+        ],
+        "history_queries": [
+          {
+            "query_id": "h-22c638b422d6",
+            "event_order": 20,
+            "text": "What is the inventory label for Vault-X1295dc35?"
+          }
+        ],
+        "future_queries": [
+          {
+            "query_id": "q-61d7a3d83efe",
+            "event_order": 31,
+            "text": "What is the six-digit access code for Vault-X1295dc35?",
+            "gold_answer": "330751",
+            "supporting_memory_sets": [
+              [
+                "m-a318755fda88"
+              ],
+              [
+                "m-732620087fa6"
+              ]
+            ]
+          },
+          {
+            "query_id": "q-fc9f2aa1418f",
+            "event_order": 32,
+            "text": "Give the complete access code needed to open Vault-X1295dc35.",
+            "gold_answer": "330751",
+            "supporting_memory_sets": [
+              [
+                "m-a318755fda88"
+              ],
+              [
+                "m-732620087fa6"
+              ]
+            ]
+          }
+        ],
+        "diagnostic_metadata": {
+          "entity": "Vault-X1295dc35",
+          "prefix_memory_id": "m-a318755fda88",
+          "suffix_memory_id": "m-732620087fa6",
+          "frequent_memory_id": "m-732620087fa6",
+          "expected_history_count": 1
+        }
+      },
+      "subset_scores": [
+        {
+          "snapshot_id": "s-1c870f772291",
+          "trajectory_id": "t-2a18492dfe5a",
+          "scenario": "redundancy",
+          "storage_ids": [],
+          "store_tokens": 0,
+          "metrics": {
+            "answer.exact_match": 0,
+            "answer.token_f1": 0.0
+          },
+          "query_response_keys": [
+            [
+              "s-1c870f772291",
+              [],
+              "q-61d7a3d83efe",
+              20260912
+            ],
+            [
+              "s-1c870f772291",
+              [],
+              "q-fc9f2aa1418f",
+              20260912
+            ]
+          ]
+        },
+        {
+          "snapshot_id": "s-1c870f772291",
+          "trajectory_id": "t-2a18492dfe5a",
+          "scenario": "redundancy",
+          "storage_ids": [
+            "m-5574ab43f680"
+          ],
+          "store_tokens": 59,
+          "metrics": {
+            "answer.exact_match": 0,
+            "answer.token_f1": 0.0
+          },
+          "query_response_keys": [
+            [
+              "s-1c870f772291",
+              [
+                "m-5574ab43f680"
+              ],
+              "q-61d7a3d83efe",
+              20260912
+            ],
+            [
+              "s-1c870f772291",
+              [
+                "m-5574ab43f680"
+              ],
+              "q-fc9f2aa1418f",
+              20260912
+            ]
+          ]
+        },
+        {
+          "snapshot_id": "s-1c870f772291",
+          "trajectory_id": "t-2a18492dfe5a",
+          "scenario": "redundancy",
+          "storage_ids": [
+            "m-732620087fa6"
+          ],
+          "store_tokens": 62,
+          "metrics": {
+            "answer.exact_match": 1,
+            "answer.token_f1": 1.0
+          },
+          "query_response_keys": [
+            [
+              "s-1c870f772291",
+              [
+                "m-732620087fa6"
+              ],
+              "q-61d7a3d83efe",
+              20260912
+            ],
+            [
+              "s-1c870f772291",
+              [
+                "m-732620087fa6"
+              ],
+              "q-fc9f2aa1418f",
+              20260912
+            ]
+          ]
+        },
+        {
+          "snapshot_id": "s-1c870f772291",
+          "trajectory_id": "t-2a18492dfe5a",
+          "scenario": "redundancy",
+          "storage_ids": [
+            "m-a318755fda88"
+          ],
+          "store_tokens": 57,
+          "metrics": {
+            "answer.exact_match": 1,
+            "answer.token_f1": 1.0
+          },
+          "query_response_keys": [
+            [
+              "s-1c870f772291",
+              [
+                "m-a318755fda88"
+              ],
+              "q-61d7a3d83efe",
+              20260912
+            ],
+            [
+              "s-1c870f772291",
+              [
+                "m-a318755fda88"
+              ],
+              "q-fc9f2aa1418f",
+              20260912
+            ]
+          ]
+        },
+        {
+          "snapshot_id": "s-1c870f772291",
+          "trajectory_id": "t-2a18492dfe5a",
+          "scenario": "redundancy",
+          "storage_ids": [
+            "m-d919f9ad9b76"
+          ],
+          "store_tokens": 56,
+          "metrics": {
+            "answer.exact_match": 0,
+            "answer.token_f1": 0.0
+          },
+          "query_response_keys": [
+            [
+              "s-1c870f772291",
+              [
+                "m-d919f9ad9b76"
+              ],
+              "q-61d7a3d83efe",
+              20260912
+            ],
+            [
+              "s-1c870f772291",
+              [
+                "m-d919f9ad9b76"
+              ],
+              "q-fc9f2aa1418f",
+              20260912
+            ]
+          ]
+        },
+        {
+          "snapshot_id": "s-1c870f772291",
+          "trajectory_id": "t-2a18492dfe5a",
+          "scenario": "redundancy",
+          "storage_ids": [
+            "m-5574ab43f680",
+            "m-732620087fa6"
+          ],
+          "store_tokens": 121,
+          "metrics": {
+            "answer.exact_match": 1,
+            "answer.token_f1": 1.0
+          },
+          "query_response_keys": [
+            [
+              "s-1c870f772291",
+              [
+                "m-5574ab43f680",
+                "m-732620087fa6"
+              ],
+              "q-61d7a3d83efe",
+              20260912
+            ],
+            [
+              "s-1c870f772291",
+              [
+                "m-5574ab43f680",
+                "m-732620087fa6"
+              ],
+              "q-fc9f2aa1418f",
+              20260912
+            ]
+          ]
+        },
+        {
+          "snapshot_id": "s-1c870f772291",
+          "trajectory_id": "t-2a18492dfe5a",
+          "scenario": "redundancy",
+          "storage_ids": [
+            "m-5574ab43f680",
+            "m-a318755fda88"
+          ],
+          "store_tokens": 116,
+          "metrics": {
+            "answer.exact_match": 1,
+            "answer.token_f1": 1.0
+          },
+          "query_response_keys": [
+            [
+              "s-1c870f772291",
+              [
+                "m-5574ab43f680",
+                "m-a318755fda88"
+              ],
+              "q-61d7a3d83efe",
+              20260912
+            ],
+            [
+              "s-1c870f772291",
+              [
+                "m-5574ab43f680",
+                "m-a318755fda88"
+              ],
+              "q-fc9f2aa1418f",
+              20260912
+            ]
+          ]
+        },
+        {
+          "snapshot_id": "s-1c870f772291",
+          "trajectory_id": "t-2a18492dfe5a",
+          "scenario": "redundancy",
+          "storage_ids": [
+            "m-5574ab43f680",
+            "m-d919f9ad9b76"
+          ],
+          "store_tokens": 115,
+          "metrics": {
+            "answer.exact_match": 0,
+            "answer.token_f1": 0.0
+          },
+          "query_response_keys": [
+            [
+              "s-1c870f772291",
+              [
+                "m-5574ab43f680",
+                "m-d919f9ad9b76"
+              ],
+              "q-61d7a3d83efe",
+              20260912
+            ],
+            [
+              "s-1c870f772291",
+              [
+                "m-5574ab43f680",
+                "m-d919f9ad9b76"
+              ],
+              "q-fc9f2aa1418f",
+              20260912
+            ]
+          ]
+        },
+        {
+          "snapshot_id": "s-1c870f772291",
+          "trajectory_id": "t-2a18492dfe5a",
+          "scenario": "redundancy",
+          "storage_ids": [
+            "m-732620087fa6",
+            "m-a318755fda88"
+          ],
+          "store_tokens": 119,
+          "metrics": {
+            "answer.exact_match": 1,
+            "answer.token_f1": 1.0
+          },
+          "query_response_keys": [
+            [
+              "s-1c870f772291",
+              [
+                "m-732620087fa6",
+                "m-a318755fda88"
+              ],
+              "q-61d7a3d83efe",
+              20260912
+            ],
+            [
+              "s-1c870f772291",
+              [
+                "m-732620087fa6",
+                "m-a318755fda88"
+              ],
+              "q-fc9f2aa1418f",
+              20260912
+            ]
+          ]
+        },
+        {
+          "snapshot_id": "s-1c870f772291",
+          "trajectory_id": "t-2a18492dfe5a",
+          "scenario": "redundancy",
+          "storage_ids": [
+            "m-732620087fa6",
+            "m-d919f9ad9b76"
+          ],
+          "store_tokens": 118,
+          "metrics": {
+            "answer.exact_match": 1,
+            "answer.token_f1": 1.0
+          },
+          "query_response_keys": [
+            [
+              "s-1c870f772291",
+              [
+                "m-732620087fa6",
+                "m-d919f9ad9b76"
+              ],
+              "q-61d7a3d83efe",
+              20260912
+            ],
+            [
+              "s-1c870f772291",
+              [
+                "m-732620087fa6",
+                "m-d919f9ad9b76"
+              ],
+              "q-fc9f2aa1418f",
+              20260912
+            ]
+          ]
+        },
+        {
+          "snapshot_id": "s-1c870f772291",
+          "trajectory_id": "t-2a18492dfe5a",
+          "scenario": "redundancy",
+          "storage_ids": [
+            "m-a318755fda88",
+            "m-d919f9ad9b76"
+          ],
+          "store_tokens": 113,
+          "metrics": {
+            "answer.exact_match": 1,
+            "answer.token_f1": 1.0
+          },
+          "query_response_keys": [
+            [
+              "s-1c870f772291",
+              [
+                "m-a318755fda88",
+                "m-d919f9ad9b76"
+              ],
+              "q-61d7a3d83efe",
+              20260912
+            ],
+            [
+              "s-1c870f772291",
+              [
+                "m-a318755fda88",
+                "m-d919f9ad9b76"
+              ],
+              "q-fc9f2aa1418f",
+              20260912
+            ]
+          ]
+        },
+        {
+          "snapshot_id": "s-1c870f772291",
+          "trajectory_id": "t-2a18492dfe5a",
+          "scenario": "redundancy",
+          "storage_ids": [
+            "m-5574ab43f680",
+            "m-732620087fa6",
+            "m-a318755fda88"
+          ],
+          "store_tokens": 178,
+          "metrics": {
+            "answer.exact_match": 1,
+            "answer.token_f1": 1.0
+          },
+          "query_response_keys": [
+            [
+              "s-1c870f772291",
+              [
+                "m-5574ab43f680",
+                "m-732620087fa6",
+                "m-a318755fda88"
+              ],
+              "q-61d7a3d83efe",
+              20260912
+            ],
+            [
+              "s-1c870f772291",
+              [
+                "m-5574ab43f680",
+                "m-732620087fa6",
+                "m-a318755fda88"
+              ],
+              "q-fc9f2aa1418f",
+              20260912
+            ]
+          ]
+        },
+        {
+          "snapshot_id": "s-1c870f772291",
+          "trajectory_id": "t-2a18492dfe5a",
+          "scenario": "redundancy",
+          "storage_ids": [
+            "m-5574ab43f680",
+            "m-732620087fa6",
+            "m-d919f9ad9b76"
+          ],
+          "store_tokens": 177,
+          "metrics": {
+            "answer.exact_match": 1,
+            "answer.token_f1": 1.0
+          },
+          "query_response_keys": [
+            [
+              "s-1c870f772291",
+              [
+                "m-5574ab43f680",
+                "m-732620087fa6",
+                "m-d919f9ad9b76"
+              ],
+              "q-61d7a3d83efe",
+              20260912
+            ],
+            [
+              "s-1c870f772291",
+              [
+                "m-5574ab43f680",
+                "m-732620087fa6",
+                "m-d919f9ad9b76"
+              ],
+              "q-fc9f2aa1418f",
+              20260912
+            ]
+          ]
+        },
+        {
+          "snapshot_id": "s-1c870f772291",
+          "trajectory_id": "t-2a18492dfe5a",
+          "scenario": "redundancy",
+          "storage_ids": [
+            "m-5574ab43f680",
+            "m-a318755fda88",
+            "m-d919f9ad9b76"
+          ],
+          "store_tokens": 172,
+          "metrics": {
+            "answer.exact_match": 1,
+            "answer.token_f1": 1.0
+          },
+          "query_response_keys": [
+            [
+              "s-1c870f772291",
+              [
+                "m-5574ab43f680",
+                "m-a318755fda88",
+                "m-d919f9ad9b76"
+              ],
+              "q-61d7a3d83efe",
+              20260912
+            ],
+            [
+              "s-1c870f772291",
+              [
+                "m-5574ab43f680",
+                "m-a318755fda88",
+                "m-d919f9ad9b76"
+              ],
+              "q-fc9f2aa1418f",
+              20260912
+            ]
+          ]
+        },
+        {
+          "snapshot_id": "s-1c870f772291",
+          "trajectory_id": "t-2a18492dfe5a",
+          "scenario": "redundancy",
+          "storage_ids": [
+            "m-732620087fa6",
+            "m-a318755fda88",
+            "m-d919f9ad9b76"
+          ],
+          "store_tokens": 175,
+          "metrics": {
+            "answer.exact_match": 1,
+            "answer.token_f1": 1.0
+          },
+          "query_response_keys": [
+            [
+              "s-1c870f772291",
+              [
+                "m-732620087fa6",
+                "m-a318755fda88",
+                "m-d919f9ad9b76"
+              ],
+              "q-61d7a3d83efe",
+              20260912
+            ],
+            [
+              "s-1c870f772291",
+              [
+                "m-732620087fa6",
+                "m-a318755fda88",
+                "m-d919f9ad9b76"
+              ],
+              "q-fc9f2aa1418f",
+              20260912
+            ]
+          ]
+        },
+        {
+          "snapshot_id": "s-1c870f772291",
+          "trajectory_id": "t-2a18492dfe5a",
+          "scenario": "redundancy",
+          "storage_ids": [
+            "m-5574ab43f680",
+            "m-732620087fa6",
+            "m-a318755fda88",
+            "m-d919f9ad9b76"
+          ],
+          "store_tokens": 234,
+          "metrics": {
+            "answer.exact_match": 1,
+            "answer.token_f1": 1.0
+          },
+          "query_response_keys": [
+            [
+              "s-1c870f772291",
+              [
+                "m-5574ab43f680",
+                "m-732620087fa6",
+                "m-a318755fda88",
+                "m-d919f9ad9b76"
+              ],
+              "q-61d7a3d83efe",
+              20260912
+            ],
+            [
+              "s-1c870f772291",
+              [
+                "m-5574ab43f680",
+                "m-732620087fa6",
+                "m-a318755fda88",
+                "m-d919f9ad9b76"
+              ],
+              "q-fc9f2aa1418f",
+              20260912
+            ]
+          ]
+        }
+      ],
+      "proposed_system_check": "preserve_at_least_one_substitute"
+    },
+    {
+      "cohort": "e4_independent",
+      "scenario": "complementarity",
+      "snapshot": {
+        "trajectory_id": "t-dcae5e38638c",
+        "user_id": "u-304d2d665477",
+        "snapshot_id": "s-1f9fccc73e42",
+        "split": "test",
+        "scenario": "complementarity",
+        "event_order": 30,
+        "memories": [
+          {
+            "memory_id": "m-8eb23e739bfe",
+            "canonical_id": "f-e6bdeeac7238",
+            "leakage_group": "f-e6bdeeac7238",
+            "event_order": 2,
+            "content": "The last three digits of the six-digit access code for Locker-Xd8ceced4 are 148. This record was transcribed from the local register."
+          },
+          {
+            "memory_id": "m-411a4d8d2766",
+            "canonical_id": "f-844358413ce9",
+            "leakage_group": "f-844358413ce9",
+            "event_order": 6,
+            "content": "The inventory label for Locker-Xd8ceced4 is 59302. This record was transcribed from the local register."
+          },
+          {
+            "memory_id": "m-c733a96a3121",
+            "canonical_id": "f-3f96f79c8e69",
+            "leakage_group": "f-3f96f79c8e69",
+            "event_order": 14,
+            "content": "The maintenance ticket for Locker-Xd8ceced4 is 75137. The facilities clerk recorded this entry during a routine inventory review."
+          },
+          {
+            "memory_id": "m-12070c27e428",
+            "canonical_id": "f-d69e933abe8f",
+            "leakage_group": "f-d69e933abe8f",
+            "event_order": 17,
+            "content": "The first three digits of the six-digit access code for Locker-Xd8ceced4 are 105. This record was transcribed from the local register."
+          }
+        ],
+        "history_queries": [
+          {
+            "query_id": "h-9b9738bececd",
+            "event_order": 20,
+            "text": "What is the inventory label for Locker-Xd8ceced4?"
+          }
+        ],
+        "future_queries": [
+          {
+            "query_id": "q-a86a43069086",
+            "event_order": 31,
+            "text": "What is the six-digit access code for Locker-Xd8ceced4?",
+            "gold_answer": "105148",
+            "supporting_memory_sets": [
+              [
+                "m-12070c27e428",
+                "m-8eb23e739bfe"
+              ]
+            ]
+          },
+          {
+            "query_id": "q-2d219989c741",
+            "event_order": 32,
+            "text": "Give the complete access code needed to open Locker-Xd8ceced4.",
+            "gold_answer": "105148",
+            "supporting_memory_sets": [
+              [
+                "m-12070c27e428",
+                "m-8eb23e739bfe"
+              ]
+            ]
+          }
+        ],
+        "diagnostic_metadata": {
+          "entity": "Locker-Xd8ceced4",
+          "prefix_memory_id": "m-12070c27e428",
+          "suffix_memory_id": "m-8eb23e739bfe",
+          "frequent_memory_id": "m-8eb23e739bfe",
+          "expected_history_count": 1
+        }
+      },
+      "subset_scores": [
+        {
+          "snapshot_id": "s-1f9fccc73e42",
+          "trajectory_id": "t-dcae5e38638c",
+          "scenario": "complementarity",
+          "storage_ids": [],
+          "store_tokens": 0,
+          "metrics": {
+            "answer.exact_match": 0,
+            "answer.token_f1": 0.0
+          },
+          "query_response_keys": [
+            [
+              "s-1f9fccc73e42",
+              [],
+              "q-a86a43069086",
+              20260912
+            ],
+            [
+              "s-1f9fccc73e42",
+              [],
+              "q-2d219989c741",
+              20260912
+            ]
+          ]
+        },
+        {
+          "snapshot_id": "s-1f9fccc73e42",
+          "trajectory_id": "t-dcae5e38638c",
+          "scenario": "complementarity",
+          "storage_ids": [
+            "m-12070c27e428"
+          ],
+          "store_tokens": 62,
+          "metrics": {
+            "answer.exact_match": 0,
+            "answer.token_f1": 0.0
+          },
+          "query_response_keys": [
+            [
+              "s-1f9fccc73e42",
+              [
+                "m-12070c27e428"
+              ],
+              "q-a86a43069086",
+              20260912
+            ],
+            [
+              "s-1f9fccc73e42",
+              [
+                "m-12070c27e428"
+              ],
+              "q-2d219989c741",
+              20260912
+            ]
+          ]
+        },
+        {
+          "snapshot_id": "s-1f9fccc73e42",
+          "trajectory_id": "t-dcae5e38638c",
+          "scenario": "complementarity",
+          "storage_ids": [
+            "m-411a4d8d2766"
+          ],
+          "store_tokens": 56,
+          "metrics": {
+            "answer.exact_match": 0,
+            "answer.token_f1": 0.0
+          },
+          "query_response_keys": [
+            [
+              "s-1f9fccc73e42",
+              [
+                "m-411a4d8d2766"
+              ],
+              "q-a86a43069086",
+              20260912
+            ],
+            [
+              "s-1f9fccc73e42",
+              [
+                "m-411a4d8d2766"
+              ],
+              "q-2d219989c741",
+              20260912
+            ]
+          ]
+        },
+        {
+          "snapshot_id": "s-1f9fccc73e42",
+          "trajectory_id": "t-dcae5e38638c",
+          "scenario": "complementarity",
+          "storage_ids": [
+            "m-8eb23e739bfe"
+          ],
+          "store_tokens": 60,
+          "metrics": {
+            "answer.exact_match": 0,
+            "answer.token_f1": 0.0
+          },
+          "query_response_keys": [
+            [
+              "s-1f9fccc73e42",
+              [
+                "m-8eb23e739bfe"
+              ],
+              "q-a86a43069086",
+              20260912
+            ],
+            [
+              "s-1f9fccc73e42",
+              [
+                "m-8eb23e739bfe"
+              ],
+              "q-2d219989c741",
+              20260912
+            ]
+          ]
+        },
+        {
+          "snapshot_id": "s-1f9fccc73e42",
+          "trajectory_id": "t-dcae5e38638c",
+          "scenario": "complementarity",
+          "storage_ids": [
+            "m-c733a96a3121"
+          ],
+          "store_tokens": 59,
+          "metrics": {
+            "answer.exact_match": 0,
+            "answer.token_f1": 0.0
+          },
+          "query_response_keys": [
+            [
+              "s-1f9fccc73e42",
+              [
+                "m-c733a96a3121"
+              ],
+              "q-a86a43069086",
+              20260912
+            ],
+            [
+              "s-1f9fccc73e42",
+              [
+                "m-c733a96a3121"
+              ],
+              "q-2d219989c741",
+              20260912
+            ]
+          ]
+        },
+        {
+          "snapshot_id": "s-1f9fccc73e42",
+          "trajectory_id": "t-dcae5e38638c",
+          "scenario": "complementarity",
+          "storage_ids": [
+            "m-12070c27e428",
+            "m-411a4d8d2766"
+          ],
+          "store_tokens": 118,
+          "metrics": {
+            "answer.exact_match": 0,
+            "answer.token_f1": 0.0
+          },
+          "query_response_keys": [
+            [
+              "s-1f9fccc73e42",
+              [
+                "m-12070c27e428",
+                "m-411a4d8d2766"
+              ],
+              "q-a86a43069086",
+              20260912
+            ],
+            [
+              "s-1f9fccc73e42",
+              [
+                "m-12070c27e428",
+                "m-411a4d8d2766"
+              ],
+              "q-2d219989c741",
+              20260912
+            ]
+          ]
+        },
+        {
+          "snapshot_id": "s-1f9fccc73e42",
+          "trajectory_id": "t-dcae5e38638c",
+          "scenario": "complementarity",
+          "storage_ids": [
+            "m-12070c27e428",
+            "m-8eb23e739bfe"
+          ],
+          "store_tokens": 122,
+          "metrics": {
+            "answer.exact_match": 0,
+            "answer.token_f1": 0.0
+          },
+          "query_response_keys": [
+            [
+              "s-1f9fccc73e42",
+              [
+                "m-12070c27e428",
+                "m-8eb23e739bfe"
+              ],
+              "q-a86a43069086",
+              20260912
+            ],
+            [
+              "s-1f9fccc73e42",
+              [
+                "m-12070c27e428",
+                "m-8eb23e739bfe"
+              ],
+              "q-2d219989c741",
+              20260912
+            ]
+          ]
+        },
+        {
+          "snapshot_id": "s-1f9fccc73e42",
+          "trajectory_id": "t-dcae5e38638c",
+          "scenario": "complementarity",
+          "storage_ids": [
+            "m-12070c27e428",
+            "m-c733a96a3121"
+          ],
+          "store_tokens": 121,
+          "metrics": {
+            "answer.exact_match": 0,
+            "answer.token_f1": 0.0
+          },
+          "query_response_keys": [
+            [
+              "s-1f9fccc73e42",
+              [
+                "m-12070c27e428",
+                "m-c733a96a3121"
+              ],
+              "q-a86a43069086",
+              20260912
+            ],
+            [
+              "s-1f9fccc73e42",
+              [
+                "m-12070c27e428",
+                "m-c733a96a3121"
+              ],
+              "q-2d219989c741",
+              20260912
+            ]
+          ]
+        },
+        {
+          "snapshot_id": "s-1f9fccc73e42",
+          "trajectory_id": "t-dcae5e38638c",
+          "scenario": "complementarity",
+          "storage_ids": [
+            "m-411a4d8d2766",
+            "m-8eb23e739bfe"
+          ],
+          "store_tokens": 116,
+          "metrics": {
+            "answer.exact_match": 0,
+            "answer.token_f1": 0.0
+          },
+          "query_response_keys": [
+            [
+              "s-1f9fccc73e42",
+              [
+                "m-411a4d8d2766",
+                "m-8eb23e739bfe"
+              ],
+              "q-a86a43069086",
+              20260912
+            ],
+            [
+              "s-1f9fccc73e42",
+              [
+                "m-411a4d8d2766",
+                "m-8eb23e739bfe"
+              ],
+              "q-2d219989c741",
+              20260912
+            ]
+          ]
+        },
+        {
+          "snapshot_id": "s-1f9fccc73e42",
+          "trajectory_id": "t-dcae5e38638c",
+          "scenario": "complementarity",
+          "storage_ids": [
+            "m-411a4d8d2766",
+            "m-c733a96a3121"
+          ],
+          "store_tokens": 115,
+          "metrics": {
+            "answer.exact_match": 0,
+            "answer.token_f1": 0.0
+          },
+          "query_response_keys": [
+            [
+              "s-1f9fccc73e42",
+              [
+                "m-411a4d8d2766",
+                "m-c733a96a3121"
+              ],
+              "q-a86a43069086",
+              20260912
+            ],
+            [
+              "s-1f9fccc73e42",
+              [
+                "m-411a4d8d2766",
+                "m-c733a96a3121"
+              ],
+              "q-2d219989c741",
+              20260912
+            ]
+          ]
+        },
+        {
+          "snapshot_id": "s-1f9fccc73e42",
+          "trajectory_id": "t-dcae5e38638c",
+          "scenario": "complementarity",
+          "storage_ids": [
+            "m-8eb23e739bfe",
+            "m-c733a96a3121"
+          ],
+          "store_tokens": 119,
+          "metrics": {
+            "answer.exact_match": 0,
+            "answer.token_f1": 0.0
+          },
+          "query_response_keys": [
+            [
+              "s-1f9fccc73e42",
+              [
+                "m-8eb23e739bfe",
+                "m-c733a96a3121"
+              ],
+              "q-a86a43069086",
+              20260912
+            ],
+            [
+              "s-1f9fccc73e42",
+              [
+                "m-8eb23e739bfe",
+                "m-c733a96a3121"
+              ],
+              "q-2d219989c741",
+              20260912
+            ]
+          ]
+        },
+        {
+          "snapshot_id": "s-1f9fccc73e42",
+          "trajectory_id": "t-dcae5e38638c",
+          "scenario": "complementarity",
+          "storage_ids": [
+            "m-12070c27e428",
+            "m-411a4d8d2766",
+            "m-8eb23e739bfe"
+          ],
+          "store_tokens": 178,
+          "metrics": {
+            "answer.exact_match": 0,
+            "answer.token_f1": 0.0
+          },
+          "query_response_keys": [
+            [
+              "s-1f9fccc73e42",
+              [
+                "m-12070c27e428",
+                "m-411a4d8d2766",
+                "m-8eb23e739bfe"
+              ],
+              "q-a86a43069086",
+              20260912
+            ],
+            [
+              "s-1f9fccc73e42",
+              [
+                "m-12070c27e428",
+                "m-411a4d8d2766",
+                "m-8eb23e739bfe"
+              ],
+              "q-2d219989c741",
+              20260912
+            ]
+          ]
+        },
+        {
+          "snapshot_id": "s-1f9fccc73e42",
+          "trajectory_id": "t-dcae5e38638c",
+          "scenario": "complementarity",
+          "storage_ids": [
+            "m-12070c27e428",
+            "m-411a4d8d2766",
+            "m-c733a96a3121"
+          ],
+          "store_tokens": 177,
+          "metrics": {
+            "answer.exact_match": 0,
+            "answer.token_f1": 0.0
+          },
+          "query_response_keys": [
+            [
+              "s-1f9fccc73e42",
+              [
+                "m-12070c27e428",
+                "m-411a4d8d2766",
+                "m-c733a96a3121"
+              ],
+              "q-a86a43069086",
+              20260912
+            ],
+            [
+              "s-1f9fccc73e42",
+              [
+                "m-12070c27e428",
+                "m-411a4d8d2766",
+                "m-c733a96a3121"
+              ],
+              "q-2d219989c741",
+              20260912
+            ]
+          ]
+        },
+        {
+          "snapshot_id": "s-1f9fccc73e42",
+          "trajectory_id": "t-dcae5e38638c",
+          "scenario": "complementarity",
+          "storage_ids": [
+            "m-12070c27e428",
+            "m-8eb23e739bfe",
+            "m-c733a96a3121"
+          ],
+          "store_tokens": 181,
+          "metrics": {
+            "answer.exact_match": 0,
+            "answer.token_f1": 0.0
+          },
+          "query_response_keys": [
+            [
+              "s-1f9fccc73e42",
+              [
+                "m-12070c27e428",
+                "m-8eb23e739bfe",
+                "m-c733a96a3121"
+              ],
+              "q-a86a43069086",
+              20260912
+            ],
+            [
+              "s-1f9fccc73e42",
+              [
+                "m-12070c27e428",
+                "m-8eb23e739bfe",
+                "m-c733a96a3121"
+              ],
+              "q-2d219989c741",
+              20260912
+            ]
+          ]
+        },
+        {
+          "snapshot_id": "s-1f9fccc73e42",
+          "trajectory_id": "t-dcae5e38638c",
+          "scenario": "complementarity",
+          "storage_ids": [
+            "m-411a4d8d2766",
+            "m-8eb23e739bfe",
+            "m-c733a96a3121"
+          ],
+          "store_tokens": 175,
+          "metrics": {
+            "answer.exact_match": 0,
+            "answer.token_f1": 0.0
+          },
+          "query_response_keys": [
+            [
+              "s-1f9fccc73e42",
+              [
+                "m-411a4d8d2766",
+                "m-8eb23e739bfe",
+                "m-c733a96a3121"
+              ],
+              "q-a86a43069086",
+              20260912
+            ],
+            [
+              "s-1f9fccc73e42",
+              [
+                "m-411a4d8d2766",
+                "m-8eb23e739bfe",
+                "m-c733a96a3121"
+              ],
+              "q-2d219989c741",
+              20260912
+            ]
+          ]
+        },
+        {
+          "snapshot_id": "s-1f9fccc73e42",
+          "trajectory_id": "t-dcae5e38638c",
+          "scenario": "complementarity",
+          "storage_ids": [
+            "m-12070c27e428",
+            "m-411a4d8d2766",
+            "m-8eb23e739bfe",
+            "m-c733a96a3121"
+          ],
+          "store_tokens": 237,
+          "metrics": {
+            "answer.exact_match": 0,
+            "answer.token_f1": 0.0
+          },
+          "query_response_keys": [
+            [
+              "s-1f9fccc73e42",
+              [
+                "m-12070c27e428",
+                "m-411a4d8d2766",
+                "m-8eb23e739bfe",
+                "m-c733a96a3121"
+              ],
+              "q-a86a43069086",
+              20260912
+            ],
+            [
+              "s-1f9fccc73e42",
+              [
+                "m-12070c27e428",
+                "m-411a4d8d2766",
+                "m-8eb23e739bfe",
+                "m-c733a96a3121"
+              ],
+              "q-2d219989c741",
+              20260912
+            ]
+          ]
+        }
+      ],
+      "proposed_system_check": "preserve_both_support_parts_and_trace_their_sources"
+    }
+  ]
+}

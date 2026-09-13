@@ -250,17 +250,20 @@ See the [v0.2 release notes](v0.2-release.en.md) for publication boundaries, res
 
 ## Names for method and system supplements
 
-studies uses the memory_studies package, longmem-study-v1 envelope, study_id, and probe_id. A study name is not a retention policy; upstream captureStrategy is not automatically an E3 candidate. Future representation/transformation fields belong to new protocols, not overloaded frozen E1 conditions. See [DeepNote](../studies/deepnote/README.en.md).
+studies uses the memory_studies package, longmem-study-v1 envelope, study_id, and probe_id. A study name is not a retention policy; upstream captureStrategy is not automatically an E3 candidate. Future representation/transformation fields belong to new protocols, not overloaded frozen E1 conditions. See [studies](../studies/README.en.md).
 
 ## Cross-version prose and terminology
 
+Use v0.1 Stage 1–4 and v0.2 E1–E4 in prose. DeepNote closes v0.1; PilotDeck closes v0.2; neither is E5. Software metadata `0.2.0` does not establish publication: use “v0.2 release candidate” until pushing and tag publication are complete.
 
 | Concept | Shared meaning |
 |---|---|
 | `U(m,q;M)` | Single-task score difference after storage deletion and fresh retrieval/generation, with fixed retriever, generator, prompt, and read budget |
 | Future retention value | `V_t` is expected contribution over future tasks; average LOO over a finite future window is an empirical estimate, not intrinsic memory value. Decision features use only history visible at t |
 | Storage budget / read budget | Retained-capacity limit and retrieved-context limit respectively; report actual tokens separately from limits |
+| Budget units | Distinguish v0.1 counts, v0.2 serialized tokens, and PilotDeck character/file-count limits. State the denominator of ratios; do not compare different units directly |
 | Frozen labels | Map E1 `value`, E2 `target.value`, and E3/E4 `loo_value` by artifact; do not rename frozen fields in place |
+| Study identifiers | DeepNote / PilotDeck in prose; `deepnote` / `pilotdeck-memory` as `study_id`; underscores in Python identifiers |
 | Evidence types | Report source review, no-model control/pure-function probes, and real-model experiments separately; passing probes does not establish model baseline gains |
 
 `candidate` identifies a method or model option; `intervention` identifies a diagnostic perturbation. Preserve version-specific historical `condition` meanings. `representation` / `transformation` belong to future protocol designs. New backend values use underscores; readers accept hyphens and frozen configurations keep their spelling. Schema and software versions evolve separately.

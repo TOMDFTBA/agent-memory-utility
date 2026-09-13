@@ -9,6 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
@@ -25,6 +27,8 @@ jobs:
         python-version: ["3.11", "3.12"]
     steps:
       - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
       - uses: actions/setup-python@v7
         with:
           python-version: ${{ matrix.python-version }}
@@ -37,5 +41,7 @@ jobs:
         run: python scripts/audit_v02.py
       - name: Independently verify E4 set algebra
         run: python experiments/utility-retention/audits/verify_e4.py experiments/utility-retention/results/e4-diagnostic-model
+      - name: Verify study evidence
+        run: PYTHONPATH=src python studies/verify.py
       - name: Run CPU test suite
         run: python -m pytest -q

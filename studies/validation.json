@@ -1,0 +1,56 @@
+{
+  "date": "2026-09-14",
+  "status": "PASS",
+  "scope": "Method notes, pinned source review, no-model probes, and existing E4 evidence handoff",
+  "deepnote": {
+    "commit": "cc2f0132737e04ec2d895e8c21673cee612ca1e7",
+    "control_probes_passed": 2,
+    "model_calls": 0,
+    "study_id": "deepnote"
+  },
+  "pilotdeck": {
+    "commit": "97633a08a73eca3d65c79494f9aa31cc18fd019f",
+    "normalization_probes_passed": 4,
+    "existing_e4_cases_mapped": 4,
+    "model_calls": 0,
+    "full_platform_executed": false,
+    "runtime": "Node 20.19.2; below upstream core declared Node range; pure function scope only",
+    "study_id": "pilotdeck-memory"
+  },
+  "checks": {
+    "study_ruff": "PASS",
+    "source_and_artifact_hashes": "PASS",
+    "edited_markdown_links": "PASS",
+    "git_diff_check": "PASS",
+    "v02_release_audit": "PASS; historical pilot runner gap remains documented"
+  },
+  "frozen_results_modified": false,
+  "files": {
+    "studies/README.md": "c96074ac88490074de4674abf1e1d6facad114abcb625da105aeb41259c8dbf3",
+    "studies/build_case_map.py": "b3799084e89195d1e2e09bf7324070f53760c5915e661dcab10b7a17b7b9b49e",
+    "studies/deepnote/README.en.md": "b61ed6a2d099581d92fd44a8e60b4a45f80aa45f02a56cc348dbfebb6db8f014",
+    "studies/deepnote/README.md": "ace53916547ea31c2ba65abb2e195add6cabb2e11045574d340f79be02ead751",
+    "studies/deepnote/results/source-probe/manifest.json": "6048074a51734fb4d11d658b870d2c9c8b1d98ef305e675aecb8edf6e7c9c4b0",
+    "studies/deepnote/results/source-probe/probes.json": "7c10e2b2461f185c4d6e75d79804c13e3e1600f6e848c7b667f84092dfa99f77",
+    "studies/deepnote/upstream.json": "397cc84682c710d5ab455f9b43cd9826dd6b4a7a7648f9f3ffa0c9ea8f616e9c",
+    "studies/memory_studies/__init__.py": "655112634bd040e1f328de2b3d0c69f81aa7c4ebc67f7a01252db7ffed45c181",
+    "studies/memory_studies/case_map.py": "96d7b6b9512d4b491a8f7acd209815e7583a924a8271c60241ae97e0f0f084d6",
+    "studies/memory_studies/pilotdeck_probe.mjs": "b86d29696392bfca5beaea424658d6511002c30e9880403dfefdcfc2343e697e",
+    "studies/memory_studies/probes.py": "4ef1162d18e0442e0259e6cbe12c8e4015a50a58210e81fd69d0a1624efdb409",
+    "studies/memory_studies/runner.py": "fa8dd8dbc1f8bd65bfd2cbf95f7c9440ac779a740c8247224ab28510f1bd009d",
+    "studies/pilotdeck-memory/README.en.md": "b98f8171861c9cbb824e6843c56611562876a802fafcb77bb632e7dd06f1e87b",
+    "studies/pilotdeck-memory/README.md": "d8e4e283138889143a324c31556158cecbc962f655367bf2e27a3f2393b4359e",
+    "studies/pilotdeck-memory/e4-case-map.json": "287b20df8d897e417e654dd37f299c53dd8149f9a221cef0cde46b9643e5b44c",
+    "studies/pilotdeck-memory/results/source-probe/manifest.json": "e701ea557f1b8289d51565c7f9533bba8fd29f0c05f402e0e2ba320ece5c834e",
+    "studies/pilotdeck-memory/results/source-probe/probes.json": "11750fa95b6c360c93b4043cded6ed9cc39c9ee50c6f45520e19181f3eedeee3",
+    "studies/pilotdeck-memory/upstream.json": "a2eaa511ce0a6716d7c97b0e8b9d33c7a92210308ad8a95df2a2644d70338cf3",
+    "studies/run.py": "5a2a14e1879488e33469aa36484f34292aab5008a1f47a3246aba0c56fb3cace",
+    "studies/README.en.md": "e01b3cc66a7dd8e63f4ed38017d627be3286c8eef918953c79b8d929ad6795f1",
+    "studies/source-history.json": "6649865e7cbd936daa54946424d7522a64d89f41cdeaef474c8a636ddd0f6ba8",
+    "studies/verify.py": "a9d86a1aacf1a296706d583a41716ac3dab52b4da7d95561e29c1a5e2c392d7d"
+  },
+  "documentation_update": {
+    "date": "2026-09-14",
+    "scope": "Version placement and explicit historical-source verification; original probe artifacts preserved."
+  }
+}

@@ -20,13 +20,13 @@ This is not simply an offline chunk-to-note index replacement. init_note, refine
 | Answer | Uses best_note, not necessarily the final attempted revision | Two rejections retain the initial note |
 | Provenance | ref_log, note_log, query_log are saved | Not a per-fact citation guarantee |
 
-Two probes execute only the upstream retrieve_note AST function with deterministic retrieval/model stubs. They do not import the API-initializing CLI, train a model, or generate real answers. [Recorded probes](../../studies/deepnote/results/v01-source-probe/probes.json)
+Two probes execute only the upstream retrieve_note AST function with deterministic retrieval/model stubs. They do not import the API-initializing CLI, train a model, or generate real answers. [Recorded probes](../../studies/deepnote/results/source-probe/probes.json)
 
 ## Connection to the existing experiments
 
 v0.1 separates retrieval success from answer quality. DeepNote supplies an evidence-organization reference; it is not retroactively an implemented v0.1 component. v0.2 retention must use past-only inputs: a note written after seeing a future test query cannot be a historical retention feature.
 
-A future controlled experiment can ask whether organizing fixed retrieved evidence reduces hit-but-wrong answers. This hypothesis remains untested.
+A subsequent controlled study can ask whether organizing fixed retrieved evidence improves E4 cases with complete support but incorrect composition. That hypothesis remains untested.
 
 ## Proposed experiment and reuse boundary
 
@@ -34,8 +34,8 @@ Compare raw_evidence, plain_summary, and structured_note as representation value
 
 Measure EM/F1, supporting-fact preservation, source traceability, and unsupported additions. An attached source ID alone does not establish factual grounding. A representation-only adaptation is DeepNote-inspired; adaptive retrieval additionally requires matched retrieval and compute budgets. No original preference-training reproduction is claimed.
 
-Reuse longmem.config, longmem.generation, longmem.experiment_io, and existing experiment scoring. Derived notes should preserve source_memory_ids without overwriting original records. Use a separate organization interface and preserve frozen experiment implementations.
+Reuse longmem.config, generation, scoring, and experiment_io. Derived notes should preserve source_memory_ids without overwriting original records. A new organization interface should not duplicate the selector or modify frozen Engine.answer.
 
-The present probe implementation lives in studies/memory_studies and uses longmem-study-v1/study_id, separate from experimental manifests. [Commands and source pin](../../studies/deepnote/README.en.md)
+The present probe implementation lives in studies/memory_studies and uses longmem-study-v1/study_id, separate from experimental manifests. [Commands and source pin](../../studies/deepnote/README.md)
 
 Sources: [paper](https://aclanthology.org/2025.findings-emnlp.1073/), [pinned repository](https://github.com/thunlp/DeepNote/tree/cc2f0132737e04ec2d895e8c21673cee612ca1e7).

@@ -8,11 +8,11 @@ Long-running agents continuously accumulate facts, answers, and external knowled
 
 ## Research path
 
-v0.1 established the foundation: persistence, retrieval under growth, downstream utility, and a multimodal case study. The current v0.2 release candidate asks whether historical signals can guide retention before future tasks are observed.
+v0.1 established the foundation: persistence, retrieval under growth, downstream utility, and a multimodal case study. The current v0.2 release asks whether historical signals can guide retention before future tasks are observed.
 
 ```mermaid
 flowchart LR
-    A[v0.1 foundation<br/>storage, retrieval and answer utility] --> B[v0.2 release candidate<br/>future value and budgeted retention]
+    A[v0.1 foundation<br/>storage, retrieval and answer utility] --> B[v0.2 current release<br/>future value and budgeted retention]
     B --> C[v0.3 next question<br/>substitutes and set-conditioned value]
 ```
 
@@ -41,7 +41,7 @@ Python 3.11 or 3.12 is recommended:
 
 ```bash
 python3 -m venv .venv
-.venv/bin/python -m pip install -e '.[mcp,test,quality]'
+.venv/bin/python -m pip install -e '.[mcp,test,quality,experiments]'
 .venv/bin/python -m ruff check src tests scripts integrations experiments/utility-retention --exclude "**/results/**"
 .venv/bin/python scripts/release_artifacts.py restore-results
 .venv/bin/python scripts/audit_v02.py
@@ -68,8 +68,9 @@ Ruff covers shared code, tests, scripts, integrations, and active v0.2 sources. 
 ## Version closing studies
 
 - [DeepNote method connection](docs/paper-notes/deepnote.en.md): the v0.1 closing study on evidence organization, with source and control-flow checks.
+- [PilotDeck memory study](studies/pilotdeck-memory/README.en.md): the v0.2 closing study, following E1–E4, on capture, extraction, and organization, with an existing E4 case handoff.
 
-This study adds no model-performance claim to frozen releases. Full-platform, representation, and matched-budget experiments remain unexecuted. [DeepNote study](studies/deepnote/README.en.md)
+These studies add no model-performance claim to frozen releases. Full-platform, representation, and matched-budget experiments remain unexecuted. [Scope and reuse](studies/README.en.md)
 
 ## Real models and AMD/ROCm
 

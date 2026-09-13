@@ -31,3 +31,6 @@ UltraRAG 的 `python -m ultrarag.client` 在本地版本中会在实际执行后
 | 上游 | 用途 | 当前证据 | 未声称的内容 |
 |---|---|---|---|
 | [DeepNote](../studies/deepnote/README.md) | v0.1 四阶段之后的收尾：证据组织 | 固定源码、两项 stub 控制检查 | 离线 note 索引或论文性能复现 |
+| [PilotDeck](../studies/pilotdeck-memory/README.md) | v0.2 E1–E4 之后的收尾：真实记忆流程 | 固定源码、四项捕获函数检查、E4 案例映射 | 完整平台运行或 retention baseline |
+
+DeepNote 来源为 thunlp/DeepNote；PilotDeck 来源为 OpenBMB/PilotDeck，分别记录版本与核查范围，不将所有工作统称为同一公司的独立产品。两项材料不修改 v0.1/v0.2 冻结结果；后续真实表示或系统实验另建协议。命名与复用边界见 [studies 总览](../studies/README.md)。

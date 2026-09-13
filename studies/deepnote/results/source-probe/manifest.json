@@ -1,0 +1,31 @@
+{
+  "schema_version": "longmem-study-v1",
+  "study_id": "deepnote",
+  "status": "COMPLETE",
+  "evidence_level": "source_and_no_model_probe",
+  "upstream": {
+    "repository": "https://github.com/thunlp/DeepNote",
+    "commit": "cc2f0132737e04ec2d895e8c21673cee612ca1e7",
+    "reviewed_at": "2026-09-14",
+    "files": {
+      "README.md": "55464fc57761d7d44c71ccb3246bf6d80abe90bc1243160b8d9feba49cd73b45",
+      "src/main.py": "f8a06b5a2a82ad278f70ef1f2dc80be8349c4dd9a80e38640cb13b0c0a8bf6ab",
+      "prompts/en/init_note": "97e1aa719972ee3755a6c68dd51232041aa610266686b5d67ed70ac73a012fd9",
+      "prompts/en/refine_note": "e4781170eb1b87dafae96199057a8367abdb0f2e78fc2b8bee54b4032a212605",
+      "prompts/en/compare": "8ce32e83d439bc4c6f35b0737253878c205d741b1dc036b2d38e21aada6c4e29",
+      "prompts/en/gen_new_query": "c024fc3ba8362af69877e8b7878b6197e70c2d432f246fa50ebec0a1ff98ac2a"
+    },
+    "source_vendored": false
+  },
+  "source_hashes": {
+    "src/longmem/experiment_io.py": "231091f433e228d7e497998bc0e5602330aaa9a661f5355b1ef50b606696d7f1",
+    "studies/memory_studies/__init__.py": "655112634bd040e1f328de2b3d0c69f81aa7c4ebc67f7a01252db7ffed45c181",
+    "studies/memory_studies/case_map.py": "96d7b6b9512d4b491a8f7acd209815e7583a924a8271c60241ae97e0f0f084d6",
+    "studies/memory_studies/pilotdeck_probe.mjs": "b86d29696392bfca5beaea424658d6511002c30e9880403dfefdcfc2343e697e",
+    "studies/memory_studies/probes.py": "4ef1162d18e0442e0259e6cbe12c8e4015a50a58210e81fd69d0a1624efdb409",
+    "studies/memory_studies/runner.py": "fa8dd8dbc1f8bd65bfd2cbf95f7c9440ac779a740c8247224ab28510f1bd009d",
+    "studies/run.py": "5a2a14e1879488e33469aa36484f34292aab5008a1f47a3246aba0c56fb3cace"
+  },
+  "artifact_sha256": "7c10e2b2461f185c4d6e75d79804c13e3e1600f6e848c7b667f84092dfa99f77",
+  "model_evidence": false
+}

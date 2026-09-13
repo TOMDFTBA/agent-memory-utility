@@ -30,3 +30,6 @@ For exact AMD/ROCm coverage and the one recorded local source-compatibility patc
 | Upstream | Role | Current evidence | Not claimed |
 |---|---|---|---|
 | [DeepNote](../studies/deepnote/README.en.md) | v0.1 closing study after Stage 1–4: evidence organization | Pinned source, two stub control probes | Offline note index or paper performance reproduction |
+| [PilotDeck](../studies/pilotdeck-memory/README.en.md) | v0.2 closing study after E1–E4: memory pipelines | Pinned source, four capture-function probes, E4 case handoff | Full platform execution or retention baseline |
+
+Sources are thunlp/DeepNote and OpenBMB/PilotDeck, with separate revisions and review scopes; they are not presented as independent products of one company. Frozen v0.1/v0.2 results are unchanged. Future representation or system experiments require separate protocols. See [study boundaries](../studies/README.en.md).

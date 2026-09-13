@@ -1,0 +1,22 @@
+{
+  "repository": "https://github.com/OpenBMB/PilotDeck",
+  "commit": "97633a08a73eca3d65c79494f9aa31cc18fd019f",
+  "reviewed_at": "2026-09-14",
+  "files": {
+    "README.md": "ed8f4ca5a48705042d28b3d66c2e2f0969a7b9de6a4a28d8987515bc3e22a42f",
+    "src/context/memory/MemoryResolver.ts": "439256f19be9b4eccd7e6ae659422c0e10c707138dc0c0f314d3904e14e8881d",
+    "src/context/memory/MemoryAttachmentBuilder.ts": "4bffe4b6ae2fc96c70eaeccad764c990e746277fe0b21b610570267b0aa3365c",
+    "src/context/memory/EdgeClawMemoryProvider.ts": "bfd48c4e367db26f7e0cae0710f5d4d3d9b386454c0993ae609365e0017f8f1c",
+    "src/context/memory/createEdgeClawMemoryProviderFromConfig.ts": "171c71553c98f08cec7903181b4b956098b28a55f8c13a6dd2f61220fe3c1e83",
+    "src/context/memory/edgeclaw-memory-core/package.json": "4267a98203ae338b6f1bc6ddfa76d4cc6e6ad44599b98657e51151638c504851",
+    "src/context/memory/edgeclaw-memory-core/src/service.ts": "b06bc1d99434cfa77a2c6989087a86195497f18d38cd4d4e027ac76c38477508",
+    "src/context/memory/edgeclaw-memory-core/src/message-utils.ts": "690f6093a97d81c69676260c86c88dddc6ca7146d2425de2cf91578e8c782244",
+    "src/context/memory/edgeclaw-memory-core/src/core/pipeline/heartbeat.ts": "c4f1247e983948bc47a83c1308cd2a158bce097335c41f4b42d9de6babd125fc",
+    "src/context/memory/edgeclaw-memory-core/src/core/review/dream-review.ts": "ddc7d016152096f0dfb9ce63bc661b34f683a7cea3491d9cfd1c1365c8d3d1b7",
+    "src/context/memory/edgeclaw-memory-core/src/core/retrieval/reasoning-loop.ts": "26d38e3c96b877e038a9cf4d15f9d9174f3b64ea23117ed5ca8d56db811ba6a7",
+    "src/context/memory/edgeclaw-memory-core/src/core/file-memory.ts": "c64b368fa7fa329cbecb475b22972860bbc133444606017132c6edbf27ed3ad6",
+    "src/context/memory/edgeclaw-memory-core/lib/message-utils.js": "c5748674a1d60f58a3b5a103890399298915704f1d63fe9f0b460f2f1a253ce6",
+    "src/context/memory/edgeclaw-memory-core/lib/core/utils/text.js": "cc78d0cb2ab257ffc47f74f4ebc5764c8673dca8039498ee51891568f033a622"
+  },
+  "source_vendored": false
+}

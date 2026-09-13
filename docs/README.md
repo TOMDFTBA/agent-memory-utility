@@ -5,7 +5,8 @@
 - [v0.1 Stage 1–4](v0.1-four-stage-implementation-log.md)
 - [v0.1 收尾：DeepNote](../studies/deepnote/README.md)
 - [v0.2 E1–E4](../experiments/utility-retention/README.md)
-- [v0.2 发布候选](v0.2-release.md)
+- [v0.2 发布说明](v0.2-release.md)
+- [v0.2 收尾：PilotDeck](../studies/pilotdeck-memory/README.md)
 - [命名与复用](experiment-development-guide.md)
 - [技术谱系](technical-lineage.md)
 

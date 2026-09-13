@@ -1,0 +1,91 @@
+{
+  "probes": [
+    {
+      "probe_id": "last_turn",
+      "options": {
+        "captureStrategy": "last_turn",
+        "includeAssistant": true,
+        "maxMessageChars": 6000
+      },
+      "output": [
+        {
+          "role": "user",
+          "content": "The last three digits of the access code are 456.",
+          "msgId": "u2"
+        },
+        {
+          "role": "assistant",
+          "content": "Recorded the second part.",
+          "msgId": "a2"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "probe_id": "full_session",
+      "options": {
+        "captureStrategy": "full_session",
+        "includeAssistant": true,
+        "maxMessageChars": 6000
+      },
+      "output": [
+        {
+          "role": "user",
+          "content": "The first three digits of the access code are 123.",
+          "msgId": "u1"
+        },
+        {
+          "role": "assistant",
+          "content": "Recorded the first part.",
+          "msgId": "a1"
+        },
+        {
+          "role": "user",
+          "content": "The last three digits of the access code are 456.",
+          "msgId": "u2"
+        },
+        {
+          "role": "assistant",
+          "content": "Recorded the second part.",
+          "msgId": "a2"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "probe_id": "user_only",
+      "options": {
+        "captureStrategy": "full_session",
+        "includeAssistant": false,
+        "maxMessageChars": 6000
+      },
+      "output": [
+        {
+          "role": "user",
+          "content": "The first three digits of the access code are 123.",
+          "msgId": "u1"
+        },
+        {
+          "role": "user",
+          "content": "The last three digits of the access code are 456.",
+          "msgId": "u2"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "probe_id": "character_truncation",
+      "output": [
+        {
+          "role": "user",
+          "content": "abcde..."
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "runtime": "v20.19.2",
+  "model_calls": 0,
+  "execution": "Pinned upstream lib/message-utils.js normalizeMessages",
+  "interpretation": "Single capture input only; not accumulated storage, extraction, Dream, or downstream QA. Compare the recorded runtime with package Node >=22.13 <23 requirement; no full-platform compatibility claim."
+}
