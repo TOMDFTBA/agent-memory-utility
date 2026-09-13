@@ -1,6 +1,6 @@
 # 实验命名与模块开发指南
 
-本指南约束当前 v0.1 基底及后续实验。v0.1 已完成一次破坏性迁移：规范字段、共享模块和唯一 runner 均已落地，正式结果也已重新生成。旧格式只作为本地开发历史，不再是发布接口。
+本指南约束当前 v0.1 基底及后续实验。v0.1 已完成一次破坏性迁移：规范字段、共享模块和唯一 runner 均已落地，正式结果也已重新生成。旧格式可通过显式 adapter 读取历史证据与发布归档；新产物不得写入旧字段。
 
 ## 设计原则
 
@@ -47,7 +47,10 @@ recency
 importance
 semantic_dedup
 utility_aware
-oracle_utility
+retrieval_frequency
+hindsight_loo
+best_subset
+oracle_utility  # v0.1 compatibility only
 ```
 
 内容条件决定“向生成器展示什么”，统一使用：
@@ -119,7 +122,7 @@ cost.retrieval_p50_ms
 - generation：`transformers`、`evidence_test`
 - experiment execution：`model`、`test`
 
-配置文件暂时接受 v0.1 的连字符值 `hash-test` 和 `evidence-test`；新 Python 标识符、枚举和值优先使用下划线。
+配置读取兼容 v0.1 的连字符值 `hash-test` 和 `evidence-test`；新 Python 标识符、枚举和值优先使用下划线。
 
 ## 模块边界
 
@@ -193,7 +196,7 @@ from longmem.experiment_io import (
 - Stage 2 使用 `event_order`、明确的 target ID 与嵌套 query/prediction 结构；旧 runner 已删除。
 - Stage 3 主实验与控制实验共享标准答案、评分和检索字段；正式主实验及冻结控制已重跑。
 - Stage 4 使用独立页面数据模块与 `visual/native_text/ocr_text` 命名；旧动态导入 runner 已删除并重跑。
-- `experiment_contracts.py` 保留少量旧格式 adapter，仅用于读取本地历史数据，不允许新产物写旧字段。
+- `experiment_contracts.py` 保留少量旧格式 adapter，仅用于读取历史数据与发布归档，不允许新产物写旧字段。
 
 任何再次改变正式 runner 的修改都必须写入新输出目录并重跑对应验证，不能让旧报告悄悄指向新源码。
 
@@ -210,6 +213,52 @@ from longmem.experiment_io import (
 - [ ] manifest 从 RUNNING 转为 COMPLETE 前完成验证
 - [ ] 报告明确数据、模型、硬件和统计边界
 
-## 方法研究
+## v0.2 发布契约与跨版本映射
 
-补充研究实现进入 `memory_studies`，`studies/run.py` 仅为 CLI。manifest 使用 `longmem-study-v1`、`study_id` 与 `probe_id`，研究名称不作为 retention policy。复用 longmem I/O 与 hash，按各 study 实际依赖显式列出源码，避免绑定无关模块。新运行使用新输出目录，不改写历史 manifest。
+软件版本为 `0.2.0`；`longmem-experiment-v1` 继续表示公共 manifest envelope，不保证不同 artifact 的 payload 相同。读取者必须结合 `experiment_id` 与 artifact 文件名选择格式，不得只凭 schema_version 拼接所有 JSON。
+
+| 概念 | 发布规则 |
+|---|---|
+| 策略族 | 使用 RETENTION_POLICIES；新写入使用 WRITE_RETENTION_POLICIES，排除旧 oracle_utility |
+| 模型/精确候选 | candidate 可为 full-a10 或 EXACT_SET_CANDIDATES；不能当作策略族名称 |
+| 存储诊断 | 新记录使用 intervention；旧 candidate=storage_deletion 由 canonical_diagnostic_plan 只读适配 |
+| 历史 E1 条件 | condition 保留冻结语义，不传给用于 v0.1 内容条件的 canonical_condition |
+| 指标 | metrics 下的 prediction.*、diagnostic.* 与原四个 namespace 均受支持 |
+| backend | 公共实现同时接受 hash_test/hash-test、evidence_test/evidence-test；冻结配置保留原拼写 |
+| 标签 | E1 value、交接 target.value 和 E3/E4 loo_value 按 artifact 读取，禁止无版本猜测转换 |
+
+### 同名基线的实现变体
+
+| policy family | v0.1 | v0.2 |
+|---|---|---|
+| importance | 随机合成元数据 | 单条 memory 的冻结 LLM 1–5 评分，无效回退 3 |
+| semantic_dedup | 代表项优先，再包含重复项，以条数截取 | 只在代表项中按新旧顺序填 token budget，不回填重复项 |
+| recency / budget_ratio | 条数预算 | 固定 tokenizer 下规范序列化的 token 预算 |
+| retrieval | memory-budget 使用 FAISS | utility-retention 使用隔离列表的 embedding 相似度排序 |
+
+机器可读映射见 [release-contracts.json](../releases/v0.2.0/release-contracts.json)。跨版本图表按 family、variant 和 budget_unit 分组，不能仅按 policy 名称比较。
+
+### 复用与冻结证据
+
+E1 数据构造、报告和诊断实现进入 utility_retention package，顶层脚本保留兼容 CLI。新评分使用 longmem.scoring；v0.1 原 scorer 不修改，以归档回答一致性测试约束相同算法。阶段生命周期不强行合并。
+
+完整冻结证据通过 release_artifacts.py 恢复，当前结果审计使用显式 source-compatibility 映射；映射同时核验当前整套实现及历史归档 hash，不接受未登记修改。需要精确历史执行时，恢复到独立目录并选择 source-run。不要修改旧 manifest、源码快照或产物 hash 来适应新代码。
+
+发布目录、恢复命令与已知历史缺口见 [v0.2 发布说明](v0.2-release.md)。
+
+## 方法与系统补充的命名
+
+studies 使用独立的 memory_studies package、longmem-study-v1 envelope、study_id 和 probe_id。研究名称不是 retention policy；上游 captureStrategy 也不直接映射为 E3 candidate。派生表示或内容变换在新协议中分别用 representation / transformation 描述，不向冻结 E1 condition 混入新含义。参见 [DeepNote](../studies/deepnote/README.md)。
+
+## 跨版本正文与术语
+
+
+| 概念 | 统一含义 |
+|---|---|
+| `U(m,q;M)` | 固定检索器、生成器、prompt 与 read budget 下，删除 memory 并重新检索生成的单任务得分差 |
+| Future retention value | `V_t` 是未来任务分布上的期望贡献；有限 future window 的平均 LOO 是经验估计，不是 memory 内在价值。决策特征只使用 t 时刻可见历史 |
+| Storage budget / read budget | 分别为保留容量上限与检索后读取容量上限；实际使用 tokens 单独报告，不与上限混称 |
+| 冻结标签 | E1 `value`、E2 `target.value`、E3/E4 `loo_value` 按 artifact 映射，不原地改名 |
+| 证据类型 | 源码分析、无模型控制/纯函数检查、真实模型实验分别报告；检查通过不代表模型 baseline 获益 |
+
+`candidate` 标识候选方法或模型，`intervention` 标识诊断干预；保留历史 `condition` 的版本语义。`representation` / `transformation` 仅用于未来协议设计。新 backend 值使用下划线，读取时兼容连字符，冻结配置保留原拼写。schema 版本与软件版本分别演进。

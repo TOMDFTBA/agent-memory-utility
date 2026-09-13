@@ -8,45 +8,32 @@
 
 ## 研究路径
 
-v0.1 研究四个问题：
-
-1. 长期记忆能否被可靠地存储和恢复？
-2. 随着记忆增长，检索质量和成本会如何变化？
-3. 成功检索到的记忆是否真的改善了下游回答？
-4. 文本是否总是可检索记忆的合适表示形式？
+v0.1 建立持久化、检索增长、回答效用和多模态案例的实验基底。当前发布候选 v0.2 研究：在不观察未来任务的条件下，历史信号能否帮助决定哪些记忆值得保留？
 
 ```mermaid
 flowchart LR
-    A[Persistent memory<br/>写入、重放、恢复]
-    B[Retrieval under growth<br/>预算与保留基线]
-    C[Downstream utility<br/>检索证据是否真的有用]
-    D[Utility-aware retention<br/>v0.2 假设]
-    M[Multimodal case study<br/>视觉 vs 原生文本 vs OCR]
-
-    A --> B --> C --> D
-    B --> M
+    A[v0.1 基底<br/>存储、检索与回答效用] --> B[v0.2 发布候选<br/>未来价值预测与预算保留]
+    B --> C[v0.3 下一问题<br/>替代证据与集合条件化价值]
 ```
 
-这些结果共同导向 v0.2：在固定 memory/token budget 下，utility-aware retention 能否比 recency、importance 和 semantic deduplication 保留更多下游任务性能？
+## v0.2 关键发现
 
-## 关键发现
+- **历史价值预测改善了本组预算决策。** 在 24 条独立合成轨迹上，utility_aware 相对冻结 importance 的三主预算平均 EM 差异为 +0.2014，轨迹 bootstrap 描述性 95% 区间为 [0.0972, 0.3056]。该结论不表示每个预算都稳定获益。[正式结果](releases/v0.2.0/reports/e3-formal-model/report.md)
+- **真实单条 LOO 分数不足以区分所有保留集合。** 冗余证据的删除边际值可同时为零，而并列最优集合的实际答案表现不同。E4 支持的是目标的不可辨识性，不是所有 LOO 最优集合都次优。[集合诊断](releases/v0.2.0/reports/e4-diagnostic-model/report.md)
+- **下一步需要同时考虑替代证据和生成限制。** 精确预测分数和选择未提升本实验平均 EM；高预算仍有证据读全但组合回答失败的情况。尚未验证 graph、consolidation 或在线长期收益。
 
-- **记忆增长并未让全量检索失效，但保留策略影响明显。** 在 balanced 场景中，全量保留在 10,000 条记忆时仍有 0.949 Recall@5；50% 保留预算下，本次基线为 0.486–0.537。[结果与边界](experiments/memory-budget/results/v0.1/report.md)
-- **检索成功不等于回答成功。** 全量记忆 `k=3` 时 Recall 为 1.000，但 exact match 为 0.889，54 个样例中有 6 个 hit-but-wrong。[Memory-utility 报告](experiments/memory-utility/results/v0.1/report.md)
-- **表示形式改变了这组小样本的检索行为。** 指定页排第一的次数分别为视觉 5/5、原生文本 4/5、OCR 3/5。这只是 8 页文档的案例，不是通用模态排名。[多模态报告](experiments/multimodal-retrieval-mini/results/v0.1/report.md)
+以上结果限定于四类等比例合成压力场景、固定 MiniCPM 系统、每快照四条 memory 和两题窗口，不代表自然用户分布或跨模型泛化。
 
-## v0.1 交付物
+## v0.2 交付物
 
 | 阶段 | 可复现交付物 |
 |---|---|
-| Persistent memory | JSONL → SQLite/FAISS 记忆库、CLI/MCP、UltraRAG-style pipeline，以及恢复与并发测试 |
-| Memory budget | 300 组 MiniCPM 检索实验，覆盖召回、延迟、索引大小和保留策略 |
-| Memory utility | 594 个成对回答，包含 relevant、irrelevant、conflicting、consolidated 和 no-memory 对照 |
-| Multimodal case study | 8 页、5 问的视觉/原生文本/OCR 对照 |
+| E1：未来价值测量 | storage deletion、窗口标签、历史特征与开发诊断 |
+| E2：价值预测 | 仅历史特征的 Ridge、验证集模型选择与冻结基线 |
+| E3：预算保留 | 24 条正式轨迹、600 个唯一回答条件、配对比较与成本分项 |
+| E4：集合依赖 | 两组各 24 条轨迹、1536 个枚举条件、1152 个背景交互 |
 
-## v0.1 收尾研究：DeepNote
-
-[DeepNote](studies/deepnote/README.md) 将检索片段连接到问题条件化的证据笔记。固定源码分析和两项确定性控制流程检查覆盖接受、拒绝和累计失败停止。本项不新增模型效果结论或编号阶段。[方法笔记](docs/paper-notes/deepnote.md)
+[发布与复验说明](docs/v0.2-release.md) · [四阶段运行入口](experiments/utility-retention/README.md) · [v0.1 前序基底](docs/v0.1-four-stage-implementation-log.md)
 
 ## 快速验证
 
@@ -55,16 +42,20 @@ flowchart LR
 ```bash
 python3 -m venv .venv
 .venv/bin/python -m pip install -e '.[mcp,test,quality]'
-.venv/bin/python -m ruff check src tests scripts integrations
+.venv/bin/python -m ruff check src tests scripts integrations experiments/utility-retention --exclude "**/results/**"
+.venv/bin/python scripts/release_artifacts.py restore-results
+.venv/bin/python scripts/audit_v02.py
 .venv/bin/python -m pytest -q
 .venv/bin/python scripts/demo.py --mode test
 ```
 
 `test` 模式不加载模型，只验证存储、MCP 和编排链路。确定性测试向量与 `[TEST ONLY]` 输出不能用于声明真实语义质量。
 
-Ruff 当前检查可复用 package、测试、脚本和集成层。正式运行后的冻结实验 runner 由源码 hash 验证，不在原地重新格式化。
+Ruff 检查公共代码、测试、脚本、集成层及 v0.2 活跃源码；归档源码保持原样。恢复命令校验并展开发布归档，不下载模型。
 
 ## 结果与文档
+
+[文档导航](docs/README.md)
 
 - [系统架构与恢复机制](docs/architecture.md) ([English](docs/architecture.en.md))
 - [第一阶段验收](docs/validation.md) ([English](docs/validation.en.md))
@@ -77,6 +68,12 @@ Ruff 当前检查可复用 package、测试、脚本和集成层。正式运行�
 - [Memory-utility 补充控制](experiments/memory-utility/controls/results/v0.1-test/report.md)
 - [多模态方向判断](docs/multimodal-memory-relevance.md)
 - [实验命名与模块开发指南](docs/experiment-development-guide.md) ([English](docs/experiment-development-guide.en.md))
+
+## 版本收尾研究
+
+- [DeepNote 方法联系](docs/paper-notes/deepnote.md)：作为 v0.1 收尾，补充证据组织讨论，已完成源码与控制流程检查。
+
+该研究没有新增原版本的模型效果结论；完整平台、表示实验及预算 baseline 尚未执行。[DeepNote 研究](studies/deepnote/README.md)
 
 ## 真实模型与 AMD/ROCm
 
@@ -135,9 +132,9 @@ ultrarag run configs/ultrarag-memory.yaml
 - [Memory utility](experiments/memory-utility/README.md)
 - [Multimodal retrieval mini](experiments/multimodal-retrieval-mini/README.md)
 
-v0.1 已完成一次破坏性 schema 收敛并用真实模型重新生成正式结果；v0.2 及后续实验继续使用同一套共享配置、I/O 和字段契约，详见[实验开发指南](docs/experiment-development-guide.md)。
+v0.1 冻结结果保留原格式。v0.2 复用共享配置、I/O、embedding 和 generation，并用独立列表检索视图实施删除；跨版本 baseline 与预算单位的区别见[实验开发指南](docs/experiment-development-guide.md)。
 
-版本库保留代码、冻结配置、汇总报告、验证摘要和图表；模型权重、向量索引、缓存、原始大规模运行目录及本机审计记录被排除。Stage 4 的论文页面截图和 OCR 派生文件在再分发许可确认前也不纳入发布。
+版本库保留代码、协议、配置、数据集和公开报告。v0.2 完整逐题证据与历史源码合并为一份校验归档，results 目录由恢复命令生成；v0.1 的排除规则保持不变。模型权重、缓存及未获再分发许可的论文页面不进入发布。
 
 ## 已知限制
 
@@ -159,4 +156,4 @@ v0.1 已完成一次破坏性 schema 收敛并用真实模型重新生成正式�
 
 机器可读的引用信息见 [`CITATION.cff`](CITATION.cff)。
 
-发布验证详情记录于 [v0.1 发布检查清单](docs/release-checklist.md)。本仓库自有代码和文档采用 Apache License 2.0；上游模型、数据集、论文材料及第三方代码仍分别受其自身许可证约束。
+当前发布验证见 [v0.2 发布说明](docs/v0.2-release.md)；历史记录见 [v0.1 发布检查清单](docs/release-checklist.md)。本仓库自有代码和文档采用 Apache License 2.0；上游模型、数据集、论文材料及第三方代码仍分别受其自身许可证约束。

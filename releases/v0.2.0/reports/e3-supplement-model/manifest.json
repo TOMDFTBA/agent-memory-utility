@@ -1,0 +1,125 @@
+{
+  "schema_version": "longmem-experiment-v1",
+  "experiment_id": "utility-retention-v0.2-e3-supplement",
+  "status": "COMPLETE",
+  "backend": "model",
+  "model": {
+    "embedding": {
+      "backend": "minicpm",
+      "model_path": "MiniCPM-Embedding",
+      "device": "cuda",
+      "max_length": 512,
+      "batch_size": 8,
+      "query_prefix": "Query: ",
+      "revision": "dc0f82b4466b254dddc25787bf7b1cbc28f755b0"
+    },
+    "generation": {
+      "backend": "transformers",
+      "model_path": "MiniCPM-2B-SFT",
+      "device": "cuda",
+      "max_new_tokens": 128,
+      "max_input_tokens": 2048
+    },
+    "name": "MiniCPM-2B-SFT",
+    "revision": "local",
+    "metadata_sha256": {
+      "embedding": {
+        "1_Pooling/config.json": "95bedfff38382b7e3138b9f0091d1d02c66c9469dfa496a183eb893acfd047df",
+        "config.json": "70f128a80d23dd04888ed012687cac709a0be94ace4c7d1e05cf393118aa81ba",
+        "config_sentence_transformers.json": "1d39195f972ade95e522ecb497b47c2e93cbb7216dbb9165e6726437df6f1955",
+        "configuration_minicpm.py": "219144c0562d032c611d4cb05c91d7ff2f8f3322939ee7f991ca2196705401a8",
+        "instruction.json": "f0b2072367eb86f6b695a5f42cbc6ab898b97fb9788d8107c7f8e9208773c5bb",
+        "model-00001-of-00002.safetensors": "4a02d2d2c5e256fc38dcff2412ea107d49b7915ede1d15339f5703f4c9f3c711",
+        "model-00002-of-00002.safetensors": "34c132ba2d9db24e3fa034c6a34ac442b7c16216fca40fc36e300199d9c28dca",
+        "model.safetensors.index.json": "0858413b7e664e7017710a47c96ddf67655a8479fa583859d1d9f0ed04af5797",
+        "modeling_minicpm.py": "e0e60122b2aebaeba488a944c45b530ec48ec08c27d0ade9f35ab87bac4be60d",
+        "modules.json": "c6e29747481e8b5dd2b58401966aeac910de39092f90cda9a704b1545f902b04",
+        "sentence_bert_config.json": "c1a6de1953e2130758a7e998f19c0e4f23ba9f8ae1aaf50c16bf219299b3ff41",
+        "special_tokens_map.json": "4859e5dbde90e059988a0a2136d8df3f2773d4d2fc4c4543690028f0b2166e7f",
+        "tokenizer.model": "c9aafcd7da1f5611dab6be545db74d5552a2ccc9c2a12c72ea7be63aac4a25d7",
+        "tokenizer_config.json": "d0614d10ad438295214491e855fd17c8d1aec906372e135cc01be916e3346041"
+      },
+      "generation": {
+        "config.json": "41cf26cfdca93f49209a6c0c26c00b281d6408e010ddc8cca9531c825cc17fc4",
+        "configuration_minicpm.py": "eca7460ace9a195a69ed9955e065bc3d6a6bf801bb15c1ed0a4c1356ad0fd590",
+        "generation_config.json": "a022aa21060c3e0106edf2c9580e5d1878fa3ab01ad1fbe69a277cc847169e20",
+        "modeling_minicpm.py": "d38af5893eab28893041fbddfdf69f380c9fc67077fcb9c6eecbb30282c9e671",
+        "pytorch_model.bin": "0b0c993ace78c5983373948c636b0e587fcf1ac6f2e0f980bf7d735fe7dc52f8",
+        "special_tokens_map.json": "6fa06efa2785e450051989a6f8fb4416b10149ded485ddd3f127a40734f5cfd0",
+        "tokenizer.json": "42f73d01995bd71c88647b13ac696b36d84d5126d0c7cbaef6f8d872d5c97dff",
+        "tokenizer.model": "c9aafcd7da1f5611dab6be545db74d5552a2ccc9c2a12c72ea7be63aac4a25d7",
+        "tokenizer_config.json": "9c87efade54e9b26d3374a42f294d266722cbf9e97c748a12183d8317da074c9"
+      }
+    }
+  },
+  "source_hashes": {
+    "experiments/utility-retention/e3_supplement.py": "e7c49581cde5f553937123e5ce1525d5148a1e54715b01faf835e25635eb20e7",
+    "experiments/utility-retention/utility_retention/e3_supplement.py": "28bdc837e6b33f2cfbe41164ab311ca394626a7349dbc86086fa536da528a157",
+    "experiments/utility-retention/utility_retention/e3_supplement_analysis.py": "83a1b46132b224ac9b445ed49a36c4f1d2965018e2c112449ce4326ca8db5bb0",
+    "experiments/utility-retention/utility_retention/e3_supplement_replay.py": "4fe4dfd0ba4bd490a2a729ed713aecb30596c7f566f12d0297e0301cf26aa533"
+  },
+  "runtime": {
+    "python": "3.13.5",
+    "platform": "Linux-6.18.44+rex+5-amd64-x86_64-with-glibc2.41",
+    "numpy": "2.2.4",
+    "torch": "2.10.0",
+    "rocm": "7.14.60850",
+    "accelerator_available": true,
+    "accelerator_name": "AMD Radeon 8060S Graphics"
+  },
+  "protocol_sha256": "1f9a364266dc25a4db4a7adc8e42b72e5fe9b1912139f0c795aa5abbf65ece43",
+  "artifact_hashes": {
+    "failure-analysis.json": "38bf34fee3b698687726a386856f1111fcaa3c3d372046b5f0dd6c6ea4b2dbf4",
+    "gain-distribution.json": "e086455287470cc6d194003f48ba6166af14e1c207596d364aa1ab414fd0ee0d",
+    "e4-cases.json": "33d7345cfd79cf5ceaa1304c4e671b61e17fbcfeeacb38987c9cac6350d14089",
+    "replay-setup.json": "01cf4f64270aabdbe78c50db03ebbd777b93ecf3f2c3abb5dba8b3788689fa1f",
+    "history-replay.json": "34d1b09935de88300014c29ee5a81764e5797145aa989c45c57658cf3b923215",
+    "retrieval-replay.jsonl": "5f0a7346809da32eab1c5329c165d282d69839b1418e2f76e5823e940584cd5c",
+    "token-replay.json": "2099427a15cfa07bc4e77c9e0db9f9d08746977e843080f1cb6d77295b496eb4",
+    "microbenchmark.json": "4aaeced38f31e17de4eb37dbd97bb59291373acec39c0471171af2c435471bdc",
+    "audit.json": "ebe58f944e9b445e313539ddc750a42e59d1759f825326916359c648fea14d9b",
+    "report.md": "2dd2bec7374726c8c753965124839e59a6617547019a9ef053ee2bf39333e2f5",
+    "e4-cases.md": "c2404cd49265d530f946aa53e521dd3b9f020ae404980034ac239e3a1e57b33e",
+    "cost-accounting.json": "5ea22668235e8f050e1c91063c7be26fdb5240b39bc735873d9c5a9b33f95eaa"
+  },
+  "parent_hashes": {
+    "settings.json": "767b6a8801f355d8a66ae9c75f18b730a46d08e00da1fd405d5840d82eedb4db",
+    "strategies.json": "c3a1e393ded3917d4d88a53ff42f50cae1af6f86e4a26943bfbbb3a7379b6cb8",
+    "predictor.json": "27f8919e662f20b34c1b6b72f37d203c05f6c88fc31d3d30008d802fa477671f",
+    "dataset.json": "15f8c5952c815081d886a0bdcf31d73187c096c6d46f746de49f9a072235e9b0",
+    "past.json": "fc0c750a54f4d0509ef2805f717d3dbda5338031b5f83cd9746472fb2f449b04",
+    "previous-snapshots.json": "ab32f69d4cc9e5df554bedb84e8a1d7912782ce2ed68c465c8fb0032030966ef",
+    "dataset-manifest.json": "e7740c6b3ab25794931b20f28e621eb5a7e4f457c1bfc6e38881606a18e9cd85",
+    "protocol.md": "2e66e1808938db1f8b323159617b7fc20e2430d73c0bde4c184c6f5205e6b481",
+    "clarification.md": "843a5ce89150a66ac40c11cb0bc85014d133d37df65fcc9abb959611139c5d21",
+    "original-freeze.json": "487fe268885cfdcf4d034973b6aade01aaa7e9a9efcb838daaf721396a5da593",
+    "features.json": "7c50948e5935904dcadae35121ae82fedfee9061f10432886ed5ae872aed4c4b",
+    "similarities.json": "f230673ea36cbbfd4cbbfd3b6a973a219a2f4bd59011f24c87ec7ead8ca849f3",
+    "importance.jsonl": "135920ee0b368d0436434a4aaad9e7fd06337351a3578a29ddb5cb2d7868a560",
+    "deployable-plans.json": "81232a152a250ad617ff49920af1dc3757663801a88e627f22382cb5533ae847",
+    "predictions.json": "18993578b40e842738019674c6d60ad053df79a0abbc5d4b9422177b627c6e81",
+    "responses.jsonl": "83d9cad41f564f676b911d521c3394472ebd6e8eb2cec9325a62c332351ee5cb",
+    "deployable-complete.json": "a75d67934a94d3d48adde2185eaeb68294a221b4467cf5121b14787789694555",
+    "diagnostic-plans.json": "c29dea14a0305ae9c0b311a57c9f938f662130ac7f337b0e45c9001397fbc379",
+    "hindsight-labels.json": "b43ebf37a768ada14af5470487f2b55398251c83f761caef8bafc2a448010497",
+    "hindsight-plans.json": "c145df855b727a483e8c39572e01f6817e943ca6a876b3919f13d0efa7e47b3e",
+    "plans.json": "064cc390cec946c298bdd65d5b2f4c4e49561c98e6a121a617072bad9eaeaa44",
+    "summary.json": "55d3e2f484222608c644c9c0f0063e4ceb61e83e6d6d1e2bc08380068d7cc357",
+    "support-diagnostics.json": "36202b69cc44a864018f9e22510d1d8a7750a5ef32123a6183574a1148142179",
+    "audit.json": "2475bfec31c16c61c97938c5011ae5966e06d6bfdab173f6f4f28e910aecd8c5",
+    "cost-report.json": "80258c207426f03690586286c0e1b9847ebc23e4bc83e03529d3379c3f960a8c",
+    "report.md": "17cd990be27617206b5a64c8e15506973bd2bb3496c572652d59dc976164b436",
+    "budget-curve.png": "3c2e1b982bd650c9b867c5216f3cc3fc6c7a7698471b3fb4babf772db9063ca7",
+    "budget-curve.svg": "8fed66700460f616346d0e851ba64b067be2f858326f2b2d9dfcc6415046f9a1",
+    "manifest.json": "0b54488b156a676110bd8549754ff8db4c8295872053b8ebf435b30e5ae3daeb"
+  },
+  "parameters": {
+    "warmups": 3,
+    "repetitions": 30,
+    "absolute_tolerance": 1e-06,
+    "relative_tolerance": 1e-05,
+    "answer_generations": 0,
+    "importance_generations": 0,
+    "post_test_descriptive": true
+  }
+}

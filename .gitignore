@@ -54,3 +54,7 @@ experiments/multimodal-retrieval-mini/results/report.md
 *.npz
 build/
 dist/
+
+# v0.2 raw evidence and repeated source snapshots are shipped once in the
+# checksum-pinned releases/v0.2.0 archive; restore with release_artifacts.py.
+experiments/utility-retention/results/

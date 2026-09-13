@@ -1,0 +1,17 @@
+{
+  "dataset": {
+    "trajectory_count": 24,
+    "queries_per_trajectory": 2,
+    "memories_per_trajectory": 4,
+    "families": ["old_but_useful", "frequent_but_useless", "redundancy", "complementarity"],
+    "per_family": 6,
+    "structure_seed": 2026091701,
+    "surface_seed": 2026091702
+  },
+  "limits": {
+    "max_enumeration_conditions": 1536,
+    "max_new_answer_generations": 1600,
+    "max_importance_generations": 96,
+    "max_cumulative_seconds": 7200
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "response_count": 1536,
+  "subset_count": 768,
+  "exact_plans_verified": 576,
+  "interaction_count": 1152,
+  "tie_ranges_verified": 384,
+  "verifier_sha256": "0e19a124317ad743629fde7aeadb296233e5bc2c2f90dd873ad2d8683f3cdfa1",
+  "parent_manifest_sha256": "aad45159e3f84e352c0c7ef506be46023b165fbcf75de972783690815e95f7b7",
+  "method": "Independent bit-mask enumeration and set algebra; shared public I/O and answer scorer only"
+}

@@ -1,0 +1,12 @@
+{
+  "read_budget": 1024,
+  "top_k": 3,
+  "repeats": 3,
+  "context_samples_per_stratum": 1,
+  "minimum_effect": 0.01,
+  "max_label_std": 0.05,
+  "minimum_sign_stability": 1.0,
+  "minimum_memory_dependency": 0.1,
+  "max_generations": 2304,
+  "max_duration_seconds": 5400
+}

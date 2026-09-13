@@ -1,0 +1,5 @@
+{
+  "repeated_conditions": 186,
+  "changed_conditions": [],
+  "interpretation": "Same-seed independent execution tests determinism, not random-decoding variance or new-task generalization"
+}

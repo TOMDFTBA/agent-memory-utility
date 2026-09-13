@@ -1,13 +1,15 @@
-# 外部技术依赖
+# 外部技术谱系
 
-四个上游目录均位于主项目之外，不复制模型或上游源码到本仓库。
+[English](technical-lineage.en.md) | 简体中文
+
+v0.1 的四项技术支点位于主项目之外，不复制模型或上游源码到本仓库。下表本地位置为历史验证记录，不是当前安装要求。
 
 | 上游 | 本阶段用途 | 本地位置 |
 |---|---|---|
 | [UltraRAG](https://github.com/OpenBMB/UltraRAG) | MCP build/run 编排 | `../UltraRAG/code` |
 | [MiniCPM-Embedding](https://huggingface.co/openbmb/MiniCPM-Embedding) | 语义向量 | `../MiniCPM-Embedding/model` |
-| [RAG-DDR](https://github.com/OpenMatch/RAG-DDR) | 后续效用实验；本阶段仅复用同目录已有 MiniCPM SFT 基座 | `../RAG-DDR` |
-| [VisRAG](https://github.com/OpenBMB/VisRAG) | 后续多模态实验，当前不调用 | `../VisRAG` |
+| [RAG-DDR](https://github.com/OpenMatch/RAG-DDR) | 下游效用的问题意识；复用本地 MiniCPM SFT 基座，不复现 DDR 训练 | `../RAG-DDR` |
+| [VisRAG](https://github.com/OpenBMB/VisRAG) | 已完成小规模三路检索案例，不运行多模态生成 | `../VisRAG` |
 
 本地 UltraRAG checkout：`37e0cce42e2156d710467cde77a2c0fd0114a2c4`。
 本地 MiniCPM-Embedding code checkout：`dc0f82b4466b254dddc25787bf7b1cbc28f755b0`。
@@ -24,6 +26,8 @@ UltraRAG 以 `--no-deps` 安装，避免拉入 CUDA、Milvus、语料解析等�
 
 UltraRAG 的 `python -m ultrarag.client` 在本地版本中会在实际执行后再次对同步 `main()` 调用 `asyncio.run` 而报错，因此使用安装生成的 `ultrarag` console script。
 
-## v0.1 收尾研究
+## 版本收尾研究
 
-[DeepNote](../studies/deepnote/README.md) 是固定 thunlp 源码的问题条件化证据组织研究。两项无模型控制检查通过；自适应检索质量、训练和持久保留尚未验证。上游 checkout 保留在仓库之外。
+| 上游 | 用途 | 当前证据 | 未声称的内容 |
+|---|---|---|---|
+| [DeepNote](../studies/deepnote/README.md) | v0.1 四阶段之后的收尾：证据组织 | 固定源码、两项 stub 控制检查 | 离线 note 索引或论文性能复现 |

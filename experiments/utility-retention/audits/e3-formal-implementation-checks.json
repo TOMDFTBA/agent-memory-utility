@@ -1,0 +1,81 @@
+{
+  "formal_audit": {
+    "passed": true,
+    "dataset_replayed": true,
+    "predictions_replayed": true,
+    "plans_replayed": true,
+    "labels_recomputed": true,
+    "scores_recomputed": true,
+    "paired_statistics_recomputed": true,
+    "deployable_before_hindsight_verified": true,
+    "budgets_verified": true,
+    "response_count": 600,
+    "importance_count": 96,
+    "model_evidence": true
+  },
+  "e2_audit": {
+    "passed": true,
+    "response_count": 260,
+    "selection_count": 1008,
+    "training_replayed": true,
+    "predictions_replayed": true,
+    "scores_recomputed": true,
+    "budgets_verified": true,
+    "test_evaluated": false,
+    "responses_sha256": "f5ff35c1e6bedb126efcd57cee9652b21299c69f1dd87b2e48001b205fcaf330"
+  },
+  "baseline_development_audit": {
+    "passed": true,
+    "importance_count": 48,
+    "response_count": 144,
+    "importance_reparsed": true,
+    "selections_replayed": true,
+    "scores_recomputed": true,
+    "e2_reaudited": true,
+    "threshold_selection_replayed": true,
+    "budgets_verified": true,
+    "test_evaluated": false,
+    "source_hashes": {
+      "experiments/utility-retention/e3_baselines.py": "80e1486faa90be57d529289e1089007abd2599c70ec12d27b346c5b31af42c3f",
+      "experiments/utility-retention/utility_retention/__init__.py": "4f2641ecb91b15b598f352dd82b67e2cef876f2beccdf13fe4816f6dcad6d5e0",
+      "experiments/utility-retention/utility_retention/baselines.py": "be05f84889ba69d69834a9ede65e9d0c531e53a45e3718fd7eb20d4898fd1e92",
+      "experiments/utility-retention/utility_retention/dataset.py": "c0e59114fe83df440417e4d243443f747980ab0f60f9a599e018fc198f80d63e",
+      "experiments/utility-retention/utility_retention/e2.py": "d9d71ea1aa899d631c2a47edd05d697cab355a12c304bd5c6f13c26b605694c6",
+      "experiments/utility-retention/utility_retention/e2_metrics.py": "76a3675e710ae46fbf785bfb6090831d0687deb5380e08a9c2543fa7b8f88887",
+      "experiments/utility-retention/utility_retention/e3_baselines.py": "f6ee95fe9aee4e846720219ea7fa234a89b35cc019b7b72377701a6c8014c873",
+      "experiments/utility-retention/utility_retention/engine.py": "7758813a043fac2913bba9c2f3960ba9c7b909b376842f31b9261d0672d7195e",
+      "experiments/utility-retention/utility_retention/labeling.py": "06409591cd99bf1026eff163be7bf8a984b856bbc05304619e929d9d13d620f9",
+      "experiments/utility-retention/utility_retention/policies.py": "8b4fb556f6063a54d26b535e7308791e9bcac6a193f4db51176aa6bac91fc594",
+      "experiments/utility-retention/utility_retention/prediction.py": "0ce257a84005cc906896a488d510abe125c791c97c746d0ab5c2dd2e0d5eef66",
+      "experiments/utility-retention/utility_retention/runner.py": "d904280bb9fd6e6d7c55a92b9763cc6c198d27e7b8a86e6e8a7a3f94ccc80025",
+      "src/longmem/__init__.py": "76d0d12ae8faf651ccf048b624caeb89b36af164580e6b9b29b888314f263b59",
+      "src/longmem/cli.py": "855c15b36007905e6149ba6b439b438070757e1cb662837ad66f0ab352a677ec",
+      "src/longmem/config.py": "287f779072c72d3e63c206a367f712bb0aba7ef11e0d205d6a05fb490ab22d54",
+      "src/longmem/embedder.py": "0f16c86aa6babdf0b497280b438abe0e71591bb8b72894c9498dacc5538e9d19",
+      "src/longmem/experiment_contracts.py": "46bd3d4916d7a62f4179c8d2b7b720a3d9415811d7b0548f87835d57db433f7f",
+      "src/longmem/experiment_io.py": "231091f433e228d7e497998bc0e5602330aaa9a661f5355b1ef50b606696d7f1",
+      "src/longmem/generation.py": "804baffb4a7d2b243fe66c1e18b8a9f2b16d306d11480f7342820c7f783363e0",
+      "src/longmem/retrieval.py": "6ef8344d903632a73e6a749fb2368cbf1b1a732fa4bde0bbe5eecbada942c06d",
+      "src/longmem/schema.py": "a4de029d8f7598f2f181560e9d4620359c9d676086bc55f82951271a80171cfa",
+      "src/longmem/store.py": "038f832909c6d4a7a5020027619192f0bcd0d548ae347968731fdf2fd5ddca02"
+    }
+  },
+  "regression": {
+    "full_suite_passed": 86,
+    "additional_primary_statistic_test_passed": 1,
+    "ruff_passed": true
+  },
+  "test_sha256": "81094a51425df21ce6e3b74a053aa5bdb44dd2103a93dee00db7d4316e0fb3bd",
+  "frequent_history_counts": [
+    3,
+    4,
+    5,
+    3,
+    4,
+    5
+  ],
+  "old_supports_oldest": true,
+  "complementarity_no_single_record_full_answer": true,
+  "plot_visually_checked": true,
+  "prior_frozen_shared_sources_unchanged": true
+}

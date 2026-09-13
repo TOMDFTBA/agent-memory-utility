@@ -20,7 +20,7 @@ class Generator:
 
     def generate(self, prompt, hits):
         backend = self.config["backend"]
-        if backend == "evidence-test":
+        if backend in {"evidence-test", "evidence_test"}:
             return "[TEST ONLY] " + ("; ".join(
                 f"{hit['memory']['content']} [{hit['memory']['memory_id']}]" for hit in hits
             ) or "No memory evidence.")

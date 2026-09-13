@@ -1,0 +1,884 @@
+[
+  {
+    "trajectory_id": "e1-train-old_but_useful",
+    "user_id": "e1-train-old_but_useful",
+    "split": "train",
+    "snapshot_id": "e1-train-old_but_useful-s0",
+    "event_order": 10,
+    "scenario": "old_but_useful",
+    "memories": [
+      {
+        "memory_id": "e1-train-old_but_useful-m0",
+        "canonical_id": "e1-train-old_but_useful-fact0",
+        "leakage_group": "e1-train-old_but_useful-fact0",
+        "event_order": 1,
+        "content": "The access code for Vault-249588 is 207302."
+      },
+      {
+        "memory_id": "e1-train-old_but_useful-m1",
+        "canonical_id": "e1-train-old_but_useful-fact1",
+        "leakage_group": "e1-train-old_but_useful-fact1",
+        "event_order": 2,
+        "content": "The service desk reference for Vault-249588 is 37685."
+      },
+      {
+        "memory_id": "e1-train-old_but_useful-m2",
+        "canonical_id": "e1-train-old_but_useful-fact2",
+        "leakage_group": "e1-train-old_but_useful-fact2",
+        "event_order": 3,
+        "content": "The maintenance ticket for Vault-249588 is 40944."
+      },
+      {
+        "memory_id": "e1-train-old_but_useful-m3",
+        "canonical_id": "e1-train-old_but_useful-fact3",
+        "leakage_group": "e1-train-old_but_useful-fact3",
+        "event_order": 4,
+        "content": "The inventory label for Vault-249588 is 80427."
+      }
+    ],
+    "history_queries": [
+      {
+        "query_id": "e1-train-old_but_useful-h0",
+        "event_order": 6,
+        "text": "What is the inventory label for Vault-249588?"
+      }
+    ],
+    "future_queries": [
+      {
+        "query_id": "e1-train-old_but_useful-q0",
+        "event_order": 11,
+        "text": "What is the six-digit access code for Vault-249588?",
+        "gold_answer": "207302",
+        "supporting_memory_sets": [
+          [
+            "e1-train-old_but_useful-m0"
+          ]
+        ]
+      },
+      {
+        "query_id": "e1-train-old_but_useful-q1",
+        "event_order": 12,
+        "text": "Give the complete access code needed to open Vault-249588.",
+        "gold_answer": "207302",
+        "supporting_memory_sets": [
+          [
+            "e1-train-old_but_useful-m0"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "trajectory_id": "e1-train-frequent_but_useless",
+    "user_id": "e1-train-frequent_but_useless",
+    "split": "train",
+    "snapshot_id": "e1-train-frequent_but_useless-s0",
+    "event_order": 10,
+    "scenario": "frequent_but_useless",
+    "memories": [
+      {
+        "memory_id": "e1-train-frequent_but_useless-m0",
+        "canonical_id": "e1-train-frequent_but_useless-fact0",
+        "leakage_group": "e1-train-frequent_but_useless-fact0",
+        "event_order": 1,
+        "content": "The access code for Vault-540106 is 447912."
+      },
+      {
+        "memory_id": "e1-train-frequent_but_useless-m1",
+        "canonical_id": "e1-train-frequent_but_useless-fact1",
+        "leakage_group": "e1-train-frequent_but_useless-fact1",
+        "event_order": 2,
+        "content": "The service desk reference for Vault-540106 is 61468."
+      },
+      {
+        "memory_id": "e1-train-frequent_but_useless-m2",
+        "canonical_id": "e1-train-frequent_but_useless-fact2",
+        "leakage_group": "e1-train-frequent_but_useless-fact2",
+        "event_order": 3,
+        "content": "The maintenance ticket for Vault-540106 is 51233."
+      },
+      {
+        "memory_id": "e1-train-frequent_but_useless-m3",
+        "canonical_id": "e1-train-frequent_but_useless-fact3",
+        "leakage_group": "e1-train-frequent_but_useless-fact3",
+        "event_order": 4,
+        "content": "The inventory label for Vault-540106 is 28116."
+      }
+    ],
+    "history_queries": [
+      {
+        "query_id": "e1-train-frequent_but_useless-h0",
+        "event_order": 6,
+        "text": "What is the service desk reference for Vault-540106?"
+      },
+      {
+        "query_id": "e1-train-frequent_but_useless-h1",
+        "event_order": 7,
+        "text": "What is the service desk reference for Vault-540106?"
+      },
+      {
+        "query_id": "e1-train-frequent_but_useless-h2",
+        "event_order": 8,
+        "text": "What is the service desk reference for Vault-540106?"
+      }
+    ],
+    "future_queries": [
+      {
+        "query_id": "e1-train-frequent_but_useless-q0",
+        "event_order": 11,
+        "text": "What is the six-digit access code for Vault-540106?",
+        "gold_answer": "447912",
+        "supporting_memory_sets": [
+          [
+            "e1-train-frequent_but_useless-m0"
+          ]
+        ]
+      },
+      {
+        "query_id": "e1-train-frequent_but_useless-q1",
+        "event_order": 12,
+        "text": "Give the complete access code needed to open Vault-540106.",
+        "gold_answer": "447912",
+        "supporting_memory_sets": [
+          [
+            "e1-train-frequent_but_useless-m0"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "trajectory_id": "e1-train-redundancy",
+    "user_id": "e1-train-redundancy",
+    "split": "train",
+    "snapshot_id": "e1-train-redundancy-s0",
+    "event_order": 10,
+    "scenario": "redundancy",
+    "memories": [
+      {
+        "memory_id": "e1-train-redundancy-m0",
+        "canonical_id": "e1-train-redundancy-fact0",
+        "leakage_group": "e1-train-redundancy-fact0",
+        "event_order": 1,
+        "content": "The access code for Vault-179580 is 994130."
+      },
+      {
+        "memory_id": "e1-train-redundancy-m1",
+        "canonical_id": "e1-train-redundancy-fact0",
+        "leakage_group": "e1-train-redundancy-fact0",
+        "event_order": 2,
+        "content": "To open Vault-179580, use access code 994130."
+      },
+      {
+        "memory_id": "e1-train-redundancy-m2",
+        "canonical_id": "e1-train-redundancy-fact2",
+        "leakage_group": "e1-train-redundancy-fact2",
+        "event_order": 3,
+        "content": "The maintenance ticket for Vault-179580 is 23564."
+      },
+      {
+        "memory_id": "e1-train-redundancy-m3",
+        "canonical_id": "e1-train-redundancy-fact3",
+        "leakage_group": "e1-train-redundancy-fact3",
+        "event_order": 4,
+        "content": "The inventory label for Vault-179580 is 16756."
+      }
+    ],
+    "history_queries": [
+      {
+        "query_id": "e1-train-redundancy-h0",
+        "event_order": 6,
+        "text": "What is the inventory label for Vault-179580?"
+      }
+    ],
+    "future_queries": [
+      {
+        "query_id": "e1-train-redundancy-q0",
+        "event_order": 11,
+        "text": "What is the six-digit access code for Vault-179580?",
+        "gold_answer": "994130",
+        "supporting_memory_sets": [
+          [
+            "e1-train-redundancy-m0"
+          ],
+          [
+            "e1-train-redundancy-m1"
+          ]
+        ]
+      },
+      {
+        "query_id": "e1-train-redundancy-q1",
+        "event_order": 12,
+        "text": "Give the complete access code needed to open Vault-179580.",
+        "gold_answer": "994130",
+        "supporting_memory_sets": [
+          [
+            "e1-train-redundancy-m0"
+          ],
+          [
+            "e1-train-redundancy-m1"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "trajectory_id": "e1-train-complementarity",
+    "user_id": "e1-train-complementarity",
+    "split": "train",
+    "snapshot_id": "e1-train-complementarity-s0",
+    "event_order": 10,
+    "scenario": "complementarity",
+    "memories": [
+      {
+        "memory_id": "e1-train-complementarity-m0",
+        "canonical_id": "e1-train-complementarity-fact0",
+        "leakage_group": "e1-train-complementarity-fact0",
+        "event_order": 1,
+        "content": "The first three digits of the six-digit access code for Vault-222506 are 984."
+      },
+      {
+        "memory_id": "e1-train-complementarity-m1",
+        "canonical_id": "e1-train-complementarity-fact1",
+        "leakage_group": "e1-train-complementarity-fact1",
+        "event_order": 2,
+        "content": "The last three digits of the six-digit access code for Vault-222506 are 111."
+      },
+      {
+        "memory_id": "e1-train-complementarity-m2",
+        "canonical_id": "e1-train-complementarity-fact2",
+        "leakage_group": "e1-train-complementarity-fact2",
+        "event_order": 3,
+        "content": "The maintenance ticket for Vault-222506 is 14064."
+      },
+      {
+        "memory_id": "e1-train-complementarity-m3",
+        "canonical_id": "e1-train-complementarity-fact3",
+        "leakage_group": "e1-train-complementarity-fact3",
+        "event_order": 4,
+        "content": "The inventory label for Vault-222506 is 64935."
+      }
+    ],
+    "history_queries": [
+      {
+        "query_id": "e1-train-complementarity-h0",
+        "event_order": 6,
+        "text": "What is the inventory label for Vault-222506?"
+      }
+    ],
+    "future_queries": [
+      {
+        "query_id": "e1-train-complementarity-q0",
+        "event_order": 11,
+        "text": "What is the six-digit access code for Vault-222506?",
+        "gold_answer": "984111",
+        "supporting_memory_sets": [
+          [
+            "e1-train-complementarity-m0",
+            "e1-train-complementarity-m1"
+          ]
+        ]
+      },
+      {
+        "query_id": "e1-train-complementarity-q1",
+        "event_order": 12,
+        "text": "Give the complete access code needed to open Vault-222506.",
+        "gold_answer": "984111",
+        "supporting_memory_sets": [
+          [
+            "e1-train-complementarity-m0",
+            "e1-train-complementarity-m1"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "trajectory_id": "e1-validation-old_but_useful",
+    "user_id": "e1-validation-old_but_useful",
+    "split": "validation",
+    "snapshot_id": "e1-validation-old_but_useful-s0",
+    "event_order": 10,
+    "scenario": "old_but_useful",
+    "memories": [
+      {
+        "memory_id": "e1-validation-old_but_useful-m0",
+        "canonical_id": "e1-validation-old_but_useful-fact0",
+        "leakage_group": "e1-validation-old_but_useful-fact0",
+        "event_order": 1,
+        "content": "The access code for Vault-927540 is 527371."
+      },
+      {
+        "memory_id": "e1-validation-old_but_useful-m1",
+        "canonical_id": "e1-validation-old_but_useful-fact1",
+        "leakage_group": "e1-validation-old_but_useful-fact1",
+        "event_order": 2,
+        "content": "The service desk reference for Vault-927540 is 90034."
+      },
+      {
+        "memory_id": "e1-validation-old_but_useful-m2",
+        "canonical_id": "e1-validation-old_but_useful-fact2",
+        "leakage_group": "e1-validation-old_but_useful-fact2",
+        "event_order": 3,
+        "content": "The maintenance ticket for Vault-927540 is 77678."
+      },
+      {
+        "memory_id": "e1-validation-old_but_useful-m3",
+        "canonical_id": "e1-validation-old_but_useful-fact3",
+        "leakage_group": "e1-validation-old_but_useful-fact3",
+        "event_order": 4,
+        "content": "The inventory label for Vault-927540 is 48946."
+      }
+    ],
+    "history_queries": [
+      {
+        "query_id": "e1-validation-old_but_useful-h0",
+        "event_order": 6,
+        "text": "What is the inventory label for Vault-927540?"
+      }
+    ],
+    "future_queries": [
+      {
+        "query_id": "e1-validation-old_but_useful-q0",
+        "event_order": 11,
+        "text": "What is the six-digit access code for Vault-927540?",
+        "gold_answer": "527371",
+        "supporting_memory_sets": [
+          [
+            "e1-validation-old_but_useful-m0"
+          ]
+        ]
+      },
+      {
+        "query_id": "e1-validation-old_but_useful-q1",
+        "event_order": 12,
+        "text": "Give the complete access code needed to open Vault-927540.",
+        "gold_answer": "527371",
+        "supporting_memory_sets": [
+          [
+            "e1-validation-old_but_useful-m0"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "trajectory_id": "e1-validation-frequent_but_useless",
+    "user_id": "e1-validation-frequent_but_useless",
+    "split": "validation",
+    "snapshot_id": "e1-validation-frequent_but_useless-s0",
+    "event_order": 10,
+    "scenario": "frequent_but_useless",
+    "memories": [
+      {
+        "memory_id": "e1-validation-frequent_but_useless-m0",
+        "canonical_id": "e1-validation-frequent_but_useless-fact0",
+        "leakage_group": "e1-validation-frequent_but_useless-fact0",
+        "event_order": 1,
+        "content": "The access code for Vault-282950 is 141315."
+      },
+      {
+        "memory_id": "e1-validation-frequent_but_useless-m1",
+        "canonical_id": "e1-validation-frequent_but_useless-fact1",
+        "leakage_group": "e1-validation-frequent_but_useless-fact1",
+        "event_order": 2,
+        "content": "The service desk reference for Vault-282950 is 90313."
+      },
+      {
+        "memory_id": "e1-validation-frequent_but_useless-m2",
+        "canonical_id": "e1-validation-frequent_but_useless-fact2",
+        "leakage_group": "e1-validation-frequent_but_useless-fact2",
+        "event_order": 3,
+        "content": "The maintenance ticket for Vault-282950 is 35115."
+      },
+      {
+        "memory_id": "e1-validation-frequent_but_useless-m3",
+        "canonical_id": "e1-validation-frequent_but_useless-fact3",
+        "leakage_group": "e1-validation-frequent_but_useless-fact3",
+        "event_order": 4,
+        "content": "The inventory label for Vault-282950 is 10270."
+      }
+    ],
+    "history_queries": [
+      {
+        "query_id": "e1-validation-frequent_but_useless-h0",
+        "event_order": 6,
+        "text": "What is the service desk reference for Vault-282950?"
+      },
+      {
+        "query_id": "e1-validation-frequent_but_useless-h1",
+        "event_order": 7,
+        "text": "What is the service desk reference for Vault-282950?"
+      },
+      {
+        "query_id": "e1-validation-frequent_but_useless-h2",
+        "event_order": 8,
+        "text": "What is the service desk reference for Vault-282950?"
+      }
+    ],
+    "future_queries": [
+      {
+        "query_id": "e1-validation-frequent_but_useless-q0",
+        "event_order": 11,
+        "text": "What is the six-digit access code for Vault-282950?",
+        "gold_answer": "141315",
+        "supporting_memory_sets": [
+          [
+            "e1-validation-frequent_but_useless-m0"
+          ]
+        ]
+      },
+      {
+        "query_id": "e1-validation-frequent_but_useless-q1",
+        "event_order": 12,
+        "text": "Give the complete access code needed to open Vault-282950.",
+        "gold_answer": "141315",
+        "supporting_memory_sets": [
+          [
+            "e1-validation-frequent_but_useless-m0"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "trajectory_id": "e1-validation-redundancy",
+    "user_id": "e1-validation-redundancy",
+    "split": "validation",
+    "snapshot_id": "e1-validation-redundancy-s0",
+    "event_order": 10,
+    "scenario": "redundancy",
+    "memories": [
+      {
+        "memory_id": "e1-validation-redundancy-m0",
+        "canonical_id": "e1-validation-redundancy-fact0",
+        "leakage_group": "e1-validation-redundancy-fact0",
+        "event_order": 1,
+        "content": "The access code for Vault-858548 is 436777."
+      },
+      {
+        "memory_id": "e1-validation-redundancy-m1",
+        "canonical_id": "e1-validation-redundancy-fact0",
+        "leakage_group": "e1-validation-redundancy-fact0",
+        "event_order": 2,
+        "content": "To open Vault-858548, use access code 436777."
+      },
+      {
+        "memory_id": "e1-validation-redundancy-m2",
+        "canonical_id": "e1-validation-redundancy-fact2",
+        "leakage_group": "e1-validation-redundancy-fact2",
+        "event_order": 3,
+        "content": "The maintenance ticket for Vault-858548 is 72177."
+      },
+      {
+        "memory_id": "e1-validation-redundancy-m3",
+        "canonical_id": "e1-validation-redundancy-fact3",
+        "leakage_group": "e1-validation-redundancy-fact3",
+        "event_order": 4,
+        "content": "The inventory label for Vault-858548 is 58064."
+      }
+    ],
+    "history_queries": [
+      {
+        "query_id": "e1-validation-redundancy-h0",
+        "event_order": 6,
+        "text": "What is the inventory label for Vault-858548?"
+      }
+    ],
+    "future_queries": [
+      {
+        "query_id": "e1-validation-redundancy-q0",
+        "event_order": 11,
+        "text": "What is the six-digit access code for Vault-858548?",
+        "gold_answer": "436777",
+        "supporting_memory_sets": [
+          [
+            "e1-validation-redundancy-m0"
+          ],
+          [
+            "e1-validation-redundancy-m1"
+          ]
+        ]
+      },
+      {
+        "query_id": "e1-validation-redundancy-q1",
+        "event_order": 12,
+        "text": "Give the complete access code needed to open Vault-858548.",
+        "gold_answer": "436777",
+        "supporting_memory_sets": [
+          [
+            "e1-validation-redundancy-m0"
+          ],
+          [
+            "e1-validation-redundancy-m1"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "trajectory_id": "e1-validation-complementarity",
+    "user_id": "e1-validation-complementarity",
+    "split": "validation",
+    "snapshot_id": "e1-validation-complementarity-s0",
+    "event_order": 10,
+    "scenario": "complementarity",
+    "memories": [
+      {
+        "memory_id": "e1-validation-complementarity-m0",
+        "canonical_id": "e1-validation-complementarity-fact0",
+        "leakage_group": "e1-validation-complementarity-fact0",
+        "event_order": 1,
+        "content": "The first three digits of the six-digit access code for Vault-323399 are 220."
+      },
+      {
+        "memory_id": "e1-validation-complementarity-m1",
+        "canonical_id": "e1-validation-complementarity-fact1",
+        "leakage_group": "e1-validation-complementarity-fact1",
+        "event_order": 2,
+        "content": "The last three digits of the six-digit access code for Vault-323399 are 157."
+      },
+      {
+        "memory_id": "e1-validation-complementarity-m2",
+        "canonical_id": "e1-validation-complementarity-fact2",
+        "leakage_group": "e1-validation-complementarity-fact2",
+        "event_order": 3,
+        "content": "The maintenance ticket for Vault-323399 is 16526."
+      },
+      {
+        "memory_id": "e1-validation-complementarity-m3",
+        "canonical_id": "e1-validation-complementarity-fact3",
+        "leakage_group": "e1-validation-complementarity-fact3",
+        "event_order": 4,
+        "content": "The inventory label for Vault-323399 is 90223."
+      }
+    ],
+    "history_queries": [
+      {
+        "query_id": "e1-validation-complementarity-h0",
+        "event_order": 6,
+        "text": "What is the inventory label for Vault-323399?"
+      }
+    ],
+    "future_queries": [
+      {
+        "query_id": "e1-validation-complementarity-q0",
+        "event_order": 11,
+        "text": "What is the six-digit access code for Vault-323399?",
+        "gold_answer": "220157",
+        "supporting_memory_sets": [
+          [
+            "e1-validation-complementarity-m0",
+            "e1-validation-complementarity-m1"
+          ]
+        ]
+      },
+      {
+        "query_id": "e1-validation-complementarity-q1",
+        "event_order": 12,
+        "text": "Give the complete access code needed to open Vault-323399.",
+        "gold_answer": "220157",
+        "supporting_memory_sets": [
+          [
+            "e1-validation-complementarity-m0",
+            "e1-validation-complementarity-m1"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "trajectory_id": "e1-test-old_but_useful",
+    "user_id": "e1-test-old_but_useful",
+    "split": "test",
+    "snapshot_id": "e1-test-old_but_useful-s0",
+    "event_order": 10,
+    "scenario": "old_but_useful",
+    "memories": [
+      {
+        "memory_id": "e1-test-old_but_useful-m0",
+        "canonical_id": "e1-test-old_but_useful-fact0",
+        "leakage_group": "e1-test-old_but_useful-fact0",
+        "event_order": 1,
+        "content": "The access code for Vault-750041 is 249090."
+      },
+      {
+        "memory_id": "e1-test-old_but_useful-m1",
+        "canonical_id": "e1-test-old_but_useful-fact1",
+        "leakage_group": "e1-test-old_but_useful-fact1",
+        "event_order": 2,
+        "content": "The service desk reference for Vault-750041 is 94574."
+      },
+      {
+        "memory_id": "e1-test-old_but_useful-m2",
+        "canonical_id": "e1-test-old_but_useful-fact2",
+        "leakage_group": "e1-test-old_but_useful-fact2",
+        "event_order": 3,
+        "content": "The maintenance ticket for Vault-750041 is 33721."
+      },
+      {
+        "memory_id": "e1-test-old_but_useful-m3",
+        "canonical_id": "e1-test-old_but_useful-fact3",
+        "leakage_group": "e1-test-old_but_useful-fact3",
+        "event_order": 4,
+        "content": "The inventory label for Vault-750041 is 17416."
+      }
+    ],
+    "history_queries": [
+      {
+        "query_id": "e1-test-old_but_useful-h0",
+        "event_order": 6,
+        "text": "What is the inventory label for Vault-750041?"
+      }
+    ],
+    "future_queries": [
+      {
+        "query_id": "e1-test-old_but_useful-q0",
+        "event_order": 11,
+        "text": "What is the six-digit access code for Vault-750041?",
+        "gold_answer": "249090",
+        "supporting_memory_sets": [
+          [
+            "e1-test-old_but_useful-m0"
+          ]
+        ]
+      },
+      {
+        "query_id": "e1-test-old_but_useful-q1",
+        "event_order": 12,
+        "text": "Give the complete access code needed to open Vault-750041.",
+        "gold_answer": "249090",
+        "supporting_memory_sets": [
+          [
+            "e1-test-old_but_useful-m0"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "trajectory_id": "e1-test-frequent_but_useless",
+    "user_id": "e1-test-frequent_but_useless",
+    "split": "test",
+    "snapshot_id": "e1-test-frequent_but_useless-s0",
+    "event_order": 10,
+    "scenario": "frequent_but_useless",
+    "memories": [
+      {
+        "memory_id": "e1-test-frequent_but_useless-m0",
+        "canonical_id": "e1-test-frequent_but_useless-fact0",
+        "leakage_group": "e1-test-frequent_but_useless-fact0",
+        "event_order": 1,
+        "content": "The access code for Vault-242690 is 190139."
+      },
+      {
+        "memory_id": "e1-test-frequent_but_useless-m1",
+        "canonical_id": "e1-test-frequent_but_useless-fact1",
+        "leakage_group": "e1-test-frequent_but_useless-fact1",
+        "event_order": 2,
+        "content": "The service desk reference for Vault-242690 is 25823."
+      },
+      {
+        "memory_id": "e1-test-frequent_but_useless-m2",
+        "canonical_id": "e1-test-frequent_but_useless-fact2",
+        "leakage_group": "e1-test-frequent_but_useless-fact2",
+        "event_order": 3,
+        "content": "The maintenance ticket for Vault-242690 is 95014."
+      },
+      {
+        "memory_id": "e1-test-frequent_but_useless-m3",
+        "canonical_id": "e1-test-frequent_but_useless-fact3",
+        "leakage_group": "e1-test-frequent_but_useless-fact3",
+        "event_order": 4,
+        "content": "The inventory label for Vault-242690 is 23418."
+      }
+    ],
+    "history_queries": [
+      {
+        "query_id": "e1-test-frequent_but_useless-h0",
+        "event_order": 6,
+        "text": "What is the service desk reference for Vault-242690?"
+      },
+      {
+        "query_id": "e1-test-frequent_but_useless-h1",
+        "event_order": 7,
+        "text": "What is the service desk reference for Vault-242690?"
+      },
+      {
+        "query_id": "e1-test-frequent_but_useless-h2",
+        "event_order": 8,
+        "text": "What is the service desk reference for Vault-242690?"
+      }
+    ],
+    "future_queries": [
+      {
+        "query_id": "e1-test-frequent_but_useless-q0",
+        "event_order": 11,
+        "text": "What is the six-digit access code for Vault-242690?",
+        "gold_answer": "190139",
+        "supporting_memory_sets": [
+          [
+            "e1-test-frequent_but_useless-m0"
+          ]
+        ]
+      },
+      {
+        "query_id": "e1-test-frequent_but_useless-q1",
+        "event_order": 12,
+        "text": "Give the complete access code needed to open Vault-242690.",
+        "gold_answer": "190139",
+        "supporting_memory_sets": [
+          [
+            "e1-test-frequent_but_useless-m0"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "trajectory_id": "e1-test-redundancy",
+    "user_id": "e1-test-redundancy",
+    "split": "test",
+    "snapshot_id": "e1-test-redundancy-s0",
+    "event_order": 10,
+    "scenario": "redundancy",
+    "memories": [
+      {
+        "memory_id": "e1-test-redundancy-m0",
+        "canonical_id": "e1-test-redundancy-fact0",
+        "leakage_group": "e1-test-redundancy-fact0",
+        "event_order": 1,
+        "content": "The access code for Vault-430416 is 782367."
+      },
+      {
+        "memory_id": "e1-test-redundancy-m1",
+        "canonical_id": "e1-test-redundancy-fact0",
+        "leakage_group": "e1-test-redundancy-fact0",
+        "event_order": 2,
+        "content": "To open Vault-430416, use access code 782367."
+      },
+      {
+        "memory_id": "e1-test-redundancy-m2",
+        "canonical_id": "e1-test-redundancy-fact2",
+        "leakage_group": "e1-test-redundancy-fact2",
+        "event_order": 3,
+        "content": "The maintenance ticket for Vault-430416 is 10718."
+      },
+      {
+        "memory_id": "e1-test-redundancy-m3",
+        "canonical_id": "e1-test-redundancy-fact3",
+        "leakage_group": "e1-test-redundancy-fact3",
+        "event_order": 4,
+        "content": "The inventory label for Vault-430416 is 93777."
+      }
+    ],
+    "history_queries": [
+      {
+        "query_id": "e1-test-redundancy-h0",
+        "event_order": 6,
+        "text": "What is the inventory label for Vault-430416?"
+      }
+    ],
+    "future_queries": [
+      {
+        "query_id": "e1-test-redundancy-q0",
+        "event_order": 11,
+        "text": "What is the six-digit access code for Vault-430416?",
+        "gold_answer": "782367",
+        "supporting_memory_sets": [
+          [
+            "e1-test-redundancy-m0"
+          ],
+          [
+            "e1-test-redundancy-m1"
+          ]
+        ]
+      },
+      {
+        "query_id": "e1-test-redundancy-q1",
+        "event_order": 12,
+        "text": "Give the complete access code needed to open Vault-430416.",
+        "gold_answer": "782367",
+        "supporting_memory_sets": [
+          [
+            "e1-test-redundancy-m0"
+          ],
+          [
+            "e1-test-redundancy-m1"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "trajectory_id": "e1-test-complementarity",
+    "user_id": "e1-test-complementarity",
+    "split": "test",
+    "snapshot_id": "e1-test-complementarity-s0",
+    "event_order": 10,
+    "scenario": "complementarity",
+    "memories": [
+      {
+        "memory_id": "e1-test-complementarity-m0",
+        "canonical_id": "e1-test-complementarity-fact0",
+        "leakage_group": "e1-test-complementarity-fact0",
+        "event_order": 1,
+        "content": "The first three digits of the six-digit access code for Vault-588957 are 768."
+      },
+      {
+        "memory_id": "e1-test-complementarity-m1",
+        "canonical_id": "e1-test-complementarity-fact1",
+        "leakage_group": "e1-test-complementarity-fact1",
+        "event_order": 2,
+        "content": "The last three digits of the six-digit access code for Vault-588957 are 326."
+      },
+      {
+        "memory_id": "e1-test-complementarity-m2",
+        "canonical_id": "e1-test-complementarity-fact2",
+        "leakage_group": "e1-test-complementarity-fact2",
+        "event_order": 3,
+        "content": "The maintenance ticket for Vault-588957 is 84894."
+      },
+      {
+        "memory_id": "e1-test-complementarity-m3",
+        "canonical_id": "e1-test-complementarity-fact3",
+        "leakage_group": "e1-test-complementarity-fact3",
+        "event_order": 4,
+        "content": "The inventory label for Vault-588957 is 40278."
+      }
+    ],
+    "history_queries": [
+      {
+        "query_id": "e1-test-complementarity-h0",
+        "event_order": 6,
+        "text": "What is the inventory label for Vault-588957?"
+      }
+    ],
+    "future_queries": [
+      {
+        "query_id": "e1-test-complementarity-q0",
+        "event_order": 11,
+        "text": "What is the six-digit access code for Vault-588957?",
+        "gold_answer": "768326",
+        "supporting_memory_sets": [
+          [
+            "e1-test-complementarity-m0",
+            "e1-test-complementarity-m1"
+          ]
+        ]
+      },
+      {
+        "query_id": "e1-test-complementarity-q1",
+        "event_order": 12,
+        "text": "Give the complete access code needed to open Vault-588957.",
+        "gold_answer": "768326",
+        "supporting_memory_sets": [
+          [
+            "e1-test-complementarity-m0",
+            "e1-test-complementarity-m1"
+          ]
+        ]
+      }
+    ]
+  }
+]

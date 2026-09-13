@@ -1,0 +1,76 @@
+{
+  "date": "2026-09-14",
+  "status": "PASS",
+  "scope": "Clean source export of tracked and non-ignored candidate files, restored from bundled evidence archive; existing dependency runtime reused. Not a fresh dependency installation or second-host GPU test.",
+  "python": "3.13.5",
+  "clean_export": {
+    "machine_local_model_config_present": false,
+    "raw_v02_result_files_in_candidate": 0,
+    "archive_files_verified": 412,
+    "result_files_restored": 341
+  },
+  "checks": [
+    {
+      "command": [
+        "python",
+        "scripts/audit_v02.py"
+      ],
+      "exit_code": 0,
+      "output": "{\n  \"checks\": {\n    \"pilot-test\": {\n      \"scores\": \"PASS\",\n      \"unavailable_historical_sources\": [\n        \"experiments/utility-retention/utility_retention/runner.py\"\n      ]\n    },\n    \"pilot-model\": {\n      \"scores\": \"PASS\",\n      \"unavailable_historical_sources\": [\n        \"experiments/utility-retention/utility_retention/runner.py\"\n      ]\n    },\n    \"e1-model-frozen\": {\n      \"scores\": \"PASS\",\n      \"unavailable_historical_sources\": []\n    },\n    \"e1-extension-model\": {\n      \"scores\": \"PASS\",\n      \"unavailable_historical_sources\": []\n    },\n    \"e1-extension-diagnostic\": \"PASS\",\n    \"e2\": \"PASS\",\n    \"e3-baselines\": \"PASS\",\n    \"e3\": \"PASS\",\n    \"e3-supplement\": \"PASS\",\n    \"e4\": \"PASS\"\n  },\n  \"scope\": \"CPU score/selection/statistics and evidence hashes; no new model inference\"\n}\n"
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "pytest",
+        "-q"
+      ],
+      "exit_code": 0,
+      "output": "........................................................................ [ 69%]\n...............................                                          [100%]\n103 passed in 36.18s\n"
+    },
+    {
+      "command": [
+        "python",
+        "-m",
+        "ruff",
+        "check",
+        "src",
+        "tests",
+        "scripts",
+        "integrations",
+        "experiments/utility-retention",
+        "--exclude",
+        "**/results/**"
+      ],
+      "exit_code": 0,
+      "output": "All checks passed!\n"
+    },
+    {
+      "command": [
+        "python",
+        "experiments/utility-retention/audits/verify_e4.py",
+        "experiments/utility-retention/results/e4-diagnostic-model"
+      ],
+      "exit_code": 0,
+      "output": "{'passed': True, 'response_count': 1536, 'subset_count': 768, 'exact_plans_verified': 576, 'interaction_count': 1152, 'tie_ranges_verified': 384, 'verifier_sha256': '1a54454c3f6335538c2df1a843d46096801e5104967ebae15942b34a65f99e78', 'parent_manifest_sha256': 'aad45159e3f84e352c0c7ef506be46023b165fbcf75de972783690815e95f7b7', 'method': 'Independent bit-mask enumeration and set algebra; shared public I/O and answer scorer only'}\n"
+    }
+  ],
+  "exact_archived_source_audits": {
+    "e1_extension_labels": "PASS",
+    "e2": "PASS",
+    "baseline_development": "PASS",
+    "e3": "PASS",
+    "supplement": "PASS",
+    "e4": "PASS"
+  },
+  "published_artifact_hashes": "34 files verified",
+  "v01_frozen_results_changed": false,
+  "model_inference_rerun": false,
+  "known_limitations": [
+    "The two early pilots lack an exact original runner snapshot; saved labels/scores remain verifiable.",
+    "Detailed per-run reports retain their original Chinese text."
+  ],
+  "git_commit_created": false,
+  "tag_created": false,
+  "remote_push_performed": false
+}

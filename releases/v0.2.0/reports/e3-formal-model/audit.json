@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "dataset_replayed": true,
+  "predictions_replayed": true,
+  "plans_replayed": true,
+  "labels_recomputed": true,
+  "scores_recomputed": true,
+  "paired_statistics_recomputed": true,
+  "deployable_before_hindsight_verified": true,
+  "budgets_verified": true,
+  "response_count": 600,
+  "importance_count": 96,
+  "model_evidence": true
+}

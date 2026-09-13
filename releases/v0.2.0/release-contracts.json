@@ -1,0 +1,29 @@
+{
+  "software_version": "0.2.0",
+  "manifest_envelope": "longmem-experiment-v1",
+  "artifact_dispatch": [
+    "experiment_id",
+    "artifact_filename"
+  ],
+  "diagnostic_payload": "intervention-v1; read-only adapter for frozen candidate=storage_deletion",
+  "variants": {
+    "v0.1": {
+      "budget_unit": "memory_count",
+      "importance": "synthetic_random_metadata",
+      "semantic_dedup": "representatives_then_duplicates",
+      "retrieval": "faiss"
+    },
+    "v0.2": {
+      "budget_unit": "serialized_memory_tokens",
+      "importance": "frozen_llm_1_to_5_fallback_3",
+      "semantic_dedup": "representatives_only_recency_no_backfill",
+      "retrieval": "isolated_list_embedding_similarity"
+    }
+  },
+  "scoring": "longmem.scoring.score_answer; equivalent to frozen v0.1 normalization",
+  "legacy_label_fields": {
+    "E1": "value",
+    "E2_handoff": "target.value",
+    "E3_E4": "loo_value"
+  }
+}

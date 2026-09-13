@@ -1,0 +1,4106 @@
+[
+  {
+    "trajectory_id": "t-9e1ae7d2f10d",
+    "user_id": "u-e3cb37e15823",
+    "snapshot_id": "s-067084864d4c",
+    "split": "train",
+    "scenario": "old_but_useful",
+    "event_order": 30,
+    "memories": [
+      {
+        "memory_id": "m-b2ee70adc343",
+        "canonical_id": "f-60347653f171",
+        "leakage_group": "f-60347653f171",
+        "event_order": 10,
+        "content": "The access code for Locker-X18822896 is 807064. This record was transcribed from the local register."
+      },
+      {
+        "memory_id": "m-26d4eb339317",
+        "canonical_id": "f-66b11bed1d10",
+        "leakage_group": "f-66b11bed1d10",
+        "event_order": 13,
+        "content": "The maintenance ticket for Locker-X18822896 is 75423."
+      },
+      {
+        "memory_id": "m-116659940459",
+        "canonical_id": "f-d6e5226bea69",
+        "leakage_group": "f-d6e5226bea69",
+        "event_order": 14,
+        "content": "The inventory label for Locker-X18822896 is 63944. This record was transcribed from the local register."
+      },
+      {
+        "memory_id": "m-a5aa68c326d4",
+        "canonical_id": "f-ce7872ae8e7a",
+        "leakage_group": "f-ce7872ae8e7a",
+        "event_order": 16,
+        "content": "The service desk reference for Locker-X18822896 is 67304. This record was transcribed from the local register."
+      }
+    ],
+    "history_queries": [
+      {
+        "query_id": "h-677666ef6bac",
+        "event_order": 20,
+        "text": "What is the inventory label for Locker-X18822896?"
+      }
+    ],
+    "future_queries": [
+      {
+        "query_id": "q-eff78da230a0",
+        "event_order": 31,
+        "text": "What is the six-digit access code for Locker-X18822896?",
+        "gold_answer": "807064",
+        "supporting_memory_sets": [
+          [
+            "m-b2ee70adc343"
+          ]
+        ]
+      },
+      {
+        "query_id": "q-862f1b0b83fd",
+        "event_order": 32,
+        "text": "Give the complete access code needed to open Locker-X18822896.",
+        "gold_answer": "807064",
+        "supporting_memory_sets": [
+          [
+            "m-b2ee70adc343"
+          ]
+        ]
+      }
+    ],
+    "diagnostic_metadata": {
+      "entity": "Locker-X18822896",
+      "prefix_memory_id": "m-b2ee70adc343",
+      "suffix_memory_id": "m-a5aa68c326d4",
+      "frequent_memory_id": "m-a5aa68c326d4",
+      "expected_history_count": 1
+    }
+  },
+  {
+    "trajectory_id": "t-7bf7c00c3d36",
+    "user_id": "u-e54adb3e9524",
+    "snapshot_id": "s-f1418428b2b4",
+    "split": "train",
+    "scenario": "old_but_useful",
+    "event_order": 30,
+    "memories": [
+      {
+        "memory_id": "m-151799664869",
+        "canonical_id": "f-b7f93ebe4ae9",
+        "leakage_group": "f-b7f93ebe4ae9",
+        "event_order": 3,
+        "content": "Locker-Xc381c495 opens with access code 771057."
+      },
+      {
+        "memory_id": "m-70bbfee5073f",
+        "canonical_id": "f-3513fa252085",
+        "leakage_group": "f-3513fa252085",
+        "event_order": 6,
+        "content": "The maintenance ticket for Locker-Xc381c495 is 66046."
+      },
+      {
+        "memory_id": "m-de8ae28b681f",
+        "canonical_id": "f-6a07e1220bc8",
+        "leakage_group": "f-6a07e1220bc8",
+        "event_order": 10,
+        "content": "The service desk reference for Locker-Xc381c495 is 40634. This record was transcribed from the local register."
+      },
+      {
+        "memory_id": "m-31602e5488b9",
+        "canonical_id": "f-592e5e702ad8",
+        "leakage_group": "f-592e5e702ad8",
+        "event_order": 15,
+        "content": "The inventory label for Locker-Xc381c495 is 98432. The facilities clerk recorded this entry during a routine inventory review."
+      }
+    ],
+    "history_queries": [
+      {
+        "query_id": "h-53c368e644d3",
+        "event_order": 20,
+        "text": "What is the inventory label for Locker-Xc381c495?"
+      },
+      {
+        "query_id": "h-b21984d9de8a",
+        "event_order": 21,
+        "text": "What is the inventory label for Locker-Xc381c495?"
+      }
+    ],
+    "future_queries": [
+      {
+        "query_id": "q-93ae1402cbad",
+        "event_order": 31,
+        "text": "What is the six-digit access code for Locker-Xc381c495?",
+        "gold_answer": "771057",
+        "supporting_memory_sets": [
+          [
+            "m-151799664869"
+          ]
+        ]
+      },
+      {
+        "query_id": "q-e4b330797fb6",
+        "event_order": 32,
+        "text": "Give the complete access code needed to open Locker-Xc381c495.",
+        "gold_answer": "771057",
+        "supporting_memory_sets": [
+          [
+            "m-151799664869"
+          ]
+        ]
+      }
+    ],
+    "diagnostic_metadata": {
+      "entity": "Locker-Xc381c495",
+      "prefix_memory_id": "m-151799664869",
+      "suffix_memory_id": "m-de8ae28b681f",
+      "frequent_memory_id": "m-de8ae28b681f",
+      "expected_history_count": 2
+    }
+  },
+  {
+    "trajectory_id": "t-67fd2dd53f9e",
+    "user_id": "u-d12d39ec4bc5",
+    "snapshot_id": "s-00009b5efee6",
+    "split": "train",
+    "scenario": "old_but_useful",
+    "event_order": 30,
+    "memories": [
+      {
+        "memory_id": "m-0510c05537f9",
+        "canonical_id": "f-75fff59dc52f",
+        "leakage_group": "f-75fff59dc52f",
+        "event_order": 1,
+        "content": "Use 501264 as the access code to open Vault-X9f7e72e1."
+      },
+      {
+        "memory_id": "m-438f5332b5d7",
+        "canonical_id": "f-85e9de715811",
+        "leakage_group": "f-85e9de715811",
+        "event_order": 4,
+        "content": "The maintenance ticket for Vault-X9f7e72e1 is 99023."
+      },
+      {
+        "memory_id": "m-15c7e2a21c9c",
+        "canonical_id": "f-d1c9a7da2418",
+        "leakage_group": "f-d1c9a7da2418",
+        "event_order": 6,
+        "content": "The inventory label for Vault-X9f7e72e1 is 34040. This record was transcribed from the local register."
+      },
+      {
+        "memory_id": "m-df89a9e6d827",
+        "canonical_id": "f-20439c955796",
+        "leakage_group": "f-20439c955796",
+        "event_order": 17,
+        "content": "The service desk reference for Vault-X9f7e72e1 is 33192."
+      }
+    ],
+    "history_queries": [
+      {
+        "query_id": "h-1ab13830769d",
+        "event_order": 20,
+        "text": "What is the inventory label for Vault-X9f7e72e1?"
+      },
+      {
+        "query_id": "h-f8e835f7ec49",
+        "event_order": 21,
+        "text": "What is the inventory label for Vault-X9f7e72e1?"
+      },
+      {
+        "query_id": "h-649d2a9f3474",
+        "event_order": 22,
+        "text": "What is the inventory label for Vault-X9f7e72e1?"
+      }
+    ],
+    "future_queries": [
+      {
+        "query_id": "q-dce3838c8e44",
+        "event_order": 31,
+        "text": "What is the six-digit access code for Vault-X9f7e72e1?",
+        "gold_answer": "501264",
+        "supporting_memory_sets": [
+          [
+            "m-0510c05537f9"
+          ]
+        ]
+      },
+      {
+        "query_id": "q-18bbedf65d02",
+        "event_order": 32,
+        "text": "Give the complete access code needed to open Vault-X9f7e72e1.",
+        "gold_answer": "501264",
+        "supporting_memory_sets": [
+          [
+            "m-0510c05537f9"
+          ]
+        ]
+      }
+    ],
+    "diagnostic_metadata": {
+      "entity": "Vault-X9f7e72e1",
+      "prefix_memory_id": "m-0510c05537f9",
+      "suffix_memory_id": "m-df89a9e6d827",
+      "frequent_memory_id": "m-df89a9e6d827",
+      "expected_history_count": 3
+    }
+  },
+  {
+    "trajectory_id": "t-73ae91101353",
+    "user_id": "u-73b05ac304d1",
+    "snapshot_id": "s-ff2cd9e57a8c",
+    "split": "train",
+    "scenario": "old_but_useful",
+    "event_order": 30,
+    "memories": [
+      {
+        "memory_id": "m-034b0e22783c",
+        "canonical_id": "f-0c3f2110bf38",
+        "leakage_group": "f-0c3f2110bf38",
+        "event_order": 2,
+        "content": "The access code for Vault-X85919d9b is 927517. This record was transcribed from the local register."
+      },
+      {
+        "memory_id": "m-5dcca43e852b",
+        "canonical_id": "f-d976b0afa76b",
+        "leakage_group": "f-d976b0afa76b",
+        "event_order": 3,
+        "content": "The maintenance ticket for Vault-X85919d9b is 59297. The facilities clerk recorded this entry during a routine inventory review."
+      },
+      {
+        "memory_id": "m-0c1df447aaa9",
+        "canonical_id": "f-23045256f71c",
+        "leakage_group": "f-23045256f71c",
+        "event_order": 10,
+        "content": "The service desk reference for Vault-X85919d9b is 39922. The facilities clerk recorded this entry during a routine inventory review."
+      },
+      {
+        "memory_id": "m-b7cfdfcac006",
+        "canonical_id": "f-cca68f060875",
+        "leakage_group": "f-cca68f060875",
+        "event_order": 12,
+        "content": "The inventory label for Vault-X85919d9b is 29727."
+      }
+    ],
+    "history_queries": [
+      {
+        "query_id": "h-765a4528b1c1",
+        "event_order": 20,
+        "text": "What is the inventory label for Vault-X85919d9b?"
+      }
+    ],
+    "future_queries": [
+      {
+        "query_id": "q-cc97ddf61d7b",
+        "event_order": 31,
+        "text": "What is the six-digit access code for Vault-X85919d9b?",
+        "gold_answer": "927517",
+        "supporting_memory_sets": [
+          [
+            "m-034b0e22783c"
+          ]
+        ]
+      },
+      {
+        "query_id": "q-20bb8a92909e",
+        "event_order": 32,
+        "text": "Give the complete access code needed to open Vault-X85919d9b.",
+        "gold_answer": "927517",
+        "supporting_memory_sets": [
+          [
+            "m-034b0e22783c"
+          ]
+        ]
+      }
+    ],
+    "diagnostic_metadata": {
+      "entity": "Vault-X85919d9b",
+      "prefix_memory_id": "m-034b0e22783c",
+      "suffix_memory_id": "m-0c1df447aaa9",
+      "frequent_memory_id": "m-0c1df447aaa9",
+      "expected_history_count": 1
+    }
+  },
+  {
+    "trajectory_id": "t-1ec40063b5ff",
+    "user_id": "u-30265aa11e02",
+    "snapshot_id": "s-aea71abbef76",
+    "split": "train",
+    "scenario": "old_but_useful",
+    "event_order": 30,
+    "memories": [
+      {
+        "memory_id": "m-005b14e1cedf",
+        "canonical_id": "f-e87caaaf440c",
+        "leakage_group": "f-e87caaaf440c",
+        "event_order": 3,
+        "content": "Locker-Xd9cd7cff opens with access code 119571."
+      },
+      {
+        "memory_id": "m-1c448038e82b",
+        "canonical_id": "f-968b73cdcbb5",
+        "leakage_group": "f-968b73cdcbb5",
+        "event_order": 8,
+        "content": "The service desk reference for Locker-Xd9cd7cff is 43233. This record was transcribed from the local register."
+      },
+      {
+        "memory_id": "m-c24c326a52ea",
+        "canonical_id": "f-4101dee7e680",
+        "leakage_group": "f-4101dee7e680",
+        "event_order": 10,
+        "content": "The maintenance ticket for Locker-Xd9cd7cff is 81322. This record was transcribed from the local register."
+      },
+      {
+        "memory_id": "m-61a265b07755",
+        "canonical_id": "f-f7e36f6285e2",
+        "leakage_group": "f-f7e36f6285e2",
+        "event_order": 13,
+        "content": "The inventory label for Locker-Xd9cd7cff is 74785. This record was transcribed from the local register."
+      }
+    ],
+    "history_queries": [
+      {
+        "query_id": "h-96025e0963da",
+        "event_order": 20,
+        "text": "What is the inventory label for Locker-Xd9cd7cff?"
+      },
+      {
+        "query_id": "h-dd06ebe77f6a",
+        "event_order": 21,
+        "text": "What is the inventory label for Locker-Xd9cd7cff?"
+      }
+    ],
+    "future_queries": [
+      {
+        "query_id": "q-fef5bdf6acc2",
+        "event_order": 31,
+        "text": "What is the six-digit access code for Locker-Xd9cd7cff?",
+        "gold_answer": "119571",
+        "supporting_memory_sets": [
+          [
+            "m-005b14e1cedf"
+          ]
+        ]
+      },
+      {
+        "query_id": "q-3f21f6e36e2c",
+        "event_order": 32,
+        "text": "Give the complete access code needed to open Locker-Xd9cd7cff.",
+        "gold_answer": "119571",
+        "supporting_memory_sets": [
+          [
+            "m-005b14e1cedf"
+          ]
+        ]
+      }
+    ],
+    "diagnostic_metadata": {
+      "entity": "Locker-Xd9cd7cff",
+      "prefix_memory_id": "m-005b14e1cedf",
+      "suffix_memory_id": "m-1c448038e82b",
+      "frequent_memory_id": "m-1c448038e82b",
+      "expected_history_count": 2
+    }
+  },
+  {
+    "trajectory_id": "t-0af606c1d5bd",
+    "user_id": "u-23e5973f6c81",
+    "snapshot_id": "s-a99815987591",
+    "split": "train",
+    "scenario": "old_but_useful",
+    "event_order": 30,
+    "memories": [
+      {
+        "memory_id": "m-b7a009a05193",
+        "canonical_id": "f-91effb3f6d8e",
+        "leakage_group": "f-91effb3f6d8e",
+        "event_order": 12,
+        "content": "Use 528890 as the access code to open Cabinet-X51b68789. This record was transcribed from the local register."
+      },
+      {
+        "memory_id": "m-64b912c3068a",
+        "canonical_id": "f-0ec02875a325",
+        "leakage_group": "f-0ec02875a325",
+        "event_order": 15,
+        "content": "The maintenance ticket for Cabinet-X51b68789 is 32708. The facilities clerk recorded this entry during a routine inventory review."
+      },
+      {
+        "memory_id": "m-5a9ee6b75270",
+        "canonical_id": "f-788c88190759",
+        "leakage_group": "f-788c88190759",
+        "event_order": 16,
+        "content": "The inventory label for Cabinet-X51b68789 is 97180. The facilities clerk recorded this entry during a routine inventory review."
+      },
+      {
+        "memory_id": "m-7eb32bc07cce",
+        "canonical_id": "f-9458732d5f27",
+        "leakage_group": "f-9458732d5f27",
+        "event_order": 17,
+        "content": "The service desk reference for Cabinet-X51b68789 is 35679."
+      }
+    ],
+    "history_queries": [
+      {
+        "query_id": "h-71ef2a250446",
+        "event_order": 20,
+        "text": "What is the inventory label for Cabinet-X51b68789?"
+      },
+      {
+        "query_id": "h-db3b5d7b6a2a",
+        "event_order": 21,
+        "text": "What is the inventory label for Cabinet-X51b68789?"
+      },
+      {
+        "query_id": "h-bfd3bf23adef",
+        "event_order": 22,
+        "text": "What is the inventory label for Cabinet-X51b68789?"
+      }
+    ],
+    "future_queries": [
+      {
+        "query_id": "q-a24827316731",
+        "event_order": 31,
+        "text": "What is the six-digit access code for Cabinet-X51b68789?",
+        "gold_answer": "528890",
+        "supporting_memory_sets": [
+          [
+            "m-b7a009a05193"
+          ]
+        ]
+      },
+      {
+        "query_id": "q-728865756d05",
+        "event_order": 32,
+        "text": "Give the complete access code needed to open Cabinet-X51b68789.",
+        "gold_answer": "528890",
+        "supporting_memory_sets": [
+          [
+            "m-b7a009a05193"
+          ]
+        ]
+      }
+    ],
+    "diagnostic_metadata": {
+      "entity": "Cabinet-X51b68789",
+      "prefix_memory_id": "m-b7a009a05193",
+      "suffix_memory_id": "m-7eb32bc07cce",
+      "frequent_memory_id": "m-7eb32bc07cce",
+      "expected_history_count": 3
+    }
+  },
+  {
+    "trajectory_id": "t-13029c61afab",
+    "user_id": "u-16342afb214c",
+    "snapshot_id": "s-5dab34589f63",
+    "split": "train",
+    "scenario": "frequent_but_useless",
+    "event_order": 30,
+    "memories": [
+      {
+        "memory_id": "m-aaf4d7418e26",
+        "canonical_id": "f-2f910563c03a",
+        "leakage_group": "f-2f910563c03a",
+        "event_order": 9,
+        "content": "The maintenance ticket for Locker-X785a4c1d is 92644. This record was transcribed from the local register."
+      },
+      {
+        "memory_id": "m-bdd8397d4474",
+        "canonical_id": "f-a632c1458ea5",
+        "leakage_group": "f-a632c1458ea5",
+        "event_order": 11,
+        "content": "The inventory label for Locker-X785a4c1d is 64427. The facilities clerk recorded this entry during a routine inventory review."
+      },
+      {
+        "memory_id": "m-ca1bfe6971a3",
+        "canonical_id": "f-df22f68e3c9e",
+        "leakage_group": "f-df22f68e3c9e",
+        "event_order": 13,
+        "content": "The access code for Locker-X785a4c1d is 654610. This record was transcribed from the local register."
+      },
+      {
+        "memory_id": "m-a8c527c6f199",
+        "canonical_id": "f-d76bc584bc7a",
+        "leakage_group": "f-d76bc584bc7a",
+        "event_order": 14,
+        "content": "The service desk reference for Locker-X785a4c1d is 75130."
+      }
+    ],
+    "history_queries": [
+      {
+        "query_id": "h-02ee86514b0d",
+        "event_order": 20,
+        "text": "What is the service desk reference for Locker-X785a4c1d?"
+      },
+      {
+        "query_id": "h-d5a1d4358df8",
+        "event_order": 21,
+        "text": "What is the service desk reference for Locker-X785a4c1d?"
+      },
+      {
+        "query_id": "h-99119b9914cf",
+        "event_order": 22,
+        "text": "What is the service desk reference for Locker-X785a4c1d?"
+      }
+    ],
+    "future_queries": [
+      {
+        "query_id": "q-7d7dde993142",
+        "event_order": 31,
+        "text": "What is the six-digit access code for Locker-X785a4c1d?",
+        "gold_answer": "654610",
+        "supporting_memory_sets": [
+          [
+            "m-ca1bfe6971a3"
+          ]
+        ]
+      },
+      {
+        "query_id": "q-ffa30fa79166",
+        "event_order": 32,
+        "text": "Give the complete access code needed to open Locker-X785a4c1d.",
+        "gold_answer": "654610",
+        "supporting_memory_sets": [
+          [
+            "m-ca1bfe6971a3"
+          ]
+        ]
+      }
+    ],
+    "diagnostic_metadata": {
+      "entity": "Locker-X785a4c1d",
+      "prefix_memory_id": "m-ca1bfe6971a3",
+      "suffix_memory_id": "m-a8c527c6f199",
+      "frequent_memory_id": "m-a8c527c6f199",
+      "expected_history_count": 3
+    }
+  },
+  {
+    "trajectory_id": "t-d20ad1cc5dc3",
+    "user_id": "u-8990b341104a",
+    "snapshot_id": "s-976e61dfa069",
+    "split": "train",
+    "scenario": "frequent_but_useless",
+    "event_order": 30,
+    "memories": [
+      {
+        "memory_id": "m-9a2c32be4eaa",
+        "canonical_id": "f-d08febc664d9",
+        "leakage_group": "f-d08febc664d9",
+        "event_order": 7,
+        "content": "The service desk reference for Vault-Xbeb89838 is 27841. This record was transcribed from the local register."
+      },
+      {
+        "memory_id": "m-cb71973d5c6d",
+        "canonical_id": "f-d94d45e75dfd",
+        "leakage_group": "f-d94d45e75dfd",
+        "event_order": 10,
+        "content": "The maintenance ticket for Vault-Xbeb89838 is 23434. The facilities clerk recorded this entry during a routine inventory review."
+      },
+      {
+        "memory_id": "m-e424931c72bf",
+        "canonical_id": "f-a0b36b59e082",
+        "leakage_group": "f-a0b36b59e082",
+        "event_order": 12,
+        "content": "The inventory label for Vault-Xbeb89838 is 87746. The facilities clerk recorded this entry during a routine inventory review."
+      },
+      {
+        "memory_id": "m-89d58d180463",
+        "canonical_id": "f-b04c690939d8",
+        "leakage_group": "f-b04c690939d8",
+        "event_order": 14,
+        "content": "Vault-Xbeb89838 opens with access code 860841."
+      }
+    ],
+    "history_queries": [
+      {
+        "query_id": "h-2e530f86153b",
+        "event_order": 20,
+        "text": "What is the service desk reference for Vault-Xbeb89838?"
+      },
+      {
+        "query_id": "h-84624492296d",
+        "event_order": 21,
+        "text": "What is the service desk reference for Vault-Xbeb89838?"
+      },
+      {
+        "query_id": "h-efdfacda18a1",
+        "event_order": 22,
+        "text": "What is the service desk reference for Vault-Xbeb89838?"
+      },
+      {
+        "query_id": "h-1cf8319b010d",
+        "event_order": 23,
+        "text": "What is the service desk reference for Vault-Xbeb89838?"
+      }
+    ],
+    "future_queries": [
+      {
+        "query_id": "q-617e3964e816",
+        "event_order": 31,
+        "text": "What is the six-digit access code for Vault-Xbeb89838?",
+        "gold_answer": "860841",
+        "supporting_memory_sets": [
+          [
+            "m-89d58d180463"
+          ]
+        ]
+      },
+      {
+        "query_id": "q-3bf7e20b21d6",
+        "event_order": 32,
+        "text": "Give the complete access code needed to open Vault-Xbeb89838.",
+        "gold_answer": "860841",
+        "supporting_memory_sets": [
+          [
+            "m-89d58d180463"
+          ]
+        ]
+      }
+    ],
+    "diagnostic_metadata": {
+      "entity": "Vault-Xbeb89838",
+      "prefix_memory_id": "m-89d58d180463",
+      "suffix_memory_id": "m-9a2c32be4eaa",
+      "frequent_memory_id": "m-9a2c32be4eaa",
+      "expected_history_count": 4
+    }
+  },
+  {
+    "trajectory_id": "t-26149980ee97",
+    "user_id": "u-6585dec5ef17",
+    "snapshot_id": "s-a6964406ece8",
+    "split": "train",
+    "scenario": "frequent_but_useless",
+    "event_order": 30,
+    "memories": [
+      {
+        "memory_id": "m-fedc11cb40ae",
+        "canonical_id": "f-3d033121297e",
+        "leakage_group": "f-3d033121297e",
+        "event_order": 1,
+        "content": "The inventory label for Locker-Xd6ccffde is 89910."
+      },
+      {
+        "memory_id": "m-a37412652fcf",
+        "canonical_id": "f-25afdc808ef3",
+        "leakage_group": "f-25afdc808ef3",
+        "event_order": 4,
+        "content": "Use 890975 as the access code to open Locker-Xd6ccffde. The facilities clerk recorded this entry during a routine inventory review."
+      },
+      {
+        "memory_id": "m-b4085fc62167",
+        "canonical_id": "f-d51dfa58ee21",
+        "leakage_group": "f-d51dfa58ee21",
+        "event_order": 6,
+        "content": "The maintenance ticket for Locker-Xd6ccffde is 35425."
+      },
+      {
+        "memory_id": "m-1c79ea894442",
+        "canonical_id": "f-e5ad61806cb0",
+        "leakage_group": "f-e5ad61806cb0",
+        "event_order": 8,
+        "content": "The service desk reference for Locker-Xd6ccffde is 73675. This record was transcribed from the local register."
+      }
+    ],
+    "history_queries": [
+      {
+        "query_id": "h-70e9d749ef3a",
+        "event_order": 20,
+        "text": "What is the service desk reference for Locker-Xd6ccffde?"
+      },
+      {
+        "query_id": "h-ad6c66fa5fb3",
+        "event_order": 21,
+        "text": "What is the service desk reference for Locker-Xd6ccffde?"
+      },
+      {
+        "query_id": "h-d5b37d31e35b",
+        "event_order": 22,
+        "text": "What is the service desk reference for Locker-Xd6ccffde?"
+      },
+      {
+        "query_id": "h-c6d8cc46297e",
+        "event_order": 23,
+        "text": "What is the service desk reference for Locker-Xd6ccffde?"
+      },
+      {
+        "query_id": "h-de7862ba9a49",
+        "event_order": 24,
+        "text": "What is the service desk reference for Locker-Xd6ccffde?"
+      }
+    ],
+    "future_queries": [
+      {
+        "query_id": "q-918143b9c26d",
+        "event_order": 31,
+        "text": "What is the six-digit access code for Locker-Xd6ccffde?",
+        "gold_answer": "890975",
+        "supporting_memory_sets": [
+          [
+            "m-a37412652fcf"
+          ]
+        ]
+      },
+      {
+        "query_id": "q-c811bf26aaca",
+        "event_order": 32,
+        "text": "Give the complete access code needed to open Locker-Xd6ccffde.",
+        "gold_answer": "890975",
+        "supporting_memory_sets": [
+          [
+            "m-a37412652fcf"
+          ]
+        ]
+      }
+    ],
+    "diagnostic_metadata": {
+      "entity": "Locker-Xd6ccffde",
+      "prefix_memory_id": "m-a37412652fcf",
+      "suffix_memory_id": "m-1c79ea894442",
+      "frequent_memory_id": "m-1c79ea894442",
+      "expected_history_count": 5
+    }
+  },
+  {
+    "trajectory_id": "t-e734a295256a",
+    "user_id": "u-79068851281b",
+    "snapshot_id": "s-449e68918244",
+    "split": "train",
+    "scenario": "frequent_but_useless",
+    "event_order": 30,
+    "memories": [
+      {
+        "memory_id": "m-cf39e07432cf",
+        "canonical_id": "f-740955dd74c7",
+        "leakage_group": "f-740955dd74c7",
+        "event_order": 1,
+        "content": "The maintenance ticket for Cabinet-Xc950cfea is 15888."
+      },
+      {
+        "memory_id": "m-7c90e7405813",
+        "canonical_id": "f-0fa869a454d4",
+        "leakage_group": "f-0fa869a454d4",
+        "event_order": 2,
+        "content": "The service desk reference for Cabinet-Xc950cfea is 12583."
+      },
+      {
+        "memory_id": "m-2f3def02cbc1",
+        "canonical_id": "f-38cf477566a4",
+        "leakage_group": "f-38cf477566a4",
+        "event_order": 11,
+        "content": "The inventory label for Cabinet-Xc950cfea is 67620. This record was transcribed from the local register."
+      },
+      {
+        "memory_id": "m-83d73b5aff1f",
+        "canonical_id": "f-e8c1cdaa2322",
+        "leakage_group": "f-e8c1cdaa2322",
+        "event_order": 12,
+        "content": "The access code for Cabinet-Xc950cfea is 743421. This record was transcribed from the local register."
+      }
+    ],
+    "history_queries": [
+      {
+        "query_id": "h-5912960e449e",
+        "event_order": 20,
+        "text": "What is the service desk reference for Cabinet-Xc950cfea?"
+      },
+      {
+        "query_id": "h-73a179760a96",
+        "event_order": 21,
+        "text": "What is the service desk reference for Cabinet-Xc950cfea?"
+      },
+      {
+        "query_id": "h-aab1f4f006f5",
+        "event_order": 22,
+        "text": "What is the service desk reference for Cabinet-Xc950cfea?"
+      }
+    ],
+    "future_queries": [
+      {
+        "query_id": "q-0a3a3cd210d2",
+        "event_order": 31,
+        "text": "What is the six-digit access code for Cabinet-Xc950cfea?",
+        "gold_answer": "743421",
+        "supporting_memory_sets": [
+          [
+            "m-83d73b5aff1f"
+          ]
+        ]
+      },
+      {
+        "query_id": "q-11736fc00ac5",
+        "event_order": 32,
+        "text": "Give the complete access code needed to open Cabinet-Xc950cfea.",
+        "gold_answer": "743421",
+        "supporting_memory_sets": [
+          [
+            "m-83d73b5aff1f"
+          ]
+        ]
+      }
+    ],
+    "diagnostic_metadata": {
+      "entity": "Cabinet-Xc950cfea",
+      "prefix_memory_id": "m-83d73b5aff1f",
+      "suffix_memory_id": "m-7c90e7405813",
+      "frequent_memory_id": "m-7c90e7405813",
+      "expected_history_count": 3
+    }
+  },
+  {
+    "trajectory_id": "t-4f66b246686d",
+    "user_id": "u-e83c0cbfb726",
+    "snapshot_id": "s-73d818ae1bd5",
+    "split": "train",
+    "scenario": "frequent_but_useless",
+    "event_order": 30,
+    "memories": [
+      {
+        "memory_id": "m-3a3361f9f7a7",
+        "canonical_id": "f-59c4b7c9e602",
+        "leakage_group": "f-59c4b7c9e602",
+        "event_order": 2,
+        "content": "The inventory label for Vault-X5255849b is 80050. This record was transcribed from the local register."
+      },
+      {
+        "memory_id": "m-c64dbec20dec",
+        "canonical_id": "f-a0a04fbe4f9b",
+        "leakage_group": "f-a0a04fbe4f9b",
+        "event_order": 3,
+        "content": "Vault-X5255849b opens with access code 320496. The facilities clerk recorded this entry during a routine inventory review."
+      },
+      {
+        "memory_id": "m-03d4132c1cd9",
+        "canonical_id": "f-55d0715a3698",
+        "leakage_group": "f-55d0715a3698",
+        "event_order": 8,
+        "content": "The service desk reference for Vault-X5255849b is 15564."
+      },
+      {
+        "memory_id": "m-375d05b9b851",
+        "canonical_id": "f-104c11e55320",
+        "leakage_group": "f-104c11e55320",
+        "event_order": 14,
+        "content": "The maintenance ticket for Vault-X5255849b is 53739. The facilities clerk recorded this entry during a routine inventory review."
+      }
+    ],
+    "history_queries": [
+      {
+        "query_id": "h-94c7601ea65d",
+        "event_order": 20,
+        "text": "What is the service desk reference for Vault-X5255849b?"
+      },
+      {
+        "query_id": "h-f45a1b6af3b9",
+        "event_order": 21,
+        "text": "What is the service desk reference for Vault-X5255849b?"
+      },
+      {
+        "query_id": "h-e61a91127073",
+        "event_order": 22,
+        "text": "What is the service desk reference for Vault-X5255849b?"
+      },
+      {
+        "query_id": "h-09af32696ccc",
+        "event_order": 23,
+        "text": "What is the service desk reference for Vault-X5255849b?"
+      }
+    ],
+    "future_queries": [
+      {
+        "query_id": "q-f6919fa72005",
+        "event_order": 31,
+        "text": "What is the six-digit access code for Vault-X5255849b?",
+        "gold_answer": "320496",
+        "supporting_memory_sets": [
+          [
+            "m-c64dbec20dec"
+          ]
+        ]
+      },
+      {
+        "query_id": "q-67010cfd20b0",
+        "event_order": 32,
+        "text": "Give the complete access code needed to open Vault-X5255849b.",
+        "gold_answer": "320496",
+        "supporting_memory_sets": [
+          [
+            "m-c64dbec20dec"
+          ]
+        ]
+      }
+    ],
+    "diagnostic_metadata": {
+      "entity": "Vault-X5255849b",
+      "prefix_memory_id": "m-c64dbec20dec",
+      "suffix_memory_id": "m-03d4132c1cd9",
+      "frequent_memory_id": "m-03d4132c1cd9",
+      "expected_history_count": 4
+    }
+  },
+  {
+    "trajectory_id": "t-076faaef1e3e",
+    "user_id": "u-8afd6ceee6f5",
+    "snapshot_id": "s-9dabaeac6e53",
+    "split": "train",
+    "scenario": "frequent_but_useless",
+    "event_order": 30,
+    "memories": [
+      {
+        "memory_id": "m-c498600756c1",
+        "canonical_id": "f-ba94ece42122",
+        "leakage_group": "f-ba94ece42122",
+        "event_order": 6,
+        "content": "The inventory label for Vault-X94942787 is 11990."
+      },
+      {
+        "memory_id": "m-e60d290ce31c",
+        "canonical_id": "f-012d73bfe3b6",
+        "leakage_group": "f-012d73bfe3b6",
+        "event_order": 12,
+        "content": "The maintenance ticket for Vault-X94942787 is 34099. The facilities clerk recorded this entry during a routine inventory review."
+      },
+      {
+        "memory_id": "m-5958f5b1c3ff",
+        "canonical_id": "f-de9423e7f0d1",
+        "leakage_group": "f-de9423e7f0d1",
+        "event_order": 13,
+        "content": "Use 190336 as the access code to open Vault-X94942787. The facilities clerk recorded this entry during a routine inventory review."
+      },
+      {
+        "memory_id": "m-5606fe09044b",
+        "canonical_id": "f-65e76bac7eee",
+        "leakage_group": "f-65e76bac7eee",
+        "event_order": 17,
+        "content": "The service desk reference for Vault-X94942787 is 99680. This record was transcribed from the local register."
+      }
+    ],
+    "history_queries": [
+      {
+        "query_id": "h-b2f30c648eb3",
+        "event_order": 20,
+        "text": "What is the service desk reference for Vault-X94942787?"
+      },
+      {
+        "query_id": "h-d0dd03d69fd6",
+        "event_order": 21,
+        "text": "What is the service desk reference for Vault-X94942787?"
+      },
+      {
+        "query_id": "h-7fd0cdbbf143",
+        "event_order": 22,
+        "text": "What is the service desk reference for Vault-X94942787?"
+      },
+      {
+        "query_id": "h-d61090edb6b5",
+        "event_order": 23,
+        "text": "What is the service desk reference for Vault-X94942787?"
+      },
+      {
+        "query_id": "h-12524585e9bf",
+        "event_order": 24,
+        "text": "What is the service desk reference for Vault-X94942787?"
+      }
+    ],
+    "future_queries": [
+      {
+        "query_id": "q-0e8cef3ea847",
+        "event_order": 31,
+        "text": "What is the six-digit access code for Vault-X94942787?",
+        "gold_answer": "190336",
+        "supporting_memory_sets": [
+          [
+            "m-5958f5b1c3ff"
+          ]
+        ]
+      },
+      {
+        "query_id": "q-b7df9e5d0bc1",
+        "event_order": 32,
+        "text": "Give the complete access code needed to open Vault-X94942787.",
+        "gold_answer": "190336",
+        "supporting_memory_sets": [
+          [
+            "m-5958f5b1c3ff"
+          ]
+        ]
+      }
+    ],
+    "diagnostic_metadata": {
+      "entity": "Vault-X94942787",
+      "prefix_memory_id": "m-5958f5b1c3ff",
+      "suffix_memory_id": "m-5606fe09044b",
+      "frequent_memory_id": "m-5606fe09044b",
+      "expected_history_count": 5
+    }
+  },
+  {
+    "trajectory_id": "t-58a8031c64cb",
+    "user_id": "u-c3e4ab52e16f",
+    "snapshot_id": "s-53400aa7d7b2",
+    "split": "train",
+    "scenario": "redundancy",
+    "event_order": 30,
+    "memories": [
+      {
+        "memory_id": "m-99ce1da31f84",
+        "canonical_id": "f-d36075cb186f",
+        "leakage_group": "f-d36075cb186f",
+        "event_order": 3,
+        "content": "The maintenance ticket for Vault-X7d8471c3 is 13939. The facilities clerk recorded this entry during a routine inventory review."
+      },
+      {
+        "memory_id": "m-b0c0d2270101",
+        "canonical_id": "f-7b98a27b4fd3",
+        "leakage_group": "f-7b98a27b4fd3",
+        "event_order": 5,
+        "content": "To open Vault-X7d8471c3, enter the access code 931204."
+      },
+      {
+        "memory_id": "m-0e3bdfcd910f",
+        "canonical_id": "f-7b98a27b4fd3",
+        "leakage_group": "f-7b98a27b4fd3",
+        "event_order": 13,
+        "content": "The access code for Vault-X7d8471c3 is 931204. This record was transcribed from the local register."
+      },
+      {
+        "memory_id": "m-7c42163db8ff",
+        "canonical_id": "f-fe30f7998b4e",
+        "leakage_group": "f-fe30f7998b4e",
+        "event_order": 16,
+        "content": "The inventory label for Vault-X7d8471c3 is 70254. The facilities clerk recorded this entry during a routine inventory review."
+      }
+    ],
+    "history_queries": [
+      {
+        "query_id": "h-5f4d4f345485",
+        "event_order": 20,
+        "text": "What is the inventory label for Vault-X7d8471c3?"
+      }
+    ],
+    "future_queries": [
+      {
+        "query_id": "q-da517e8df25f",
+        "event_order": 31,
+        "text": "What is the six-digit access code for Vault-X7d8471c3?",
+        "gold_answer": "931204",
+        "supporting_memory_sets": [
+          [
+            "m-0e3bdfcd910f"
+          ],
+          [
+            "m-b0c0d2270101"
+          ]
+        ]
+      },
+      {
+        "query_id": "q-394991fb6bc1",
+        "event_order": 32,
+        "text": "Give the complete access code needed to open Vault-X7d8471c3.",
+        "gold_answer": "931204",
+        "supporting_memory_sets": [
+          [
+            "m-0e3bdfcd910f"
+          ],
+          [
+            "m-b0c0d2270101"
+          ]
+        ]
+      }
+    ],
+    "diagnostic_metadata": {
+      "entity": "Vault-X7d8471c3",
+      "prefix_memory_id": "m-0e3bdfcd910f",
+      "suffix_memory_id": "m-b0c0d2270101",
+      "frequent_memory_id": "m-b0c0d2270101",
+      "expected_history_count": 1
+    }
+  },
+  {
+    "trajectory_id": "t-14145243a226",
+    "user_id": "u-d41819c09b9f",
+    "snapshot_id": "s-d00f06210c1a",
+    "split": "train",
+    "scenario": "redundancy",
+    "event_order": 30,
+    "memories": [
+      {
+        "memory_id": "m-1cded0f508a0",
+        "canonical_id": "f-30434e568512",
+        "leakage_group": "f-30434e568512",
+        "event_order": 1,
+        "content": "Cabinet-X5212ee5e opens with access code 832860. The facilities clerk recorded this entry during a routine inventory review."
+      },
+      {
+        "memory_id": "m-c6930bf9dd81",
+        "canonical_id": "f-30434e568512",
+        "leakage_group": "f-30434e568512",
+        "event_order": 2,
+        "content": "To open Cabinet-X5212ee5e, enter the access code 832860. This record was transcribed from the local register."
+      },
+      {
+        "memory_id": "m-7a6c95eabb16",
+        "canonical_id": "f-1ab534a078f3",
+        "leakage_group": "f-1ab534a078f3",
+        "event_order": 3,
+        "content": "The inventory label for Cabinet-X5212ee5e is 10240. The facilities clerk recorded this entry during a routine inventory review."
+      },
+      {
+        "memory_id": "m-e1e1f8b0fbd6",
+        "canonical_id": "f-c4bea7dd5886",
+        "leakage_group": "f-c4bea7dd5886",
+        "event_order": 5,
+        "content": "The maintenance ticket for Cabinet-X5212ee5e is 86024. The facilities clerk recorded this entry during a routine inventory review."
+      }
+    ],
+    "history_queries": [
+      {
+        "query_id": "h-721f097c1b78",
+        "event_order": 20,
+        "text": "What is the inventory label for Cabinet-X5212ee5e?"
+      },
+      {
+        "query_id": "h-d172fbab013c",
+        "event_order": 21,
+        "text": "What is the inventory label for Cabinet-X5212ee5e?"
+      }
+    ],
+    "future_queries": [
+      {
+        "query_id": "q-e6d42190fc68",
+        "event_order": 31,
+        "text": "What is the six-digit access code for Cabinet-X5212ee5e?",
+        "gold_answer": "832860",
+        "supporting_memory_sets": [
+          [
+            "m-1cded0f508a0"
+          ],
+          [
+            "m-c6930bf9dd81"
+          ]
+        ]
+      },
+      {
+        "query_id": "q-668f5e648888",
+        "event_order": 32,
+        "text": "Give the complete access code needed to open Cabinet-X5212ee5e.",
+        "gold_answer": "832860",
+        "supporting_memory_sets": [
+          [
+            "m-1cded0f508a0"
+          ],
+          [
+            "m-c6930bf9dd81"
+          ]
+        ]
+      }
+    ],
+    "diagnostic_metadata": {
+      "entity": "Cabinet-X5212ee5e",
+      "prefix_memory_id": "m-1cded0f508a0",
+      "suffix_memory_id": "m-c6930bf9dd81",
+      "frequent_memory_id": "m-c6930bf9dd81",
+      "expected_history_count": 2
+    }
+  },
+  {
+    "trajectory_id": "t-c0a542ce2585",
+    "user_id": "u-976cfe447aa0",
+    "snapshot_id": "s-99a1cea8c601",
+    "split": "train",
+    "scenario": "redundancy",
+    "event_order": 30,
+    "memories": [
+      {
+        "memory_id": "m-e260c2d875db",
+        "canonical_id": "f-3079c1821576",
+        "leakage_group": "f-3079c1821576",
+        "event_order": 6,
+        "content": "The maintenance ticket for Cabinet-Xdd4aa635 is 50252. The facilities clerk recorded this entry during a routine inventory review."
+      },
+      {
+        "memory_id": "m-ebf0c5f12da7",
+        "canonical_id": "f-d8799f786e08",
+        "leakage_group": "f-d8799f786e08",
+        "event_order": 7,
+        "content": "The inventory label for Cabinet-Xdd4aa635 is 76480. This record was transcribed from the local register."
+      },
+      {
+        "memory_id": "m-36f809ca06a1",
+        "canonical_id": "f-31464d9e8c79",
+        "leakage_group": "f-31464d9e8c79",
+        "event_order": 8,
+        "content": "Use 561535 as the access code to open Cabinet-Xdd4aa635. This record was transcribed from the local register."
+      },
+      {
+        "memory_id": "m-32eb6c938128",
+        "canonical_id": "f-31464d9e8c79",
+        "leakage_group": "f-31464d9e8c79",
+        "event_order": 12,
+        "content": "To open Cabinet-Xdd4aa635, enter the access code 561535. This record was transcribed from the local register."
+      }
+    ],
+    "history_queries": [
+      {
+        "query_id": "h-abae2e2a805d",
+        "event_order": 20,
+        "text": "What is the inventory label for Cabinet-Xdd4aa635?"
+      },
+      {
+        "query_id": "h-29d4e0301344",
+        "event_order": 21,
+        "text": "What is the inventory label for Cabinet-Xdd4aa635?"
+      },
+      {
+        "query_id": "h-0f0a240d6d73",
+        "event_order": 22,
+        "text": "What is the inventory label for Cabinet-Xdd4aa635?"
+      }
+    ],
+    "future_queries": [
+      {
+        "query_id": "q-66d48c448b73",
+        "event_order": 31,
+        "text": "What is the six-digit access code for Cabinet-Xdd4aa635?",
+        "gold_answer": "561535",
+        "supporting_memory_sets": [
+          [
+            "m-36f809ca06a1"
+          ],
+          [
+            "m-32eb6c938128"
+          ]
+        ]
+      },
+      {
+        "query_id": "q-a2c0a748910c",
+        "event_order": 32,
+        "text": "Give the complete access code needed to open Cabinet-Xdd4aa635.",
+        "gold_answer": "561535",
+        "supporting_memory_sets": [
+          [
+            "m-36f809ca06a1"
+          ],
+          [
+            "m-32eb6c938128"
+          ]
+        ]
+      }
+    ],
+    "diagnostic_metadata": {
+      "entity": "Cabinet-Xdd4aa635",
+      "prefix_memory_id": "m-36f809ca06a1",
+      "suffix_memory_id": "m-32eb6c938128",
+      "frequent_memory_id": "m-32eb6c938128",
+      "expected_history_count": 3
+    }
+  },
+  {
+    "trajectory_id": "t-dcab287f5cc4",
+    "user_id": "u-7b6aa9fd70bf",
+    "snapshot_id": "s-b840d2583e22",
+    "split": "train",
+    "scenario": "redundancy",
+    "event_order": 30,
+    "memories": [
+      {
+        "memory_id": "m-64c53a42176e",
+        "canonical_id": "f-7018b80f2791",
+        "leakage_group": "f-7018b80f2791",
+        "event_order": 1,
+        "content": "The access code for Cabinet-X1072a56a is 131660."
+      },
+      {
+        "memory_id": "m-9db462ce71d4",
+        "canonical_id": "f-6629115b6f27",
+        "leakage_group": "f-6629115b6f27",
+        "event_order": 6,
+        "content": "The inventory label for Cabinet-X1072a56a is 60321. The facilities clerk recorded this entry during a routine inventory review."
+      },
+      {
+        "memory_id": "m-792190996aa2",
+        "canonical_id": "f-14a7bc9fcda1",
+        "leakage_group": "f-14a7bc9fcda1",
+        "event_order": 9,
+        "content": "The maintenance ticket for Cabinet-X1072a56a is 74467. The facilities clerk recorded this entry during a routine inventory review."
+      },
+      {
+        "memory_id": "m-7b3d6ccf4a55",
+        "canonical_id": "f-7018b80f2791",
+        "leakage_group": "f-7018b80f2791",
+        "event_order": 17,
+        "content": "To open Cabinet-X1072a56a, enter the access code 131660."
+      }
+    ],
+    "history_queries": [
+      {
+        "query_id": "h-8fd4ab6f28a4",
+        "event_order": 20,
+        "text": "What is the inventory label for Cabinet-X1072a56a?"
+      }
+    ],
+    "future_queries": [
+      {
+        "query_id": "q-5e6638cda7ac",
+        "event_order": 31,
+        "text": "What is the six-digit access code for Cabinet-X1072a56a?",
+        "gold_answer": "131660",
+        "supporting_memory_sets": [
+          [
+            "m-64c53a42176e"
+          ],
+          [
+            "m-7b3d6ccf4a55"
+          ]
+        ]
+      },
+      {
+        "query_id": "q-b5cae80b409a",
+        "event_order": 32,
+        "text": "Give the complete access code needed to open Cabinet-X1072a56a.",
+        "gold_answer": "131660",
+        "supporting_memory_sets": [
+          [
+            "m-64c53a42176e"
+          ],
+          [
+            "m-7b3d6ccf4a55"
+          ]
+        ]
+      }
+    ],
+    "diagnostic_metadata": {
+      "entity": "Cabinet-X1072a56a",
+      "prefix_memory_id": "m-64c53a42176e",
+      "suffix_memory_id": "m-7b3d6ccf4a55",
+      "frequent_memory_id": "m-7b3d6ccf4a55",
+      "expected_history_count": 1
+    }
+  },
+  {
+    "trajectory_id": "t-f57ea03f41c8",
+    "user_id": "u-aa40914509fa",
+    "snapshot_id": "s-33c1525b344d",
+    "split": "train",
+    "scenario": "redundancy",
+    "event_order": 30,
+    "memories": [
+      {
+        "memory_id": "m-4d5762d13825",
+        "canonical_id": "f-f7979cd275d7",
+        "leakage_group": "f-f7979cd275d7",
+        "event_order": 1,
+        "content": "To open Cabinet-Xe175aed8, enter the access code 616064."
+      },
+      {
+        "memory_id": "m-24f7d34c3e37",
+        "canonical_id": "f-f7979cd275d7",
+        "leakage_group": "f-f7979cd275d7",
+        "event_order": 9,
+        "content": "Cabinet-Xe175aed8 opens with access code 616064. This record was transcribed from the local register."
+      },
+      {
+        "memory_id": "m-b780cc823128",
+        "canonical_id": "f-9b58ab35fdbd",
+        "leakage_group": "f-9b58ab35fdbd",
+        "event_order": 11,
+        "content": "The maintenance ticket for Cabinet-Xe175aed8 is 40499."
+      },
+      {
+        "memory_id": "m-5490080347a5",
+        "canonical_id": "f-4c8456e1f608",
+        "leakage_group": "f-4c8456e1f608",
+        "event_order": 13,
+        "content": "The inventory label for Cabinet-Xe175aed8 is 69264. This record was transcribed from the local register."
+      }
+    ],
+    "history_queries": [
+      {
+        "query_id": "h-d9844489260a",
+        "event_order": 20,
+        "text": "What is the inventory label for Cabinet-Xe175aed8?"
+      },
+      {
+        "query_id": "h-463b867c199b",
+        "event_order": 21,
+        "text": "What is the inventory label for Cabinet-Xe175aed8?"
+      }
+    ],
+    "future_queries": [
+      {
+        "query_id": "q-d017acdb5a3c",
+        "event_order": 31,
+        "text": "What is the six-digit access code for Cabinet-Xe175aed8?",
+        "gold_answer": "616064",
+        "supporting_memory_sets": [
+          [
+            "m-24f7d34c3e37"
+          ],
+          [
+            "m-4d5762d13825"
+          ]
+        ]
+      },
+      {
+        "query_id": "q-9d70102dd052",
+        "event_order": 32,
+        "text": "Give the complete access code needed to open Cabinet-Xe175aed8.",
+        "gold_answer": "616064",
+        "supporting_memory_sets": [
+          [
+            "m-24f7d34c3e37"
+          ],
+          [
+            "m-4d5762d13825"
+          ]
+        ]
+      }
+    ],
+    "diagnostic_metadata": {
+      "entity": "Cabinet-Xe175aed8",
+      "prefix_memory_id": "m-24f7d34c3e37",
+      "suffix_memory_id": "m-4d5762d13825",
+      "frequent_memory_id": "m-4d5762d13825",
+      "expected_history_count": 2
+    }
+  },
+  {
+    "trajectory_id": "t-02ca3a010b58",
+    "user_id": "u-0115c3d4e960",
+    "snapshot_id": "s-4a8305a32885",
+    "split": "train",
+    "scenario": "redundancy",
+    "event_order": 30,
+    "memories": [
+      {
+        "memory_id": "m-9d36e472b6f4",
+        "canonical_id": "f-df42d04d222c",
+        "leakage_group": "f-df42d04d222c",
+        "event_order": 3,
+        "content": "Use 129293 as the access code to open Locker-Xa922391a. The facilities clerk recorded this entry during a routine inventory review."
+      },
+      {
+        "memory_id": "m-e5a80a4c1c2e",
+        "canonical_id": "f-df42d04d222c",
+        "leakage_group": "f-df42d04d222c",
+        "event_order": 5,
+        "content": "To open Locker-Xa922391a, enter the access code 129293. This record was transcribed from the local register."
+      },
+      {
+        "memory_id": "m-b833d9626ef0",
+        "canonical_id": "f-595b766531da",
+        "leakage_group": "f-595b766531da",
+        "event_order": 10,
+        "content": "The inventory label for Locker-Xa922391a is 45979. The facilities clerk recorded this entry during a routine inventory review."
+      },
+      {
+        "memory_id": "m-d26eb739b691",
+        "canonical_id": "f-fe2dc67ce4ef",
+        "leakage_group": "f-fe2dc67ce4ef",
+        "event_order": 15,
+        "content": "The maintenance ticket for Locker-Xa922391a is 60415. The facilities clerk recorded this entry during a routine inventory review."
+      }
+    ],
+    "history_queries": [
+      {
+        "query_id": "h-be0ba4637d32",
+        "event_order": 20,
+        "text": "What is the inventory label for Locker-Xa922391a?"
+      },
+      {
+        "query_id": "h-576be610ab83",
+        "event_order": 21,
+        "text": "What is the inventory label for Locker-Xa922391a?"
+      },
+      {
+        "query_id": "h-d9f240cf2aad",
+        "event_order": 22,
+        "text": "What is the inventory label for Locker-Xa922391a?"
+      }
+    ],
+    "future_queries": [
+      {
+        "query_id": "q-64c210427824",
+        "event_order": 31,
+        "text": "What is the six-digit access code for Locker-Xa922391a?",
+        "gold_answer": "129293",
+        "supporting_memory_sets": [
+          [
+            "m-9d36e472b6f4"
+          ],
+          [
+            "m-e5a80a4c1c2e"
+          ]
+        ]
+      },
+      {
+        "query_id": "q-dea95958c862",
+        "event_order": 32,
+        "text": "Give the complete access code needed to open Locker-Xa922391a.",
+        "gold_answer": "129293",
+        "supporting_memory_sets": [
+          [
+            "m-9d36e472b6f4"
+          ],
+          [
+            "m-e5a80a4c1c2e"
+          ]
+        ]
+      }
+    ],
+    "diagnostic_metadata": {
+      "entity": "Locker-Xa922391a",
+      "prefix_memory_id": "m-9d36e472b6f4",
+      "suffix_memory_id": "m-e5a80a4c1c2e",
+      "frequent_memory_id": "m-e5a80a4c1c2e",
+      "expected_history_count": 3
+    }
+  },
+  {
+    "trajectory_id": "t-001957f91a4d",
+    "user_id": "u-37ea3cde29a0",
+    "snapshot_id": "s-9ee0da517f46",
+    "split": "train",
+    "scenario": "complementarity",
+    "event_order": 30,
+    "memories": [
+      {
+        "memory_id": "m-31881f0d507e",
+        "canonical_id": "f-b63925e70a27",
+        "leakage_group": "f-b63925e70a27",
+        "event_order": 8,
+        "content": "The first three digits of the six-digit access code for Vault-Xf3fbfb3d are 843. The facilities clerk recorded this entry during a routine inventory review."
+      },
+      {
+        "memory_id": "m-41592a51fd6b",
+        "canonical_id": "f-30355e43ebb8",
+        "leakage_group": "f-30355e43ebb8",
+        "event_order": 9,
+        "content": "The last three digits of the six-digit access code for Vault-Xf3fbfb3d are 711. The facilities clerk recorded this entry during a routine inventory review."
+      },
+      {
+        "memory_id": "m-4158a40616d1",
+        "canonical_id": "f-750d1edfcce0",
+        "leakage_group": "f-750d1edfcce0",
+        "event_order": 14,
+        "content": "The maintenance ticket for Vault-Xf3fbfb3d is 35454. The facilities clerk recorded this entry during a routine inventory review."
+      },
+      {
+        "memory_id": "m-5d645246109f",
+        "canonical_id": "f-9819e7eff60d",
+        "leakage_group": "f-9819e7eff60d",
+        "event_order": 15,
+        "content": "The inventory label for Vault-Xf3fbfb3d is 39203. This record was transcribed from the local register."
+      }
+    ],
+    "history_queries": [
+      {
+        "query_id": "h-e94b8b30d00b",
+        "event_order": 20,
+        "text": "What is the inventory label for Vault-Xf3fbfb3d?"
+      }
+    ],
+    "future_queries": [
+      {
+        "query_id": "q-0a01b5a07431",
+        "event_order": 31,
+        "text": "What is the six-digit access code for Vault-Xf3fbfb3d?",
+        "gold_answer": "843711",
+        "supporting_memory_sets": [
+          [
+            "m-31881f0d507e",
+            "m-41592a51fd6b"
+          ]
+        ]
+      },
+      {
+        "query_id": "q-ba0eb9b41bd9",
+        "event_order": 32,
+        "text": "Give the complete access code needed to open Vault-Xf3fbfb3d.",
+        "gold_answer": "843711",
+        "supporting_memory_sets": [
+          [
+            "m-31881f0d507e",
+            "m-41592a51fd6b"
+          ]
+        ]
+      }
+    ],
+    "diagnostic_metadata": {
+      "entity": "Vault-Xf3fbfb3d",
+      "prefix_memory_id": "m-31881f0d507e",
+      "suffix_memory_id": "m-41592a51fd6b",
+      "frequent_memory_id": "m-41592a51fd6b",
+      "expected_history_count": 1
+    }
+  },
+  {
+    "trajectory_id": "t-3eb6885067f4",
+    "user_id": "u-a44cc63b45c1",
+    "snapshot_id": "s-9829e3246fb8",
+    "split": "train",
+    "scenario": "complementarity",
+    "event_order": 30,
+    "memories": [
+      {
+        "memory_id": "m-ccf4dfd3f36a",
+        "canonical_id": "f-bb57580f3ebe",
+        "leakage_group": "f-bb57580f3ebe",
+        "event_order": 3,
+        "content": "The inventory label for Cabinet-X42595fbc is 81147. This record was transcribed from the local register."
+      },
+      {
+        "memory_id": "m-914c428c1c7b",
+        "canonical_id": "f-b5975613a3f8",
+        "leakage_group": "f-b5975613a3f8",
+        "event_order": 9,
+        "content": "The maintenance ticket for Cabinet-X42595fbc is 75415."
+      },
+      {
+        "memory_id": "m-d4b571dc5325",
+        "canonical_id": "f-0b0426bc83e8",
+        "leakage_group": "f-0b0426bc83e8",
+        "event_order": 13,
+        "content": "The first three digits of the six-digit access code for Cabinet-X42595fbc are 868."
+      },
+      {
+        "memory_id": "m-9d82d42038d0",
+        "canonical_id": "f-7d6a037ffe89",
+        "leakage_group": "f-7d6a037ffe89",
+        "event_order": 16,
+        "content": "The last three digits of the six-digit access code for Cabinet-X42595fbc are 291. The facilities clerk recorded this entry during a routine inventory review."
+      }
+    ],
+    "history_queries": [
+      {
+        "query_id": "h-790133512958",
+        "event_order": 20,
+        "text": "What is the inventory label for Cabinet-X42595fbc?"
+      },
+      {
+        "query_id": "h-7063affd39a1",
+        "event_order": 21,
+        "text": "What is the inventory label for Cabinet-X42595fbc?"
+      }
+    ],
+    "future_queries": [
+      {
+        "query_id": "q-a23ca6c7162d",
+        "event_order": 31,
+        "text": "What is the six-digit access code for Cabinet-X42595fbc?",
+        "gold_answer": "868291",
+        "supporting_memory_sets": [
+          [
+            "m-d4b571dc5325",
+            "m-9d82d42038d0"
+          ]
+        ]
+      },
+      {
+        "query_id": "q-9f9b8d2534a6",
+        "event_order": 32,
+        "text": "Give the complete access code needed to open Cabinet-X42595fbc.",
+        "gold_answer": "868291",
+        "supporting_memory_sets": [
+          [
+            "m-d4b571dc5325",
+            "m-9d82d42038d0"
+          ]
+        ]
+      }
+    ],
+    "diagnostic_metadata": {
+      "entity": "Cabinet-X42595fbc",
+      "prefix_memory_id": "m-d4b571dc5325",
+      "suffix_memory_id": "m-9d82d42038d0",
+      "frequent_memory_id": "m-9d82d42038d0",
+      "expected_history_count": 2
+    }
+  },
+  {
+    "trajectory_id": "t-8e0aee4a352d",
+    "user_id": "u-ae290c33eba1",
+    "snapshot_id": "s-c215e434d5cd",
+    "split": "train",
+    "scenario": "complementarity",
+    "event_order": 30,
+    "memories": [
+      {
+        "memory_id": "m-ca735d398d74",
+        "canonical_id": "f-558ce11ab02f",
+        "leakage_group": "f-558ce11ab02f",
+        "event_order": 1,
+        "content": "The first three digits of the six-digit access code for Cabinet-X5337ffc7 are 264. This record was transcribed from the local register."
+      },
+      {
+        "memory_id": "m-7be0196b7288",
+        "canonical_id": "f-907c773cd13d",
+        "leakage_group": "f-907c773cd13d",
+        "event_order": 5,
+        "content": "The last three digits of the six-digit access code for Cabinet-X5337ffc7 are 209. The facilities clerk recorded this entry during a routine inventory review."
+      },
+      {
+        "memory_id": "m-69d8e18159ed",
+        "canonical_id": "f-7079e1bb6f89",
+        "leakage_group": "f-7079e1bb6f89",
+        "event_order": 8,
+        "content": "The maintenance ticket for Cabinet-X5337ffc7 is 86899. This record was transcribed from the local register."
+      },
+      {
+        "memory_id": "m-f79d43b885de",
+        "canonical_id": "f-b9321e3b4569",
+        "leakage_group": "f-b9321e3b4569",
+        "event_order": 16,
+        "content": "The inventory label for Cabinet-X5337ffc7 is 33418. This record was transcribed from the local register."
+      }
+    ],
+    "history_queries": [
+      {
+        "query_id": "h-f9c0e9a621a5",
+        "event_order": 20,
+        "text": "What is the inventory label for Cabinet-X5337ffc7?"
+      },
+      {
+        "query_id": "h-c32f1066cb64",
+        "event_order": 21,
+        "text": "What is the inventory label for Cabinet-X5337ffc7?"
+      },
+      {
+        "query_id": "h-3c7a0348ea3f",
+        "event_order": 22,
+        "text": "What is the inventory label for Cabinet-X5337ffc7?"
+      }
+    ],
+    "future_queries": [
+      {
+        "query_id": "q-1a5572ad729f",
+        "event_order": 31,
+        "text": "What is the six-digit access code for Cabinet-X5337ffc7?",
+        "gold_answer": "264209",
+        "supporting_memory_sets": [
+          [
+            "m-ca735d398d74",
+            "m-7be0196b7288"
+          ]
+        ]
+      },
+      {
+        "query_id": "q-2c6591a4a9a3",
+        "event_order": 32,
+        "text": "Give the complete access code needed to open Cabinet-X5337ffc7.",
+        "gold_answer": "264209",
+        "supporting_memory_sets": [
+          [
+            "m-ca735d398d74",
+            "m-7be0196b7288"
+          ]
+        ]
+      }
+    ],
+    "diagnostic_metadata": {
+      "entity": "Cabinet-X5337ffc7",
+      "prefix_memory_id": "m-ca735d398d74",
+      "suffix_memory_id": "m-7be0196b7288",
+      "frequent_memory_id": "m-7be0196b7288",
+      "expected_history_count": 3
+    }
+  },
+  {
+    "trajectory_id": "t-ff887ad48558",
+    "user_id": "u-bc58ef78aeda",
+    "snapshot_id": "s-089db09a1363",
+    "split": "train",
+    "scenario": "complementarity",
+    "event_order": 30,
+    "memories": [
+      {
+        "memory_id": "m-f40b0ceb56e7",
+        "canonical_id": "f-c6aa8ad0e843",
+        "leakage_group": "f-c6aa8ad0e843",
+        "event_order": 2,
+        "content": "The last three digits of the six-digit access code for Cabinet-X8960fc6c are 212. This record was transcribed from the local register."
+      },
+      {
+        "memory_id": "m-27f131662a73",
+        "canonical_id": "f-b874a4b335ea",
+        "leakage_group": "f-b874a4b335ea",
+        "event_order": 3,
+        "content": "The maintenance ticket for Cabinet-X8960fc6c is 31934. This record was transcribed from the local register."
+      },
+      {
+        "memory_id": "m-726e0e2d2b6b",
+        "canonical_id": "f-2d16cb983095",
+        "leakage_group": "f-2d16cb983095",
+        "event_order": 4,
+        "content": "The first three digits of the six-digit access code for Cabinet-X8960fc6c are 891."
+      },
+      {
+        "memory_id": "m-dfcfbd7fd12f",
+        "canonical_id": "f-e93187c78226",
+        "leakage_group": "f-e93187c78226",
+        "event_order": 14,
+        "content": "The inventory label for Cabinet-X8960fc6c is 30557. The facilities clerk recorded this entry during a routine inventory review."
+      }
+    ],
+    "history_queries": [
+      {
+        "query_id": "h-bd236279a034",
+        "event_order": 20,
+        "text": "What is the inventory label for Cabinet-X8960fc6c?"
+      }
+    ],
+    "future_queries": [
+      {
+        "query_id": "q-36b85a5164a8",
+        "event_order": 31,
+        "text": "What is the six-digit access code for Cabinet-X8960fc6c?",
+        "gold_answer": "891212",
+        "supporting_memory_sets": [
+          [
+            "m-726e0e2d2b6b",
+            "m-f40b0ceb56e7"
+          ]
+        ]
+      },
+      {
+        "query_id": "q-2585fed5ac84",
+        "event_order": 32,
+        "text": "Give the complete access code needed to open Cabinet-X8960fc6c.",
+        "gold_answer": "891212",
+        "supporting_memory_sets": [
+          [
+            "m-726e0e2d2b6b",
+            "m-f40b0ceb56e7"
+          ]
+        ]
+      }
+    ],
+    "diagnostic_metadata": {
+      "entity": "Cabinet-X8960fc6c",
+      "prefix_memory_id": "m-726e0e2d2b6b",
+      "suffix_memory_id": "m-f40b0ceb56e7",
+      "frequent_memory_id": "m-f40b0ceb56e7",
+      "expected_history_count": 1
+    }
+  },
+  {
+    "trajectory_id": "t-3abad6cfc41b",
+    "user_id": "u-962f6f2e0c7f",
+    "snapshot_id": "s-1d84e64d8d00",
+    "split": "train",
+    "scenario": "complementarity",
+    "event_order": 30,
+    "memories": [
+      {
+        "memory_id": "m-4366f0074350",
+        "canonical_id": "f-0dbffebeea63",
+        "leakage_group": "f-0dbffebeea63",
+        "event_order": 12,
+        "content": "The inventory label for Cabinet-X445047b6 is 73942. This record was transcribed from the local register."
+      },
+      {
+        "memory_id": "m-9395bb1f5082",
+        "canonical_id": "f-a0e586a027ff",
+        "leakage_group": "f-a0e586a027ff",
+        "event_order": 14,
+        "content": "The last three digits of the six-digit access code for Cabinet-X445047b6 are 451. The facilities clerk recorded this entry during a routine inventory review."
+      },
+      {
+        "memory_id": "m-32ad7d8b13c4",
+        "canonical_id": "f-49ad3a64f3ee",
+        "leakage_group": "f-49ad3a64f3ee",
+        "event_order": 16,
+        "content": "The maintenance ticket for Cabinet-X445047b6 is 91065. The facilities clerk recorded this entry during a routine inventory review."
+      },
+      {
+        "memory_id": "m-5dfb8cdd943e",
+        "canonical_id": "f-209455a8c0cd",
+        "leakage_group": "f-209455a8c0cd",
+        "event_order": 17,
+        "content": "The first three digits of the six-digit access code for Cabinet-X445047b6 are 542. This record was transcribed from the local register."
+      }
+    ],
+    "history_queries": [
+      {
+        "query_id": "h-6a6609a4e90b",
+        "event_order": 20,
+        "text": "What is the inventory label for Cabinet-X445047b6?"
+      },
+      {
+        "query_id": "h-d04fc058ae75",
+        "event_order": 21,
+        "text": "What is the inventory label for Cabinet-X445047b6?"
+      }
+    ],
+    "future_queries": [
+      {
+        "query_id": "q-0dd91ef9a211",
+        "event_order": 31,
+        "text": "What is the six-digit access code for Cabinet-X445047b6?",
+        "gold_answer": "542451",
+        "supporting_memory_sets": [
+          [
+            "m-5dfb8cdd943e",
+            "m-9395bb1f5082"
+          ]
+        ]
+      },
+      {
+        "query_id": "q-1f802a3e52f9",
+        "event_order": 32,
+        "text": "Give the complete access code needed to open Cabinet-X445047b6.",
+        "gold_answer": "542451",
+        "supporting_memory_sets": [
+          [
+            "m-5dfb8cdd943e",
+            "m-9395bb1f5082"
+          ]
+        ]
+      }
+    ],
+    "diagnostic_metadata": {
+      "entity": "Cabinet-X445047b6",
+      "prefix_memory_id": "m-5dfb8cdd943e",
+      "suffix_memory_id": "m-9395bb1f5082",
+      "frequent_memory_id": "m-9395bb1f5082",
+      "expected_history_count": 2
+    }
+  },
+  {
+    "trajectory_id": "t-489f880d644e",
+    "user_id": "u-3d51cab8390f",
+    "snapshot_id": "s-b1f48328d6c8",
+    "split": "train",
+    "scenario": "complementarity",
+    "event_order": 30,
+    "memories": [
+      {
+        "memory_id": "m-932e41b34893",
+        "canonical_id": "f-b226f639f969",
+        "leakage_group": "f-b226f639f969",
+        "event_order": 1,
+        "content": "The inventory label for Locker-X1fa62864 is 21119."
+      },
+      {
+        "memory_id": "m-c3baf632fa20",
+        "canonical_id": "f-32b6f3de6585",
+        "leakage_group": "f-32b6f3de6585",
+        "event_order": 3,
+        "content": "The maintenance ticket for Locker-X1fa62864 is 74842. The facilities clerk recorded this entry during a routine inventory review."
+      },
+      {
+        "memory_id": "m-bd141808ceb4",
+        "canonical_id": "f-a1839c1a5404",
+        "leakage_group": "f-a1839c1a5404",
+        "event_order": 6,
+        "content": "The first three digits of the six-digit access code for Locker-X1fa62864 are 540. This record was transcribed from the local register."
+      },
+      {
+        "memory_id": "m-9b0dae5f89d2",
+        "canonical_id": "f-2a9b181fd795",
+        "leakage_group": "f-2a9b181fd795",
+        "event_order": 14,
+        "content": "The last three digits of the six-digit access code for Locker-X1fa62864 are 909."
+      }
+    ],
+    "history_queries": [
+      {
+        "query_id": "h-c07191fb79b4",
+        "event_order": 20,
+        "text": "What is the inventory label for Locker-X1fa62864?"
+      },
+      {
+        "query_id": "h-db72777c4e0a",
+        "event_order": 21,
+        "text": "What is the inventory label for Locker-X1fa62864?"
+      },
+      {
+        "query_id": "h-704fb9bf4302",
+        "event_order": 22,
+        "text": "What is the inventory label for Locker-X1fa62864?"
+      }
+    ],
+    "future_queries": [
+      {
+        "query_id": "q-53ea22461c66",
+        "event_order": 31,
+        "text": "What is the six-digit access code for Locker-X1fa62864?",
+        "gold_answer": "540909",
+        "supporting_memory_sets": [
+          [
+            "m-bd141808ceb4",
+            "m-9b0dae5f89d2"
+          ]
+        ]
+      },
+      {
+        "query_id": "q-0e2607e6c715",
+        "event_order": 32,
+        "text": "Give the complete access code needed to open Locker-X1fa62864.",
+        "gold_answer": "540909",
+        "supporting_memory_sets": [
+          [
+            "m-bd141808ceb4",
+            "m-9b0dae5f89d2"
+          ]
+        ]
+      }
+    ],
+    "diagnostic_metadata": {
+      "entity": "Locker-X1fa62864",
+      "prefix_memory_id": "m-bd141808ceb4",
+      "suffix_memory_id": "m-9b0dae5f89d2",
+      "frequent_memory_id": "m-9b0dae5f89d2",
+      "expected_history_count": 3
+    }
+  },
+  {
+    "trajectory_id": "t-23481acdb4b4",
+    "user_id": "u-40fe400e9998",
+    "snapshot_id": "s-be9632bdda8e",
+    "split": "validation",
+    "scenario": "old_but_useful",
+    "event_order": 30,
+    "memories": [
+      {
+        "memory_id": "m-d588fd497cad",
+        "canonical_id": "f-a3338780f8cb",
+        "leakage_group": "f-a3338780f8cb",
+        "event_order": 2,
+        "content": "The access code for Cabinet-Xc62da5e5 is 262656. This record was transcribed from the local register."
+      },
+      {
+        "memory_id": "m-de71606df99e",
+        "canonical_id": "f-bbd17aad2f66",
+        "leakage_group": "f-bbd17aad2f66",
+        "event_order": 4,
+        "content": "The maintenance ticket for Cabinet-Xc62da5e5 is 39149. This record was transcribed from the local register."
+      },
+      {
+        "memory_id": "m-f5f438910368",
+        "canonical_id": "f-a25f0417d698",
+        "leakage_group": "f-a25f0417d698",
+        "event_order": 5,
+        "content": "The inventory label for Cabinet-Xc62da5e5 is 18005. This record was transcribed from the local register."
+      },
+      {
+        "memory_id": "m-7248d51b498b",
+        "canonical_id": "f-3a9f389c1940",
+        "leakage_group": "f-3a9f389c1940",
+        "event_order": 17,
+        "content": "The service desk reference for Cabinet-Xc62da5e5 is 13497. This record was transcribed from the local register."
+      }
+    ],
+    "history_queries": [
+      {
+        "query_id": "h-3f8b788d4859",
+        "event_order": 20,
+        "text": "What is the inventory label for Cabinet-Xc62da5e5?"
+      }
+    ],
+    "future_queries": [
+      {
+        "query_id": "q-29094b75755c",
+        "event_order": 31,
+        "text": "What is the six-digit access code for Cabinet-Xc62da5e5?",
+        "gold_answer": "262656",
+        "supporting_memory_sets": [
+          [
+            "m-d588fd497cad"
+          ]
+        ]
+      },
+      {
+        "query_id": "q-b06be3a83a0c",
+        "event_order": 32,
+        "text": "Give the complete access code needed to open Cabinet-Xc62da5e5.",
+        "gold_answer": "262656",
+        "supporting_memory_sets": [
+          [
+            "m-d588fd497cad"
+          ]
+        ]
+      }
+    ],
+    "diagnostic_metadata": {
+      "entity": "Cabinet-Xc62da5e5",
+      "prefix_memory_id": "m-d588fd497cad",
+      "suffix_memory_id": "m-7248d51b498b",
+      "frequent_memory_id": "m-7248d51b498b",
+      "expected_history_count": 1
+    }
+  },
+  {
+    "trajectory_id": "t-e8076d30e6f9",
+    "user_id": "u-84a5aec18bd9",
+    "snapshot_id": "s-82e8ba90ec78",
+    "split": "validation",
+    "scenario": "old_but_useful",
+    "event_order": 30,
+    "memories": [
+      {
+        "memory_id": "m-a1c271983d2a",
+        "canonical_id": "f-540150b98b45",
+        "leakage_group": "f-540150b98b45",
+        "event_order": 3,
+        "content": "Cabinet-X14b5f781 opens with access code 117429."
+      },
+      {
+        "memory_id": "m-b948e9f111b1",
+        "canonical_id": "f-baae57238e96",
+        "leakage_group": "f-baae57238e96",
+        "event_order": 6,
+        "content": "The maintenance ticket for Cabinet-X14b5f781 is 52012. The facilities clerk recorded this entry during a routine inventory review."
+      },
+      {
+        "memory_id": "m-231738983848",
+        "canonical_id": "f-a41850fed64e",
+        "leakage_group": "f-a41850fed64e",
+        "event_order": 9,
+        "content": "The inventory label for Cabinet-X14b5f781 is 97100. This record was transcribed from the local register."
+      },
+      {
+        "memory_id": "m-352d99809b95",
+        "canonical_id": "f-6deee68fb4f8",
+        "leakage_group": "f-6deee68fb4f8",
+        "event_order": 14,
+        "content": "The service desk reference for Cabinet-X14b5f781 is 19430."
+      }
+    ],
+    "history_queries": [
+      {
+        "query_id": "h-2e867fc26cfb",
+        "event_order": 20,
+        "text": "What is the inventory label for Cabinet-X14b5f781?"
+      },
+      {
+        "query_id": "h-7a95ed5e3886",
+        "event_order": 21,
+        "text": "What is the inventory label for Cabinet-X14b5f781?"
+      }
+    ],
+    "future_queries": [
+      {
+        "query_id": "q-186c8beca035",
+        "event_order": 31,
+        "text": "What is the six-digit access code for Cabinet-X14b5f781?",
+        "gold_answer": "117429",
+        "supporting_memory_sets": [
+          [
+            "m-a1c271983d2a"
+          ]
+        ]
+      },
+      {
+        "query_id": "q-81908d4a3edc",
+        "event_order": 32,
+        "text": "Give the complete access code needed to open Cabinet-X14b5f781.",
+        "gold_answer": "117429",
+        "supporting_memory_sets": [
+          [
+            "m-a1c271983d2a"
+          ]
+        ]
+      }
+    ],
+    "diagnostic_metadata": {
+      "entity": "Cabinet-X14b5f781",
+      "prefix_memory_id": "m-a1c271983d2a",
+      "suffix_memory_id": "m-352d99809b95",
+      "frequent_memory_id": "m-352d99809b95",
+      "expected_history_count": 2
+    }
+  },
+  {
+    "trajectory_id": "t-f375a3a03278",
+    "user_id": "u-eb945b1e0d50",
+    "snapshot_id": "s-ee162c5e566b",
+    "split": "validation",
+    "scenario": "old_but_useful",
+    "event_order": 30,
+    "memories": [
+      {
+        "memory_id": "m-d08e0e448e9a",
+        "canonical_id": "f-d9c99c8f6b1c",
+        "leakage_group": "f-d9c99c8f6b1c",
+        "event_order": 2,
+        "content": "Use 818963 as the access code to open Vault-Xcc4d2a6c."
+      },
+      {
+        "memory_id": "m-c3ddf1296725",
+        "canonical_id": "f-d8f700ebde1f",
+        "leakage_group": "f-d8f700ebde1f",
+        "event_order": 6,
+        "content": "The inventory label for Vault-Xcc4d2a6c is 18208."
+      },
+      {
+        "memory_id": "m-807a30f44319",
+        "canonical_id": "f-f73210305066",
+        "leakage_group": "f-f73210305066",
+        "event_order": 12,
+        "content": "The service desk reference for Vault-Xcc4d2a6c is 48024. This record was transcribed from the local register."
+      },
+      {
+        "memory_id": "m-15f7cc0ed9e1",
+        "canonical_id": "f-4f3bd8506c2d",
+        "leakage_group": "f-4f3bd8506c2d",
+        "event_order": 14,
+        "content": "The maintenance ticket for Vault-Xcc4d2a6c is 34774. This record was transcribed from the local register."
+      }
+    ],
+    "history_queries": [
+      {
+        "query_id": "h-ae3e3fda2449",
+        "event_order": 20,
+        "text": "What is the inventory label for Vault-Xcc4d2a6c?"
+      },
+      {
+        "query_id": "h-88a0a05a109c",
+        "event_order": 21,
+        "text": "What is the inventory label for Vault-Xcc4d2a6c?"
+      },
+      {
+        "query_id": "h-6ece32aee792",
+        "event_order": 22,
+        "text": "What is the inventory label for Vault-Xcc4d2a6c?"
+      }
+    ],
+    "future_queries": [
+      {
+        "query_id": "q-e26e259a07bf",
+        "event_order": 31,
+        "text": "What is the six-digit access code for Vault-Xcc4d2a6c?",
+        "gold_answer": "818963",
+        "supporting_memory_sets": [
+          [
+            "m-d08e0e448e9a"
+          ]
+        ]
+      },
+      {
+        "query_id": "q-b6e985fa03f7",
+        "event_order": 32,
+        "text": "Give the complete access code needed to open Vault-Xcc4d2a6c.",
+        "gold_answer": "818963",
+        "supporting_memory_sets": [
+          [
+            "m-d08e0e448e9a"
+          ]
+        ]
+      }
+    ],
+    "diagnostic_metadata": {
+      "entity": "Vault-Xcc4d2a6c",
+      "prefix_memory_id": "m-d08e0e448e9a",
+      "suffix_memory_id": "m-807a30f44319",
+      "frequent_memory_id": "m-807a30f44319",
+      "expected_history_count": 3
+    }
+  },
+  {
+    "trajectory_id": "t-b16e99beb432",
+    "user_id": "u-a8821507c971",
+    "snapshot_id": "s-f7d77d9e81db",
+    "split": "validation",
+    "scenario": "frequent_but_useless",
+    "event_order": 30,
+    "memories": [
+      {
+        "memory_id": "m-1f7e13bb6ef6",
+        "canonical_id": "f-913bf500fb77",
+        "leakage_group": "f-913bf500fb77",
+        "event_order": 2,
+        "content": "The service desk reference for Vault-X167b2626 is 43516. This record was transcribed from the local register."
+      },
+      {
+        "memory_id": "m-89c855c87e23",
+        "canonical_id": "f-b56b9780581f",
+        "leakage_group": "f-b56b9780581f",
+        "event_order": 3,
+        "content": "The inventory label for Vault-X167b2626 is 38959. This record was transcribed from the local register."
+      },
+      {
+        "memory_id": "m-cc8cd5d51bb4",
+        "canonical_id": "f-660cf6f1ade9",
+        "leakage_group": "f-660cf6f1ade9",
+        "event_order": 5,
+        "content": "The access code for Vault-X167b2626 is 735000. The facilities clerk recorded this entry during a routine inventory review."
+      },
+      {
+        "memory_id": "m-0899b2fe9e27",
+        "canonical_id": "f-71bcd6dd2fbc",
+        "leakage_group": "f-71bcd6dd2fbc",
+        "event_order": 14,
+        "content": "The maintenance ticket for Vault-X167b2626 is 96009."
+      }
+    ],
+    "history_queries": [
+      {
+        "query_id": "h-b2edf93cdb04",
+        "event_order": 20,
+        "text": "What is the service desk reference for Vault-X167b2626?"
+      },
+      {
+        "query_id": "h-393d86929e57",
+        "event_order": 21,
+        "text": "What is the service desk reference for Vault-X167b2626?"
+      },
+      {
+        "query_id": "h-bf3396df9bd1",
+        "event_order": 22,
+        "text": "What is the service desk reference for Vault-X167b2626?"
+      }
+    ],
+    "future_queries": [
+      {
+        "query_id": "q-81930004bb40",
+        "event_order": 31,
+        "text": "What is the six-digit access code for Vault-X167b2626?",
+        "gold_answer": "735000",
+        "supporting_memory_sets": [
+          [
+            "m-cc8cd5d51bb4"
+          ]
+        ]
+      },
+      {
+        "query_id": "q-cb6bde8a5e86",
+        "event_order": 32,
+        "text": "Give the complete access code needed to open Vault-X167b2626.",
+        "gold_answer": "735000",
+        "supporting_memory_sets": [
+          [
+            "m-cc8cd5d51bb4"
+          ]
+        ]
+      }
+    ],
+    "diagnostic_metadata": {
+      "entity": "Vault-X167b2626",
+      "prefix_memory_id": "m-cc8cd5d51bb4",
+      "suffix_memory_id": "m-1f7e13bb6ef6",
+      "frequent_memory_id": "m-1f7e13bb6ef6",
+      "expected_history_count": 3
+    }
+  },
+  {
+    "trajectory_id": "t-ee04b67d4573",
+    "user_id": "u-d13cdaafa7e0",
+    "snapshot_id": "s-10a7704c8e19",
+    "split": "validation",
+    "scenario": "frequent_but_useless",
+    "event_order": 30,
+    "memories": [
+      {
+        "memory_id": "m-0da9a27a4aaa",
+        "canonical_id": "f-c26fe22305a8",
+        "leakage_group": "f-c26fe22305a8",
+        "event_order": 2,
+        "content": "The maintenance ticket for Locker-Xd76db198 is 28743. The facilities clerk recorded this entry during a routine inventory review."
+      },
+      {
+        "memory_id": "m-da19fdb64885",
+        "canonical_id": "f-859559a21e62",
+        "leakage_group": "f-859559a21e62",
+        "event_order": 5,
+        "content": "Locker-Xd76db198 opens with access code 759909. The facilities clerk recorded this entry during a routine inventory review."
+      },
+      {
+        "memory_id": "m-d91ab8ceec13",
+        "canonical_id": "f-dfa360421051",
+        "leakage_group": "f-dfa360421051",
+        "event_order": 9,
+        "content": "The service desk reference for Locker-Xd76db198 is 12060. The facilities clerk recorded this entry during a routine inventory review."
+      },
+      {
+        "memory_id": "m-505216e2b414",
+        "canonical_id": "f-4b56881c8bd1",
+        "leakage_group": "f-4b56881c8bd1",
+        "event_order": 12,
+        "content": "The inventory label for Locker-Xd76db198 is 56197. The facilities clerk recorded this entry during a routine inventory review."
+      }
+    ],
+    "history_queries": [
+      {
+        "query_id": "h-131a91cb1aef",
+        "event_order": 20,
+        "text": "What is the service desk reference for Locker-Xd76db198?"
+      },
+      {
+        "query_id": "h-95ee28b0f063",
+        "event_order": 21,
+        "text": "What is the service desk reference for Locker-Xd76db198?"
+      },
+      {
+        "query_id": "h-2b14767fe965",
+        "event_order": 22,
+        "text": "What is the service desk reference for Locker-Xd76db198?"
+      },
+      {
+        "query_id": "h-dbb861318261",
+        "event_order": 23,
+        "text": "What is the service desk reference for Locker-Xd76db198?"
+      }
+    ],
+    "future_queries": [
+      {
+        "query_id": "q-dfe27424c76f",
+        "event_order": 31,
+        "text": "What is the six-digit access code for Locker-Xd76db198?",
+        "gold_answer": "759909",
+        "supporting_memory_sets": [
+          [
+            "m-da19fdb64885"
+          ]
+        ]
+      },
+      {
+        "query_id": "q-f2296e5d4fa1",
+        "event_order": 32,
+        "text": "Give the complete access code needed to open Locker-Xd76db198.",
+        "gold_answer": "759909",
+        "supporting_memory_sets": [
+          [
+            "m-da19fdb64885"
+          ]
+        ]
+      }
+    ],
+    "diagnostic_metadata": {
+      "entity": "Locker-Xd76db198",
+      "prefix_memory_id": "m-da19fdb64885",
+      "suffix_memory_id": "m-d91ab8ceec13",
+      "frequent_memory_id": "m-d91ab8ceec13",
+      "expected_history_count": 4
+    }
+  },
+  {
+    "trajectory_id": "t-eddec56d9a90",
+    "user_id": "u-bdb3f9864c14",
+    "snapshot_id": "s-4da3e1921e13",
+    "split": "validation",
+    "scenario": "frequent_but_useless",
+    "event_order": 30,
+    "memories": [
+      {
+        "memory_id": "m-02530e841456",
+        "canonical_id": "f-6e704f4fe8fa",
+        "leakage_group": "f-6e704f4fe8fa",
+        "event_order": 4,
+        "content": "Use 255403 as the access code to open Locker-Xb8baef89. This record was transcribed from the local register."
+      },
+      {
+        "memory_id": "m-2f341c9318d9",
+        "canonical_id": "f-e4e5d823eae4",
+        "leakage_group": "f-e4e5d823eae4",
+        "event_order": 5,
+        "content": "The service desk reference for Locker-Xb8baef89 is 83307."
+      },
+      {
+        "memory_id": "m-08a9bbd7271d",
+        "canonical_id": "f-c050588f23c8",
+        "leakage_group": "f-c050588f23c8",
+        "event_order": 16,
+        "content": "The maintenance ticket for Locker-Xb8baef89 is 28626. This record was transcribed from the local register."
+      },
+      {
+        "memory_id": "m-2d44983ef6e3",
+        "canonical_id": "f-58ae35b7803a",
+        "leakage_group": "f-58ae35b7803a",
+        "event_order": 17,
+        "content": "The inventory label for Locker-Xb8baef89 is 72972. The facilities clerk recorded this entry during a routine inventory review."
+      }
+    ],
+    "history_queries": [
+      {
+        "query_id": "h-07eb361d86ad",
+        "event_order": 20,
+        "text": "What is the service desk reference for Locker-Xb8baef89?"
+      },
+      {
+        "query_id": "h-a521b9307e73",
+        "event_order": 21,
+        "text": "What is the service desk reference for Locker-Xb8baef89?"
+      },
+      {
+        "query_id": "h-f053eddd9bd4",
+        "event_order": 22,
+        "text": "What is the service desk reference for Locker-Xb8baef89?"
+      },
+      {
+        "query_id": "h-e98d101817d4",
+        "event_order": 23,
+        "text": "What is the service desk reference for Locker-Xb8baef89?"
+      },
+      {
+        "query_id": "h-0b4d23fc8b99",
+        "event_order": 24,
+        "text": "What is the service desk reference for Locker-Xb8baef89?"
+      }
+    ],
+    "future_queries": [
+      {
+        "query_id": "q-7c63365eed50",
+        "event_order": 31,
+        "text": "What is the six-digit access code for Locker-Xb8baef89?",
+        "gold_answer": "255403",
+        "supporting_memory_sets": [
+          [
+            "m-02530e841456"
+          ]
+        ]
+      },
+      {
+        "query_id": "q-081db0c71e06",
+        "event_order": 32,
+        "text": "Give the complete access code needed to open Locker-Xb8baef89.",
+        "gold_answer": "255403",
+        "supporting_memory_sets": [
+          [
+            "m-02530e841456"
+          ]
+        ]
+      }
+    ],
+    "diagnostic_metadata": {
+      "entity": "Locker-Xb8baef89",
+      "prefix_memory_id": "m-02530e841456",
+      "suffix_memory_id": "m-2f341c9318d9",
+      "frequent_memory_id": "m-2f341c9318d9",
+      "expected_history_count": 5
+    }
+  },
+  {
+    "trajectory_id": "t-37a2531c9972",
+    "user_id": "u-378490733f6e",
+    "snapshot_id": "s-b23ab6074ff0",
+    "split": "validation",
+    "scenario": "redundancy",
+    "event_order": 30,
+    "memories": [
+      {
+        "memory_id": "m-dc65d9268365",
+        "canonical_id": "f-6271cb78effa",
+        "leakage_group": "f-6271cb78effa",
+        "event_order": 1,
+        "content": "The maintenance ticket for Locker-Xf99be50c is 23643. This record was transcribed from the local register."
+      },
+      {
+        "memory_id": "m-593f41342726",
+        "canonical_id": "f-8dcd18441389",
+        "leakage_group": "f-8dcd18441389",
+        "event_order": 4,
+        "content": "The inventory label for Locker-Xf99be50c is 38227. The facilities clerk recorded this entry during a routine inventory review."
+      },
+      {
+        "memory_id": "m-dfb0cd8168db",
+        "canonical_id": "f-75a5983ee759",
+        "leakage_group": "f-75a5983ee759",
+        "event_order": 6,
+        "content": "To open Locker-Xf99be50c, enter the access code 760185. The facilities clerk recorded this entry during a routine inventory review."
+      },
+      {
+        "memory_id": "m-23c19f8ed753",
+        "canonical_id": "f-75a5983ee759",
+        "leakage_group": "f-75a5983ee759",
+        "event_order": 11,
+        "content": "The access code for Locker-Xf99be50c is 760185. The facilities clerk recorded this entry during a routine inventory review."
+      }
+    ],
+    "history_queries": [
+      {
+        "query_id": "h-67e7858e5ba5",
+        "event_order": 20,
+        "text": "What is the inventory label for Locker-Xf99be50c?"
+      }
+    ],
+    "future_queries": [
+      {
+        "query_id": "q-5e879ebb0e6e",
+        "event_order": 31,
+        "text": "What is the six-digit access code for Locker-Xf99be50c?",
+        "gold_answer": "760185",
+        "supporting_memory_sets": [
+          [
+            "m-23c19f8ed753"
+          ],
+          [
+            "m-dfb0cd8168db"
+          ]
+        ]
+      },
+      {
+        "query_id": "q-554a852c95de",
+        "event_order": 32,
+        "text": "Give the complete access code needed to open Locker-Xf99be50c.",
+        "gold_answer": "760185",
+        "supporting_memory_sets": [
+          [
+            "m-23c19f8ed753"
+          ],
+          [
+            "m-dfb0cd8168db"
+          ]
+        ]
+      }
+    ],
+    "diagnostic_metadata": {
+      "entity": "Locker-Xf99be50c",
+      "prefix_memory_id": "m-23c19f8ed753",
+      "suffix_memory_id": "m-dfb0cd8168db",
+      "frequent_memory_id": "m-dfb0cd8168db",
+      "expected_history_count": 1
+    }
+  },
+  {
+    "trajectory_id": "t-3aaa857df94a",
+    "user_id": "u-58b03a594a99",
+    "snapshot_id": "s-538a69e883e9",
+    "split": "validation",
+    "scenario": "redundancy",
+    "event_order": 30,
+    "memories": [
+      {
+        "memory_id": "m-4ca242744708",
+        "canonical_id": "f-7f1748c22d6f",
+        "leakage_group": "f-7f1748c22d6f",
+        "event_order": 1,
+        "content": "The inventory label for Vault-X4567a406 is 15956."
+      },
+      {
+        "memory_id": "m-8edf627a4d77",
+        "canonical_id": "f-f8333c5d9ddc",
+        "leakage_group": "f-f8333c5d9ddc",
+        "event_order": 9,
+        "content": "The maintenance ticket for Vault-X4567a406 is 42539."
+      },
+      {
+        "memory_id": "m-141e7d9e345d",
+        "canonical_id": "f-2024fa8a008a",
+        "leakage_group": "f-2024fa8a008a",
+        "event_order": 10,
+        "content": "To open Vault-X4567a406, enter the access code 897417."
+      },
+      {
+        "memory_id": "m-db35ca49dc91",
+        "canonical_id": "f-2024fa8a008a",
+        "leakage_group": "f-2024fa8a008a",
+        "event_order": 15,
+        "content": "Vault-X4567a406 opens with access code 897417."
+      }
+    ],
+    "history_queries": [
+      {
+        "query_id": "h-63614439a9ad",
+        "event_order": 20,
+        "text": "What is the inventory label for Vault-X4567a406?"
+      },
+      {
+        "query_id": "h-7e9b194f6673",
+        "event_order": 21,
+        "text": "What is the inventory label for Vault-X4567a406?"
+      }
+    ],
+    "future_queries": [
+      {
+        "query_id": "q-2086cd4c8ca1",
+        "event_order": 31,
+        "text": "What is the six-digit access code for Vault-X4567a406?",
+        "gold_answer": "897417",
+        "supporting_memory_sets": [
+          [
+            "m-db35ca49dc91"
+          ],
+          [
+            "m-141e7d9e345d"
+          ]
+        ]
+      },
+      {
+        "query_id": "q-e89bbccfb969",
+        "event_order": 32,
+        "text": "Give the complete access code needed to open Vault-X4567a406.",
+        "gold_answer": "897417",
+        "supporting_memory_sets": [
+          [
+            "m-db35ca49dc91"
+          ],
+          [
+            "m-141e7d9e345d"
+          ]
+        ]
+      }
+    ],
+    "diagnostic_metadata": {
+      "entity": "Vault-X4567a406",
+      "prefix_memory_id": "m-db35ca49dc91",
+      "suffix_memory_id": "m-141e7d9e345d",
+      "frequent_memory_id": "m-141e7d9e345d",
+      "expected_history_count": 2
+    }
+  },
+  {
+    "trajectory_id": "t-5ab832feeee5",
+    "user_id": "u-3cc96fea8e3f",
+    "snapshot_id": "s-de41590235c3",
+    "split": "validation",
+    "scenario": "redundancy",
+    "event_order": 30,
+    "memories": [
+      {
+        "memory_id": "m-3d158eb3c8bc",
+        "canonical_id": "f-ba3916763c8d",
+        "leakage_group": "f-ba3916763c8d",
+        "event_order": 10,
+        "content": "To open Cabinet-Xc028fdc9, enter the access code 670194. The facilities clerk recorded this entry during a routine inventory review."
+      },
+      {
+        "memory_id": "m-f3f564622ad4",
+        "canonical_id": "f-ba3916763c8d",
+        "leakage_group": "f-ba3916763c8d",
+        "event_order": 12,
+        "content": "Use 670194 as the access code to open Cabinet-Xc028fdc9. The facilities clerk recorded this entry during a routine inventory review."
+      },
+      {
+        "memory_id": "m-9fe18d2508f7",
+        "canonical_id": "f-85ce0c121e04",
+        "leakage_group": "f-85ce0c121e04",
+        "event_order": 14,
+        "content": "The inventory label for Cabinet-Xc028fdc9 is 42976."
+      },
+      {
+        "memory_id": "m-df8ff18e1346",
+        "canonical_id": "f-27b9f766ceb6",
+        "leakage_group": "f-27b9f766ceb6",
+        "event_order": 15,
+        "content": "The maintenance ticket for Cabinet-Xc028fdc9 is 90884. The facilities clerk recorded this entry during a routine inventory review."
+      }
+    ],
+    "history_queries": [
+      {
+        "query_id": "h-ef4998c090ca",
+        "event_order": 20,
+        "text": "What is the inventory label for Cabinet-Xc028fdc9?"
+      },
+      {
+        "query_id": "h-385e86626129",
+        "event_order": 21,
+        "text": "What is the inventory label for Cabinet-Xc028fdc9?"
+      },
+      {
+        "query_id": "h-14be3112d783",
+        "event_order": 22,
+        "text": "What is the inventory label for Cabinet-Xc028fdc9?"
+      }
+    ],
+    "future_queries": [
+      {
+        "query_id": "q-e83662bd0632",
+        "event_order": 31,
+        "text": "What is the six-digit access code for Cabinet-Xc028fdc9?",
+        "gold_answer": "670194",
+        "supporting_memory_sets": [
+          [
+            "m-f3f564622ad4"
+          ],
+          [
+            "m-3d158eb3c8bc"
+          ]
+        ]
+      },
+      {
+        "query_id": "q-a971c4ee1d7a",
+        "event_order": 32,
+        "text": "Give the complete access code needed to open Cabinet-Xc028fdc9.",
+        "gold_answer": "670194",
+        "supporting_memory_sets": [
+          [
+            "m-f3f564622ad4"
+          ],
+          [
+            "m-3d158eb3c8bc"
+          ]
+        ]
+      }
+    ],
+    "diagnostic_metadata": {
+      "entity": "Cabinet-Xc028fdc9",
+      "prefix_memory_id": "m-f3f564622ad4",
+      "suffix_memory_id": "m-3d158eb3c8bc",
+      "frequent_memory_id": "m-3d158eb3c8bc",
+      "expected_history_count": 3
+    }
+  },
+  {
+    "trajectory_id": "t-0340d2ae8507",
+    "user_id": "u-afb6d8644b07",
+    "snapshot_id": "s-33dc6844e145",
+    "split": "validation",
+    "scenario": "complementarity",
+    "event_order": 30,
+    "memories": [
+      {
+        "memory_id": "m-c2ea459e52b7",
+        "canonical_id": "f-98e0b752072f",
+        "leakage_group": "f-98e0b752072f",
+        "event_order": 5,
+        "content": "The first three digits of the six-digit access code for Vault-X3e7fb1d3 are 748. This record was transcribed from the local register."
+      },
+      {
+        "memory_id": "m-1a1b1016d010",
+        "canonical_id": "f-6da3716a0e19",
+        "leakage_group": "f-6da3716a0e19",
+        "event_order": 12,
+        "content": "The inventory label for Vault-X3e7fb1d3 is 48638. The facilities clerk recorded this entry during a routine inventory review."
+      },
+      {
+        "memory_id": "m-83a3a1ba904a",
+        "canonical_id": "f-84770e8d2eb8",
+        "leakage_group": "f-84770e8d2eb8",
+        "event_order": 13,
+        "content": "The maintenance ticket for Vault-X3e7fb1d3 is 58549. This record was transcribed from the local register."
+      },
+      {
+        "memory_id": "m-cfcc37fa88f7",
+        "canonical_id": "f-983aafac18a5",
+        "leakage_group": "f-983aafac18a5",
+        "event_order": 16,
+        "content": "The last three digits of the six-digit access code for Vault-X3e7fb1d3 are 955. The facilities clerk recorded this entry during a routine inventory review."
+      }
+    ],
+    "history_queries": [
+      {
+        "query_id": "h-8645c91ca4c6",
+        "event_order": 20,
+        "text": "What is the inventory label for Vault-X3e7fb1d3?"
+      }
+    ],
+    "future_queries": [
+      {
+        "query_id": "q-4585a6e35570",
+        "event_order": 31,
+        "text": "What is the six-digit access code for Vault-X3e7fb1d3?",
+        "gold_answer": "748955",
+        "supporting_memory_sets": [
+          [
+            "m-c2ea459e52b7",
+            "m-cfcc37fa88f7"
+          ]
+        ]
+      },
+      {
+        "query_id": "q-2f28e1f4f586",
+        "event_order": 32,
+        "text": "Give the complete access code needed to open Vault-X3e7fb1d3.",
+        "gold_answer": "748955",
+        "supporting_memory_sets": [
+          [
+            "m-c2ea459e52b7",
+            "m-cfcc37fa88f7"
+          ]
+        ]
+      }
+    ],
+    "diagnostic_metadata": {
+      "entity": "Vault-X3e7fb1d3",
+      "prefix_memory_id": "m-c2ea459e52b7",
+      "suffix_memory_id": "m-cfcc37fa88f7",
+      "frequent_memory_id": "m-cfcc37fa88f7",
+      "expected_history_count": 1
+    }
+  },
+  {
+    "trajectory_id": "t-0cba7486f046",
+    "user_id": "u-6b68a07970dd",
+    "snapshot_id": "s-8cc3514f4197",
+    "split": "validation",
+    "scenario": "complementarity",
+    "event_order": 30,
+    "memories": [
+      {
+        "memory_id": "m-63e0002b001c",
+        "canonical_id": "f-6d6d9f59c255",
+        "leakage_group": "f-6d6d9f59c255",
+        "event_order": 2,
+        "content": "The inventory label for Vault-Xcc6da56a is 24978."
+      },
+      {
+        "memory_id": "m-8d22e9a9448e",
+        "canonical_id": "f-b3780494a8fa",
+        "leakage_group": "f-b3780494a8fa",
+        "event_order": 5,
+        "content": "The maintenance ticket for Vault-Xcc6da56a is 60776."
+      },
+      {
+        "memory_id": "m-af76235dfaca",
+        "canonical_id": "f-bca2c43fb627",
+        "leakage_group": "f-bca2c43fb627",
+        "event_order": 7,
+        "content": "The last three digits of the six-digit access code for Vault-Xcc6da56a are 267. This record was transcribed from the local register."
+      },
+      {
+        "memory_id": "m-fbe23bc3a949",
+        "canonical_id": "f-b3b7cd3778db",
+        "leakage_group": "f-b3b7cd3778db",
+        "event_order": 9,
+        "content": "The first three digits of the six-digit access code for Vault-Xcc6da56a are 219. The facilities clerk recorded this entry during a routine inventory review."
+      }
+    ],
+    "history_queries": [
+      {
+        "query_id": "h-f0fa94d8e813",
+        "event_order": 20,
+        "text": "What is the inventory label for Vault-Xcc6da56a?"
+      },
+      {
+        "query_id": "h-4e2ace74cec8",
+        "event_order": 21,
+        "text": "What is the inventory label for Vault-Xcc6da56a?"
+      }
+    ],
+    "future_queries": [
+      {
+        "query_id": "q-08812c6c6f40",
+        "event_order": 31,
+        "text": "What is the six-digit access code for Vault-Xcc6da56a?",
+        "gold_answer": "219267",
+        "supporting_memory_sets": [
+          [
+            "m-fbe23bc3a949",
+            "m-af76235dfaca"
+          ]
+        ]
+      },
+      {
+        "query_id": "q-38bde7fa9901",
+        "event_order": 32,
+        "text": "Give the complete access code needed to open Vault-Xcc6da56a.",
+        "gold_answer": "219267",
+        "supporting_memory_sets": [
+          [
+            "m-fbe23bc3a949",
+            "m-af76235dfaca"
+          ]
+        ]
+      }
+    ],
+    "diagnostic_metadata": {
+      "entity": "Vault-Xcc6da56a",
+      "prefix_memory_id": "m-fbe23bc3a949",
+      "suffix_memory_id": "m-af76235dfaca",
+      "frequent_memory_id": "m-af76235dfaca",
+      "expected_history_count": 2
+    }
+  },
+  {
+    "trajectory_id": "t-68d234f3fa28",
+    "user_id": "u-59a722dccb1e",
+    "snapshot_id": "s-3afa028339e0",
+    "split": "validation",
+    "scenario": "complementarity",
+    "event_order": 30,
+    "memories": [
+      {
+        "memory_id": "m-91620635dc53",
+        "canonical_id": "f-230ee92803ff",
+        "leakage_group": "f-230ee92803ff",
+        "event_order": 7,
+        "content": "The first three digits of the six-digit access code for Locker-Xdb41690e are 921. This record was transcribed from the local register."
+      },
+      {
+        "memory_id": "m-2483e8105cec",
+        "canonical_id": "f-1f3304b7b38e",
+        "leakage_group": "f-1f3304b7b38e",
+        "event_order": 14,
+        "content": "The maintenance ticket for Locker-Xdb41690e is 88013. This record was transcribed from the local register."
+      },
+      {
+        "memory_id": "m-1233700e3d45",
+        "canonical_id": "f-b76ebb671e02",
+        "leakage_group": "f-b76ebb671e02",
+        "event_order": 15,
+        "content": "The inventory label for Locker-Xdb41690e is 31134."
+      },
+      {
+        "memory_id": "m-c772bab21d60",
+        "canonical_id": "f-9c0ba4736638",
+        "leakage_group": "f-9c0ba4736638",
+        "event_order": 17,
+        "content": "The last three digits of the six-digit access code for Locker-Xdb41690e are 687. The facilities clerk recorded this entry during a routine inventory review."
+      }
+    ],
+    "history_queries": [
+      {
+        "query_id": "h-8a06df332874",
+        "event_order": 20,
+        "text": "What is the inventory label for Locker-Xdb41690e?"
+      },
+      {
+        "query_id": "h-bd2668c7d1eb",
+        "event_order": 21,
+        "text": "What is the inventory label for Locker-Xdb41690e?"
+      },
+      {
+        "query_id": "h-72e2d7c5388e",
+        "event_order": 22,
+        "text": "What is the inventory label for Locker-Xdb41690e?"
+      }
+    ],
+    "future_queries": [
+      {
+        "query_id": "q-da4b1bd58930",
+        "event_order": 31,
+        "text": "What is the six-digit access code for Locker-Xdb41690e?",
+        "gold_answer": "921687",
+        "supporting_memory_sets": [
+          [
+            "m-91620635dc53",
+            "m-c772bab21d60"
+          ]
+        ]
+      },
+      {
+        "query_id": "q-46bebad64df5",
+        "event_order": 32,
+        "text": "Give the complete access code needed to open Locker-Xdb41690e.",
+        "gold_answer": "921687",
+        "supporting_memory_sets": [
+          [
+            "m-91620635dc53",
+            "m-c772bab21d60"
+          ]
+        ]
+      }
+    ],
+    "diagnostic_metadata": {
+      "entity": "Locker-Xdb41690e",
+      "prefix_memory_id": "m-91620635dc53",
+      "suffix_memory_id": "m-c772bab21d60",
+      "frequent_memory_id": "m-c772bab21d60",
+      "expected_history_count": 3
+    }
+  },
+  {
+    "trajectory_id": "t-39ad71fdff5b",
+    "user_id": "u-a19e08b151f3",
+    "snapshot_id": "s-b808d24b2d66",
+    "split": "test",
+    "scenario": "old_but_useful",
+    "event_order": 30,
+    "memories": [
+      {
+        "memory_id": "m-e6aca58d113a",
+        "canonical_id": "f-a13ca553e575",
+        "leakage_group": "f-a13ca553e575",
+        "event_order": 3,
+        "content": "The access code for Locker-X1ad2b627 is 349413. The facilities clerk recorded this entry during a routine inventory review."
+      },
+      {
+        "memory_id": "m-4f3a97e3e6f3",
+        "canonical_id": "f-f82f444215aa",
+        "leakage_group": "f-f82f444215aa",
+        "event_order": 5,
+        "content": "The inventory label for Locker-X1ad2b627 is 75019. This record was transcribed from the local register."
+      },
+      {
+        "memory_id": "m-1edfd8956e01",
+        "canonical_id": "f-f9006ff0eea8",
+        "leakage_group": "f-f9006ff0eea8",
+        "event_order": 7,
+        "content": "The maintenance ticket for Locker-X1ad2b627 is 75143. The facilities clerk recorded this entry during a routine inventory review."
+      },
+      {
+        "memory_id": "m-e2d8df7e808e",
+        "canonical_id": "f-5ead266bb2a0",
+        "leakage_group": "f-5ead266bb2a0",
+        "event_order": 13,
+        "content": "The service desk reference for Locker-X1ad2b627 is 90584. The facilities clerk recorded this entry during a routine inventory review."
+      }
+    ],
+    "history_queries": [
+      {
+        "query_id": "h-c6c6c36d6e2f",
+        "event_order": 20,
+        "text": "What is the inventory label for Locker-X1ad2b627?"
+      }
+    ],
+    "future_queries": [
+      {
+        "query_id": "q-8276508e4f05",
+        "event_order": 31,
+        "text": "What is the six-digit access code for Locker-X1ad2b627?",
+        "gold_answer": "349413",
+        "supporting_memory_sets": [
+          [
+            "m-e6aca58d113a"
+          ]
+        ]
+      },
+      {
+        "query_id": "q-a86aebba475f",
+        "event_order": 32,
+        "text": "Give the complete access code needed to open Locker-X1ad2b627.",
+        "gold_answer": "349413",
+        "supporting_memory_sets": [
+          [
+            "m-e6aca58d113a"
+          ]
+        ]
+      }
+    ],
+    "diagnostic_metadata": {
+      "entity": "Locker-X1ad2b627",
+      "prefix_memory_id": "m-e6aca58d113a",
+      "suffix_memory_id": "m-e2d8df7e808e",
+      "frequent_memory_id": "m-e2d8df7e808e",
+      "expected_history_count": 1
+    }
+  },
+  {
+    "trajectory_id": "t-41c3b5d08fd0",
+    "user_id": "u-df2e910df287",
+    "snapshot_id": "s-efd44cdb99e4",
+    "split": "test",
+    "scenario": "old_but_useful",
+    "event_order": 30,
+    "memories": [
+      {
+        "memory_id": "m-5b9904cd8ab1",
+        "canonical_id": "f-5e49198d23cd",
+        "leakage_group": "f-5e49198d23cd",
+        "event_order": 6,
+        "content": "Vault-X28f8016a opens with access code 739739. The facilities clerk recorded this entry during a routine inventory review."
+      },
+      {
+        "memory_id": "m-bf061c161d42",
+        "canonical_id": "f-df7bf5256c37",
+        "leakage_group": "f-df7bf5256c37",
+        "event_order": 8,
+        "content": "The inventory label for Vault-X28f8016a is 19361. This record was transcribed from the local register."
+      },
+      {
+        "memory_id": "m-a577a00a073c",
+        "canonical_id": "f-dea1a75327f5",
+        "leakage_group": "f-dea1a75327f5",
+        "event_order": 9,
+        "content": "The maintenance ticket for Vault-X28f8016a is 61242. The facilities clerk recorded this entry during a routine inventory review."
+      },
+      {
+        "memory_id": "m-a705ac3e5146",
+        "canonical_id": "f-7f1dd3b0fccd",
+        "leakage_group": "f-7f1dd3b0fccd",
+        "event_order": 16,
+        "content": "The service desk reference for Vault-X28f8016a is 40131."
+      }
+    ],
+    "history_queries": [
+      {
+        "query_id": "h-3b9721396dfc",
+        "event_order": 20,
+        "text": "What is the inventory label for Vault-X28f8016a?"
+      },
+      {
+        "query_id": "h-d9b2f8f88089",
+        "event_order": 21,
+        "text": "What is the inventory label for Vault-X28f8016a?"
+      }
+    ],
+    "future_queries": [
+      {
+        "query_id": "q-1d2c3396c582",
+        "event_order": 31,
+        "text": "What is the six-digit access code for Vault-X28f8016a?",
+        "gold_answer": "739739",
+        "supporting_memory_sets": [
+          [
+            "m-5b9904cd8ab1"
+          ]
+        ]
+      },
+      {
+        "query_id": "q-243832b16348",
+        "event_order": 32,
+        "text": "Give the complete access code needed to open Vault-X28f8016a.",
+        "gold_answer": "739739",
+        "supporting_memory_sets": [
+          [
+            "m-5b9904cd8ab1"
+          ]
+        ]
+      }
+    ],
+    "diagnostic_metadata": {
+      "entity": "Vault-X28f8016a",
+      "prefix_memory_id": "m-5b9904cd8ab1",
+      "suffix_memory_id": "m-a705ac3e5146",
+      "frequent_memory_id": "m-a705ac3e5146",
+      "expected_history_count": 2
+    }
+  },
+  {
+    "trajectory_id": "t-ded6db73b9f0",
+    "user_id": "u-96974acc6623",
+    "snapshot_id": "s-6003e1e585a2",
+    "split": "test",
+    "scenario": "old_but_useful",
+    "event_order": 30,
+    "memories": [
+      {
+        "memory_id": "m-5838e7f7d3fc",
+        "canonical_id": "f-cf3644f71042",
+        "leakage_group": "f-cf3644f71042",
+        "event_order": 8,
+        "content": "Use 917871 as the access code to open Locker-X9d4e8418. The facilities clerk recorded this entry during a routine inventory review."
+      },
+      {
+        "memory_id": "m-e1b4abf45258",
+        "canonical_id": "f-1aab8d69fa98",
+        "leakage_group": "f-1aab8d69fa98",
+        "event_order": 10,
+        "content": "The inventory label for Locker-X9d4e8418 is 77083. This record was transcribed from the local register."
+      },
+      {
+        "memory_id": "m-e845d8eb4d41",
+        "canonical_id": "f-50d48c84684e",
+        "leakage_group": "f-50d48c84684e",
+        "event_order": 13,
+        "content": "The maintenance ticket for Locker-X9d4e8418 is 51698. The facilities clerk recorded this entry during a routine inventory review."
+      },
+      {
+        "memory_id": "m-3c99213b41a8",
+        "canonical_id": "f-0d0a1f425db5",
+        "leakage_group": "f-0d0a1f425db5",
+        "event_order": 16,
+        "content": "The service desk reference for Locker-X9d4e8418 is 75301. This record was transcribed from the local register."
+      }
+    ],
+    "history_queries": [
+      {
+        "query_id": "h-c81cf0380229",
+        "event_order": 20,
+        "text": "What is the inventory label for Locker-X9d4e8418?"
+      },
+      {
+        "query_id": "h-54b75f4a50ca",
+        "event_order": 21,
+        "text": "What is the inventory label for Locker-X9d4e8418?"
+      },
+      {
+        "query_id": "h-de11cc126631",
+        "event_order": 22,
+        "text": "What is the inventory label for Locker-X9d4e8418?"
+      }
+    ],
+    "future_queries": [
+      {
+        "query_id": "q-230dbaabb2e9",
+        "event_order": 31,
+        "text": "What is the six-digit access code for Locker-X9d4e8418?",
+        "gold_answer": "917871",
+        "supporting_memory_sets": [
+          [
+            "m-5838e7f7d3fc"
+          ]
+        ]
+      },
+      {
+        "query_id": "q-fa07a887211c",
+        "event_order": 32,
+        "text": "Give the complete access code needed to open Locker-X9d4e8418.",
+        "gold_answer": "917871",
+        "supporting_memory_sets": [
+          [
+            "m-5838e7f7d3fc"
+          ]
+        ]
+      }
+    ],
+    "diagnostic_metadata": {
+      "entity": "Locker-X9d4e8418",
+      "prefix_memory_id": "m-5838e7f7d3fc",
+      "suffix_memory_id": "m-3c99213b41a8",
+      "frequent_memory_id": "m-3c99213b41a8",
+      "expected_history_count": 3
+    }
+  },
+  {
+    "trajectory_id": "t-78e0c1546ca4",
+    "user_id": "u-dfe56e48a38e",
+    "snapshot_id": "s-bcc95f3ca72c",
+    "split": "test",
+    "scenario": "frequent_but_useless",
+    "event_order": 30,
+    "memories": [
+      {
+        "memory_id": "m-44b35a4ca037",
+        "canonical_id": "f-91e6af09d55f",
+        "leakage_group": "f-91e6af09d55f",
+        "event_order": 7,
+        "content": "The access code for Cabinet-X32ad06dc is 478888. This record was transcribed from the local register."
+      },
+      {
+        "memory_id": "m-58da783164ed",
+        "canonical_id": "f-1445f42c931c",
+        "leakage_group": "f-1445f42c931c",
+        "event_order": 11,
+        "content": "The service desk reference for Cabinet-X32ad06dc is 70076."
+      },
+      {
+        "memory_id": "m-f01f07089520",
+        "canonical_id": "f-0425f86cad27",
+        "leakage_group": "f-0425f86cad27",
+        "event_order": 13,
+        "content": "The maintenance ticket for Cabinet-X32ad06dc is 25473. The facilities clerk recorded this entry during a routine inventory review."
+      },
+      {
+        "memory_id": "m-25e8954632a2",
+        "canonical_id": "f-f4a6c907d273",
+        "leakage_group": "f-f4a6c907d273",
+        "event_order": 17,
+        "content": "The inventory label for Cabinet-X32ad06dc is 41174. The facilities clerk recorded this entry during a routine inventory review."
+      }
+    ],
+    "history_queries": [
+      {
+        "query_id": "h-b568d4d012db",
+        "event_order": 20,
+        "text": "What is the service desk reference for Cabinet-X32ad06dc?"
+      },
+      {
+        "query_id": "h-4a4717a76e5b",
+        "event_order": 21,
+        "text": "What is the service desk reference for Cabinet-X32ad06dc?"
+      },
+      {
+        "query_id": "h-14ae68537d87",
+        "event_order": 22,
+        "text": "What is the service desk reference for Cabinet-X32ad06dc?"
+      }
+    ],
+    "future_queries": [
+      {
+        "query_id": "q-35b8bca1bf5b",
+        "event_order": 31,
+        "text": "What is the six-digit access code for Cabinet-X32ad06dc?",
+        "gold_answer": "478888",
+        "supporting_memory_sets": [
+          [
+            "m-44b35a4ca037"
+          ]
+        ]
+      },
+      {
+        "query_id": "q-b21542fb8df7",
+        "event_order": 32,
+        "text": "Give the complete access code needed to open Cabinet-X32ad06dc.",
+        "gold_answer": "478888",
+        "supporting_memory_sets": [
+          [
+            "m-44b35a4ca037"
+          ]
+        ]
+      }
+    ],
+    "diagnostic_metadata": {
+      "entity": "Cabinet-X32ad06dc",
+      "prefix_memory_id": "m-44b35a4ca037",
+      "suffix_memory_id": "m-58da783164ed",
+      "frequent_memory_id": "m-58da783164ed",
+      "expected_history_count": 3
+    }
+  },
+  {
+    "trajectory_id": "t-86955249a527",
+    "user_id": "u-3892147d0665",
+    "snapshot_id": "s-e6229af88b99",
+    "split": "test",
+    "scenario": "frequent_but_useless",
+    "event_order": 30,
+    "memories": [
+      {
+        "memory_id": "m-f4de6c99150f",
+        "canonical_id": "f-c0dd2581fbc3",
+        "leakage_group": "f-c0dd2581fbc3",
+        "event_order": 2,
+        "content": "The maintenance ticket for Locker-Xc80b1e5d is 13951. The facilities clerk recorded this entry during a routine inventory review."
+      },
+      {
+        "memory_id": "m-6b336ad726e6",
+        "canonical_id": "f-963b9e4cca92",
+        "leakage_group": "f-963b9e4cca92",
+        "event_order": 6,
+        "content": "The service desk reference for Locker-Xc80b1e5d is 85952. This record was transcribed from the local register."
+      },
+      {
+        "memory_id": "m-be6da530934d",
+        "canonical_id": "f-2e15c88c1f24",
+        "leakage_group": "f-2e15c88c1f24",
+        "event_order": 12,
+        "content": "The inventory label for Locker-Xc80b1e5d is 87691. This record was transcribed from the local register."
+      },
+      {
+        "memory_id": "m-b0f730d0d4f4",
+        "canonical_id": "f-29ec1f6163c5",
+        "leakage_group": "f-29ec1f6163c5",
+        "event_order": 15,
+        "content": "Locker-Xc80b1e5d opens with access code 566834."
+      }
+    ],
+    "history_queries": [
+      {
+        "query_id": "h-8443e72126e3",
+        "event_order": 20,
+        "text": "What is the service desk reference for Locker-Xc80b1e5d?"
+      },
+      {
+        "query_id": "h-bf55446580a1",
+        "event_order": 21,
+        "text": "What is the service desk reference for Locker-Xc80b1e5d?"
+      },
+      {
+        "query_id": "h-d6166cdb7c4c",
+        "event_order": 22,
+        "text": "What is the service desk reference for Locker-Xc80b1e5d?"
+      },
+      {
+        "query_id": "h-6bccc47a6102",
+        "event_order": 23,
+        "text": "What is the service desk reference for Locker-Xc80b1e5d?"
+      }
+    ],
+    "future_queries": [
+      {
+        "query_id": "q-01d634e9a246",
+        "event_order": 31,
+        "text": "What is the six-digit access code for Locker-Xc80b1e5d?",
+        "gold_answer": "566834",
+        "supporting_memory_sets": [
+          [
+            "m-b0f730d0d4f4"
+          ]
+        ]
+      },
+      {
+        "query_id": "q-7cbee1f5fe27",
+        "event_order": 32,
+        "text": "Give the complete access code needed to open Locker-Xc80b1e5d.",
+        "gold_answer": "566834",
+        "supporting_memory_sets": [
+          [
+            "m-b0f730d0d4f4"
+          ]
+        ]
+      }
+    ],
+    "diagnostic_metadata": {
+      "entity": "Locker-Xc80b1e5d",
+      "prefix_memory_id": "m-b0f730d0d4f4",
+      "suffix_memory_id": "m-6b336ad726e6",
+      "frequent_memory_id": "m-6b336ad726e6",
+      "expected_history_count": 4
+    }
+  },
+  {
+    "trajectory_id": "t-123a4a2f49be",
+    "user_id": "u-4f19a561014c",
+    "snapshot_id": "s-503564df8849",
+    "split": "test",
+    "scenario": "frequent_but_useless",
+    "event_order": 30,
+    "memories": [
+      {
+        "memory_id": "m-10dc202dfa45",
+        "canonical_id": "f-a7d95a374a7b",
+        "leakage_group": "f-a7d95a374a7b",
+        "event_order": 4,
+        "content": "The maintenance ticket for Vault-X0e4e73a3 is 74017. This record was transcribed from the local register."
+      },
+      {
+        "memory_id": "m-f19ff4bd33a4",
+        "canonical_id": "f-ecb8db151d9a",
+        "leakage_group": "f-ecb8db151d9a",
+        "event_order": 10,
+        "content": "The inventory label for Vault-X0e4e73a3 is 95865. This record was transcribed from the local register."
+      },
+      {
+        "memory_id": "m-796a22e1e689",
+        "canonical_id": "f-3b7f7789b141",
+        "leakage_group": "f-3b7f7789b141",
+        "event_order": 14,
+        "content": "The service desk reference for Vault-X0e4e73a3 is 74384. The facilities clerk recorded this entry during a routine inventory review."
+      },
+      {
+        "memory_id": "m-74dfd3e5b9b7",
+        "canonical_id": "f-c4e655ab5a6f",
+        "leakage_group": "f-c4e655ab5a6f",
+        "event_order": 17,
+        "content": "Use 224729 as the access code to open Vault-X0e4e73a3. This record was transcribed from the local register."
+      }
+    ],
+    "history_queries": [
+      {
+        "query_id": "h-9fc6b24abd20",
+        "event_order": 20,
+        "text": "What is the service desk reference for Vault-X0e4e73a3?"
+      },
+      {
+        "query_id": "h-c19e437ad4ef",
+        "event_order": 21,
+        "text": "What is the service desk reference for Vault-X0e4e73a3?"
+      },
+      {
+        "query_id": "h-e528a0ac9ddb",
+        "event_order": 22,
+        "text": "What is the service desk reference for Vault-X0e4e73a3?"
+      },
+      {
+        "query_id": "h-2406828fb904",
+        "event_order": 23,
+        "text": "What is the service desk reference for Vault-X0e4e73a3?"
+      },
+      {
+        "query_id": "h-045430f20922",
+        "event_order": 24,
+        "text": "What is the service desk reference for Vault-X0e4e73a3?"
+      }
+    ],
+    "future_queries": [
+      {
+        "query_id": "q-2ce7210a075c",
+        "event_order": 31,
+        "text": "What is the six-digit access code for Vault-X0e4e73a3?",
+        "gold_answer": "224729",
+        "supporting_memory_sets": [
+          [
+            "m-74dfd3e5b9b7"
+          ]
+        ]
+      },
+      {
+        "query_id": "q-ded3924341e4",
+        "event_order": 32,
+        "text": "Give the complete access code needed to open Vault-X0e4e73a3.",
+        "gold_answer": "224729",
+        "supporting_memory_sets": [
+          [
+            "m-74dfd3e5b9b7"
+          ]
+        ]
+      }
+    ],
+    "diagnostic_metadata": {
+      "entity": "Vault-X0e4e73a3",
+      "prefix_memory_id": "m-74dfd3e5b9b7",
+      "suffix_memory_id": "m-796a22e1e689",
+      "frequent_memory_id": "m-796a22e1e689",
+      "expected_history_count": 5
+    }
+  },
+  {
+    "trajectory_id": "t-d2b153aa4e56",
+    "user_id": "u-c122a68df723",
+    "snapshot_id": "s-33b0651f1b39",
+    "split": "test",
+    "scenario": "redundancy",
+    "event_order": 30,
+    "memories": [
+      {
+        "memory_id": "m-188f0e9d5451",
+        "canonical_id": "f-194c4a4fb7d0",
+        "leakage_group": "f-194c4a4fb7d0",
+        "event_order": 6,
+        "content": "The access code for Cabinet-X92095538 is 145918."
+      },
+      {
+        "memory_id": "m-f6137a9405c3",
+        "canonical_id": "f-9df08fcae943",
+        "leakage_group": "f-9df08fcae943",
+        "event_order": 7,
+        "content": "The maintenance ticket for Cabinet-X92095538 is 99823."
+      },
+      {
+        "memory_id": "m-aa0e5ccf3e5b",
+        "canonical_id": "f-194c4a4fb7d0",
+        "leakage_group": "f-194c4a4fb7d0",
+        "event_order": 10,
+        "content": "To open Cabinet-X92095538, enter the access code 145918. The facilities clerk recorded this entry during a routine inventory review."
+      },
+      {
+        "memory_id": "m-8cdd927bba19",
+        "canonical_id": "f-99b192f7e81f",
+        "leakage_group": "f-99b192f7e81f",
+        "event_order": 13,
+        "content": "The inventory label for Cabinet-X92095538 is 67962. This record was transcribed from the local register."
+      }
+    ],
+    "history_queries": [
+      {
+        "query_id": "h-f3ecc1a715a9",
+        "event_order": 20,
+        "text": "What is the inventory label for Cabinet-X92095538?"
+      }
+    ],
+    "future_queries": [
+      {
+        "query_id": "q-713d493997fd",
+        "event_order": 31,
+        "text": "What is the six-digit access code for Cabinet-X92095538?",
+        "gold_answer": "145918",
+        "supporting_memory_sets": [
+          [
+            "m-188f0e9d5451"
+          ],
+          [
+            "m-aa0e5ccf3e5b"
+          ]
+        ]
+      },
+      {
+        "query_id": "q-5b0fa42c9f15",
+        "event_order": 32,
+        "text": "Give the complete access code needed to open Cabinet-X92095538.",
+        "gold_answer": "145918",
+        "supporting_memory_sets": [
+          [
+            "m-188f0e9d5451"
+          ],
+          [
+            "m-aa0e5ccf3e5b"
+          ]
+        ]
+      }
+    ],
+    "diagnostic_metadata": {
+      "entity": "Cabinet-X92095538",
+      "prefix_memory_id": "m-188f0e9d5451",
+      "suffix_memory_id": "m-aa0e5ccf3e5b",
+      "frequent_memory_id": "m-aa0e5ccf3e5b",
+      "expected_history_count": 1
+    }
+  },
+  {
+    "trajectory_id": "t-3fafe7aff2a1",
+    "user_id": "u-bd0172ff50e7",
+    "snapshot_id": "s-7ac4710458a4",
+    "split": "test",
+    "scenario": "redundancy",
+    "event_order": 30,
+    "memories": [
+      {
+        "memory_id": "m-79f18466c3a8",
+        "canonical_id": "f-7face84bd203",
+        "leakage_group": "f-7face84bd203",
+        "event_order": 1,
+        "content": "Locker-X76d16a3e opens with access code 979643. This record was transcribed from the local register."
+      },
+      {
+        "memory_id": "m-687396357d53",
+        "canonical_id": "f-7face84bd203",
+        "leakage_group": "f-7face84bd203",
+        "event_order": 6,
+        "content": "To open Locker-X76d16a3e, enter the access code 979643. The facilities clerk recorded this entry during a routine inventory review."
+      },
+      {
+        "memory_id": "m-0a170b43c61f",
+        "canonical_id": "f-22a10025b675",
+        "leakage_group": "f-22a10025b675",
+        "event_order": 16,
+        "content": "The inventory label for Locker-X76d16a3e is 96639."
+      },
+      {
+        "memory_id": "m-1fd2d0795681",
+        "canonical_id": "f-fabd4c4dae4c",
+        "leakage_group": "f-fabd4c4dae4c",
+        "event_order": 17,
+        "content": "The maintenance ticket for Locker-X76d16a3e is 11641. The facilities clerk recorded this entry during a routine inventory review."
+      }
+    ],
+    "history_queries": [
+      {
+        "query_id": "h-217eda87ab5c",
+        "event_order": 20,
+        "text": "What is the inventory label for Locker-X76d16a3e?"
+      },
+      {
+        "query_id": "h-dd56db9a7f40",
+        "event_order": 21,
+        "text": "What is the inventory label for Locker-X76d16a3e?"
+      }
+    ],
+    "future_queries": [
+      {
+        "query_id": "q-fb8f945bdeb2",
+        "event_order": 31,
+        "text": "What is the six-digit access code for Locker-X76d16a3e?",
+        "gold_answer": "979643",
+        "supporting_memory_sets": [
+          [
+            "m-79f18466c3a8"
+          ],
+          [
+            "m-687396357d53"
+          ]
+        ]
+      },
+      {
+        "query_id": "q-da3c2274f11d",
+        "event_order": 32,
+        "text": "Give the complete access code needed to open Locker-X76d16a3e.",
+        "gold_answer": "979643",
+        "supporting_memory_sets": [
+          [
+            "m-79f18466c3a8"
+          ],
+          [
+            "m-687396357d53"
+          ]
+        ]
+      }
+    ],
+    "diagnostic_metadata": {
+      "entity": "Locker-X76d16a3e",
+      "prefix_memory_id": "m-79f18466c3a8",
+      "suffix_memory_id": "m-687396357d53",
+      "frequent_memory_id": "m-687396357d53",
+      "expected_history_count": 2
+    }
+  },
+  {
+    "trajectory_id": "t-7cabda7bad1e",
+    "user_id": "u-bd174adb6390",
+    "snapshot_id": "s-db75977337b6",
+    "split": "test",
+    "scenario": "redundancy",
+    "event_order": 30,
+    "memories": [
+      {
+        "memory_id": "m-56db54b26aae",
+        "canonical_id": "f-99b37fad72b1",
+        "leakage_group": "f-99b37fad72b1",
+        "event_order": 1,
+        "content": "The maintenance ticket for Cabinet-X8c7aa6eb is 73278."
+      },
+      {
+        "memory_id": "m-8b36c81a8abe",
+        "canonical_id": "f-3200d4c40f91",
+        "leakage_group": "f-3200d4c40f91",
+        "event_order": 2,
+        "content": "To open Cabinet-X8c7aa6eb, enter the access code 970071. The facilities clerk recorded this entry during a routine inventory review."
+      },
+      {
+        "memory_id": "m-e0682ea60f50",
+        "canonical_id": "f-da8f42b8780e",
+        "leakage_group": "f-da8f42b8780e",
+        "event_order": 8,
+        "content": "The inventory label for Cabinet-X8c7aa6eb is 35507."
+      },
+      {
+        "memory_id": "m-41286bfef964",
+        "canonical_id": "f-3200d4c40f91",
+        "leakage_group": "f-3200d4c40f91",
+        "event_order": 17,
+        "content": "Use 970071 as the access code to open Cabinet-X8c7aa6eb. The facilities clerk recorded this entry during a routine inventory review."
+      }
+    ],
+    "history_queries": [
+      {
+        "query_id": "h-3f73de9ceb54",
+        "event_order": 20,
+        "text": "What is the inventory label for Cabinet-X8c7aa6eb?"
+      },
+      {
+        "query_id": "h-57a1b72784b2",
+        "event_order": 21,
+        "text": "What is the inventory label for Cabinet-X8c7aa6eb?"
+      },
+      {
+        "query_id": "h-3871cd574668",
+        "event_order": 22,
+        "text": "What is the inventory label for Cabinet-X8c7aa6eb?"
+      }
+    ],
+    "future_queries": [
+      {
+        "query_id": "q-5f72bbd9b891",
+        "event_order": 31,
+        "text": "What is the six-digit access code for Cabinet-X8c7aa6eb?",
+        "gold_answer": "970071",
+        "supporting_memory_sets": [
+          [
+            "m-41286bfef964"
+          ],
+          [
+            "m-8b36c81a8abe"
+          ]
+        ]
+      },
+      {
+        "query_id": "q-ecac47deecd5",
+        "event_order": 32,
+        "text": "Give the complete access code needed to open Cabinet-X8c7aa6eb.",
+        "gold_answer": "970071",
+        "supporting_memory_sets": [
+          [
+            "m-41286bfef964"
+          ],
+          [
+            "m-8b36c81a8abe"
+          ]
+        ]
+      }
+    ],
+    "diagnostic_metadata": {
+      "entity": "Cabinet-X8c7aa6eb",
+      "prefix_memory_id": "m-41286bfef964",
+      "suffix_memory_id": "m-8b36c81a8abe",
+      "frequent_memory_id": "m-8b36c81a8abe",
+      "expected_history_count": 3
+    }
+  },
+  {
+    "trajectory_id": "t-86076b8ede20",
+    "user_id": "u-1ade65b30c0c",
+    "snapshot_id": "s-a2ae7a2bb5c7",
+    "split": "test",
+    "scenario": "complementarity",
+    "event_order": 30,
+    "memories": [
+      {
+        "memory_id": "m-a6f72b8d27df",
+        "canonical_id": "f-996603281ebc",
+        "leakage_group": "f-996603281ebc",
+        "event_order": 1,
+        "content": "The first three digits of the six-digit access code for Locker-X470b985e are 425."
+      },
+      {
+        "memory_id": "m-153f7c1b2021",
+        "canonical_id": "f-004e3db2dccb",
+        "leakage_group": "f-004e3db2dccb",
+        "event_order": 3,
+        "content": "The last three digits of the six-digit access code for Locker-X470b985e are 479."
+      },
+      {
+        "memory_id": "m-ae42a94efb63",
+        "canonical_id": "f-4b1254a0adb0",
+        "leakage_group": "f-4b1254a0adb0",
+        "event_order": 8,
+        "content": "The maintenance ticket for Locker-X470b985e is 26436."
+      },
+      {
+        "memory_id": "m-79fc268b1178",
+        "canonical_id": "f-5730b7209345",
+        "leakage_group": "f-5730b7209345",
+        "event_order": 15,
+        "content": "The inventory label for Locker-X470b985e is 97972. This record was transcribed from the local register."
+      }
+    ],
+    "history_queries": [
+      {
+        "query_id": "h-15fc070e451c",
+        "event_order": 20,
+        "text": "What is the inventory label for Locker-X470b985e?"
+      }
+    ],
+    "future_queries": [
+      {
+        "query_id": "q-157f93377464",
+        "event_order": 31,
+        "text": "What is the six-digit access code for Locker-X470b985e?",
+        "gold_answer": "425479",
+        "supporting_memory_sets": [
+          [
+            "m-a6f72b8d27df",
+            "m-153f7c1b2021"
+          ]
+        ]
+      },
+      {
+        "query_id": "q-09484db4d32b",
+        "event_order": 32,
+        "text": "Give the complete access code needed to open Locker-X470b985e.",
+        "gold_answer": "425479",
+        "supporting_memory_sets": [
+          [
+            "m-a6f72b8d27df",
+            "m-153f7c1b2021"
+          ]
+        ]
+      }
+    ],
+    "diagnostic_metadata": {
+      "entity": "Locker-X470b985e",
+      "prefix_memory_id": "m-a6f72b8d27df",
+      "suffix_memory_id": "m-153f7c1b2021",
+      "frequent_memory_id": "m-153f7c1b2021",
+      "expected_history_count": 1
+    }
+  },
+  {
+    "trajectory_id": "t-ec918b39b462",
+    "user_id": "u-c60706c587ca",
+    "snapshot_id": "s-271458649bda",
+    "split": "test",
+    "scenario": "complementarity",
+    "event_order": 30,
+    "memories": [
+      {
+        "memory_id": "m-8ea4980f669c",
+        "canonical_id": "f-460528176d64",
+        "leakage_group": "f-460528176d64",
+        "event_order": 4,
+        "content": "The maintenance ticket for Cabinet-X03cc77e8 is 76514. The facilities clerk recorded this entry during a routine inventory review."
+      },
+      {
+        "memory_id": "m-db0e478967de",
+        "canonical_id": "f-30fca7141639",
+        "leakage_group": "f-30fca7141639",
+        "event_order": 5,
+        "content": "The inventory label for Cabinet-X03cc77e8 is 45706."
+      },
+      {
+        "memory_id": "m-82b279ff7ed0",
+        "canonical_id": "f-abe18c22b6ca",
+        "leakage_group": "f-abe18c22b6ca",
+        "event_order": 9,
+        "content": "The last three digits of the six-digit access code for Cabinet-X03cc77e8 are 609. This record was transcribed from the local register."
+      },
+      {
+        "memory_id": "m-68c8305ca470",
+        "canonical_id": "f-89c78d2f7c49",
+        "leakage_group": "f-89c78d2f7c49",
+        "event_order": 17,
+        "content": "The first three digits of the six-digit access code for Cabinet-X03cc77e8 are 470. The facilities clerk recorded this entry during a routine inventory review."
+      }
+    ],
+    "history_queries": [
+      {
+        "query_id": "h-6f769c732b54",
+        "event_order": 20,
+        "text": "What is the inventory label for Cabinet-X03cc77e8?"
+      },
+      {
+        "query_id": "h-1fc30371bf0e",
+        "event_order": 21,
+        "text": "What is the inventory label for Cabinet-X03cc77e8?"
+      }
+    ],
+    "future_queries": [
+      {
+        "query_id": "q-fad211630220",
+        "event_order": 31,
+        "text": "What is the six-digit access code for Cabinet-X03cc77e8?",
+        "gold_answer": "470609",
+        "supporting_memory_sets": [
+          [
+            "m-68c8305ca470",
+            "m-82b279ff7ed0"
+          ]
+        ]
+      },
+      {
+        "query_id": "q-a9e60e232fcf",
+        "event_order": 32,
+        "text": "Give the complete access code needed to open Cabinet-X03cc77e8.",
+        "gold_answer": "470609",
+        "supporting_memory_sets": [
+          [
+            "m-68c8305ca470",
+            "m-82b279ff7ed0"
+          ]
+        ]
+      }
+    ],
+    "diagnostic_metadata": {
+      "entity": "Cabinet-X03cc77e8",
+      "prefix_memory_id": "m-68c8305ca470",
+      "suffix_memory_id": "m-82b279ff7ed0",
+      "frequent_memory_id": "m-82b279ff7ed0",
+      "expected_history_count": 2
+    }
+  },
+  {
+    "trajectory_id": "t-20cc588ee6be",
+    "user_id": "u-7456bc05a1b2",
+    "snapshot_id": "s-66a6bb822166",
+    "split": "test",
+    "scenario": "complementarity",
+    "event_order": 30,
+    "memories": [
+      {
+        "memory_id": "m-4d02ee01c49b",
+        "canonical_id": "f-4e3e25cd7a9b",
+        "leakage_group": "f-4e3e25cd7a9b",
+        "event_order": 7,
+        "content": "The last three digits of the six-digit access code for Locker-X03fdd8c2 are 086."
+      },
+      {
+        "memory_id": "m-4c7c5b44a00b",
+        "canonical_id": "f-96b7a2eb72d5",
+        "leakage_group": "f-96b7a2eb72d5",
+        "event_order": 9,
+        "content": "The maintenance ticket for Locker-X03fdd8c2 is 56636. This record was transcribed from the local register."
+      },
+      {
+        "memory_id": "m-81e4d4e16f0c",
+        "canonical_id": "f-d1b680d1810e",
+        "leakage_group": "f-d1b680d1810e",
+        "event_order": 12,
+        "content": "The first three digits of the six-digit access code for Locker-X03fdd8c2 are 436. This record was transcribed from the local register."
+      },
+      {
+        "memory_id": "m-7f14fb754e61",
+        "canonical_id": "f-21528d64619b",
+        "leakage_group": "f-21528d64619b",
+        "event_order": 17,
+        "content": "The inventory label for Locker-X03fdd8c2 is 22737. This record was transcribed from the local register."
+      }
+    ],
+    "history_queries": [
+      {
+        "query_id": "h-ebd83936dc67",
+        "event_order": 20,
+        "text": "What is the inventory label for Locker-X03fdd8c2?"
+      },
+      {
+        "query_id": "h-a1ea5efe6126",
+        "event_order": 21,
+        "text": "What is the inventory label for Locker-X03fdd8c2?"
+      },
+      {
+        "query_id": "h-934fdbcf9fda",
+        "event_order": 22,
+        "text": "What is the inventory label for Locker-X03fdd8c2?"
+      }
+    ],
+    "future_queries": [
+      {
+        "query_id": "q-9a333623fb83",
+        "event_order": 31,
+        "text": "What is the six-digit access code for Locker-X03fdd8c2?",
+        "gold_answer": "436086",
+        "supporting_memory_sets": [
+          [
+            "m-81e4d4e16f0c",
+            "m-4d02ee01c49b"
+          ]
+        ]
+      },
+      {
+        "query_id": "q-c5bf3422be11",
+        "event_order": 32,
+        "text": "Give the complete access code needed to open Locker-X03fdd8c2.",
+        "gold_answer": "436086",
+        "supporting_memory_sets": [
+          [
+            "m-81e4d4e16f0c",
+            "m-4d02ee01c49b"
+          ]
+        ]
+      }
+    ],
+    "diagnostic_metadata": {
+      "entity": "Locker-X03fdd8c2",
+      "prefix_memory_id": "m-81e4d4e16f0c",
+      "suffix_memory_id": "m-4d02ee01c49b",
+      "frequent_memory_id": "m-4d02ee01c49b",
+      "expected_history_count": 3
+    }
+  }
+]

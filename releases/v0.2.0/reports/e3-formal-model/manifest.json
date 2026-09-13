@@ -1,0 +1,196 @@
+{
+  "schema_version": "longmem-experiment-v1",
+  "experiment_id": "utility-retention-v0.2-e3-formal",
+  "status": "COMPLETE",
+  "backend": "model",
+  "parameters": {
+    "status": "FROZEN_FOR_FUTURE_RUN",
+    "executed": false,
+    "dataset": {
+      "trajectory_count": 24,
+      "queries_per_trajectory": 2,
+      "memories_per_trajectory": 4,
+      "families": [
+        "old_but_useful",
+        "frequent_but_useless",
+        "redundancy",
+        "complementarity"
+      ],
+      "per_family": 6,
+      "structure_seed": 2026091401,
+      "surface_seed": 2026091402
+    },
+    "budget_ratios": [
+      0.1,
+      0.25,
+      0.5,
+      0.75
+    ],
+    "primary_budget_ratios": [
+      0.25,
+      0.5,
+      0.75
+    ],
+    "random_seeds": [
+      20260912,
+      20260913,
+      20260914
+    ],
+    "generation_seed": 20260912,
+    "bootstrap_seed": 20260912,
+    "bootstrap_repeats": 5000,
+    "read_budget": 1024,
+    "top_k": 3,
+    "frozen_inputs": {
+      "e2_predictor": {
+        "path": "results/e2-development-model/frozen-predictor.json",
+        "sha256": "27f8919e662f20b34c1b6b72f37d203c05f6c88fc31d3d30008d802fa477671f"
+      },
+      "e3_strategies": {
+        "path": "results/e3-baselines-development-model/frozen-strategies.json",
+        "sha256": "c3a1e393ded3917d4d88a53ff42f50cae1af6f86e4a26943bfbbb3a7379b6cb8"
+      },
+      "e3_audit": {
+        "path": "results/e3-baselines-development-model/audit.json",
+        "sha256": "05989d2dc400c7e7adcf65ffc852786ad4cda2bdf32b1ba1c596db105c464d06"
+      }
+    },
+    "selected": {
+      "utility_predictor": "full-a10",
+      "strongest_heuristic": "importance",
+      "semantic_dedup_threshold": 0.8
+    },
+    "limits": {
+      "max_importance_generations": 96,
+      "max_answer_generations": 1500,
+      "max_cumulative_seconds": 7200
+    }
+  },
+  "protocol_sha256": "2e66e1808938db1f8b323159617b7fc20e2430d73c0bde4c184c6f5205e6b481",
+  "clarification_sha256": "843a5ce89150a66ac40c11cb0bc85014d133d37df65fcc9abb959611139c5d21",
+  "dataset_sha256": "15f8c5952c815081d886a0bdcf31d73187c096c6d46f746de49f9a072235e9b0",
+  "source_hashes": {
+    "experiments/utility-retention/e3_formal.py": "b5dabd5edd19eadf015313183fc6cdb534be45ccd1f5a00eef95d640c7b3569d",
+    "experiments/utility-retention/generate_e1_extension.py": "e0be92649b58ce5d14f36a597ef31d45a77b7395d15ab9cff05b612beda3eb8e",
+    "experiments/utility-retention/utility_retention/__init__.py": "4f2641ecb91b15b598f352dd82b67e2cef876f2beccdf13fe4816f6dcad6d5e0",
+    "experiments/utility-retention/utility_retention/baselines.py": "be05f84889ba69d69834a9ede65e9d0c531e53a45e3718fd7eb20d4898fd1e92",
+    "experiments/utility-retention/utility_retention/dataset.py": "c0e59114fe83df440417e4d243443f747980ab0f60f9a599e018fc198f80d63e",
+    "experiments/utility-retention/utility_retention/e2.py": "d9d71ea1aa899d631c2a47edd05d697cab355a12c304bd5c6f13c26b605694c6",
+    "experiments/utility-retention/utility_retention/e2_metrics.py": "76a3675e710ae46fbf785bfb6090831d0687deb5380e08a9c2543fa7b8f88887",
+    "experiments/utility-retention/utility_retention/e3_baselines.py": "f6ee95fe9aee4e846720219ea7fa234a89b35cc019b7b72377701a6c8014c873",
+    "experiments/utility-retention/utility_retention/e3_formal.py": "fcdb659c031b9b926893706212e676ef36b91ed740c6eea876dbbaee77e21e35",
+    "experiments/utility-retention/utility_retention/e3_formal_data.py": "811448c9ca9a83e2eb3989cef2aabc9f0902a217d4bc3b4c9d3bc8b3227fb85e",
+    "experiments/utility-retention/utility_retention/e3_formal_report.py": "7ad182144636232ee7abcb23962c19d491e94272f677df26a35fd1fc9e979065",
+    "experiments/utility-retention/utility_retention/engine.py": "7758813a043fac2913bba9c2f3960ba9c7b909b376842f31b9261d0672d7195e",
+    "experiments/utility-retention/utility_retention/labeling.py": "06409591cd99bf1026eff163be7bf8a984b856bbc05304619e929d9d13d620f9",
+    "experiments/utility-retention/utility_retention/policies.py": "8b4fb556f6063a54d26b535e7308791e9bcac6a193f4db51176aa6bac91fc594",
+    "experiments/utility-retention/utility_retention/prediction.py": "0ce257a84005cc906896a488d510abe125c791c97c746d0ab5c2dd2e0d5eef66",
+    "experiments/utility-retention/utility_retention/runner.py": "d904280bb9fd6e6d7c55a92b9763cc6c198d27e7b8a86e6e8a7a3f94ccc80025",
+    "src/longmem/__init__.py": "76d0d12ae8faf651ccf048b624caeb89b36af164580e6b9b29b888314f263b59",
+    "src/longmem/cli.py": "855c15b36007905e6149ba6b439b438070757e1cb662837ad66f0ab352a677ec",
+    "src/longmem/config.py": "287f779072c72d3e63c206a367f712bb0aba7ef11e0d205d6a05fb490ab22d54",
+    "src/longmem/embedder.py": "0f16c86aa6babdf0b497280b438abe0e71591bb8b72894c9498dacc5538e9d19",
+    "src/longmem/experiment_contracts.py": "46bd3d4916d7a62f4179c8d2b7b720a3d9415811d7b0548f87835d57db433f7f",
+    "src/longmem/experiment_io.py": "231091f433e228d7e497998bc0e5602330aaa9a661f5355b1ef50b606696d7f1",
+    "src/longmem/generation.py": "804baffb4a7d2b243fe66c1e18b8a9f2b16d306d11480f7342820c7f783363e0",
+    "src/longmem/retrieval.py": "6ef8344d903632a73e6a749fb2368cbf1b1a732fa4bde0bbe5eecbada942c06d",
+    "src/longmem/schema.py": "a4de029d8f7598f2f181560e9d4620359c9d676086bc55f82951271a80171cfa",
+    "src/longmem/store.py": "038f832909c6d4a7a5020027619192f0bcd0d548ae347968731fdf2fd5ddca02"
+  },
+  "runtime": {
+    "python": "3.13.5",
+    "platform": "Linux-6.18.44+rex+5-amd64-x86_64-with-glibc2.41",
+    "numpy": "2.2.4",
+    "torch": "2.10.0",
+    "rocm": "7.14.60850",
+    "accelerator_available": true,
+    "accelerator_name": "AMD Radeon 8060S Graphics"
+  },
+  "input_hashes": {
+    "settings.json": "767b6a8801f355d8a66ae9c75f18b730a46d08e00da1fd405d5840d82eedb4db",
+    "strategies.json": "c3a1e393ded3917d4d88a53ff42f50cae1af6f86e4a26943bfbbb3a7379b6cb8",
+    "predictor.json": "27f8919e662f20b34c1b6b72f37d203c05f6c88fc31d3d30008d802fa477671f",
+    "dataset.json": "15f8c5952c815081d886a0bdcf31d73187c096c6d46f746de49f9a072235e9b0",
+    "past.json": "fc0c750a54f4d0509ef2805f717d3dbda5338031b5f83cd9746472fb2f449b04",
+    "previous-snapshots.json": "ab32f69d4cc9e5df554bedb84e8a1d7912782ce2ed68c465c8fb0032030966ef",
+    "dataset-manifest.json": "e7740c6b3ab25794931b20f28e621eb5a7e4f457c1bfc6e38881606a18e9cd85",
+    "protocol.md": "2e66e1808938db1f8b323159617b7fc20e2430d73c0bde4c184c6f5205e6b481",
+    "clarification.md": "843a5ce89150a66ac40c11cb0bc85014d133d37df65fcc9abb959611139c5d21",
+    "original-freeze.json": "487fe268885cfdcf4d034973b6aade01aaa7e9a9efcb838daaf721396a5da593"
+  },
+  "artifact_hashes": {
+    "features.json": "7c50948e5935904dcadae35121ae82fedfee9061f10432886ed5ae872aed4c4b",
+    "similarities.json": "f230673ea36cbbfd4cbbfd3b6a973a219a2f4bd59011f24c87ec7ead8ca849f3",
+    "importance.jsonl": "135920ee0b368d0436434a4aaad9e7fd06337351a3578a29ddb5cb2d7868a560",
+    "deployable-plans.json": "81232a152a250ad617ff49920af1dc3757663801a88e627f22382cb5533ae847",
+    "predictions.json": "18993578b40e842738019674c6d60ad053df79a0abbc5d4b9422177b627c6e81",
+    "deployable-complete.json": "a75d67934a94d3d48adde2185eaeb68294a221b4467cf5121b14787789694555",
+    "diagnostic-plans.json": "c29dea14a0305ae9c0b311a57c9f938f662130ac7f337b0e45c9001397fbc379",
+    "hindsight-labels.json": "b43ebf37a768ada14af5470487f2b55398251c83f761caef8bafc2a448010497",
+    "hindsight-plans.json": "c145df855b727a483e8c39572e01f6817e943ca6a876b3919f13d0efa7e47b3e",
+    "plans.json": "064cc390cec946c298bdd65d5b2f4c4e49561c98e6a121a617072bad9eaeaa44",
+    "summary.json": "55d3e2f484222608c644c9c0f0063e4ceb61e83e6d6d1e2bc08380068d7cc357",
+    "support-diagnostics.json": "36202b69cc44a864018f9e22510d1d8a7750a5ef32123a6183574a1148142179",
+    "responses.jsonl": "83d9cad41f564f676b911d521c3394472ebd6e8eb2cec9325a62c332351ee5cb",
+    "audit.json": "2475bfec31c16c61c97938c5011ae5966e06d6bfdab173f6f4f28e910aecd8c5",
+    "report.md": "17cd990be27617206b5a64c8e15506973bd2bb3496c572652d59dc976164b436",
+    "cost-report.json": "80258c207426f03690586286c0e1b9847ebc23e4bc83e03529d3379c3f960a8c",
+    "budget-curve.png": "3c2e1b982bd650c9b867c5216f3cc3fc6c7a7698471b3fb4babf772db9063ca7",
+    "budget-curve.svg": "8fed66700460f616346d0e851ba64b067be2f858326f2b2d9dfcc6415046f9a1"
+  },
+  "model": {
+    "embedding": {
+      "backend": "minicpm",
+      "model_path": "MiniCPM-Embedding",
+      "device": "cuda",
+      "max_length": 512,
+      "batch_size": 8,
+      "query_prefix": "Query: ",
+      "revision": "dc0f82b4466b254dddc25787bf7b1cbc28f755b0"
+    },
+    "generation": {
+      "backend": "transformers",
+      "model_path": "MiniCPM-2B-SFT",
+      "device": "cuda",
+      "max_new_tokens": 128,
+      "max_input_tokens": 2048
+    },
+    "name": "MiniCPM-2B-SFT",
+    "revision": "local",
+    "metadata_sha256": {
+      "embedding": {
+        "1_Pooling/config.json": "95bedfff38382b7e3138b9f0091d1d02c66c9469dfa496a183eb893acfd047df",
+        "config.json": "70f128a80d23dd04888ed012687cac709a0be94ace4c7d1e05cf393118aa81ba",
+        "config_sentence_transformers.json": "1d39195f972ade95e522ecb497b47c2e93cbb7216dbb9165e6726437df6f1955",
+        "configuration_minicpm.py": "219144c0562d032c611d4cb05c91d7ff2f8f3322939ee7f991ca2196705401a8",
+        "instruction.json": "f0b2072367eb86f6b695a5f42cbc6ab898b97fb9788d8107c7f8e9208773c5bb",
+        "model-00001-of-00002.safetensors": "4a02d2d2c5e256fc38dcff2412ea107d49b7915ede1d15339f5703f4c9f3c711",
+        "model-00002-of-00002.safetensors": "34c132ba2d9db24e3fa034c6a34ac442b7c16216fca40fc36e300199d9c28dca",
+        "model.safetensors.index.json": "0858413b7e664e7017710a47c96ddf67655a8479fa583859d1d9f0ed04af5797",
+        "modeling_minicpm.py": "e0e60122b2aebaeba488a944c45b530ec48ec08c27d0ade9f35ab87bac4be60d",
+        "modules.json": "c6e29747481e8b5dd2b58401966aeac910de39092f90cda9a704b1545f902b04",
+        "sentence_bert_config.json": "c1a6de1953e2130758a7e998f19c0e4f23ba9f8ae1aaf50c16bf219299b3ff41",
+        "special_tokens_map.json": "4859e5dbde90e059988a0a2136d8df3f2773d4d2fc4c4543690028f0b2166e7f",
+        "tokenizer.model": "c9aafcd7da1f5611dab6be545db74d5552a2ccc9c2a12c72ea7be63aac4a25d7",
+        "tokenizer_config.json": "d0614d10ad438295214491e855fd17c8d1aec906372e135cc01be916e3346041"
+      },
+      "generation": {
+        "config.json": "41cf26cfdca93f49209a6c0c26c00b281d6408e010ddc8cca9531c825cc17fc4",
+        "configuration_minicpm.py": "eca7460ace9a195a69ed9955e065bc3d6a6bf801bb15c1ed0a4c1356ad0fd590",
+        "generation_config.json": "a022aa21060c3e0106edf2c9580e5d1878fa3ab01ad1fbe69a277cc847169e20",
+        "modeling_minicpm.py": "d38af5893eab28893041fbddfdf69f380c9fc67077fcb9c6eecbb30282c9e671",
+        "pytorch_model.bin": "0b0c993ace78c5983373948c636b0e587fcf1ac6f2e0f980bf7d735fe7dc52f8",
+        "special_tokens_map.json": "6fa06efa2785e450051989a6f8fb4416b10149ded485ddd3f127a40734f5cfd0",
+        "tokenizer.json": "42f73d01995bd71c88647b13ac696b36d84d5126d0c7cbaef6f8d872d5c97dff",
+        "tokenizer.model": "c9aafcd7da1f5611dab6be545db74d5552a2ccc9c2a12c72ea7be63aac4a25d7",
+        "tokenizer_config.json": "9c87efade54e9b26d3374a42f294d266722cbf9e97c748a12183d8317da074c9"
+      }
+    }
+  },
+  "history_similarity_seconds": 14.610656489000121,
+  "token_costs_recomputed": true,
+  "historical_inputs_replayed": true,
+  "response_count": 600,
+  "importance_count": 96,
+  "cumulative_seconds": 452.90330077099634
+}

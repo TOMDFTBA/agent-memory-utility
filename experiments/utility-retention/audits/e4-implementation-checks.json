@@ -1,0 +1,298 @@
+{
+  "status": "COMPLETE",
+  "tests_passed": 98,
+  "ruff_passed": true,
+  "frozen_e3_sources_unchanged": {
+    "experiments/utility-retention/e3_formal.py": true,
+    "experiments/utility-retention/generate_e1_extension.py": true,
+    "experiments/utility-retention/utility_retention/__init__.py": true,
+    "experiments/utility-retention/utility_retention/baselines.py": true,
+    "experiments/utility-retention/utility_retention/dataset.py": true,
+    "experiments/utility-retention/utility_retention/e2.py": true,
+    "experiments/utility-retention/utility_retention/e2_metrics.py": true,
+    "experiments/utility-retention/utility_retention/e3_baselines.py": true,
+    "experiments/utility-retention/utility_retention/e3_formal.py": true,
+    "experiments/utility-retention/utility_retention/e3_formal_data.py": true,
+    "experiments/utility-retention/utility_retention/e3_formal_report.py": true,
+    "experiments/utility-retention/utility_retention/engine.py": true,
+    "experiments/utility-retention/utility_retention/labeling.py": true,
+    "experiments/utility-retention/utility_retention/policies.py": true,
+    "experiments/utility-retention/utility_retention/prediction.py": true,
+    "experiments/utility-retention/utility_retention/runner.py": true,
+    "src/longmem/__init__.py": true,
+    "src/longmem/cli.py": true,
+    "src/longmem/config.py": true,
+    "src/longmem/embedder.py": true,
+    "src/longmem/experiment_contracts.py": true,
+    "src/longmem/experiment_io.py": true,
+    "src/longmem/generation.py": true,
+    "src/longmem/retrieval.py": true,
+    "src/longmem/schema.py": true,
+    "src/longmem/store.py": true
+  },
+  "imports": {
+    "e4": [
+      {
+        "module": "pathlib",
+        "names": [
+          "Path"
+        ]
+      },
+      {
+        "module": "longmem.config",
+        "names": [
+          "load_config"
+        ]
+      },
+      {
+        "module": "longmem.experiment_contracts",
+        "names": [
+          "SCHEMA_VERSION"
+        ]
+      },
+      {
+        "module": "longmem.experiment_io",
+        "names": [
+          "append_jsonl",
+          "read_json",
+          "read_jsonl",
+          "runtime_metadata",
+          "sha256_file",
+          "source_hashes",
+          "write_json"
+        ]
+      },
+      {
+        "module": "baselines",
+        "names": [
+          "importance_prompt",
+          "parse_importance",
+          "similarity_table"
+        ]
+      },
+      {
+        "module": "e2",
+        "names": [
+          "expected_conditions",
+          "verify_responses"
+        ]
+      },
+      {
+        "module": "e2_metrics",
+        "names": [
+          "response_key"
+        ]
+      },
+      {
+        "module": "e3_baselines",
+        "names": [
+          "strip_times",
+          "verify_importance"
+        ]
+      },
+      {
+        "module": "e3_formal",
+        "names": [
+          "audit",
+          "make_deployable",
+          "seal",
+          "verify_freeze"
+        ]
+      },
+      {
+        "module": "e3_formal_data",
+        "names": [
+          "build_formal",
+          "past_view",
+          "ensure_past"
+        ]
+      },
+      {
+        "module": "engine",
+        "names": [
+          "Engine",
+          "historical_features",
+          "score",
+          "serialize"
+        ]
+      },
+      {
+        "module": "prediction",
+        "names": [
+          "FEATURES"
+        ]
+      },
+      {
+        "module": "runner",
+        "names": [
+          "HERE",
+          "ROOT",
+          "model_identity"
+        ]
+      },
+      {
+        "module": "e4_analysis",
+        "names": [
+          "derive",
+          "enumeration_plans",
+          "exact_predicted_plans",
+          "EXACT_PREDICTED"
+        ]
+      },
+      {
+        "module": "e4_controls",
+        "names": [
+          "context_plans",
+          "control_key",
+          "verify_controls",
+          "verify_tokens"
+        ]
+      },
+      {
+        "module": "e4_report",
+        "names": [
+          "report"
+        ]
+      }
+    ],
+    "e4_analysis": [
+      {
+        "module": "collections",
+        "names": [
+          "defaultdict"
+        ]
+      },
+      {
+        "module": "itertools",
+        "names": [
+          "combinations"
+        ]
+      },
+      {
+        "module": "statistics",
+        "names": [
+          "mean"
+        ]
+      },
+      {
+        "module": "e2_metrics",
+        "names": [
+          "paired",
+          "response_key",
+          "summarize"
+        ]
+      },
+      {
+        "module": "e3_formal",
+        "names": [
+          "hindsight_plans",
+          "loo_labels"
+        ]
+      },
+      {
+        "module": "e3_supplement_analysis",
+        "names": [
+          "analyze"
+        ]
+      }
+    ],
+    "e4_controls": [
+      {
+        "module": "e2",
+        "names": [
+          "verify_responses"
+        ]
+      },
+      {
+        "module": "e2_metrics",
+        "names": [
+          "response_key"
+        ]
+      },
+      {
+        "module": "engine",
+        "names": [
+          "serialize"
+        ]
+      }
+    ],
+    "e4_report": [
+      {
+        "module": "collections",
+        "names": [
+          "defaultdict"
+        ]
+      },
+      {
+        "module": "statistics",
+        "names": [
+          "mean"
+        ]
+      },
+      {
+        "module": "longmem.experiment_io",
+        "names": [
+          "read_json",
+          "read_jsonl"
+        ]
+      },
+      {
+        "module": "e4_analysis",
+        "names": [
+          "CORE",
+          "EXACT_LOO"
+        ]
+      }
+    ]
+  },
+  "e4_sources": {
+    "experiments/utility-retention/e4.py": "577177fe7d2195daee428c1ab362e86465d7f320feb9318139e2385cc3d0207c",
+    "experiments/utility-retention/utility_retention/e4.py": "a401142af88d2d1d78ca6ea5cf13bd4d389aef5605d3c311449b9050abd1e852",
+    "experiments/utility-retention/utility_retention/e4_analysis.py": "cc79273a944b795d0494eaff878a873b2d6bba3964830ef2f5b156798975e3c4",
+    "experiments/utility-retention/utility_retention/e4_controls.py": "2d6def22c7bb801974f6713772d7409451260e864b881941dd7073065f4f760a",
+    "experiments/utility-retention/utility_retention/e4_report.py": "8a2d00fdcfc5acc8bc0eb6dc0d59036c85819435cf4200fe7628b9428e8f9476"
+  },
+  "naming": {
+    "candidate": [
+      "predicted_sum_optimal",
+      "hindsight_loo_sum_optimal",
+      "best_subset"
+    ],
+    "diagnostic": [
+      "subset_enumeration"
+    ],
+    "condition": [
+      "context_deletion",
+      "context_support_forward",
+      "context_support_reversed"
+    ]
+  },
+  "no_training_or_dynamic_runner_import": true,
+  "model_manifest_sha256": "aad45159e3f84e352c0c7ef506be46023b165fbcf75de972783690815e95f7b7",
+  "model_audit": {
+    "passed": true,
+    "enumeration_complete": true,
+    "response_count": 1536,
+    "subset_count": 768,
+    "interaction_count": 1152,
+    "tie_ranges_recomputed": true,
+    "cohort_statistics_recomputed": true,
+    "labels_scores_recomputed": true,
+    "past_only_plans_replayed": true,
+    "parent_unchanged": true,
+    "context_controls_verified": 96,
+    "winner_repeat_changes": 0,
+    "model_evidence": true
+  },
+  "independent_check": {
+    "passed": true,
+    "response_count": 1536,
+    "subset_count": 768,
+    "exact_plans_verified": 576,
+    "interaction_count": 1152,
+    "tie_ranges_verified": 384,
+    "verifier_sha256": "0e19a124317ad743629fde7aeadb296233e5bc2c2f90dd873ad2d8683f3cdfa1",
+    "parent_manifest_sha256": "aad45159e3f84e352c0c7ef506be46023b165fbcf75de972783690815e95f7b7",
+    "method": "Independent bit-mask enumeration and set algebra; shared public I/O and answer scorer only"
+  }
+}

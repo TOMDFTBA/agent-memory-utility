@@ -1,0 +1,13 @@
+{
+  "alphas": [0.1, 1.0, 10.0],
+  "budget_ratios": [0.1, 0.25, 0.5, 0.75],
+  "selection_budget_ratios": [0.25, 0.5, 0.75],
+  "random_seeds": [20260912, 20260913, 20260914],
+  "generation_seed": 20260912,
+  "bootstrap_seed": 20260912,
+  "bootstrap_repeats": 5000,
+  "read_budget": 1024,
+  "top_k": 3,
+  "max_generations": 1000,
+  "max_duration_seconds": 3600
+}

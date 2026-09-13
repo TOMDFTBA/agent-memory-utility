@@ -37,7 +37,7 @@ def load_config(path=None):
 def make_store(config):
     embedding = dict(config["embedding"])
     backend = embedding.pop("backend")
-    if backend == "hash-test":
+    if backend in {"hash-test", "hash_test"}:
         embedder = HashEmbedder()
     elif backend == "minicpm":
         embedder = MiniCPMEmbedder(**embedding)

@@ -8,45 +8,32 @@ Long-running agents continuously accumulate facts, answers, and external knowled
 
 ## Research path
 
-v0.1 investigates four questions:
-
-1. Can long-term memory be stored and recovered reliably?
-2. What happens to retrieval quality and cost as memory grows?
-3. Does successfully retrieved memory actually improve downstream answers?
-4. Is text always the right representation for retrievable memory?
+v0.1 established the foundation: persistence, retrieval under growth, downstream utility, and a multimodal case study. The current v0.2 release candidate asks whether historical signals can guide retention before future tasks are observed.
 
 ```mermaid
 flowchart LR
-    A[Persistent memory<br/>write, replay, recover]
-    B[Retrieval under growth<br/>budget and retention baselines]
-    C[Downstream utility<br/>does retrieved evidence help?]
-    D[Utility-aware retention<br/>v0.2 hypothesis]
-    M[Multimodal case study<br/>visual vs native text vs OCR]
-
-    A --> B --> C --> D
-    B --> M
+    A[v0.1 foundation<br/>storage, retrieval and answer utility] --> B[v0.2 release candidate<br/>future value and budgeted retention]
+    B --> C[v0.3 next question<br/>substitutes and set-conditioned value]
 ```
 
-Together, these results motivate v0.2: under a fixed memory/token budget, can utility-aware retention preserve more downstream task performance than recency, importance, and semantic deduplication?
+## v0.2 key findings
 
-## Key findings
+- **Historical value prediction improved decisions in this benchmark.** Across 24 held-out synthetic trajectories, utility_aware exceeded frozen importance by 0.2014 EM averaged over three primary budgets; the descriptive trajectory-bootstrap 95% interval was [0.0972, 0.3056]. This does not establish improvement at every budget. [Formal results](releases/v0.2.0/reports/e3-formal-model/report.md)
+- **True individual LOO scores did not distinguish all useful sets.** Redundant evidence can have zero deletion value for every substitute, while tied score-optimal sets have different answer scores. E4 supports this ambiguity, not the claim that every LOO-optimal set is inferior. [Set diagnostics](releases/v0.2.0/reports/e4-diagnostic-model/report.md)
+- **The next question concerns substitutes and generation limits.** Exact predicted-score selection did not improve average EM here; some high-budget answers still failed with all supporting evidence read. Graphs, consolidation, and online long-term gains remain untested.
 
-- **Growth is manageable, but retention policy matters.** With all memories retained, Recall@5 remained 0.949 at 10,000 memories in the balanced scenario. At a 50% retention budget, the evaluated baselines reached 0.486–0.537 Recall@5. [Results and scope](experiments/memory-budget/results/v0.1/report.en.md)
-- **Retrieval success is not the same as answer success.** Full-memory retrieval at `k=3` reached 1.000 recall, yet exact match was 0.889, including 6 of 54 hit-but-wrong cases. [Utility report](experiments/memory-utility/results/v0.1/report.en.md)
-- **Representation changed retrieval behavior in the small multimodal study.** The designated page ranked first for 5/5 visual queries, 4/5 native-text queries, and 3/5 OCR queries. This is an eight-page case study, not a general modality ranking. [Multimodal report](experiments/multimodal-retrieval-mini/results/v0.1/report.en.md)
+These findings concern four equally weighted synthetic stress scenarios, a fixed MiniCPM system, four memories per snapshot, and two future tasks. They do not establish natural-user or cross-model generalization.
 
-## v0.1 artifacts
+## v0.2 artifacts
 
 | Stage | Reproducible artifact |
 |---|---|
-| Persistent memory | JSONL → SQLite/FAISS memory store, CLI/MCP interface, UltraRAG-style pipeline, and recovery/concurrency tests |
-| Memory budget | 300-run MiniCPM retrieval benchmark with recall, latency, index-size, and retention-policy results |
-| Memory utility | 594 paired answers with relevant, irrelevant, conflicting, consolidated, and no-memory controls |
-| Multimodal case study | Visual/native-text/OCR comparison over eight pages and five queries |
+| E1: future-value measurement | Storage deletion, window labels, historical features, and development controls |
+| E2: value prediction | Past-only Ridge models, validation selection, and frozen baselines |
+| E3: budgeted retention | 24 formal trajectories, 600 unique answer conditions, paired comparisons, and cost components |
+| E4: set dependence | Two cohorts of 24 trajectories, 1536 enumeration conditions, and 1152 background interactions |
 
-## v0.1 closing study: DeepNote
-
-[DeepNote](studies/deepnote/README.en.md) connects retrieved fragments to query-conditioned evidence notes. Pinned source review and two deterministic control-flow probes cover acceptance, rejection, and cumulative failure stopping. This adds no model-quality result or numbered stage. [Method note](docs/paper-notes/deepnote.en.md)
+[Release and reproduction](docs/v0.2-release.en.md) · [Four-stage commands](experiments/utility-retention/README.md) · [Previous v0.1 foundation](docs/v0.1-four-stage-implementation-log.md)
 
 ## Quick verification
 
@@ -55,16 +42,20 @@ Python 3.11 or 3.12 is recommended:
 ```bash
 python3 -m venv .venv
 .venv/bin/python -m pip install -e '.[mcp,test,quality]'
-.venv/bin/python -m ruff check src tests scripts integrations
+.venv/bin/python -m ruff check src tests scripts integrations experiments/utility-retention --exclude "**/results/**"
+.venv/bin/python scripts/release_artifacts.py restore-results
+.venv/bin/python scripts/audit_v02.py
 .venv/bin/python -m pytest -q
 .venv/bin/python scripts/demo.py --mode test
 ```
 
 Test mode validates storage, MCP, and orchestration with deterministic test doubles. It does not load model weights, and its vectors and `[TEST ONLY]` outputs are not semantic-quality evidence.
 
-Ruff currently covers the reusable package, tests, scripts, and integration layer. Frozen experiment runners are validated by their recorded source hashes and are not reformatted in place after a formal run.
+Ruff covers shared code, tests, scripts, integrations, and active v0.2 sources. Archived sources remain unchanged. The restore command verifies and expands local evidence without downloading models.
 
 ## Results and documentation
+
+[Documentation index](docs/README.en.md)
 
 - [System architecture and recovery model](docs/architecture.en.md) ([中文](docs/architecture.md))
 - [Stage 1 validation](docs/validation.en.md) ([中文](docs/validation.md))
@@ -73,6 +64,12 @@ Ruff currently covers the reusable package, tests, scripts, and integration laye
 - [Multimodal comparison](experiments/multimodal-retrieval-mini/results/v0.1/report.en.md) ([中文](experiments/multimodal-retrieval-mini/results/v0.1/report.md))
 - [Technical lineage and upstream boundaries](docs/technical-lineage.en.md) ([中文](docs/technical-lineage.md))
 - [Experiment naming and module guide](docs/experiment-development-guide.en.md) ([中文](docs/experiment-development-guide.md))
+
+## Version closing studies
+
+- [DeepNote method connection](docs/paper-notes/deepnote.en.md): the v0.1 closing study on evidence organization, with source and control-flow checks.
+
+This study adds no model-performance claim to frozen releases. Full-platform, representation, and matched-budget experiments remain unexecuted. [DeepNote study](studies/deepnote/README.en.md)
 
 ## Real models and AMD/ROCm
 
@@ -127,9 +124,9 @@ ultrarag run configs/ultrarag-memory.yaml
 - [Memory utility](experiments/memory-utility/README.md)
 - [Multimodal retrieval mini](experiments/multimodal-retrieval-mini/README.md)
 
-v0.1 completed a breaking schema consolidation and regenerated the formal results with real local models. Later experiments should use the shared configuration, I/O, and field contracts in the [experiment development guide](docs/experiment-development-guide.en.md).
+v0.1 results retain their frozen formats. v0.2 reuses configuration, I/O, embedding, and generation, with an isolated list retrieval view for deletion. Cross-version baseline variants and budget units are documented in the [experiment guide](docs/experiment-development-guide.en.md).
 
-The repository includes source code, frozen configurations, aggregate reports, validation summaries, and figures. It excludes model weights, vector indexes, caches, raw large-scale runs, and machine-local audit records. Stage 4 paper screenshots and OCR derivatives are also excluded until redistribution rights are confirmed.
+The repository includes code, protocols, configurations, datasets, and browsable reports. Full v0.2 responses and historical sources are shipped once in a checksum-pinned archive; restore materializes the ignored results directory. v0.1 exclusions remain unchanged. Model weights, caches, and paper-page derivatives without redistribution clearance remain excluded.
 
 ## Known limitations
 
@@ -153,4 +150,4 @@ Qixuan Zhong (钟启轩) — [GitHub: TOMDFTBA](https://github.com/TOMDFTBA) —
 
 Citation metadata is available in [`CITATION.cff`](CITATION.cff).
 
-Release validation details are recorded in the [v0.1 release checklist](docs/release-checklist.md).
+Current validation is recorded in the [v0.2 release notes](docs/v0.2-release.en.md); the [v0.1 release checklist](docs/release-checklist.md) remains historical evidence.

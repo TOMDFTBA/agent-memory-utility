@@ -16,7 +16,7 @@ jobs:
       - name: Install quality tools
         run: python -m pip install -e '.[quality]'
       - name: Run Ruff
-        run: python -m ruff check src tests scripts integrations studies
+        run: python -m ruff check src tests scripts integrations experiments/utility-retention studies --exclude "**/results/**"
 
   test:
     runs-on: ubuntu-latest
@@ -31,5 +31,11 @@ jobs:
           cache: pip
       - name: Install package and test dependencies
         run: python -m pip install -e '.[test]'
+      - name: Restore checksum-pinned v0.2 evidence
+        run: python scripts/release_artifacts.py restore-results
+      - name: Audit v0.2 evidence
+        run: python scripts/audit_v02.py
+      - name: Independently verify E4 set algebra
+        run: python experiments/utility-retention/audits/verify_e4.py experiments/utility-retention/results/e4-diagnostic-model
       - name: Run CPU test suite
         run: python -m pytest -q

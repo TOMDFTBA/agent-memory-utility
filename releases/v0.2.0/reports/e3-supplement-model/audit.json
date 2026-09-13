@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "parent_audit_passed": true,
+  "formal_parent_unchanged": true,
+  "historical_feature_rows": 96,
+  "similarity_matrices": 24,
+  "retrieval_conditions": 600,
+  "storage_token_records": 96,
+  "importance_token_records": 96,
+  "deployable_plans_replayed": 960,
+  "feature_max_abs_difference": 0.0,
+  "similarity_max_abs_difference": 0.0,
+  "prediction_max_abs_difference": 0.0,
+  "retrieval_score_max_abs_difference": 0.0,
+  "context_ids_exact": true,
+  "token_counts_exact": true,
+  "benchmark_samples": 180,
+  "descriptive_analysis_replayed": true,
+  "new_answer_generations": 0,
+  "new_importance_generations": 0,
+  "model_evidence": true
+}

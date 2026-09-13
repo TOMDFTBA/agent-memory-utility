@@ -1,0 +1,23 @@
+{
+  "importance_generations": 96,
+  "answer_generations": 600,
+  "importance_seconds": 32.3826133069997,
+  "answer_seconds": 420.52068746399664,
+  "history_similarity_seconds": 14.610656489000121,
+  "selection_seconds_by_candidate": {
+    "utility_aware": 0.0003503349996663019,
+    "importance": 0.00019133899832013412,
+    "recency": 0.00014612600034524803,
+    "retrieval_frequency": 0.0001474250002502231,
+    "semantic_dedup": 0.0016976659994725196,
+    "random": 0.0004210619993045839,
+    "hindsight_loo": 0.0001721090009141335,
+    "full": 4.127300098843989e-05,
+    "no_memory": 2.4415000325461733e-05
+  },
+  "importance_input_tokens": 11916,
+  "importance_output_tokens": 318,
+  "answer_input_tokens": 104014,
+  "answer_output_tokens": 3509,
+  "importance_valid_fraction": 0.9895833333333334
+}

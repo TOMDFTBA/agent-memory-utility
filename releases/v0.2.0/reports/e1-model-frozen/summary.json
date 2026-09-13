@@ -1,0 +1,79 @@
+{
+  "scores_by_scenario": {
+    "complementarity": {
+      "full_em": 0.5,
+      "no_memory_em": 0,
+      "label_distribution": {
+        "positive": 5,
+        "zero": 6,
+        "negative": 1
+      }
+    },
+    "frequent_but_useless": {
+      "full_em": 1,
+      "no_memory_em": 0,
+      "label_distribution": {
+        "positive": 3,
+        "zero": 9
+      }
+    },
+    "old_but_useful": {
+      "full_em": 1,
+      "no_memory_em": 0,
+      "label_distribution": {
+        "positive": 3,
+        "zero": 9
+      }
+    },
+    "redundancy": {
+      "full_em": 1,
+      "no_memory_em": 0,
+      "label_distribution": {
+        "zero": 12
+      }
+    }
+  },
+  "response_count": 576,
+  "trajectory_count": 12,
+  "scores_by_split": {
+    "train": {
+      "context_deletion": 0.625,
+      "full": 1,
+      "no_memory": 0,
+      "storage_deletion": 0.71875
+    },
+    "validation": {
+      "context_deletion": 0.5,
+      "full": 0.75,
+      "no_memory": 0,
+      "storage_deletion": 0.65625
+    },
+    "test": {
+      "context_deletion": 0.625,
+      "full": 0.875,
+      "no_memory": 0,
+      "storage_deletion": 0.6875
+    }
+  },
+  "full_minus_no_memory": 0.875,
+  "trajectory_bootstrap_95_ci": [
+    0.6666666666666666,
+    1.0
+  ],
+  "label_distribution": {
+    "positive": 11,
+    "zero": 36,
+    "negative": 1
+  },
+  "maximum_label_std": 0.0,
+  "minimum_sign_stability": 1.0,
+  "duration_seconds": 401.610847020027,
+  "median_response_seconds": 0.7750200724985916,
+  "zero_query_diagnostics": {
+    "total": 228,
+    "not_retrieved": 72,
+    "with_replacement": 156,
+    "hit_but_wrong": 33
+  },
+  "ready_for_stage2": true
+}

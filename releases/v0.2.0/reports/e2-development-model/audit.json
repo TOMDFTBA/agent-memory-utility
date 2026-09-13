@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "response_count": 260,
+  "selection_count": 1008,
+  "training_replayed": true,
+  "predictions_replayed": true,
+  "scores_recomputed": true,
+  "budgets_verified": true,
+  "test_evaluated": false,
+  "responses_sha256": "f5ff35c1e6bedb126efcd57cee9652b21299c69f1dd87b2e48001b205fcaf330"
+}

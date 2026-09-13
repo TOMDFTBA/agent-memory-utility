@@ -1,0 +1,63 @@
+{
+  "status": "FROZEN_FOR_FUTURE_RUN",
+  "executed": false,
+  "dataset": {
+    "trajectory_count": 24,
+    "queries_per_trajectory": 2,
+    "memories_per_trajectory": 4,
+    "families": [
+      "old_but_useful",
+      "frequent_but_useless",
+      "redundancy",
+      "complementarity"
+    ],
+    "per_family": 6,
+    "structure_seed": 2026091401,
+    "surface_seed": 2026091402
+  },
+  "budget_ratios": [
+    0.1,
+    0.25,
+    0.5,
+    0.75
+  ],
+  "primary_budget_ratios": [
+    0.25,
+    0.5,
+    0.75
+  ],
+  "random_seeds": [
+    20260912,
+    20260913,
+    20260914
+  ],
+  "generation_seed": 20260912,
+  "bootstrap_seed": 20260912,
+  "bootstrap_repeats": 5000,
+  "read_budget": 1024,
+  "top_k": 3,
+  "frozen_inputs": {
+    "e2_predictor": {
+      "path": "results/e2-development-model/frozen-predictor.json",
+      "sha256": "27f8919e662f20b34c1b6b72f37d203c05f6c88fc31d3d30008d802fa477671f"
+    },
+    "e3_strategies": {
+      "path": "results/e3-baselines-development-model/frozen-strategies.json",
+      "sha256": "c3a1e393ded3917d4d88a53ff42f50cae1af6f86e4a26943bfbbb3a7379b6cb8"
+    },
+    "e3_audit": {
+      "path": "results/e3-baselines-development-model/audit.json",
+      "sha256": "05989d2dc400c7e7adcf65ffc852786ad4cda2bdf32b1ba1c596db105c464d06"
+    }
+  },
+  "selected": {
+    "utility_predictor": "full-a10",
+    "strongest_heuristic": "importance",
+    "semantic_dedup_threshold": 0.8
+  },
+  "limits": {
+    "max_importance_generations": 96,
+    "max_answer_generations": 1500,
+    "max_cumulative_seconds": 7200
+  }
+}

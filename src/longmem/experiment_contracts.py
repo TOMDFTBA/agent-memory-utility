@@ -5,7 +5,8 @@ from typing import Any
 
 SCHEMA_VERSION = "longmem-experiment-v1"
 
-RETENTION_POLICIES = frozenset({"full", "random", "recency", "importance", "semantic_dedup", "utility_aware", "oracle_utility"})
+RETENTION_POLICIES = frozenset({"full", "random", "recency", "importance", "semantic_dedup", "utility_aware", "oracle_utility",
+                                "retrieval_frequency", "hindsight_loo", "best_subset"})
 MEMORY_CONDITIONS = frozenset({
     "no_memory",
     "relevant",
@@ -57,10 +58,29 @@ def canonical_modality(name: str) -> str:
 
 
 def metric_key(namespace: str, name: str, *, k: int | None = None) -> str:
-    if namespace not in {"retention", "retrieval", "answer", "cost"}:
+    if namespace not in {"retention", "retrieval", "answer", "cost", "prediction", "diagnostic"}:
         raise ValueError(f"Unknown metric namespace: {namespace}")
     if k is not None:
         if isinstance(k, bool) or not isinstance(k, int) or k < 1:
             raise ValueError("k must be a positive integer")
         name = f"{name}_at_{k}"
     return f"{namespace}.{name}"
+
+
+# Candidate IDs are separate from policy families and content conditions.
+EXACT_SET_CANDIDATES = frozenset({"predicted_sum_optimal", "hindsight_loo_sum_optimal"})
+MEMORY_INTERVENTIONS = frozenset({"storage_deletion", "context_deletion", "subset_enumeration"})
+WRITE_RETENTION_POLICIES = RETENTION_POLICIES - {"oracle_utility"}
+
+
+def canonical_diagnostic_plan(record: dict[str, Any]) -> dict[str, Any]:
+    """Read frozen E3 diagnostics without rewriting the original artifact."""
+    result = dict(record)
+    if result.get("candidate") == "storage_deletion":
+        if "intervention" in result and result["intervention"] != "storage_deletion":
+            raise ValueError("Conflicting diagnostic fields")
+        result.pop("candidate")
+        result["intervention"] = "storage_deletion"
+    if result.get("intervention") not in MEMORY_INTERVENTIONS or "candidate" in result:
+        raise ValueError("Expected a diagnostic plan, not a retention candidate")
+    return result

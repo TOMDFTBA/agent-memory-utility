@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "If you use this software or its experimental artifacts, please cite it as below."
 title: "Agent Memory Utility: From Retrieval to Retention"
 type: software
-version: 0.1.0
+version: 0.2.0
 authors:
   - family-names: Zhong
     given-names: Qixuan
@@ -11,8 +11,8 @@ license: Apache-2.0
 repository-code: "https://github.com/TOMDFTBA/agent-memory-utility"
 abstract: >-
   A reproducible exploratory framework for studying persistent storage,
-  retrieval under memory growth, downstream memory utility, and multimodal
-  retrieval for long-horizon agents.
+  retrieval under memory growth, future memory value prediction, budgeted
+  retention, and set-dependence diagnostics for long-horizon agents.
 keywords:
   - agent memory
   - retrieval-augmented generation

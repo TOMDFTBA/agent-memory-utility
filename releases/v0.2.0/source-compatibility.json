@@ -1,0 +1,193 @@
+{
+  "purpose": "Reviewed source relocation, shared scoring/backend aliases, diagnostic read adapter, and portable test-backend configuration; frozen manifests unchanged. Exact archived execution available.",
+  "index_sha256": "f3092a151d0f3eede016b013bb174202bad77447a7750b842e9772c317f696d7",
+  "legacy_hashes": {
+    "experiments/utility-retention/audits/verify_e4.py": [
+      "0e19a124317ad743629fde7aeadb296233e5bc2c2f90dd873ad2d8683f3cdfa1"
+    ],
+    "experiments/utility-retention/audits/verify_run.py": [
+      "8ef7f7ee5e33998b7c53000daab05c663fd3a0ce0d1e6e418fe6eb4ccfc45f20"
+    ],
+    "experiments/utility-retention/diagnose_e1.py": [
+      "a90273f083b2a6cb3fa6524a66c1377bddec3437c4543980210a1b00a865b4dd"
+    ],
+    "experiments/utility-retention/e2.py": [
+      "2e2373163dcac5e0b5ce9f2cf84ec51b8d9eb9c182268a2afdb34f08f1a50011"
+    ],
+    "experiments/utility-retention/e3_baselines.py": [
+      "80e1486faa90be57d529289e1089007abd2599c70ec12d27b346c5b31af42c3f"
+    ],
+    "experiments/utility-retention/e3_formal.py": [
+      "b5dabd5edd19eadf015313183fc6cdb534be45ccd1f5a00eef95d640c7b3569d"
+    ],
+    "experiments/utility-retention/e3_supplement.py": [
+      "e7c49581cde5f553937123e5ce1525d5148a1e54715b01faf835e25635eb20e7"
+    ],
+    "experiments/utility-retention/e4.py": [
+      "577177fe7d2195daee428c1ab362e86465d7f320feb9318139e2385cc3d0207c"
+    ],
+    "experiments/utility-retention/evaluate.py": [
+      "d4fa09099ab7abc5084326297994eabd691eb945a4e78869875f10ecc307bbf6"
+    ],
+    "experiments/utility-retention/generate_e1_dataset.py": [
+      "926f22cd9fac40516eab8d30d9d7045ae58c364a03a238ed0351148af9e04ef6"
+    ],
+    "experiments/utility-retention/generate_e1_extension.py": [
+      "e0be92649b58ce5d14f36a597ef31d45a77b7395d15ab9cff05b612beda3eb8e"
+    ],
+    "experiments/utility-retention/report.py": [
+      "e65d5fd1278615843afe35e69ca2c1b8b2b2c327c3e04de6875630aed49e3849"
+    ],
+    "experiments/utility-retention/report_extension.py": [
+      "f2f45e71328e3d45d02cd7cb62367bf087477db2fe887a9113b9be06c46a4b37"
+    ],
+    "experiments/utility-retention/run.py": [
+      "8a3e847ea825d7d888c0c524220c4f907f48025cf4b1a4ce3b40ca18ada53f1a"
+    ],
+    "experiments/utility-retention/utility_retention/__init__.py": [
+      "4f2641ecb91b15b598f352dd82b67e2cef876f2beccdf13fe4816f6dcad6d5e0"
+    ],
+    "experiments/utility-retention/utility_retention/baselines.py": [
+      "be05f84889ba69d69834a9ede65e9d0c531e53a45e3718fd7eb20d4898fd1e92"
+    ],
+    "experiments/utility-retention/utility_retention/dataset.py": [
+      "c0e59114fe83df440417e4d243443f747980ab0f60f9a599e018fc198f80d63e"
+    ],
+    "experiments/utility-retention/utility_retention/e2.py": [
+      "d9d71ea1aa899d631c2a47edd05d697cab355a12c304bd5c6f13c26b605694c6"
+    ],
+    "experiments/utility-retention/utility_retention/e2_metrics.py": [
+      "76a3675e710ae46fbf785bfb6090831d0687deb5380e08a9c2543fa7b8f88887"
+    ],
+    "experiments/utility-retention/utility_retention/e3_baselines.py": [
+      "f6ee95fe9aee4e846720219ea7fa234a89b35cc019b7b72377701a6c8014c873"
+    ],
+    "experiments/utility-retention/utility_retention/e3_formal.py": [
+      "fcdb659c031b9b926893706212e676ef36b91ed740c6eea876dbbaee77e21e35"
+    ],
+    "experiments/utility-retention/utility_retention/e3_formal_data.py": [
+      "811448c9ca9a83e2eb3989cef2aabc9f0902a217d4bc3b4c9d3bc8b3227fb85e"
+    ],
+    "experiments/utility-retention/utility_retention/e3_formal_report.py": [
+      "7ad182144636232ee7abcb23962c19d491e94272f677df26a35fd1fc9e979065"
+    ],
+    "experiments/utility-retention/utility_retention/e3_supplement.py": [
+      "28bdc837e6b33f2cfbe41164ab311ca394626a7349dbc86086fa536da528a157"
+    ],
+    "experiments/utility-retention/utility_retention/e3_supplement_analysis.py": [
+      "83a1b46132b224ac9b445ed49a36c4f1d2965018e2c112449ce4326ca8db5bb0"
+    ],
+    "experiments/utility-retention/utility_retention/e3_supplement_replay.py": [
+      "4fe4dfd0ba4bd490a2a729ed713aecb30596c7f566f12d0297e0301cf26aa533"
+    ],
+    "experiments/utility-retention/utility_retention/e4.py": [
+      "a401142af88d2d1d78ca6ea5cf13bd4d389aef5605d3c311449b9050abd1e852"
+    ],
+    "experiments/utility-retention/utility_retention/e4_analysis.py": [
+      "cc79273a944b795d0494eaff878a873b2d6bba3964830ef2f5b156798975e3c4"
+    ],
+    "experiments/utility-retention/utility_retention/e4_controls.py": [
+      "2d6def22c7bb801974f6713772d7409451260e864b881941dd7073065f4f760a"
+    ],
+    "experiments/utility-retention/utility_retention/e4_report.py": [
+      "8a2d00fdcfc5acc8bc0eb6dc0d59036c85819435cf4200fe7628b9428e8f9476"
+    ],
+    "experiments/utility-retention/utility_retention/engine.py": [
+      "7758813a043fac2913bba9c2f3960ba9c7b909b376842f31b9261d0672d7195e"
+    ],
+    "experiments/utility-retention/utility_retention/labeling.py": [
+      "06409591cd99bf1026eff163be7bf8a984b856bbc05304619e929d9d13d620f9"
+    ],
+    "experiments/utility-retention/utility_retention/policies.py": [
+      "8b4fb556f6063a54d26b535e7308791e9bcac6a193f4db51176aa6bac91fc594"
+    ],
+    "experiments/utility-retention/utility_retention/prediction.py": [
+      "0ce257a84005cc906896a488d510abe125c791c97c746d0ab5c2dd2e0d5eef66"
+    ],
+    "experiments/utility-retention/utility_retention/runner.py": [
+      "d904280bb9fd6e6d7c55a92b9763cc6c198d27e7b8a86e6e8a7a3f94ccc80025"
+    ],
+    "src/longmem/__init__.py": [
+      "76d0d12ae8faf651ccf048b624caeb89b36af164580e6b9b29b888314f263b59"
+    ],
+    "src/longmem/cli.py": [
+      "855c15b36007905e6149ba6b439b438070757e1cb662837ad66f0ab352a677ec"
+    ],
+    "src/longmem/config.py": [
+      "287f779072c72d3e63c206a367f712bb0aba7ef11e0d205d6a05fb490ab22d54"
+    ],
+    "src/longmem/embedder.py": [
+      "0f16c86aa6babdf0b497280b438abe0e71591bb8b72894c9498dacc5538e9d19"
+    ],
+    "src/longmem/experiment_contracts.py": [
+      "46bd3d4916d7a62f4179c8d2b7b720a3d9415811d7b0548f87835d57db433f7f",
+      "dadbcb3b535fd9254cc97b4ba4df0a4a789aafa71efda7d1543aa0ad009599a4"
+    ],
+    "src/longmem/experiment_io.py": [
+      "231091f433e228d7e497998bc0e5602330aaa9a661f5355b1ef50b606696d7f1"
+    ],
+    "src/longmem/generation.py": [
+      "804baffb4a7d2b243fe66c1e18b8a9f2b16d306d11480f7342820c7f783363e0"
+    ],
+    "src/longmem/retrieval.py": [
+      "6ef8344d903632a73e6a749fb2368cbf1b1a732fa4bde0bbe5eecbada942c06d"
+    ],
+    "src/longmem/schema.py": [
+      "a4de029d8f7598f2f181560e9d4620359c9d676086bc55f82951271a80171cfa"
+    ],
+    "src/longmem/store.py": [
+      "038f832909c6d4a7a5020027619192f0bcd0d548ae347968731fdf2fd5ddca02"
+    ]
+  },
+  "release_sources": {
+    "experiments/utility-retention/diagnose_e1.py": "b78870501fcc2f1980862a6f0ced4045019a24b4cfa825e9b458b4d9f55acb25",
+    "experiments/utility-retention/e2.py": "2e2373163dcac5e0b5ce9f2cf84ec51b8d9eb9c182268a2afdb34f08f1a50011",
+    "experiments/utility-retention/e3_baselines.py": "80e1486faa90be57d529289e1089007abd2599c70ec12d27b346c5b31af42c3f",
+    "experiments/utility-retention/e3_formal.py": "b5dabd5edd19eadf015313183fc6cdb534be45ccd1f5a00eef95d640c7b3569d",
+    "experiments/utility-retention/e3_supplement.py": "e7c49581cde5f553937123e5ce1525d5148a1e54715b01faf835e25635eb20e7",
+    "experiments/utility-retention/e4.py": "577177fe7d2195daee428c1ab362e86465d7f320feb9318139e2385cc3d0207c",
+    "experiments/utility-retention/evaluate.py": "d4fa09099ab7abc5084326297994eabd691eb945a4e78869875f10ecc307bbf6",
+    "experiments/utility-retention/generate_e1_dataset.py": "926f22cd9fac40516eab8d30d9d7045ae58c364a03a238ed0351148af9e04ef6",
+    "experiments/utility-retention/generate_e1_extension.py": "8d8a514e226b48b620cacb414ef326073e66cfabd87fa4b8284dbf68c4fa81f4",
+    "experiments/utility-retention/report.py": "616913a10ce4ce5d4937b65afdcd8c1145b9a14efd6a2ab881c3c1935af86bbd",
+    "experiments/utility-retention/report_extension.py": "7a8fa9fd3ef798cbed9eb8de4985a6cd719702a1b0e3d70bb261c6ddcabe6452",
+    "experiments/utility-retention/run.py": "8a3e847ea825d7d888c0c524220c4f907f48025cf4b1a4ce3b40ca18ada53f1a",
+    "experiments/utility-retention/utility_retention/__init__.py": "4f2641ecb91b15b598f352dd82b67e2cef876f2beccdf13fe4816f6dcad6d5e0",
+    "experiments/utility-retention/utility_retention/baselines.py": "be05f84889ba69d69834a9ede65e9d0c531e53a45e3718fd7eb20d4898fd1e92",
+    "experiments/utility-retention/utility_retention/dataset.py": "c0e59114fe83df440417e4d243443f747980ab0f60f9a599e018fc198f80d63e",
+    "experiments/utility-retention/utility_retention/e1_diagnosis.py": "a90273f083b2a6cb3fa6524a66c1377bddec3437c4543980210a1b00a865b4dd",
+    "experiments/utility-retention/utility_retention/e1_extension_data.py": "90670ed66f2129820f8b1dc9c68002311ab333f9860e9ed997e6101b41096083",
+    "experiments/utility-retention/utility_retention/e1_extension_report.py": "16141bd777e7dc8b1fd553c0e37e404c9827310e0abea97e72a6879eef49caf3",
+    "experiments/utility-retention/utility_retention/e1_report.py": "965bae27bf7ded5fd7087f2debb9a38f7cc625666d44a0e8cd613fbec3ae7a5c",
+    "experiments/utility-retention/utility_retention/e2.py": "5d87bbddaee21a6992f76c71b6d713d408e4f1e0a5dc8559ae5e2e49f0cb1b64",
+    "experiments/utility-retention/utility_retention/e2_metrics.py": "76a3675e710ae46fbf785bfb6090831d0687deb5380e08a9c2543fa7b8f88887",
+    "experiments/utility-retention/utility_retention/e3_baselines.py": "3a1e3e633282359522099c65830a480dad18fe600841f778e127f2fa22a88a3a",
+    "experiments/utility-retention/utility_retention/e3_formal.py": "2d14d3a371d22cf31cdfcbdbf2515882592595cb51ab0d6c714491de8267b3f4",
+    "experiments/utility-retention/utility_retention/e3_formal_data.py": "3d0e576e62ee56c7db25f6de213eb8517a08f8ac500a1fbe0e9ad3c22b714f40",
+    "experiments/utility-retention/utility_retention/e3_formal_report.py": "7ad182144636232ee7abcb23962c19d491e94272f677df26a35fd1fc9e979065",
+    "experiments/utility-retention/utility_retention/e3_supplement.py": "c51decce0ffcffa20ee4f8d38b6f278f0457bddf069edc957d2647de64ffba01",
+    "experiments/utility-retention/utility_retention/e3_supplement_analysis.py": "83a1b46132b224ac9b445ed49a36c4f1d2965018e2c112449ce4326ca8db5bb0",
+    "experiments/utility-retention/utility_retention/e3_supplement_replay.py": "4fe4dfd0ba4bd490a2a729ed713aecb30596c7f566f12d0297e0301cf26aa533",
+    "experiments/utility-retention/utility_retention/e4.py": "f861592c84b6d2ab6cec8e0aa44d97e4bf481a338d3f2866741c1ecba403c583",
+    "experiments/utility-retention/utility_retention/e4_analysis.py": "cc79273a944b795d0494eaff878a873b2d6bba3964830ef2f5b156798975e3c4",
+    "experiments/utility-retention/utility_retention/e4_controls.py": "2d6def22c7bb801974f6713772d7409451260e864b881941dd7073065f4f760a",
+    "experiments/utility-retention/utility_retention/e4_report.py": "8a2d00fdcfc5acc8bc0eb6dc0d59036c85819435cf4200fe7628b9428e8f9476",
+    "experiments/utility-retention/utility_retention/engine.py": "3d5c4b9144e9ef88d0871ca911535bd6856e350a1439188f47fe13b3cccab307",
+    "experiments/utility-retention/utility_retention/labeling.py": "06409591cd99bf1026eff163be7bf8a984b856bbc05304619e929d9d13d620f9",
+    "experiments/utility-retention/utility_retention/policies.py": "8b4fb556f6063a54d26b535e7308791e9bcac6a193f4db51176aa6bac91fc594",
+    "experiments/utility-retention/utility_retention/prediction.py": "0ce257a84005cc906896a488d510abe125c791c97c746d0ab5c2dd2e0d5eef66",
+    "experiments/utility-retention/utility_retention/runner.py": "d904280bb9fd6e6d7c55a92b9763cc6c198d27e7b8a86e6e8a7a3f94ccc80025",
+    "src/longmem/__init__.py": "76d0d12ae8faf651ccf048b624caeb89b36af164580e6b9b29b888314f263b59",
+    "src/longmem/cli.py": "855c15b36007905e6149ba6b439b438070757e1cb662837ad66f0ab352a677ec",
+    "src/longmem/config.py": "fb28ca1afc75669d85872c3293f73c6451739b621fc8878273077d97dfe6be49",
+    "src/longmem/embedder.py": "0f16c86aa6babdf0b497280b438abe0e71591bb8b72894c9498dacc5538e9d19",
+    "src/longmem/experiment_contracts.py": "7410d4b1eaa6030e1367d1a5841a485d94ff6af0b6c13615ce826aeee2eded5d",
+    "src/longmem/experiment_io.py": "231091f433e228d7e497998bc0e5602330aaa9a661f5355b1ef50b606696d7f1",
+    "src/longmem/generation.py": "f95155ed65e7a74e21ab99b8b4d919eaaee9b75b12382e6ccd0dd941d716108e",
+    "src/longmem/provenance.py": "b0d86c19ade32d85fcb0e18869bb45816b516cebb1d76333ea7ed416d0bdc005",
+    "src/longmem/retrieval.py": "6ef8344d903632a73e6a749fb2368cbf1b1a732fa4bde0bbe5eecbada942c06d",
+    "src/longmem/schema.py": "a4de029d8f7598f2f181560e9d4620359c9d676086bc55f82951271a80171cfa",
+    "src/longmem/scoring.py": "e88f09dc59c96ccbcd4eb862791fc46ceb84d0f2b56e947458da86f10bf80de8",
+    "src/longmem/store.py": "038f832909c6d4a7a5020027619192f0bcd0d548ae347968731fdf2fd5ddca02"
+  }
+}

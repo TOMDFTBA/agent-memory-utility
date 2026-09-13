@@ -1,0 +1,23 @@
+{
+  "status": "FROZEN_FOR_FUTURE_RUN",
+  "executed": false,
+  "created_at": "2026-09-12",
+  "protocol": {
+    "path": "protocol-e3-formal-test.md",
+    "sha256": "2e66e1808938db1f8b323159617b7fc20e2430d73c0bde4c184c6f5205e6b481"
+  },
+  "config": {
+    "path": "configs/e3-formal-test.json",
+    "sha256": "767b6a8801f355d8a66ae9c75f18b730a46d08e00da1fd405d5840d82eedb4db"
+  },
+  "development_freeze": {
+    "e2_predictor_sha256": "27f8919e662f20b34c1b6b72f37d203c05f6c88fc31d3d30008d802fa477671f",
+    "e3_strategies_sha256": "c3a1e393ded3917d4d88a53ff42f50cae1af6f86e4a26943bfbbb3a7379b6cb8",
+    "e3_audit_sha256": "05989d2dc400c7e7adcf65ffc852786ad4cda2bdf32b1ba1c596db105c464d06"
+  },
+  "selected": {
+    "utility_predictor": "full-a10",
+    "strongest_heuristic": "importance",
+    "semantic_dedup_threshold": 0.8
+  }
+}

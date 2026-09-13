@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "enumeration_complete": true,
+  "response_count": 1536,
+  "subset_count": 768,
+  "interaction_count": 1152,
+  "tie_ranges_recomputed": true,
+  "cohort_statistics_recomputed": true,
+  "labels_scores_recomputed": true,
+  "past_only_plans_replayed": true,
+  "parent_unchanged": true,
+  "context_controls_verified": 96,
+  "winner_repeat_changes": 0,
+  "model_evidence": true
+}

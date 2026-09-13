@@ -2,7 +2,7 @@
 
 [Chinese version](technical-lineage.md)
 
-The four upstream projects live outside this repository. Their source, model weights, and datasets are not vendored here.
+The four v0.1 technical foundations live outside this repository. Their source, weights, and datasets are not vendored here. Local locations below are historical validation records, not current installation requirements.
 
 | Upstream | Role in this project | Expected local location |
 |---|---|---|
@@ -25,6 +25,8 @@ In the tested checkout, `python -m ultrarag.client` executes the synchronous `ma
 
 For exact AMD/ROCm coverage and the one recorded local source-compatibility patch, see the [environment deployment report](environment-deployment.en.md).
 
-## v0.1 closing study
+## Version closing studies
 
-[DeepNote](../studies/deepnote/README.en.md) is a pinned thunlp source study of query-conditioned evidence organization. Two no-model control probes passed; adaptive retrieval quality, training, and persistent retention remain untested. The checkout stays outside the repository.
+| Upstream | Role | Current evidence | Not claimed |
+|---|---|---|---|
+| [DeepNote](../studies/deepnote/README.en.md) | v0.1 closing study after Stage 1–4: evidence organization | Pinned source, two stub control probes | Offline note index or paper performance reproduction |

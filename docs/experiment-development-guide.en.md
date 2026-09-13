@@ -2,7 +2,7 @@
 
 [简体中文](experiment-development-guide.md)
 
-This guide defines the contracts for the v0.1 foundation and later experiments. v0.1 completed a breaking migration: canonical fields, shared modules, and one runner per experiment are now in place, and the formal results were regenerated. Older formats are local development history rather than supported release interfaces.
+This guide defines the contracts for the v0.1 foundation and later experiments. v0.1 completed a breaking migration: canonical fields, shared modules, and one runner per experiment are now in place, and the formal results were regenerated. Explicit adapters may read older formats in historical evidence and release archives; new artifacts must not write legacy fields.
 
 ## Design principles
 
@@ -49,7 +49,10 @@ recency
 importance
 semantic_dedup
 utility_aware
-oracle_utility
+retrieval_frequency
+hindsight_loo
+best_subset
+oracle_utility  # v0.1 compatibility only
 ```
 
 Content conditions decide what the generator receives:
@@ -195,7 +198,7 @@ Write `RUNNING` when execution begins and atomically update it to `COMPLETE` onl
 - Stage 2 uses `event_order`, explicit target IDs, and nested query/prediction structures; the old runner was removed.
 - Stage 3 main and control experiments share canonical answers, scoring, and retrieval fields; the formal main run and frozen controls were regenerated.
 - Stage 4 uses a separate page-data module and the names `visual`, `native_text`, and `ocr_text`; the old dynamic-import runner was removed and the experiment rerun.
-- `experiment_contracts.py` retains a small set of old-format adapters for reading local history only. New artifacts must not write legacy fields.
+- `experiment_contracts.py` retains a small set of old-format adapters for reading historical evidence and release archives only. New artifacts must not write legacy fields.
 
 Any change to a formal runner must write to a new output directory and rerun the corresponding validation. An old report must never silently point to changed source code.
 
@@ -212,6 +215,52 @@ Any change to a formal runner must write to a new output directory and rerun the
 - [ ] Complete validation before changing the manifest from `RUNNING` to `COMPLETE`.
 - [ ] State dataset, model, hardware, and statistical boundaries in the report.
 
-## Method studies
+## v0.2 release contracts and cross-version mapping
 
-Use `memory_studies` for shared study implementation and `studies/run.py` as the CLI. Study manifests use `longmem-study-v1`, `study_id`, and `probe_id`; study names are not retention policies. Reuse longmem I/O and hashing. List each study's actual source dependencies explicitly rather than hashing unrelated modules. New runs use new output directories; never rewrite historical manifests.
+The software version is `0.2.0`. `longmem-experiment-v1` continues to identify the common manifest envelope; it does not make every artifact payload identical. Readers select the format using experiment_id and artifact filename, not schema_version alone.
+
+| Concept | Release rule |
+|---|---|
+| Policy family | RETENTION_POLICIES supports old reads; WRITE_RETENTION_POLICIES excludes legacy oracle_utility |
+| Model/exact candidate | candidate may be full-a10 or a member of EXACT_SET_CANDIDATES, separate from policy families |
+| Storage diagnostic | New records use intervention; canonical_diagnostic_plan reads old candidate=storage_deletion without mutation |
+| Historical E1 condition | Preserve the frozen meaning; do not pass it to the v0.1 content-condition canonical_condition |
+| Metrics | prediction.* and diagnostic.* join the four existing namespaces under metrics |
+| Backend | Public implementations accept hash_test/hash-test and evidence_test/evidence-test; frozen configurations retain their spelling |
+| Labels | Read E1 value, handoff target.value, and E3/E4 loo_value according to artifact type; do not guess a conversion |
+
+### Same-name baseline variants
+
+| Policy family | v0.1 | v0.2 |
+|---|---|---|
+| importance | Random synthetic metadata | Frozen single-memory LLM score, 1–5, with neutral fallback 3 |
+| semantic_dedup | Representatives first, then duplicates, truncated by count | Representatives only, recency order, token budget, no duplicate backfill |
+| recency / budget_ratio | Memory-count budget | Canonical serialization tokens under a fixed tokenizer |
+| retrieval | FAISS in memory-budget | Embedding similarity over an isolated list in utility-retention |
+
+The machine-readable mapping is [release-contracts.json](../releases/v0.2.0/release-contracts.json). Cross-version comparisons must distinguish family, variant, and budget_unit.
+
+### Reuse and frozen evidence
+
+E1 builders, reports, and diagnosis live in utility_retention; top-level scripts retain compatible CLIs. New scoring uses longmem.scoring. The v0.1 scorer stays unchanged and is checked against archived answers. Stage lifecycles remain separate.
+
+release_artifacts.py restores complete frozen evidence. Current audits use an explicit source-compatibility mapping that checks the entire registered release implementation and historical archive hashes. Unregistered changes fail. Exact historical execution uses an isolated restore with source-run. Never change old manifests, source snapshots, or artifact hashes to accommodate new code.
+
+See the [v0.2 release notes](v0.2-release.en.md) for publication boundaries, restoration commands, and historical gaps.
+
+## Names for method and system supplements
+
+studies uses the memory_studies package, longmem-study-v1 envelope, study_id, and probe_id. A study name is not a retention policy; upstream captureStrategy is not automatically an E3 candidate. Future representation/transformation fields belong to new protocols, not overloaded frozen E1 conditions. See [DeepNote](../studies/deepnote/README.en.md).
+
+## Cross-version prose and terminology
+
+
+| Concept | Shared meaning |
+|---|---|
+| `U(m,q;M)` | Single-task score difference after storage deletion and fresh retrieval/generation, with fixed retriever, generator, prompt, and read budget |
+| Future retention value | `V_t` is expected contribution over future tasks; average LOO over a finite future window is an empirical estimate, not intrinsic memory value. Decision features use only history visible at t |
+| Storage budget / read budget | Retained-capacity limit and retrieved-context limit respectively; report actual tokens separately from limits |
+| Frozen labels | Map E1 `value`, E2 `target.value`, and E3/E4 `loo_value` by artifact; do not rename frozen fields in place |
+| Evidence types | Report source review, no-model control/pure-function probes, and real-model experiments separately; passing probes does not establish model baseline gains |
+
+`candidate` identifies a method or model option; `intervention` identifies a diagnostic perturbation. Preserve version-specific historical `condition` meanings. `representation` / `transformation` belong to future protocol designs. New backend values use underscores; readers accept hyphens and frozen configurations keep their spelling. Schema and software versions evolve separately.
