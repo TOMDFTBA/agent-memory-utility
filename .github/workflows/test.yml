@@ -30,7 +30,7 @@ jobs:
           python-version: ${{ matrix.python-version }}
           cache: pip
       - name: Install package and test dependencies
-        run: python -m pip install -e '.[test]'
+        run: python -m pip install -e '.[test,experiments]'
       - name: Restore checksum-pinned v0.2 evidence
         run: python scripts/release_artifacts.py restore-results
       - name: Audit v0.2 evidence
