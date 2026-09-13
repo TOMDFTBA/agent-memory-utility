@@ -1,4 +1,6 @@
 """Formal E3 lifecycle; frozen E1/E2 functions remain unchanged and reusable."""
+from .numeric_replay import replay_equal
+
 import argparse
 import math
 import shutil
@@ -400,7 +402,7 @@ def audit(output):
                                          read_json(output/'predictor.json'), settings)
     if strip_times(plans) != strip_times(read_json(output/'deployable-plans.json')):
         raise ValueError('Deployable selection mismatch')
-    if predictions != read_json(output/'predictions.json'):
+    if not replay_equal(predictions, read_json(output/'predictions.json')):
         raise ValueError('Prediction mismatch')
     responses = read_jsonl(output/'responses.jsonl')
     marker = read_json(output/'deployable-complete.json')

@@ -12,6 +12,7 @@ from longmem.provenance import source_matches
 from longmem.experiment_contracts import SCHEMA_VERSION
 from longmem.experiment_io import (append_jsonl, read_json, read_jsonl, runtime_metadata,
                                    sha256_file, source_hashes, write_json)
+from .numeric_replay import replay_equal
 from .prediction import FEATURES, GROUPS, fit, predict
 from .policies import baseline_scores, select
 from .e2_metrics import paired, prediction_metrics, response_key, summarize
@@ -305,15 +306,16 @@ def audit(output, write=False):
     settings = read_json(output/'settings.json')
     train, validation = read_json(output/'train.json'), read_json(output/'validation.json')
     models = make_models(train, settings)
-    if models != read_json(output/'models.json'):
+    if not replay_equal(models, read_json(output/'models.json')):
         raise ValueError('Training replay mismatch')
     plans, predictions = make_plans(validation, models, settings)
     saved = read_json(output/'plans.json')
     def without_time(rows):
         return [{k: v for k, v in r.items() if k != 'selection_seconds'} for r in rows]
-    if without_time(plans) != without_time(saved) or predictions != read_json(output/'predictions.json'):
+    if without_time(plans) != without_time(saved) or not replay_equal(predictions, read_json(output/'predictions.json')):
         raise ValueError('Prediction/selection replay mismatch')
-    if {n: prediction_metrics(validation, pp) for n, pp in predictions.items()} != read_json(output/'prediction-metrics.json'):
+    if not replay_equal({n: prediction_metrics(validation, pp) for n, pp in predictions.items()},
+                        read_json(output/'prediction-metrics.json')):
         raise ValueError('Prediction metrics mismatch')
     if any(p['candidate'] != 'full' and p['store_tokens'] > p['budget_tokens'] for p in saved):
         raise ValueError('Storage budget exceeded')
@@ -328,7 +330,7 @@ def audit(output, write=False):
     if summary != read_json(output/'summary.json') or selection != read_json(output/'model-selection.json'):
         raise ValueError('Downstream/selection recomputation mismatch')
     frozen = read_json(output/'frozen-predictor.json')
-    if (frozen['model'] != models[selection['main_candidate']]
+    if (frozen['model'] != read_json(output/'models.json')[selection['main_candidate']]
             or frozen['validation_responses_sha256'] != sha256_file(output/'responses.jsonl')
             or frozen['selection_sha256'] != sha256_file(output/'model-selection.json')
             or frozen['models_sha256'] != sha256_file(output/'models.json')

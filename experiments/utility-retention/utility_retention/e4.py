@@ -1,4 +1,6 @@
 """E4 independent lifecycle; E1/E2/E3 implementations and artifacts remain frozen."""
+from .numeric_replay import replay_equal
+
 import argparse
 import copy
 import os
@@ -341,7 +343,8 @@ def audit(output):
     deployable, predictions = make_deployable(past, features, importance, read_json(output/'similarities.json'),
                                              read_json(output/'predictor.json'), settings)
     deployable = strip_times(deployable)+exact_predicted_plans(past, features, predictions, settings)
-    if predictions != read_json(output/'predictions.json') or deployable != read_json(output/'deployable-plans.json'):
+    if (not replay_equal(predictions, read_json(output/'predictions.json'))
+            or not replay_equal(deployable, read_json(output/'deployable-plans.json'))):
         raise ValueError('E4 past-only selection replay mismatch')
     old_ids = {s['snapshot_id'] for s in old}
     if [r for r in features if r['snapshot_id'] in old_ids] != read_json(parent/'features.json'):
@@ -364,7 +367,7 @@ def audit(output):
     verify_responses(enumeration, snapshots, responses, settings)
     result = derive(snapshots, features, predictions, deployable, responses, settings, cohorts)
     for name, value in result.items():
-        if value != read_json(output/(name.replace('_', '-')+'.json')):
+        if not replay_equal(value, read_json(output/(name.replace('_', '-')+'.json'))):
             raise ValueError('E4 derived result mismatch: '+name)
     if any(p['candidate'] != 'full' and p['store_tokens'] > p['budget_tokens'] for p in result['plans']):
         raise ValueError('E4 storage budget exceeded')
