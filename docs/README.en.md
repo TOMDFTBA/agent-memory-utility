@@ -37,15 +37,19 @@ Paired documents link to their language counterpart. Single-language records are
 - [Multimodal research direction](multimodal-memory-relevance.md) — Chinese only
 - [v0.1 implementation history](v0.1-four-stage-implementation-log.md) — Chinese only
 - [v0.1 release checklist](release-checklist.md) — Chinese only
+- [Publication history](v0.2-publication-history.en.md)
 
-### v0.2 planning and implementation history
+<details>
+<summary>v0.2 implementation history — Chinese</summary>
 
-- [v0.2-four-stage-implementation-plan.md](v0.2-four-stage-implementation-plan.md) — Chinese only
-- [v0.2-stage1-implementation-log.md](v0.2-stage1-implementation-log.md) — Chinese only
-- [v0.2-stage2-implementation-log.md](v0.2-stage2-implementation-log.md) — Chinese only
-- [v0.2-stage3-implementation-log.md](v0.2-stage3-implementation-log.md) — Chinese only
-- [v0.2-stage3-supplement-log.md](v0.2-stage3-supplement-log.md) — Chinese only
-- [v0.2-stage4-implementation-log.md](v0.2-stage4-implementation-log.md) — Chinese only
-- [v0.2-pre-release-naming-reuse-audit.md](v0.2-pre-release-naming-reuse-audit.md) — Chinese only
+- [v0.2-four-stage-implementation-plan.md](v0.2-four-stage-implementation-plan.md)
+- [v0.2-stage1-implementation-log.md](v0.2-stage1-implementation-log.md)
+- [v0.2-stage2-implementation-log.md](v0.2-stage2-implementation-log.md)
+- [v0.2-stage3-implementation-log.md](v0.2-stage3-implementation-log.md)
+- [v0.2-stage3-supplement-log.md](v0.2-stage3-supplement-log.md)
+- [v0.2-stage4-implementation-log.md](v0.2-stage4-implementation-log.md)
+- [v0.2-pre-release-naming-reuse-audit.md](v0.2-pre-release-naming-reuse-audit.md)
+
+</details>
 
 Historical plans and audits describe their recording time; use release notes for current status. Source paths and frozen artifacts are preserved.

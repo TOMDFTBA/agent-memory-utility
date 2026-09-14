@@ -2,7 +2,7 @@
 
 English | [简体中文](README.zh-CN.md)
 
-**From retrieval to retention: a reproducible framework for measuring what long-horizon agent memory stores, retrieves, and actually uses.**
+**From retrieval to retention: a reproducible framework for studying what long-horizon agent memory stores, retrieves, uses, and retains under budget.**
 
 Long-running agents continuously accumulate facts, answers, and external knowledge. This project turns that growth into a sequence of testable research questions.
 

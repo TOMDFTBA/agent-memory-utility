@@ -37,15 +37,19 @@
 - [多模态研究方向判断](multimodal-memory-relevance.md) — 仅中文
 - [v0.1 实施历史](v0.1-four-stage-implementation-log.md) — 仅中文
 - [v0.1 发布检查清单](release-checklist.md) — 仅中文
+- [发布过程记录](v0.2-publication-history.md)
 
-### v0.2 计划与实施历史
+<details>
+<summary>v0.2 计划与实施历史 — 中文</summary>
 
-- [v0.2-four-stage-implementation-plan.md](v0.2-four-stage-implementation-plan.md) — 仅中文
-- [v0.2-stage1-implementation-log.md](v0.2-stage1-implementation-log.md) — 仅中文
-- [v0.2-stage2-implementation-log.md](v0.2-stage2-implementation-log.md) — 仅中文
-- [v0.2-stage3-implementation-log.md](v0.2-stage3-implementation-log.md) — 仅中文
-- [v0.2-stage3-supplement-log.md](v0.2-stage3-supplement-log.md) — 仅中文
-- [v0.2-stage4-implementation-log.md](v0.2-stage4-implementation-log.md) — 仅中文
-- [v0.2-pre-release-naming-reuse-audit.md](v0.2-pre-release-naming-reuse-audit.md) — 仅中文
+- [v0.2-four-stage-implementation-plan.md](v0.2-four-stage-implementation-plan.md)
+- [v0.2-stage1-implementation-log.md](v0.2-stage1-implementation-log.md)
+- [v0.2-stage2-implementation-log.md](v0.2-stage2-implementation-log.md)
+- [v0.2-stage3-implementation-log.md](v0.2-stage3-implementation-log.md)
+- [v0.2-stage3-supplement-log.md](v0.2-stage3-supplement-log.md)
+- [v0.2-stage4-implementation-log.md](v0.2-stage4-implementation-log.md)
+- [v0.2-pre-release-naming-reuse-audit.md](v0.2-pre-release-naming-reuse-audit.md)
+
+</details>
 
 历史计划和审计反映记录时的状态；当前状态以发布说明为准。保留原路径与冻结产物。
